@@ -7,9 +7,11 @@ export default () => (
     <Link href="/">
       <a>Home</a>
     </Link>
-
     <Link href="/about">
       <a>About</a>
+    </Link>
+    <Link href="/projects">
+      <a>Projects</a>
     </Link>
     <Link href="/blog">
       <a>Blog</a>
