@@ -1,19 +1,20 @@
 {
   "name": "portfolio-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Arthur Hwang portfolio site",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "next dev": "npm run dev",
     "build": "next build",
-    "start": "next start"
+    "start": "node server/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Arthur Hwang",
   "license": "ISC",
   "dependencies": {
-    "next": "^9.0.8",
+    "express": "^4.17.1",
+    "next": "^9.1.1",
     "nextjs-progressbar": "0.0.4",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
