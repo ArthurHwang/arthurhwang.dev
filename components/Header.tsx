@@ -11,6 +11,7 @@ export default () => (
           <a>Arthur Hwang</a>
         </Link>
       </Logo>
+      {/* <img className="me" src="/static/me.jpg"></img> */}
       <Nav />
     </div>
     {/* <div className="sub-bar"> */}
@@ -45,12 +46,18 @@ const Logo = styled.h1`
 
 const StyledHeader = styled.header`
   .bar {
-    border-bottom: 2px solid ${props => props.theme.black};
+
+    /* border-bottom: 1px solid ${props => props.theme.grey}; */
+    border-bottom: 1px solid #eee;
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: stretch;
 
+.me {
+  padding: 1rem;
+  width: 150px;
+}
     @media (max-width: 1300px) {
       grid-template-columns: 1fr;
       justify-content: center;

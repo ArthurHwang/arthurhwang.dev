@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
   padding: 0;
   display: flex;
   justify-self: end;
-  font-size: 2rem;
+  font-size: 1.2rem;
   a,
   button {
     padding: 1rem 3rem;
@@ -32,7 +32,7 @@ const StyledNav = styled.nav`
     align-items: center;
     position: relative;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1em;
     background: none;
     border: 0;
@@ -43,7 +43,7 @@ const StyledNav = styled.nav`
       font-size: 10px;
       padding: 0 10px;
     }
-    &:before {
+    /* &:before {
       content: "";
       width: 2px;
       background: ${props => props.theme.lightgrey};
@@ -53,9 +53,9 @@ const StyledNav = styled.nav`
       transform: skew(-20deg);
       top: 0;
       bottom: 0;
-    }
+    } */
     &:after {
-      height: 2px;
+      height: 1px;
       background: red;
       content: "";
       width: 0;
