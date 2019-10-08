@@ -21,7 +21,7 @@ export default () => (
 );
 
 const Logo = styled.h1`
-  font-size: 4rem;
+  font-size: 2.5rem;
   margin-left: 2rem;
   position: relative;
   z-index: 2;
@@ -45,7 +45,7 @@ const Logo = styled.h1`
 
 const StyledHeader = styled.header`
   .bar {
-    border-bottom: 10px solid ${props => props.theme.black};
+    border-bottom: 2px solid ${props => props.theme.black};
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;

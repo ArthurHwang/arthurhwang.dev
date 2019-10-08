@@ -16,13 +16,13 @@ const theme = {
 };
 
 const GlobalStyle = createGlobalStyle`
-/* @font-face {
-  font-family: 'radnika_next';
-  src: url(/static/radnikanext-medium-webfont.woff2) format('woff2');
-  font-weight: normal;
-  font-style: normal;
-} */
-
+@font-face {
+    font-family: 'Fira Code';
+    src: url('/static/fonts/FiraCode-Bold.ttf');
+    font-weight: bold;
+    font-display: auto;
+    font-style: normal;
+}
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -39,7 +39,11 @@ body {
   margin: 0;
   font-size: 1.5rem;
   line-height: 2;
-  /* font-family: 'radnika_next'; */
+  font-family: "Segoe UI";
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -69,8 +73,8 @@ class MyApp extends App {
         <Layout>
           <NextNProgress
             color="red"
-            startPosition="0.3"
-            stopDelayMs="0"
+            startPosition={0.3}
+            stopDelayMs={0}
             height="3"
           />
           <Component {...pageProps} />

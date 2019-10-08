@@ -21,7 +21,7 @@ export default () => (
       sizes="16x16"
       href="static/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="manifest" href="static/favicon/site.webmanifest" />
     <title>ArthurHwang.dev</title>
   </Head>
 );

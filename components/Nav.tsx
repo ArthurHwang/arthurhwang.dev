@@ -16,9 +16,6 @@ export default () => (
     <Link href="/blog">
       <a>Blog</a>
     </Link>
-    <Link href="/orders">
-      <a>Resources</a>
-    </Link>
   </StyledNav>
 );
 
