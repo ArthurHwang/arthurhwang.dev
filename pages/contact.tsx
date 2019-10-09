@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-export default function Projects() {
+export default function Contact() {
   return (
     <div>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea magnam cum a

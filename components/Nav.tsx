@@ -3,10 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export default () => (
-  <StyledNav data-test="nav">
-    <Link href="/">
-      <a>Home</a>
-    </Link>
+  <StyledNav>
     <Link href="/about">
       <a>About</a>
     </Link>
@@ -15,6 +12,9 @@ export default () => (
     </Link>
     <Link href="/blog">
       <a>Blog</a>
+    </Link>
+    <Link href="/contact">
+      <a>Contact</a>
     </Link>
   </StyledNav>
 );

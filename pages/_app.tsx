@@ -9,9 +9,9 @@ const theme = {
   black: "#393939",
   grey: "#3A3A3A",
   blue: "#2b486d",
+  lightgrey: "#E1E1E1",
   link: "#0096cc",
   linkHover: "#007199",
-  lightgrey: "#E1E1E1",
   offWhite: "#EDEDED",
   maxWidth: "1000px",
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
@@ -28,7 +28,7 @@ class MyApp extends App {
             color="red"
             startPosition={0.3}
             stopDelayMs={0}
-            height="3"
+            height="2"
           />
           <Component {...pageProps} />
         </Layout>
@@ -61,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
     font-display: auto;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Montserrat';
     src: url('/static/fonts/Montserrat-Regular.ttf');
@@ -101,9 +100,12 @@ body {
   font-size: 1.6rem;
   line-height: 2;
   font-family: "Roboto", "Open Sans";
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
   line-height: 1.8;
   letter-spacing: 0.1px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
