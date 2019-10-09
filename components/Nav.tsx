@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
   padding: 0;
   display: flex;
   justify-self: end;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   a,
   button {
     padding: 1rem 3rem;
@@ -37,23 +37,13 @@ const StyledNav = styled.nav`
     background: none;
     border: 0;
     cursor: pointer;
-    color: ${props => props.theme.black};
+    color: ${({ theme }) => theme.black};
     /* font-weight: 5000; */
     @media (max-width: 700px) {
-      font-size: 10px;
+      font-size: 1.4rem;
       padding: 0 10px;
     }
-    /* &:before {
-      content: "";
-      width: 2px;
-      background: ${props => props.theme.lightgrey};
-      height: 100%;
-      left: 0;
-      position: absolute;
-      transform: skew(-20deg);
-      top: 0;
-      bottom: 0;
-    } */
+
     &:after {
       height: 1px;
       background: red;
@@ -72,15 +62,27 @@ const StyledNav = styled.nav`
       &:after {
         width: calc(100% - 60px);
       }
-      @media (max-width: 700px) {
+      /* @media (max-width: 700px) {
         width: calc(100% - 10px);
-      }
+      } */
     }
   }
   @media (max-width: 1300px) {
-    border-top: 1px solid ${props => props.theme.lightgrey};
+    border-top: 1px solid ${({ theme }) => theme.lightgrey};
     width: 100%;
     justify-content: center;
     font-size: 1.5rem;
   }
 `;
+
+/* &:before {
+      content: "";
+      width: 2px;
+      background: ${({theme}) => themelightgrey};
+      height: 100%;
+      left: 0;
+      position: absolute;
+      transform: skew(-20deg);
+      top: 0;
+      bottom: 0;
+    } */

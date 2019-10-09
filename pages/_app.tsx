@@ -7,58 +7,17 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 const theme = {
   red: "#FF0000",
   black: "#393939",
-  grey: "#EEE",
+  grey: "#3A3A3A",
   blue: "#2b486d",
+  link: "#0096cc",
+  linkHover: "#007199",
   lightgrey: "#E1E1E1",
   offWhite: "#EDEDED",
   maxWidth: "1000px",
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
 };
 
-const GlobalStyle = createGlobalStyle`
-
-html {
-  box-sizing: border-box;
-  font-size: 10px;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-size: 1.8rem;
-  /* line-height: 2; */
-  font-family: "Segoe UI";
-  line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
-  direction: ltr;
-  text-rendering: optimizeLegibility;
-}
-
-a {
-  text-decoration: none;
-  color: ${theme.black};
-}
-`;
-
 class MyApp extends App {
-  // Only uncomment this method if you have blocking data requirements for
-  // every single page in your application. This disables the ability to
-  // perform automatic static optimization, causing every page in your app to
-  // be server-side rendered.
-  //
-  // static async getInitialProps(appContext) {
-  //   // calls page's `getInitialProps` and fills `appProps.pageProps`
-  //   const appProps = await App.getInitialProps(appContext);
-  //
-  //   return { ...appProps }
-  // }
-
   render() {
     const { Component, pageProps } = this.props;
     return (
@@ -79,3 +38,94 @@ class MyApp extends App {
 }
 
 export default MyApp;
+
+const GlobalStyle = createGlobalStyle`
+@font-face {
+    font-family: 'Roboto';
+    src: url('/static/fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+    font-display: auto;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/static/fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+    font-display: auto;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/static/fonts/Roboto-Medium.ttf');
+    font-weight: 500;
+    font-display: auto;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+    font-display: auto;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-SemiBold.ttf');
+    font-weight: 500;
+    font-display: auto;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-display: auto;
+    font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: "Roboto", "Open Sans";
+  line-height: 1.8;
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: ${theme.link};
+  font-weight: 500;
+
+  &:hover {
+    color: ${theme.linkHover}
+  }
+}
+`;
+
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+//
+// static async getInitialProps(appContext) {
+//   // calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(appContext);
+//
+//   return { ...appProps }
+// }
