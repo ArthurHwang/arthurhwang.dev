@@ -1,24 +1,63 @@
-import styled from "styled-components";
+import { useEffect, useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
-import { Fragment } from "react";
+import Post from "../../components/Post";
 
-export default function Home() {
+console.log(process.env.SPACE_ID);
+const client = require("contentful").createClient({
+  space: process.env.SPACE_ID,
+  accessToken: process.env.ACCESS_TOKEN
+});
+
+function HomePage() {
+  async function fetchContentTypes() {
+    const types = await client.getContentTypes();
+    if (types.items) return types.items;
+    console.log("Error getting Content Types.");
+  }
+
+  async function fetchEntriesForContentType(contentType) {
+    const entries = await client.getEntries({
+      content_type: contentType.sys.id
+    });
+    if (entries.items) return entries.items;
+    console.log(`Error getting Entries for ${contentType.name}.`);
+  }
+
+  const [posts, setPosts] = useState([]);
+  console.log(posts);
+  useEffect(() => {
+    async function getPosts() {
+      const contentTypes = await fetchContentTypes();
+      const allPosts = await fetchEntriesForContentType(contentTypes[0]);
+      setPosts([...allPosts]);
+    }
+    getPosts();
+  }, []);
+
   return (
-    <Fragment>
+    <>
       <Head>
-        <title>Arthur Hwang | Fullstack Web Developer</title>
+        <title>Next.js + Contentful</title>
+        <link
+          rel="stylesheet"
+          href="https://css.zeit.sh/v1.css"
+          type="text/css"
+        />
       </Head>
-      <StyledWrap>
-        <Link href="/blog/next-vs-gatsby">
-          <a>Next Vs Gatsby</a>
-        </Link>
-      </StyledWrap>
-    </Fragment>
+      {posts.length > 0
+        ? posts.map(p => (
+            <Post
+              alt={p.fields.alt}
+              date={p.fields.date}
+              key={p.fields.title}
+              image={p.fields.image}
+              title={p.fields.title}
+              url={p.fields.url}
+            />
+          ))
+        : null}
+    </>
   );
 }
 
-const StyledWrap = styled("div")`
-  /* color: red;
-  background: blue; */
-`;
+export default HomePage;
