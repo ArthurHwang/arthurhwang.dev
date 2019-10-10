@@ -247,7 +247,7 @@ body {
   margin: 0;
   font-size: 1.6rem;
   line-height: 2;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
+  font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.8;
