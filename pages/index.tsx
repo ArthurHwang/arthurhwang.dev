@@ -1,12 +1,12 @@
-import { useEffect, Fragment } from "react";
+import { Fragment } from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import Fonts from "../util/Fonts";
+// import Fonts from "../util/Fonts";
 
 export default function Home() {
-  useEffect(() => {
-    Fonts();
-  }, []);
+  // useEffect(() => {
+  //   Fonts();
+  // }, []);
 
   return (
     <Fragment>
