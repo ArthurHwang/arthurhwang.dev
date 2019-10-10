@@ -6,10 +6,7 @@ function Post({ alt, date, image, title, url, id }) {
   console;
   return (
     <div className="container">
-      <Link
-        as={`blog${url}`}
-        href={`blog${url}?id=${id}`}
-      >
+      <Link href={`blog${url}`}>
         <a>
           <img alt={alt} src={image} />
         </a>
