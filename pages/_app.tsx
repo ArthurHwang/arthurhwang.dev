@@ -188,7 +188,7 @@ template {
   display: none;
 }
 /* NormalizeCSS End*/
-@font-face {
+/* @font-face {
     font-family: 'Roboto';
     src: url('/static/fonts/Roboto-Regular.ttf');
     font-weight: 400;
@@ -229,7 +229,7 @@ template {
     font-weight: 700;
     font-display: auto;
     font-style: normal;
-}
+} */
 
 html {
   box-sizing: border-box;
@@ -247,7 +247,7 @@ body {
   margin: 0;
   font-size: 1.6rem;
   line-height: 2;
-  font-family: "Roboto", "Open Sans";
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.8;

@@ -39,7 +39,7 @@ const Logo = styled("h1")`
 `;
 
 const StyledHeader = styled("header")`
-  font-family: "Montserrat";
+  /* font-family: "Montserrat"; */
   font-weight: 600;
   background-color: #eee;
 
