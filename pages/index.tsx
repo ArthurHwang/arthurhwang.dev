@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import Head from "next/head";
-import {Fragment} from "react"
+import { Fragment } from "react";
 
 export default function Home() {
   return (
     <Fragment>
       <Head>
         <title>Arthur Hwang | Fullstack Web Developer</title>
+        <meta
+          name="description"
+          content="Full Stack Developer Brute Force Code"
+        />
       </Head>
       <StyledWrap>
         <p>

@@ -2,22 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-export default () => (
-  <StyledNav>
-    <Link href="/about">
-      <a>About</a>
-    </Link>
-    <Link href="/projects">
-      <a>Projects</a>
-    </Link>
-    <Link href="/blog">
-      <a>Blog</a>
-    </Link>
-    <Link href="/contact">
-      <a>Contact</a>
-    </Link>
-  </StyledNav>
-);
+export default function Nav() {
+  return (
+    <StyledNav>
+      <Link href="/about">
+        <a>About</a>
+      </Link>
+      <Link href="/projects">
+        <a>Projects</a>
+      </Link>
+      <Link href="/blog">
+        <a>Blog</a>
+      </Link>
+      <Link href="/contact">
+        <a>Contact</a>
+      </Link>
+    </StyledNav>
+  );
+}
 
 const StyledNav = styled.nav`
   margin: 0;
@@ -38,7 +40,6 @@ const StyledNav = styled.nav`
     border: 0;
     cursor: pointer;
     color: ${({ theme }) => theme.black};
-    /* font-weight: 5000; */
     @media (max-width: 700px) {
       font-size: 1.4rem;
       padding: 0 10px;

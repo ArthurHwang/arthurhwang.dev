@@ -4,18 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
 
-const StyledLayout = styled.div`
-  background: white;
-  color: ${({ theme }) => theme.black};
-`;
-
-const Inner = styled.div`
-  max-width: ${({ theme }) => theme.maxWidth};
-  margin: 0 auto;
-  padding: 2rem;
-`;
-
-export default ({ children }) => {
+export default function Layout({ children }) {
   return (
     <StyledLayout>
       <Meta />
@@ -24,4 +13,15 @@ export default ({ children }) => {
       <Footer />
     </StyledLayout>
   );
-};
+}
+
+const StyledLayout = styled("div")`
+  background: white;
+  color: ${({ theme }) => theme.black};
+`;
+
+const Inner = styled("div")`
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: 0 auto;
+  padding: 2rem;
+`;

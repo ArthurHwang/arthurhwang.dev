@@ -40,9 +40,10 @@ class MyApp extends App {
 export default MyApp;
 
 const GlobalStyle = createGlobalStyle`
+/* NormalizeCSS Start*/
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%; 
 }
 body {
   margin: 0;
@@ -55,21 +56,21 @@ h1 {
   margin: 0.67em 0;
 }
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box; 
+  height: 0; 
+  overflow: visible; 
 }
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace; 
+  font-size: 1em; 
 }
 a {
   background-color: transparent;
 }
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  border-bottom: none; 
+  text-decoration: underline; 
+  text-decoration: underline dotted; 
 }
 b,
 strong {
@@ -78,8 +79,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace; 
+  font-size: 1em; 
 }
 small {
   font-size: 80%;
@@ -105,17 +106,17 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit; 
+  font-size: 100%; 
+  line-height: 1.15; 
+  margin: 0; 
 }
 button,
-input { /* 1 */
+input { 
   overflow: visible;
 }
 button,
-select { /* 1 */
+select { 
   text-transform: none;
 }
 button,
@@ -141,12 +142,12 @@ fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box; 
+  color: inherit; 
+  display: table; 
+  max-width: 100%; 
+  padding: 0; 
+  white-space: normal; 
 }
 progress {
   vertical-align: baseline;
@@ -156,23 +157,23 @@ textarea {
 }
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box; 
+  padding: 0; 
 }
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield; 
+  outline-offset: -2px; 
 }
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button; 
+  font: inherit; 
 }
 details {
   display: block;
@@ -186,6 +187,7 @@ template {
 [hidden] {
   display: none;
 }
+/* NormalizeCSS End*/
 @font-face {
     font-family: 'Roboto';
     src: url('/static/fonts/Roboto-Regular.ttf');

@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-function Post({ alt, date, image, title, url, id }) {
-  console.log(id);
+export default function Post({ alt, date, image, title, url }) {
   console;
   return (
     <div className="container">
@@ -50,5 +49,3 @@ function Post({ alt, date, image, title, url, id }) {
     </div>
   );
 }
-
-export default Post;
