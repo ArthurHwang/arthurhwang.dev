@@ -1,14 +1,24 @@
 require("dotenv").config();
-const withFonts = require("next-fonts");
-module.exports = withFonts({
-  webpack(config, options) {
-    return config;
-  },
+// const withFonts = require("next-fonts");
+// module.exports = withFonts({
+//   webpack(config, options) {
+//     return config;
+//   },
+//   env: {
+//     SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
+//     ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN
+//   }
+// });
+
+module.exports = {
+  // webpack(config, options) {
+  //   return config;
+  // },
   env: {
     SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN
   }
-});
+};
 
 // module.exports = withFonts({
 //   cssModules: true,
