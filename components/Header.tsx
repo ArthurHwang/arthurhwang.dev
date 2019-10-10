@@ -1,22 +1,23 @@
-import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Nav from "./Nav";
 
-export default () => (
-  <StyledHeader>
-    <div className="bar">
-      <Logo>
-        <Link href="/">
-          <a>Arthur Hwang</a>
-        </Link>
-      </Logo>
-      <Nav />
-    </div>
-  </StyledHeader>
-);
+export default function Header() {
+  return (
+    <StyledHeader>
+      <div className="bar">
+        <Logo>
+          <Link href="/">
+            <a>Arthur Hwang</a>
+          </Link>
+        </Logo>
+        <Nav />
+      </div>
+    </StyledHeader>
+  );
+}
 
-const Logo = styled.h1`
+const Logo = styled("h1")`
   font-size: 2.5rem;
   margin-left: 2rem;
   position: relative;
@@ -36,8 +37,8 @@ const Logo = styled.h1`
   }
 `;
 
-const StyledHeader = styled.header`
-  font-family: "Montserrat";
+const StyledHeader = styled("header")`
+  /* font-family: "Montserrat"; */
   font-weight: 600;
   background-color: #eee;
 

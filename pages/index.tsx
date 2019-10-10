@@ -1,12 +1,21 @@
+import { Fragment } from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import {Fragment} from "react"
+// import Fonts from "../util/Fonts";
 
 export default function Home() {
+  // useEffect(() => {
+  //   Fonts();
+  // }, []);
+
   return (
     <Fragment>
       <Head>
         <title>Arthur Hwang | Fullstack Web Developer</title>
+        <meta
+          name="description"
+          content="Full Stack Developer Brute Force Code"
+        />
       </Head>
       <StyledWrap>
         <p>
