@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import Post from "../../components/Post";
 
-// console.log(process.env.SPACE_ID);
 const client = require("contentful").createClient({
   space: process.env.SPACE_ID,
   accessToken: process.env.ACCESS_TOKEN
