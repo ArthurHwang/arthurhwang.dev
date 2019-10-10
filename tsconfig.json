@@ -15,5 +15,12 @@
     "jsx": "preserve"
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blog/[post].tsx"]
+  "include": [
+    "lib/init-apollo.js",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/blog/[post].tsx",
+    "lib/with-apollo-client.js"
+  ]
 }
