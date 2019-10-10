@@ -188,6 +188,58 @@ template {
   display: none;
 }
 /* NormalizeCSS End*/
+
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  line-height: 1.8;
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-rendering: optimizeLegibility; */
+  text-rendering: geometricPrecision;
+}
+
+a {
+  text-decoration: none;
+  color: ${theme.link};
+  font-weight: 500;
+
+  &:hover {
+    color: ${theme.linkHover}
+  }
+}
+`;
+
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+//
+// static async getInitialProps(appContext) {
+//   // calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(appContext);
+//
+//   return { ...appProps }
+// }
+
 /* @font-face {
     font-family: 'Roboto';
     src: url('/static/fonts/Roboto-Regular.ttf');
@@ -230,52 +282,3 @@ template {
     font-display: auto;
     font-style: normal;
 } */
-
-html {
-  box-sizing: border-box;
-  font-size: 10px;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-size: 1.6rem;
-  line-height: 2;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  line-height: 1.8;
-  letter-spacing: 0.1px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-a {
-  text-decoration: none;
-  color: ${theme.link};
-  font-weight: 500;
-
-  &:hover {
-    color: ${theme.linkHover}
-  }
-}
-`;
-
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// static async getInitialProps(appContext) {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//
-//   return { ...appProps }
-// }

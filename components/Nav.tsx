@@ -20,7 +20,7 @@ export default function Nav() {
   );
 }
 
-const StyledNav = styled.nav`
+const StyledNav = styled("nav")`
   margin: 0;
   padding: 0;
   display: flex;
