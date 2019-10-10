@@ -1,33 +1,34 @@
-import { NextPage } from "next";
-import marksy from "marksy/jsx";
-import { createElement } from "react";
+import React from "react";
 
-// 1. We create our marksy instance using the
-// element factory from React
-const compile = marksy({
-  createElement,
-  components: {
-    MyCustomComponent(props) {
-      return <h1>{props.children}</h1>;
+Post.getInitialProps = async ({ query }) => {
+  const client = require("contentful").createClient({
+    space: process.env.SPACE_ID,
+    accessToken: process.env.ACCESS_TOKEN
+  });
+  const getEntries = await client.getEntries();
+  let payload = [];
+  let post = [];
+  const splitItems = Object.values(getEntries)[4];
+
+  // @ts-ignore
+  splitItems.forEach(entry => {
+    payload.push(entry);
+  });
+
+  payload.forEach(item => {
+    if (item.fields.url === `/${query.name}`) {
+      post.push(item);
     }
-  }
-});
-const Article: NextPage<{ article: string }> = ({ article }) => {
-  // 3. Here we get the article as a string and we compile it into
-  //   console.log(props);
-  // virtual dom
-  console.log(compile);
-  console.log(article);
-  return <div>{compile(article).tree}</div>;
-};
-// 2. When Next prepares the component we go
-// grab the markdown based on the name query
-Article.getInitialProps = async ({ query }) => {
-  const article = await import(`./${query.name}.md`);
+  });
 
   return {
-    article: article.default
+    post
   };
 };
 
-export default Article;
+export default function Post(props) {
+  const post = props.post[0].fields;
+  const { title, date, description, image, alt, url, body } = post;
+  console.log(body);
+  return <div>{body}</div>;
+}

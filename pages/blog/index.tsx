@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import Post from "../../components/Post";
 
-console.log(process.env.SPACE_ID);
+// console.log(process.env.SPACE_ID);
 const client = require("contentful").createClient({
   space: process.env.SPACE_ID,
   accessToken: process.env.ACCESS_TOKEN
@@ -24,26 +24,27 @@ function HomePage() {
   }
 
   const [posts, setPosts] = useState([]);
-  console.log(posts);
+
   useEffect(() => {
     async function getPosts() {
       const contentTypes = await fetchContentTypes();
-      const allPosts = await fetchEntriesForContentType(contentTypes[0]);
+      const allPosts = await fetchEntriesForContentType(contentTypes[14]);
+      console.log(contentTypes);
       setPosts([...allPosts]);
     }
     getPosts();
   }, []);
-
+  console.log(posts);
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Next.js + Contentful</title>
         <link
           rel="stylesheet"
           href="https://css.zeit.sh/v1.css"
           type="text/css"
         />
-      </Head>
+      </Head> */}
       {posts.length > 0
         ? posts.map(p => (
             <Post
@@ -53,6 +54,7 @@ function HomePage() {
               image={p.fields.image}
               title={p.fields.title}
               url={p.fields.url}
+              id={p.sys.id}
             />
           ))
         : null}

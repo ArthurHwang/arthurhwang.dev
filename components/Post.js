@@ -1,11 +1,19 @@
 import React from "react";
+import Link from "next/link";
 
-function Post({ alt, date, image, title, url }) {
+function Post({ alt, date, image, title, url, id }) {
+  console.log(id);
+  console;
   return (
     <div className="container">
-      <a href={url}>
-        <img alt={alt} src={image} />
-      </a>
+      <Link
+        as={`blog${url}`}
+        href={`blog${url}?id=${id}`}
+      >
+        <a>
+          <img alt={alt} src={image} />
+        </a>
+      </Link>
       <div className="text">
         <h2>{title}</h2>
         <h4>{date}</h4>
@@ -15,6 +23,9 @@ function Post({ alt, date, image, title, url }) {
           cursor: pointer;
           height: 453px;
           margin-bottom: 48px;
+        }
+        img {
+          max-width: 400px;
         }
         a {
           border-bottom: none;
