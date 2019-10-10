@@ -21,7 +21,8 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-ionicons": "^3.0.1",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "url-loader": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
