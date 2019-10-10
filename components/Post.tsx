@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 export default function Post({ alt, date, image, title, url }) {
+  console.log(url);
   console;
   return (
     <div className="container">
-      <Link href={`blog${url}`}>
+      <Link href={`blog/${url}`}>
         <a>
           <img alt={alt} src={image} />
         </a>

@@ -17,7 +17,7 @@ Post.getInitialProps = async ({ query }) => {
   });
 
   payload.forEach(item => {
-    if (item.fields.url === `/${query.post}`) {
+    if (item.fields.url === query.post) {
       post.push(item);
     }
   });
@@ -30,6 +30,7 @@ Post.getInitialProps = async ({ query }) => {
 
 export default function Post(props) {
   const post = props.post[0].fields;
+  console.log(props);
   const {
     title,
     date,
