@@ -57,9 +57,9 @@ const Home = () => {
           {({ data, loading }) => {
             // const { viewer } = data;
             console.log(data);
-            // if (loading || !viewer) {
-            //   return <div>Loading ...</div>;
-            // }
+            if (loading || !data) {
+              return <div>Loading ...</div>;
+            }
             return (
               <div>
                 {/* {viewer.name} {viewer.login} */}
