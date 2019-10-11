@@ -2,6 +2,7 @@ import { useEffect, useState, Fragment } from "react";
 import Head from "next/head";
 import { NextPage } from "next";
 import { Post } from "../../components/Post";
+import styled from "styled-components";
 
 const client = require("contentful").createClient({
   space: process.env.SPACE_ID,
@@ -41,20 +42,27 @@ const HomePage: NextPage<any> = () => {
         <title>Arthur Hwang | Blog</title>
         <meta name="description" content="Arthur Hwang's Blog" />
       </Head>
-      {posts.length > 0
-        ? posts.map((p: any) => (
-            <Post
-              alt={p.fields.featureImage.fields.description}
-              date={p.fields.date}
-              key={p.fields.title}
-              image={p.fields.featureImage.fields.file.url}
-              title={p.fields.title}
-              url={p.fields.url}
-            />
-          ))
-        : null}
+      <StyledPosts>
+        {posts.length > 0
+          ? posts.map((p: any) => (
+              <Post
+                alt={p.fields.featureImage.fields.description}
+                date={p.fields.date}
+                key={p.fields.title}
+                image={p.fields.featureImage.fields.file.url}
+                title={p.fields.title}
+                url={p.fields.url}
+              />
+            ))
+          : null}
+      </StyledPosts>
     </Fragment>
   );
 };
+
+const StyledPosts = styled("div")`
+  width: 100%;
+  /* min-height: 800px; */
+`;
 
 export default HomePage;

@@ -41,4 +41,7 @@ export const Footer: React.FC<any> = () => {
 const StyledFooter = styled("footer")`
   background-color: #eee;
   margin: 0;
+
+  display: flex;
+  justify-content: space-between;
 `;

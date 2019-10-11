@@ -16,6 +16,8 @@ const Post: NextPage<any> = props => {
     featureImage
     // url,
   } = post;
+
+  console.log(props);
   return (
     <Fragment>
       <Head>
@@ -26,7 +28,7 @@ const Post: NextPage<any> = props => {
         <p>{date}</p>
         <img
           src={featureImage.fields.file.url}
-          alt={featureImage.fields.file.description}
+          alt={featureImage.fields.description}
         />
         {body}
       </div>
