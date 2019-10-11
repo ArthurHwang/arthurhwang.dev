@@ -1,8 +1,14 @@
 import Link from "next/link";
 
-export default function Post({ alt, date, image, title, url }) {
-  console.log(url);
-  console;
+interface Props {
+  alt: string;
+  date: string;
+  image: string;
+  title: string;
+  url: string;
+}
+
+export default function Post({ alt, date, image, title, url }: Props) {
   return (
     <div className="container">
       <Link href={`blog/${url}`}>

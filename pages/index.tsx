@@ -38,10 +38,16 @@ const GET_REPOSITORIES_OF_CURRENT_USER = gql`
   }
 `;
 
-const Home = () => {
+const Home: React.FC = () => {
   // useEffect(() => {
   //   Fonts();
   // }, []);
+
+  interface Query {
+    data: any;
+    loading: any;
+  }
+
   return (
     <Fragment>
       <Head>
@@ -54,18 +60,11 @@ const Home = () => {
 
       <StyledWrap>
         <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
-          {({ data, loading }) => {
-            // const { viewer } = data;
-            console.log(data);
+          {({ data, loading }: Query) => {
             if (loading || !data) {
               return <div>Loading ...</div>;
             }
-            return (
-              <div>
-                {/* {viewer.name} {viewer.login} */}
-                {JSON.stringify(data)}
-              </div>
-            );
+            return <div>{JSON.stringify(data)}</div>;
           }}
         </Query>
       </StyledWrap>

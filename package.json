@@ -13,6 +13,8 @@
   "author": "Arthur Hwang",
   "license": "ISC",
   "dependencies": {
+    "@types/graphql": "^14.5.0",
+    "@types/styled-components": "^4.1.19",
     "apollo-boost": "^0.4.4",
     "apollo-client": "2.6.4",
     "contentful": "^7.10.0",

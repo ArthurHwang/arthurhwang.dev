@@ -1,9 +1,15 @@
 import styled from "styled-components";
+//@ts-ignore
 import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+//@ts-ignore
 import LogoGithub from "react-ionicons/lib/LogoGithub";
+//@ts-ignore
 import IosRefresh from "react-ionicons/lib/IosRefresh";
+//@ts-ignore
 import MdInfinite from "react-ionicons/lib/MdInfinite";
+//@ts-ignore
 import LogoLinkedin from "react-ionicons/lib/LogoLinkedin";
+//@ts-ignore
 import MdHeart from "react-ionicons/lib/MdHeart";
 
 export default function footer() {

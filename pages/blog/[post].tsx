@@ -1,14 +1,18 @@
 import { Fragment } from "react";
 import Head from "next/head";
 
-Post.getInitialProps = async ({ query }) => {
+interface Props {
+  query: any;
+}
+
+Post.getInitialProps = async ({ query }: Props) => {
   const client = require("contentful").createClient({
     space: process.env.SPACE_ID,
     accessToken: process.env.ACCESS_TOKEN
   });
   const getEntries = await client.getEntries();
-  let payload = [];
-  let post = [];
+  let payload: any = [];
+  let post: any = [];
   const splitItems = Object.values(getEntries)[4];
 
   // @ts-ignore
@@ -16,7 +20,7 @@ Post.getInitialProps = async ({ query }) => {
     payload.push(entry);
   });
 
-  payload.forEach(item => {
+  payload.forEach((item: any) => {
     if (item.fields.url === query.post) {
       post.push(item);
     }
@@ -28,9 +32,8 @@ Post.getInitialProps = async ({ query }) => {
   };
 };
 
-export default function Post(props) {
+export default function Post(props: any) {
   const post = props.post[0].fields;
-  console.log(props);
   const {
     title,
     date,

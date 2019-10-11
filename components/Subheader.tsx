@@ -5,10 +5,7 @@ interface Props {
 }
 
 const Subheader = ({ pathName }: Props) => {
-  console.log(pathName);
-
   function contentSwitch(path: string) {
-    // console.log(path);
     switch (path) {
       case "/about":
         return (

@@ -1,6 +1,7 @@
 import React from "react";
 import App from "next/app";
 import Layout from "../components/Layout";
+//@ts-ignore
 import NextNProgress from "nextjs-progressbar";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import withApolloClient from "../lib/with-apollo-client";
@@ -19,7 +20,7 @@ const theme = {
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
 };
 
-class MyApp extends App {
+class MyApp extends App<any> {
   render() {
     //@ts-ignore
     const { Component, pageProps, apolloClient } = this.props;

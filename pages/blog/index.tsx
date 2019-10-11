@@ -14,7 +14,7 @@ function HomePage() {
     console.log("Error getting Content Types.");
   }
 
-  async function fetchEntriesForContentType(contentType) {
+  async function fetchEntriesForContentType(contentType: any) {
     const entries = await client.getEntries({
       content_type: contentType.sys
     });
@@ -28,7 +28,7 @@ function HomePage() {
     async function getPosts() {
       const contentTypes = await fetchContentTypes();
       const allPosts = await fetchEntriesForContentType(contentTypes);
-      console.log(contentTypes);
+      //@ts-ignore
       setPosts([...allPosts]);
     }
     getPosts();
@@ -41,7 +41,7 @@ function HomePage() {
         <meta name="description" content="Arthur Hwang's Blog" />
       </Head>
       {posts.length > 0
-        ? posts.map(p => (
+        ? posts.map((p: any) => (
             <Post
               alt={p.fields.featureImage.fields.description}
               date={p.fields.date}

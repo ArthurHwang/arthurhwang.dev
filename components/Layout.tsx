@@ -5,8 +5,14 @@ import styled from "styled-components";
 import Subheader from "./Subheader";
 import { withRouter } from "next/router";
 
-const Layout = ({ children, router: { pathname } }) => {
-  // console.log(pathname);
+interface Props {
+  children: any;
+  router: {
+    pathname: string;
+  };
+}
+
+const Layout = ({ children, router: { pathname } }: Props) => {
   return (
     <StyledLayout>
       <Meta />
