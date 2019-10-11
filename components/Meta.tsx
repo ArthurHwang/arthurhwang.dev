@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default () => (
+export const Meta: React.FC<any> = () => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, no follow" />

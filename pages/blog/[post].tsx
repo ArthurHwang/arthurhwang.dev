@@ -1,9 +1,38 @@
 import { Fragment } from "react";
+import { NextPage } from "next";
 import Head from "next/head";
 
 interface Props {
   query: any;
 }
+
+const Post: NextPage<any> = props => {
+  const post = props.post[0].fields;
+  const {
+    title,
+    date,
+    description,
+    body,
+    featureImage
+    // url,
+  } = post;
+  return (
+    <Fragment>
+      <Head>
+        <title>{`Arthur Hwang | ${title}`}</title>
+        <meta name="description" content={description} />
+      </Head>
+      <div>
+        <p>{date}</p>
+        <img
+          src={featureImage.fields.file.url}
+          alt={featureImage.fields.file.description}
+        />
+        {body}
+      </div>
+    </Fragment>
+  );
+};
 
 Post.getInitialProps = async ({ query }: Props) => {
   const client = require("contentful").createClient({
@@ -32,30 +61,4 @@ Post.getInitialProps = async ({ query }: Props) => {
   };
 };
 
-export default function Post(props: any) {
-  const post = props.post[0].fields;
-  const {
-    title,
-    date,
-    description,
-    body,
-    featureImage
-    // url,
-  } = post;
-  return (
-    <Fragment>
-      <Head>
-        <title>{`Arthur Hwang | ${title}`}</title>
-        <meta name="description" content={description} />
-      </Head>
-      <div>
-        <p>{date}</p>
-        <img
-          src={featureImage.fields.file.url}
-          alt={featureImage.fields.file.description}
-        />
-        {body}
-      </div>
-    </Fragment>
-  );
-}
+export default Post;

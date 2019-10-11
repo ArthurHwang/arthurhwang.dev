@@ -1,9 +1,9 @@
-import Meta from "./Meta";
-import Header from "./Header";
-import Footer from "./Footer";
-import styled from "styled-components";
-import Subheader from "./Subheader";
+import { Meta } from "./Meta";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { Subheader } from "./Subheader";
 import { withRouter } from "next/router";
+import styled from "styled-components";
 
 interface Props {
   children: any;
@@ -12,7 +12,7 @@ interface Props {
   };
 }
 
-const Layout = ({ children, router: { pathname } }: Props) => {
+const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
   return (
     <StyledLayout>
       <Meta />

@@ -1,8 +1,8 @@
+import { Nav } from "./Nav";
 import styled from "styled-components";
 import Link from "next/link";
-import Nav from "./Nav";
 
-export default function Header() {
+export const Header: React.FC<any> = () => {
   return (
     <StyledHeader>
       <div className="bar">
@@ -15,7 +15,7 @@ export default function Header() {
       </div>
     </StyledHeader>
   );
-}
+};
 
 const Logo = styled("h1")`
   font-size: 2.5rem;

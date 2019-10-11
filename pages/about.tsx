@@ -1,12 +1,14 @@
 import { Fragment } from "react";
+import { NextPage } from "next";
 import Link from "next/link";
 import Head from "next/head";
 
-export default function About() {
+const About: NextPage<any> = () => {
   return (
     <Fragment>
       <Head>
         <title>Arthur Hwang | About</title>
+        <meta name="description" content="Arthur Hwang | About" />
       </Head>
       <div>
         <h1>
@@ -43,27 +45,6 @@ export default function About() {
           facilis soluta quia ab provident.it amet consectetur adipisicing elit.
           In, libero.
         </h4>
-        <Link href="/">
-          <a>hiii</a>
-        </Link>
-        <Link href="/">
-          <a>hiii</a>
-        </Link>
-        <Link href="/">
-          <a>hiii</a>
-        </Link>
-        <Link href="/">
-          <a>hiii</a>
-        </Link>
-        <Link href="/">
-          <a>hiii</a>
-        </Link>
-        <Link href="/asdf">
-          <a>hiii</a>
-        </Link>
-        <Link href="/asdf">
-          <a>hiiasdfi</a>
-        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
           consectetur dolorem asperiores optio perspi Lorem ipsum dolor sit amet
@@ -157,4 +138,6 @@ export default function About() {
       </div>
     </Fragment>
   );
-}
+};
+
+export default About;

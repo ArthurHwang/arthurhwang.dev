@@ -1,7 +1,8 @@
 import { Fragment } from "react";
+import { NextPage } from "next";
 import Head from "next/head";
 
-export default function Contact() {
+const Contact: NextPage<any> = () => {
   return (
     <Fragment>
       <Head>
@@ -35,4 +36,6 @@ export default function Contact() {
       </div>
     </Fragment>
   );
-}
+};
+
+export default Contact;

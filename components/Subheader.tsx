@@ -4,7 +4,7 @@ interface Props {
   pathName: string;
 }
 
-const Subheader = ({ pathName }: Props) => {
+export const Subheader: React.FC<Props> = ({ pathName }) => {
   function contentSwitch(path: string) {
     switch (path) {
       case "/about":
@@ -12,7 +12,7 @@ const Subheader = ({ pathName }: Props) => {
           <SubheaderInner>
             <h1>hi</h1>
             <h2>what</h2>
-            <img src="/static/me.jpg" />
+            <img width="200px" src="/static/me.jpg" />
           </SubheaderInner>
         );
       case "/projects":
@@ -48,8 +48,6 @@ const Subheader = ({ pathName }: Props) => {
   }
   return <StyledSubheader>{contentSwitch(pathName)}</StyledSubheader>;
 };
-
-export default Subheader;
 
 const StyledSubheader = styled("section")`
   background: #f5f8fa no-repeat 50%;

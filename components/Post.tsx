@@ -8,7 +8,13 @@ interface Props {
   url: string;
 }
 
-export default function Post({ alt, date, image, title, url }: Props) {
+export const Post: React.FC<Props> = ({
+  alt,
+  date,
+  image,
+  title,
+  url
+}: Props) => {
   return (
     <div className="container">
       <Link href={`blog/${url}`}>
@@ -54,4 +60,4 @@ export default function Post({ alt, date, image, title, url }: Props) {
       `}</style>
     </div>
   );
-}
+};

@@ -1,7 +1,8 @@
 import { Fragment } from "react";
 import Head from "next/head";
+import { NextPage } from "next";
 
-export default function ErrorPage() {
+const ErrorPage: NextPage<any> = () => {
   return (
     <Fragment>
       <Head>
@@ -11,4 +12,6 @@ export default function ErrorPage() {
       <div>You have reached a page that does not exist......so sad today</div>
     </Fragment>
   );
-}
+};
+
+export default ErrorPage;

@@ -1,7 +1,8 @@
 import { Fragment } from "react";
+import { NextPage } from "next";
 import Head from "next/head";
 
-export default function Projects() {
+const Projects: NextPage<any> = () => {
   return (
     <Fragment>
       <Head>
@@ -26,4 +27,6 @@ export default function Projects() {
       </div>
     </Fragment>
   );
-}
+};
+
+export default Projects;

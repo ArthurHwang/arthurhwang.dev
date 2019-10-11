@@ -1,13 +1,14 @@
 import { useEffect, useState, Fragment } from "react";
 import Head from "next/head";
-import Post from "../../components/Post";
+import { NextPage } from "next";
+import { Post } from "../../components/Post";
 
 const client = require("contentful").createClient({
   space: process.env.SPACE_ID,
   accessToken: process.env.ACCESS_TOKEN
 });
 
-function HomePage() {
+const HomePage: NextPage<any> = () => {
   async function fetchContentTypes() {
     const types = await client.getContentTypes();
     if (types.items) return types.items;
@@ -54,6 +55,6 @@ function HomePage() {
         : null}
     </Fragment>
   );
-}
+};
 
 export default HomePage;

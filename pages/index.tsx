@@ -1,8 +1,9 @@
 import { Fragment } from "react";
+import { Query } from "react-apollo";
+import { NextPage } from "next";
 import styled from "styled-components";
 import Head from "next/head";
 import gql from "graphql-tag";
-import { Query } from "react-apollo";
 // import Fonts from "../util/Fonts";
 // import { withApollo } from "../lib/apollo";
 
@@ -38,7 +39,7 @@ const GET_REPOSITORIES_OF_CURRENT_USER = gql`
   }
 `;
 
-const Home: React.FC = () => {
+const Home: NextPage<any> = () => {
   // useEffect(() => {
   //   Fonts();
   // }, []);

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function Nav() {
+export const Nav: React.FC<any> = () => {
   return (
     <StyledNav>
       <Link href="/about">
@@ -18,7 +18,7 @@ export default function Nav() {
       </Link>
     </StyledNav>
   );
-}
+};
 
 const StyledNav = styled("nav")`
   margin: 0;
@@ -26,6 +26,7 @@ const StyledNav = styled("nav")`
   display: flex;
   justify-self: end;
   font-size: 1.3rem;
+
   a,
   button {
     padding: 1rem 3rem;
