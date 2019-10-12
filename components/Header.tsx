@@ -10,7 +10,7 @@ export const Header: React.FC<any> = () => {
         <Link href="/">
           <div className="hover-box">
             <StyledLogo>
-              <img src="/static/me.jpg" />
+              <div className="logo-img"></div>
               <div className="text-wrapper">
                 <p className="name">Arthur Hwang</p>
                 <p className="title">Software Engineer</p>
@@ -34,9 +34,17 @@ const StyledLogo = styled("div")`
   grid-template-rows: 65px;
   margin: 0.5rem 0.5rem 0.5rem 2rem;
 
-  img {
-    width: 100%;
+  @media (max-width: 768px) {
+    margin-left: 0.25rem;
+  }
+
+  .logo-img {
+    background-image: url("/static/me.jpg");
+    background-position: 1px 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 50%;
+    border: 1px solid ${({ theme }) => theme.lightgrey};
   }
 
   p {

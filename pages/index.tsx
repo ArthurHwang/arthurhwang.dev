@@ -1,10 +1,11 @@
 import { Fragment } from "react";
 // import { Query } from "react-apollo";
+// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 import { NextPage } from "next";
 import styled from "styled-components";
 import Head from "next/head";
 // import gql from "graphql-tag";
-import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 // import Fonts from "../util/Fonts";
 // import { withApollo } from "../lib/apollo";
 
@@ -61,13 +62,22 @@ const Home: NextPage<any> = () => {
       </Head>
 
       <StyledWrap>
-        <LogoNodejs
-          onClick={() => alert("Hi!")}
-          style={{ position: "relative" }}
-          fontSize="60px"
-          beat={true}
-          color="#43853d"
-        />
+        <p>
+          Rong rong you got a big ass, u r da best u has amazing bootie u heart
+          so big
+        </p>
+        <p>u as sso big</p>
+        <h1>u ass SO BIG WOW</h1>
+        <h2>u ass dont quit</h2>
+        {/* <div style={{ zIndex: "-5000" }}>
+          <LogoNodejs
+            onClick={() => alert("Hi!")}
+            style={{ zIndex: "-1" }}
+            fontSize="60px"
+            beat={true}
+            color="#43853d"
+          />
+        </div> */}
         {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
           {({ data, loading }: Query) => {
             if (loading || !data) {

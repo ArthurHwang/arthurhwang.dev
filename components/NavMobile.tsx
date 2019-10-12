@@ -1,30 +1,44 @@
 import styled from "styled-components";
-import IosApps from "react-ionicons/lib/IosApps";
+// import IosApps from "react-ionicons/lib/IosApps";
+import { Fragment } from "react";
+import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+import { IoIosKeypad } from "react-icons/io";
 import { useState } from "react";
+import Link from "next/link";
 
 export const NavMobile: React.FC<any> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = () => {
-    return setMenuOpen(!menuOpen);
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLink = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <NavMobileWrapper>
       <StyledNavMobile>
-        <IconWrapper rotate={menuOpen ? "true" : "false"}>
-          <IosApps
-            color={menuOpen ? "red" : "black"}
-            fontSize="40px"
-            onClick={handleClick}
-            
-            className="menu-icon"
-          />
+        <IconWrapper onClick={handleClick} rotate={menuOpen ? "true" : "false"}>
+          <IoIosKeypad />
         </IconWrapper>
         {menuOpen && (
-          <StyledNavMenu className={menuOpen ? "fade" : "fadeOut"}>
-            blah blah
-          </StyledNavMenu>
+          <Fragment>
+            <StyledNavMenu className={menuOpen ? "fade" : "fadeOut"}>
+              <LogoNodejs
+                onClick={() => alert("Hi!")}
+                fontSize="60px"
+                beat={true}
+                color="#43853d"
+              />
+              <Link href="/about">
+                <a className="link-wrap" onClick={handleLink}>
+                  About
+                </a>
+              </Link>
+            </StyledNavMenu>
+          </Fragment>
         )}
       </StyledNavMobile>
     </NavMobileWrapper>
@@ -43,6 +57,7 @@ const IconWrapper = styled("div")`
 
   svg {
     position: relative;
+    font-size: 3.5rem;
     right: 1.5rem;
     //@ts-ignore
     color: ${props => (props.rotate === "true" ? `red` : "black")};
@@ -66,6 +81,10 @@ const StyledNavMenu = styled("div")`
   width: 100vw;
   background-color: ${({ theme }) => theme.lightgrey};
   height: calc(100vh - 75px);
+
+  .link-wrap {
+    cursor: pointer;
+  }
 `;
 
 const NavMobileWrapper = styled.div`

@@ -39,8 +39,8 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
       default:
         return (
           <SubheaderInner>
-            <h1>Hey there</h1>
-            <h2>What do you want</h2>
+            <h1>Rong rong u ass is monsterous</h1>
+            <h2>U ass end world hunger</h2>
           </SubheaderInner>
         );
     }
@@ -55,4 +55,10 @@ const StyledSubheader = styled("section")`
   border: 1px solid rgba(0, 0, 0, 0.125);
 `;
 
-const SubheaderInner = styled("div")``;
+const SubheaderInner = styled("div")`
+  h1,
+  h2 {
+    font-size: 5rem;
+    color: red;
+  }
+`;

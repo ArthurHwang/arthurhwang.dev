@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+import { FaReact } from "react-icons/fa";
+// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 // import LogoGithub from "react-ionicons/lib/LogoGithub";
 // import IosRefresh from "react-ionicons/lib/IosRefresh";
 // import MdInfinite from "react-ionicons/lib/MdInfinite";
@@ -9,13 +10,14 @@ import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 export const Footer: React.FC<any> = () => {
   return (
     <StyledFooter>
-      <LogoNodejs
+      <FaReact className="icon-react" />
+      {/* <LogoNodejs
         onClick={() => alert("Hi!")}
         fontSize="60px"
         beat={true}
         color="#43853d"
-        style={{ zIndex: "0" }}
-      />
+        style={{ zIndex: "-1" }}
+      /> */}
       {/* <LogoGithub
         onClick={() => alert("Hi!")}
         fontSize="60px"
@@ -41,4 +43,9 @@ const StyledFooter = styled("footer")`
   margin: 0;
   display: flex;
   justify-content: space-between;
+
+  .icon-react {
+    color: blue;
+    font-size: 4rem;
+  }
 `;
