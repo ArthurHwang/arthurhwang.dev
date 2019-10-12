@@ -27,6 +27,7 @@ const Post: NextPage<any> = props => {
       <div>
         <p>{date}</p>
         <img
+          width="100%"
           src={featureImage.fields.file.url}
           alt={featureImage.fields.description}
         />

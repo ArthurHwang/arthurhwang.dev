@@ -35,7 +35,7 @@ const HomePage: NextPage<any> = () => {
     }
     getPosts();
   }, []);
-
+  console.log(posts);
   return (
     <Fragment>
       <Head>

@@ -218,6 +218,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-rendering: optimizeLegibility; */
+  text-align: justify;
   text-rendering: geometricPrecision;
 }
 
