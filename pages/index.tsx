@@ -68,14 +68,14 @@ const Home: NextPage<any> = () => {
           beat={true}
           color="#43853d"
         />
-        <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
+        {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
           {({ data, loading }: Query) => {
             if (loading || !data) {
               return <div>Loading ...</div>;
             }
             return <div>{JSON.stringify(data)}</div>;
           }}
-        </Query>
+        </Query> */}
       </StyledWrap>
     </Fragment>
   );
