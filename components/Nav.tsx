@@ -68,12 +68,12 @@ const StyledNav = styled("nav")`
       } */
     }
   }
-  @media (max-width: 1300px) {
+  /* @media (max-width: 1300px) {
     border-top: 1px solid ${({ theme }) => theme.lightgrey};
     width: 100%;
     justify-content: center;
     font-size: 1.5rem;
-  }
+  } */
 `;
 
 /* &:before {

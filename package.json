@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-app",
+  "name": "arthurhwang.dev",
   "version": "1.0.0",
-  "description": "Arthur Hwang portfolio site",
+  "description": "Arthur Hwangs portfolio",
   "main": "index.js",
   "scripts": {
     "dev": "next",

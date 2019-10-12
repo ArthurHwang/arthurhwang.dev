@@ -12,7 +12,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
           <SubheaderInner>
             <h1>hi</h1>
             <h2>what</h2>
-            <img width="200px" src="/static/me.jpg" />
+            {/* <img width="200px" src="/static/me.jpg" /> */}
           </SubheaderInner>
         );
       case "/projects":
@@ -22,7 +22,6 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
             <h2>hehehehe</h2>
           </SubheaderInner>
         );
-
       case "/blog":
         return (
           <SubheaderInner>

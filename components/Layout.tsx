@@ -23,7 +23,7 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
     </StyledLayout>
   );
 };
-//@ts-ignore
+// @ts-ignore
 export default withRouter(Layout);
 
 const StyledLayout = styled("div")`

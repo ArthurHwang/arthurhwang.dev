@@ -6,41 +6,79 @@ export const Header: React.FC<any> = () => {
   return (
     <StyledHeader>
       <div className="bar">
-        <Logo>
-          <Link href="/">
-            <a>Arthur Hwang</a>
-          </Link>
-        </Logo>
+        <Link href="/">
+          <div className="hover-box">
+            <StyledLogo>
+              <img src="/static/me.jpg" />
+              <div className="text-wrapper">
+                <p className="name">Arthur Hwang</p>
+                <p className="title">Software Engineer</p>
+              </div>
+            </StyledLogo>
+          </div>
+        </Link>
         <Nav />
       </div>
     </StyledHeader>
   );
 };
 
-const Logo = styled("h1")`
+const StyledLogo = styled("div")`
   font-size: 2.5rem;
-  margin-left: 2rem;
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  grid-template-rows: 65px;
+  margin: 0.5rem 0.5rem 0.5rem 2rem;
 
-  a {
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    color: ${({ theme }) => theme.black};
-    text-transform: uppercase;
-    text-decoration: none;
+  img {
+    width: 100%;
+    border-radius: 50%;
   }
 
-  @media (max-width: 1300px) {
+  p {
+    color: ${({ theme }) => theme.black};
+    text-transform: uppercase;
+    padding: 0 0 0 1.5rem;
     margin: 0;
-    text-align: center;
+  }
+
+  p.name {
+    font-size: 2.5rem;
+    position: relative;
+    bottom: 2px;
+  }
+
+  p.title {
+    font-size: 1.6rem;
+    color: #b3b3b3;
+    position: relative;
+    bottom: 10px;
+    font-style: italic;
+    font-weight: 600;
   }
 `;
 
 const StyledHeader = styled("header")`
-  /* font-family: "Montserrat"; */
   font-weight: 600;
   background-color: #eee;
+
+  .hover-box {
+    cursor: pointer;
+    padding-right: 2rem;
+    transition: background 0.2s linear;
+
+    &:hover {
+      background: #dfecf5;
+      color: red;
+
+      .text-wrapper p {
+        transition: color 0.2s linear;
+        color: ${({ theme }) => theme.link};
+      }
+    }
+  }
 
   .bar {
     display: grid;
@@ -52,10 +90,11 @@ const StyledHeader = styled("header")`
       padding: 1rem;
       width: 150px;
     }
-    @media (max-width: 1300px) {
+
+    /* @media (max-width: 1300px) {
       grid-template-columns: 1fr;
       justify-content: center;
-    }
+    } */
   }
   .sub-bar {
     display: grid;
