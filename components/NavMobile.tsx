@@ -37,6 +37,21 @@ export const NavMobile: React.FC<any> = () => {
                   About
                 </a>
               </Link>
+              <Link href="/projects">
+                <a className="link-wrap" onClick={handleLink}>
+                  Projects
+                </a>
+              </Link>
+              <Link href="/blog">
+                <a className="link-wrap" onClick={handleLink}>
+                  Blog
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a className="link-wrap" onClick={handleLink}>
+                  Contact
+                </a>
+              </Link>
             </StyledNavMenu>
           </Fragment>
         )}
@@ -81,9 +96,12 @@ const StyledNavMenu = styled("div")`
   width: 100vw;
   background-color: ${({ theme }) => theme.lightgrey};
   height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
 
   .link-wrap {
     cursor: pointer;
+    text-transform: uppercase;
   }
 `;
 
