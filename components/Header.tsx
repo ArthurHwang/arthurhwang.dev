@@ -1,6 +1,7 @@
 import { Nav } from "./Nav";
 import styled from "styled-components";
 import Link from "next/link";
+import { NavMobile } from "./NavMobile";
 
 export const Header: React.FC<any> = () => {
   return (
@@ -18,6 +19,7 @@ export const Header: React.FC<any> = () => {
           </div>
         </Link>
         <Nav />
+        <NavMobile />
       </div>
     </StyledHeader>
   );
@@ -48,6 +50,12 @@ const StyledLogo = styled("div")`
     font-size: 2.5rem;
     position: relative;
     bottom: 2px;
+
+    @media (max-width: 413px) {
+      font-size: 1.8rem;
+      bottom: initial;
+      top: 8px;
+    }
   }
 
   p.title {
@@ -57,6 +65,12 @@ const StyledLogo = styled("div")`
     bottom: 10px;
     font-style: italic;
     font-weight: 600;
+
+    @media (max-width: 413px) {
+      font-size: 1.2rem;
+      bottom: initial;
+      top: 3px;
+    }
   }
 `;
 
