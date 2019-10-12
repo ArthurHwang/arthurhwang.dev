@@ -16,6 +16,7 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
   return (
     <StyledLayout>
       <Meta />
+      <MobilePush />
       <Header />
       <Subheader pathName={pathname} />
       <Inner>{children}</Inner>
@@ -25,6 +26,14 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
 };
 // @ts-ignore
 export default withRouter(Layout);
+
+const MobilePush = styled("div")`
+  height: 75px;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+`;
 
 const StyledLayout = styled("div")`
   background: white;

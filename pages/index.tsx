@@ -4,6 +4,7 @@ import { NextPage } from "next";
 import styled from "styled-components";
 import Head from "next/head";
 import gql from "graphql-tag";
+import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 // import Fonts from "../util/Fonts";
 // import { withApollo } from "../lib/apollo";
 
@@ -60,6 +61,13 @@ const Home: NextPage<any> = () => {
       </Head>
 
       <StyledWrap>
+        <LogoNodejs
+          onClick={() => alert("Hi!")}
+          style={{ position: "relative" }}
+          fontSize="60px"
+          beat={true}
+          color="#43853d"
+        />
         <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
           {({ data, loading }: Query) => {
             if (loading || !data) {

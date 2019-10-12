@@ -110,4 +110,10 @@ const StyledHeader = styled("header")`
     grid-template-columns: 1fr auto;
     border-bottom: 1px solid ${({ theme }) => theme.lightgrey};
   }
+
+  @media (max-width: 768px) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
 `;
