@@ -77,7 +77,7 @@ const IconWrapper = styled("div")`
     //@ts-ignore
     color: ${props => (props.rotate === "true" ? `red` : "black")};
     //@ts-ignore
-    transform: ${props => (props.rotate === "true" ? `rotate(180deg)` : "")};
+    transform: ${props => (props.rotate === "true" ? `rotate(225deg)` : "")};
     transition: transform 0.5s;
   }
 `;
