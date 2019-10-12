@@ -70,8 +70,7 @@ const StyledHeader = styled("header")`
     transition: background 0.2s linear;
 
     &:hover {
-      background: #dfecf5;
-      color: red;
+      background: ${({ theme }) => theme.linkBG};
 
       .text-wrapper p {
         transition: color 0.2s linear;
@@ -90,12 +89,8 @@ const StyledHeader = styled("header")`
       padding: 1rem;
       width: 150px;
     }
-
-    /* @media (max-width: 1300px) {
-      grid-template-columns: 1fr;
-      justify-content: center;
-    } */
   }
+
   .sub-bar {
     display: grid;
     grid-template-columns: 1fr auto;

@@ -50,7 +50,6 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
 
 const StyledSubheader = styled("section")`
   background: #f5f8fa no-repeat 50%;
-  /* background-image: url("/static/subheader.png"); */
   background-size: cover;
   min-height: 300px;
   border: 1px solid rgba(0, 0, 0, 0.125);

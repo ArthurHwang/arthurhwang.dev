@@ -17,7 +17,6 @@ const Post: NextPage<any> = props => {
     // url,
   } = post;
 
-  console.log(props);
   return (
     <Fragment>
       <Head>

@@ -26,5 +26,3 @@ export const Meta: React.FC<any> = () => (
     <title>ArthurHwang.dev</title>
   </Head>
 );
-
-// export default Meta;

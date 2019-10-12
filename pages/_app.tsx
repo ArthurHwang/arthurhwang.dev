@@ -14,6 +14,7 @@ const theme = {
   lightgrey: "#E1E1E1",
   link: "#0096cc",
   linkHover: "#007199",
+  linkBG: "#dfecf5",
   offWhite: "#EDEDED",
   maxWidth: "1000px",
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
@@ -29,9 +30,9 @@ class MyApp extends App<any> {
           <Layout>
             <NextNProgress
               color="red"
-              startPosition={0.3}
+              startPosition={0}
               stopDelayMs={0}
-              height="2"
+              height="1.3"
             />
             <Component {...pageProps} />
           </Layout>

@@ -20,9 +20,7 @@ export const Post: React.FC<Props> = ({
     <StyledPost>
       <Link href={`blog/${url}`}>
         <div className="container">
-          {/* <a> */}
           <img alt={alt} src={image} />
-          {/* </a> */}
           <div className="text">
             <h2>{title}</h2>
             <h4>{date}</h4>

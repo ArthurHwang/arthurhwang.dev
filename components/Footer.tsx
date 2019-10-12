@@ -13,13 +13,11 @@ export const Footer: React.FC<any> = () => {
         onClick={() => alert("Hi!")}
         fontSize="60px"
         beat={true}
-        // shake={true}
         color="#43853d"
       />
       <LogoGithub
         onClick={() => alert("Hi!")}
         fontSize="60px"
-        // beat={true}
         shake={true}
         color="#43853d"
       />
@@ -27,7 +25,6 @@ export const Footer: React.FC<any> = () => {
         onClick={() => alert("Hi!")}
         fontSize="60px"
         beat={true}
-        // shake={true}
         color="#43853d"
       />
       <IosRefresh fontSize="60px" color="#347eff" rotate={true} />
@@ -41,7 +38,6 @@ export const Footer: React.FC<any> = () => {
 const StyledFooter = styled("footer")`
   background-color: #eee;
   margin: 0;
-
   display: flex;
   justify-content: space-between;
 `;

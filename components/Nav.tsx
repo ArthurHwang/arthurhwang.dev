@@ -1,20 +1,28 @@
 import styled from "styled-components";
-import Link from "next/link";
+import { ActiveLink as Link } from "./ActiveLink";
 
 export const Nav: React.FC<any> = () => {
   return (
     <StyledNav>
-      <Link href="/about">
-        <a>About</a>
+      <Link activeClassName="active" href="/about">
+        <div className="link-box">
+          <a>About</a>
+        </div>
       </Link>
-      <Link href="/projects">
-        <a>Projects</a>
+      <Link activeClassName="active" href="/projects">
+        <div className="link-box">
+          <a>Projects</a>
+        </div>
       </Link>
-      <Link href="/blog">
-        <a>Blog</a>
+      <Link activeClassName="active" partiallyActive={true} href="/blog">
+        <div className="link-box">
+          <a>Blog</a>
+        </div>
       </Link>
-      <Link href="/contact">
-        <a>Contact</a>
+      <Link activeClassName="active" href="/contact">
+        <div className="link-box">
+          <a>Contact</a>
+        </div>
       </Link>
     </StyledNav>
   );
@@ -25,11 +33,38 @@ const StyledNav = styled("nav")`
   padding: 0;
   display: flex;
   justify-self: end;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+
+  .active {
+    a:after {
+      height: 2px;
+      background: red;
+      content: "";
+      width: 65px;
+    }
+  }
+
+  .link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s linear;
+
+    &:hover {
+      background: ${({ theme }) => theme.linkBG};
+
+      a {
+        transition: color 0.2s linear;
+        color: ${({ theme }) => theme.link};
+      }
+    }
+  }
 
   a,
   button {
     padding: 1rem 3rem;
+    height: 100%;
     display: flex;
     align-items: center;
     position: relative;
@@ -40,10 +75,6 @@ const StyledNav = styled("nav")`
     border: 0;
     cursor: pointer;
     color: ${({ theme }) => theme.black};
-    @media (max-width: 700px) {
-      font-size: 1.4rem;
-      padding: 0 10px;
-    }
 
     &:after {
       height: 1px;
@@ -61,29 +92,20 @@ const StyledNav = styled("nav")`
     &:focus {
       outline: none;
       &:after {
-        width: calc(100% - 60px);
+        width: calc(100% - 65px);
+        @media (max-width: 833px) {
+          width: calc(100% - 45px);
+        }
       }
-      /* @media (max-width: 700px) {
-        width: calc(100% - 10px);
-      } */
+    }
+
+    @media (max-width: 833px) {
+      font-size: 1.6rem;
+      padding: 0 20px;
     }
   }
-  /* @media (max-width: 1300px) {
-    border-top: 1px solid ${({ theme }) => theme.lightgrey};
-    width: 100%;
-    justify-content: center;
-    font-size: 1.5rem;
-  } */
-`;
 
-/* &:before {
-      content: "";
-      width: 2px;
-      background: ${({theme}) => themelightgrey};
-      height: 100%;
-      left: 0;
-      position: absolute;
-      transform: skew(-20deg);
-      top: 0;
-      bottom: 0;
-    } */
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
