@@ -1,54 +1,54 @@
 import { Fragment } from "react";
-import { Query } from "react-apollo";
+// import { Query } from "react-apollo";
 import { NextPage } from "next";
 import styled from "styled-components";
 import Head from "next/head";
-import gql from "graphql-tag";
+// import gql from "graphql-tag";
 import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 // import Fonts from "../util/Fonts";
 // import { withApollo } from "../lib/apollo";
 
-const GET_REPOSITORIES_OF_CURRENT_USER = gql`
-  {
-    viewer {
-      repositories(first: 5, orderBy: { direction: DESC, field: STARGAZERS }) {
-        edges {
-          node {
-            id
-            name
-            url
-            descriptionHTML
-            primaryLanguage {
-              name
-            }
-            owner {
-              login
-              url
-            }
-            stargazers {
-              totalCount
-            }
-            viewerHasStarred
-            watchers {
-              totalCount
-            }
-            viewerSubscription
-          }
-        }
-      }
-    }
-  }
-`;
+// const GET_REPOSITORIES_OF_CURRENT_USER = gql`
+//   {
+//     viewer {
+//       repositories(first: 5, orderBy: { direction: DESC, field: STARGAZERS }) {
+//         edges {
+//           node {
+//             id
+//             name
+//             url
+//             descriptionHTML
+//             primaryLanguage {
+//               name
+//             }
+//             owner {
+//               login
+//               url
+//             }
+//             stargazers {
+//               totalCount
+//             }
+//             viewerHasStarred
+//             watchers {
+//               totalCount
+//             }
+//             viewerSubscription
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 const Home: NextPage<any> = () => {
   // useEffect(() => {
   //   Fonts();
   // }, []);
 
-  interface Query {
-    data: any;
-    loading: any;
-  }
+  // interface Query {
+  //   data: any;
+  //   loading: any;
+  // }
 
   return (
     <Fragment>
