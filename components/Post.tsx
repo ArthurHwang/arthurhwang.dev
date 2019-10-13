@@ -32,8 +32,6 @@ export const Post: React.FC<Props> = ({
 };
 
 const StyledPost = styled("div")`
-  /* width: 200px; */
-
   .container {
     overflow: hidden;
     text-align: center;
@@ -45,15 +43,6 @@ const StyledPost = styled("div")`
     border: 1px solid black;
   }
   img {
-    /* width: 600px; */
-    /* object-fit: contain; */
-    /* width: 100%; */
-
-    /* width: 100%; */
-    /* object-fit: contain; */
-
-    /* object-fit: cover; */
-    /* height: 100%; */
     object-fit: cover;
   }
   a {
@@ -63,7 +52,6 @@ const StyledPost = styled("div")`
     border-bottom: none;
   }
   .text {
-    /* margin-top: -160px; */
     padding: 24px;
     position: absolute;
     top: 0;
@@ -71,8 +59,6 @@ const StyledPost = styled("div")`
     & > * {
       color: red;
     }
-
-    /* text-align: center; */
   }
   h2 {
     color: white;

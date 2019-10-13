@@ -38,7 +38,7 @@ const StyledNav = styled("nav")`
   .active {
     a:after {
       height: 2px;
-      background: red;
+      background: #72cc96;
       content: "";
       width: 65px;
     }
@@ -77,8 +77,8 @@ const StyledNav = styled("nav")`
     color: ${({ theme }) => theme.black};
 
     &:after {
-      height: 1px;
-      background: red;
+      height: 2px;
+      background: #72cc96;
       content: "";
       width: 0;
       position: absolute;

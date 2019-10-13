@@ -29,10 +29,10 @@ class MyApp extends App<any> {
           <GlobalStyle />
           <Layout>
             <NextNProgress
-              color="red"
+              color="#E31B6D"
               startPosition={0}
               stopDelayMs={0}
-              height="1.3"
+              height="1.5"
             />
             <Component {...pageProps} />
           </Layout>
@@ -211,7 +211,7 @@ body {
   margin: 0;
   font-size: 1.6rem;
   line-height: 2;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
+  font-family:  "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.8;

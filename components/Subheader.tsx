@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 
 interface Props {
   pathName: string;
@@ -39,26 +40,51 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
       default:
         return (
           <SubheaderInner>
-            <h1>Rong rong u ass is monsterous</h1>
-            <h2>U ass end world hunger</h2>
+            <h1>Arthur Hwang</h1>
+            <h1>
+              Full Stack Developer / React / Node{" "}
+              <span>
+                <LogoNodejs
+                  onClick={() => alert("Hi!")}
+                  fontSize="60px"
+                  beat={true}
+                  color="#43853d"
+                  style={{ zIndex: "-1" }}
+                />
+              </span>
+            </h1>
+
+            {/* <h2>
+              I love to learn about and create things with cutting-edge web
+              technologies
+            </h2> */}
           </SubheaderInner>
         );
     }
   }
-  return <StyledSubheader>{contentSwitch(pathName)}</StyledSubheader>;
+  return (
+    <StyledSubheader>
+      <ContentWrap>{contentSwitch(pathName)}</ContentWrap>
+    </StyledSubheader>
+  );
 };
 
-const StyledSubheader = styled("section")`
-  background: #f5f8fa no-repeat 50%;
-  background-size: cover;
-  min-height: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+const ContentWrap = styled("div")`
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: 0 auto;
 `;
 
 const SubheaderInner = styled("div")`
-  h1,
-  h2 {
+  h1 {
     font-size: 5rem;
-    color: red;
   }
+  h2 {
+    font-size: 3rem;
+  }
+`;
+const StyledSubheader = styled("section")`
+  background: #f5f8fa no-repeat 50%;
+  background-size: cover;
+  min-height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 `;

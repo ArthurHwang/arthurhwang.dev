@@ -13,7 +13,7 @@ export const Header: React.FC<any> = () => {
               <div className="logo-img"></div>
               <div className="text-wrapper">
                 <p className="name">Arthur Hwang</p>
-                <p className="title">Software Engineer</p>
+                <p className="title">Full Stack Developer</p>
               </div>
             </StyledLogo>
           </div>
@@ -28,7 +28,6 @@ export const Header: React.FC<any> = () => {
 const StyledLogo = styled("div")`
   font-size: 2.5rem;
   position: relative;
-  z-index: 2;
   display: grid;
   grid-template-columns: 65px 1fr;
   grid-template-rows: 65px;
@@ -84,7 +83,8 @@ const StyledLogo = styled("div")`
 
 const StyledHeader = styled("header")`
   font-weight: 600;
-  background-color: #eee;
+  background-color: #fff;
+  z-index: 1;
 
   .hover-box {
     cursor: pointer;
@@ -116,7 +116,7 @@ const StyledHeader = styled("header")`
   .sub-bar {
     display: grid;
     grid-template-columns: 1fr auto;
-    border-bottom: 1px solid ${({ theme }) => theme.lightgrey};
+    /* border-bottom: 1px solid ${({ theme }) => theme.lightgrey}; */
   }
 
   @media (max-width: 768px) {

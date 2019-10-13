@@ -60,9 +60,7 @@ export const NavMobile: React.FC<any> = () => {
   );
 };
 
-const IconWrapper = styled("div")`
-  //@ts-ignore
-  color: ${props => console.log(props)};
+const IconWrapper = styled("div")<{ rotate: string }>`
   height: 100%;
   width: 100%;
   display: flex;
@@ -74,9 +72,7 @@ const IconWrapper = styled("div")`
     position: relative;
     font-size: 3.5rem;
     right: 1.5rem;
-    //@ts-ignore
     color: ${props => (props.rotate === "true" ? `red` : "black")};
-    //@ts-ignore
     transform: ${props => (props.rotate === "true" ? `rotate(225deg)` : "")};
     transition: transform 0.5s;
   }
