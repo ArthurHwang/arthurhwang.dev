@@ -35,7 +35,7 @@ const StyledLogo = styled("div")`
   margin: 0.5rem 0.5rem 0.5rem 2rem;
 
   @media (max-width: 768px) {
-    margin-left: 0.25rem;
+    margin-left: 0.5rem;
   }
 
   .logo-img {
