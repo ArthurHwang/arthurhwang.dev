@@ -63,13 +63,13 @@ const StyledNav = styled("nav")`
       height: 2px;
       background: ${({ theme }) => theme.yellow};
       content: "";
-      width: 65px;
+      width: calc(100% - 30px);
     }
   }
 
   a,
   button {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     height: 100%;
     display: flex;
     align-items: center;
@@ -99,17 +99,17 @@ const StyledNav = styled("nav")`
     &:focus {
       outline: none;
       &:after {
-        width: calc(100% - 65px);
-        @media (max-width: 833px) {
+        width: calc(100% - 30px);
+        /* @media (max-width: 833px) {
           width: calc(100% - 45px);
-        }
+        } */
       }
     }
-
+    /* 
     @media (max-width: 833px) {
       font-size: 1.6rem;
       padding: 0 20px;
-    }
+    } */
   }
 
   @media (max-width: 768px) {
