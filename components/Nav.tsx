@@ -75,7 +75,7 @@ const StyledNav = styled("nav")`
     background: none;
     border: 0;
     cursor: pointer;
-    color: ${({ theme }) => theme.black};
+    color: ${({ theme }) => theme.darkgrey};
 
     &:after {
       height: 2px;
