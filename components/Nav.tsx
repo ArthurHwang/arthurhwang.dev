@@ -35,15 +35,6 @@ const StyledNav = styled("nav")`
   justify-self: end;
   font-size: 1.6rem;
 
-  .active {
-    a:after {
-      height: 2px;
-      background: ${({ theme }) => theme.yellow};
-      content: "";
-      width: 65px;
-    }
-  }
-
   .link-box {
     display: flex;
     align-items: center;
@@ -56,8 +47,21 @@ const StyledNav = styled("nav")`
 
       a {
         transition: color 0.2s linear;
-        color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.secondary};
       }
+    }
+  }
+
+  .active {
+    a:after {
+      height: 2px;
+      background: ${({ theme }) => theme.yellow};
+      content: "";
+      width: 65px;
+    }
+
+    .link-box a {
+      background: ${({ theme }) => theme.accent};
     }
   }
 
@@ -74,7 +78,7 @@ const StyledNav = styled("nav")`
     background: none;
     border: 0;
     cursor: pointer;
-    color: ${({ theme }) => theme.darkgrey};
+    color: ${({ theme }) => theme.grey};
 
     &:after {
       height: 2px;

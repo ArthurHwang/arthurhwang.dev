@@ -5,9 +5,16 @@ import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 import { IoIosKeypad } from "react-icons/io";
 import { useState } from "react";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export const NavMobile: React.FC<any> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return window.addEventListener("scroll", handleScroll);
+  }, []);
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
@@ -17,6 +24,11 @@ export const NavMobile: React.FC<any> = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleScroll = () => {
+    console.log("hi");
+    setMenuOpen(false);
+  };
+
   return (
     <NavMobileWrapper>
       <StyledNavMobile>
@@ -24,7 +36,10 @@ export const NavMobile: React.FC<any> = () => {
           <IoIosKeypad />
         </IconWrapper>
         {menuOpen && (
-          <StyledNavMenu className={menuOpen ? "fade" : "fadeOut"}>
+          <StyledNavMenu
+            onScroll={handleScroll}
+            className={menuOpen ? "fade" : "fadeOut"}
+          >
             <LogoNodejs
               onClick={() => alert("Hi!")}
               fontSize="60px"
@@ -71,9 +86,7 @@ const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
     font-size: 3rem;
     right: 1.5rem;
     color: ${props =>
-      props.rotate === "true"
-        ? props.theme.yellow
-        : props.theme.black};
+      props.rotate === "true" ? props.theme.yellow : props.theme.black};
     transform: ${props => (props.rotate === "true" ? `rotate(225deg)` : "")};
     transition: transform 0.5s;
   }
@@ -89,10 +102,10 @@ const StyledNavMobile = styled("nav")`
 const StyledNavMenu = styled("div")`
   position: fixed;
   left: 0;
-  top: 60px;
+  top: 61px;
   width: 100vw;
-  background-color: ${({ theme }) => theme.lightgrey};
-  height: calc(100vh - 75px);
+  background-color: ${({ theme }) => theme.grey};
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
 

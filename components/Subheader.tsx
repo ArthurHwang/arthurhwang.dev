@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 
 interface Props {
   pathName: string;
@@ -40,9 +40,10 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
       default:
         return (
           <SubheaderInner>
-            <h1>Arthur Hwang</h1>
+            <h1>Brute Force Determination</h1>
+            <h2>Heuristic Approach</h2>
             <h1>
-              Full Stack Developer / React / Node{" "}
+              {/* Full Stack Developer / React / Node{" "}
               <span>
                 <LogoNodejs
                   onClick={() => alert("Hi!")}
@@ -51,7 +52,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
                   color="#43853d"
                   style={{ zIndex: "-1" }}
                 />
-              </span>
+              </span> */}
             </h1>
 
             {/* <h2>
@@ -76,6 +77,10 @@ const ContentWrap = styled("div")`
 `;
 
 const SubheaderInner = styled("div")`
+  h1,
+  h2 {
+    text-justify: left;
+  }
   h1 {
     font-size: 5rem;
     color: ${({ theme }) => theme.primary};

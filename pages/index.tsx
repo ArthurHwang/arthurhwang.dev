@@ -9,6 +9,7 @@ import Head from "next/head";
 // import Fonts from "../util/Fonts";
 // import { withApollo } from "../lib/apollo";
 // import { useEffect } from "react";
+import Link from "next/link";
 
 // const GET_REPOSITORIES_OF_CURRENT_USER = gql`
 //   {
@@ -88,6 +89,9 @@ const Home: NextPage<any> = () => {
           an experienced website developer, I help people and companies create
           an online presence that provides an optimal experience.
         </p>
+        <Link href="/">
+          <a>GO HOME</a>
+        </Link>
 
         <h2>Connect with me</h2>
         <p>

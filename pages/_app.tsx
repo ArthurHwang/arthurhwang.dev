@@ -13,7 +13,7 @@ const theme = {
   secondaryAccent: "#FE4A49",
   lightgrey: "#f6f6f6",
   yellow: "#faa916",
-  darkgrey: "#525252",
+  grey: "#525252",
   black: "#1e1e1e",
   blue: "#3454d1",
   link: "#4AD7D1",
@@ -222,17 +222,35 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-rendering: optimizeLegibility; */
-  text-align: justify;
+  /* text-align: justify; */
   text-rendering: geometricPrecision;
+}
+
+h1,h2,h3 {
+  color: ${theme.black};
+}
+
+p {
+  color: ${theme.grey};
 }
 
 a {
   text-decoration: none;
-  color: ${theme.link};
+  color: ${theme.blue};
   font-weight: 500;
+  transition: color 0.2s linear;
+  background-color: transparent;
+  background-image: linear-gradient(to right,#4AD7D1,#4AD7D1 50%,white 50%);
+  background-position: 100%;
+  background-size: 200% 100%;
+  transition: all .4s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   &:hover {
-    color: ${theme.linkHover}
+    /* color: ${theme.blue}; */
+    /* text-decoration: none; */
+    background-position: 0%;
   }
 }
 `;

@@ -2,8 +2,15 @@ import { Nav } from "./Nav";
 import styled from "styled-components";
 import Link from "next/link";
 import { NavMobile } from "./NavMobile";
+// import { useState } from "react";
 
 export const Header: React.FC<any> = () => {
+  // const [logoClick, setLogoClick] = useState(false);
+
+  // const handleLogoClick = () => {
+  //   setLogoClick(!logoClick)
+  // }
+
   return (
     <StyledHeader>
       <div className="bar">
@@ -87,8 +94,8 @@ const StyledLogo = styled("div")`
 const StyledHeader = styled("header")`
   font-weight: 600;
   z-index: 1;
-  background: ${({ theme }) => theme.primary};
-  border-bottom: 1px solid ${({ theme }) => theme.lightgrey};
+  background: ${({ theme }) => theme.lightgrey};
+  /* border-bottom: 1px solid ${({ theme }) => theme.lightgrey}; */
 
   .hover-box {
     cursor: pointer;
