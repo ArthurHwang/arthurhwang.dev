@@ -69,7 +69,7 @@ const StyledNav = styled("nav")`
 
   a,
   button {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     height: 100%;
     display: flex;
     align-items: center;

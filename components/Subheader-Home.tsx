@@ -29,6 +29,12 @@ export const SubheaderHome: React.FC<any> = () => {
 const TextWrap = styled("div")`
   margin: 0 auto;
   width: 578px;
+  position: relative;
+  bottom: 30px;
+
+  @media (max-width: 480px) {
+    bottom: 20px;
+  }
 `;
 
 const ContentWrap = styled("div")`
@@ -78,7 +84,7 @@ const ContentWrap = styled("div")`
 
   .content {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
@@ -88,6 +94,7 @@ const ContentWrap = styled("div")`
 
     @media (max-width: 480px) {
       font-size: 1.6rem;
+      bottom: 10px;
     }
 
     &__container {
