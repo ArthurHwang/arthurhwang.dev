@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SubheaderHome } from "./Subheader-Home";
+import { SubheaderDefault } from "./Subheader-Default";
 interface Props {
   pathName: string;
 }
@@ -9,31 +10,50 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
     switch (path) {
       case "/about":
         return (
-          <SubheaderInner>
-            <h1>hi</h1>
-            <h2>what</h2>
-          </SubheaderInner>
+          <SubheaderDefault>
+            <h1>About</h1>
+            <h2>Some things about me.</h2>
+          </SubheaderDefault>
         );
       case "/projects":
         return (
-          <SubheaderInner>
-            <h1>projects</h1>
-            <h2>hehehehe</h2>
-          </SubheaderInner>
+          <SubheaderDefault>
+            <h1>Projects</h1>
+            <h2>
+              See my projects below. Unless explicity stated,{" "}
+              <strong>all source code is completely authored by me.</strong>
+            </h2>
+          </SubheaderDefault>
         );
       case "/blog":
         return (
-          <SubheaderInner>
-            <h1>hi</h1>
-            <h2>what</h2>
-          </SubheaderInner>
+          <SubheaderDefault>
+            <h1>Blog</h1>
+            <h2>
+              This blog is powered by Contentful Delivery API and a lot of
+              markdown parsing.
+            </h2>
+          </SubheaderDefault>
+        );
+      case "/blog/[post]":
+        return (
+          <SubheaderDefault>
+            <h1>Blog</h1>
+            <h2>
+              This blog is powered by Contentful Delivery API and a lot of
+              markdown parsing.
+            </h2>
+          </SubheaderDefault>
         );
       case "/contact":
         return (
-          <SubheaderInner>
-            <h1>contact me</h1>
-            <h2>what</h2>
-          </SubheaderInner>
+          <SubheaderDefault>
+            <h1>Contact Me</h1>
+            <h2>
+              You're awesome and I'm flattered. Please feel free to reach out to
+              me for any reason!
+            </h2>
+          </SubheaderDefault>
         );
       default:
         return <SubheaderHome />;
@@ -41,19 +61,6 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
   }
   return <StyledSubheader>{contentSwitch(pathName)}</StyledSubheader>;
 };
-
-const SubheaderInner = styled("div")`
-  h1 {
-    margin: 0;
-    font-size: 5rem;
-    color: ${({ theme }) => theme.primary};
-  }
-  h2 {
-    margin: 0;
-    font-size: 3rem;
-    color: ${({ theme }) => theme.primary};
-  }
-`;
 
 const StyledSubheader = styled("section")`
   background: ${({ theme }) => theme.lightgrey} no-repeat 50%;
