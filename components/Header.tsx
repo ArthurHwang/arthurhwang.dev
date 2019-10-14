@@ -87,6 +87,8 @@ const StyledLogo = styled("div")`
 const StyledHeader = styled("header")`
   font-weight: 600;
   z-index: 1;
+  background: ${({ theme }) => theme.primary};
+  border-bottom: 1px solid ${({ theme }) => theme.lightgrey};
 
   .hover-box {
     cursor: pointer;
@@ -94,16 +96,16 @@ const StyledHeader = styled("header")`
     transition: background 0.2s linear;
 
     &:hover {
-      background: ${({ theme }) => theme.accent};
+      /* background: ${({ theme }) => theme.accent}; */
 
       .text-wrapper p {
-        transition: color 0.2s linear;
-        color: ${({ theme }) => theme.primary};
+        /* transition: color 0.2s linear; */
+        /* color: ${({ theme }) => theme.primary}; */
       }
 
       .text-wrapper p.title {
-        transition: color 0.2s linear;
-        color: ${({ theme }) => theme.yellow};
+        /* transition: color 0.2s linear; */
+        /* color: ${({ theme }) => theme.yellow}; */
       }
     }
   }

@@ -43,7 +43,7 @@ const StyledLayout = styled("div")`
 const Inner = styled("section")`
   max-width: ${({ theme }) => theme.maxWidth};
   margin: 0 auto;
-  padding: 2rem 0;
-  background-color: ${({theme}) => theme.primary};
+  padding: 2rem;
+  background-color: ${({ theme }) => theme.primary};
   /* min-height: ; */
 `;

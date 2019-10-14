@@ -72,6 +72,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
 const ContentWrap = styled("div")`
   max-width: ${({ theme }) => theme.maxWidth};
   margin: 0 auto;
+  padding: 0 2rem;
 `;
 
 const SubheaderInner = styled("div")`

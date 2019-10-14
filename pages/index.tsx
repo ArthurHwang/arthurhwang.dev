@@ -6,9 +6,9 @@ import styled from "styled-components";
 import Head from "next/head";
 // import gql from "graphql-tag";
 // import LogoNodejs from "react-ionicons/lib/LogoNodejs";
-import Fonts from "../util/Fonts";
+// import Fonts from "../util/Fonts";
 // import { withApollo } from "../lib/apollo";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 // const GET_REPOSITORIES_OF_CURRENT_USER = gql`
 //   {
@@ -43,9 +43,9 @@ import { useEffect } from "react";
 // `;
 
 const Home: NextPage<any> = () => {
-  useEffect(() => {
-    Fonts();
-  }, []);
+  // useEffect(() => {
+  //   Fonts();
+  // }, []);
 
   // interface Query {
   //   data: any;
