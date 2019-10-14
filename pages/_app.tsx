@@ -7,17 +7,20 @@ import withApolloClient from "../lib/with-apollo-client";
 import { ApolloProvider } from "react-apollo";
 
 const theme = {
-  red: "#FF0000",
-  black: "#393939",
-  grey: "#3A3A3A",
-  blue: "#2b486d",
-  lightgrey: "#E1E1E1",
-  link: "#0096cc",
-  linkHover: "#007199",
+  primary: "#fff",
+  secondary: "#001730",
+  accent: "#4AD7D1",
+  secondaryAccent: "#FE4A49",
+  lightgrey: "#f6f6f6",
+  yellow: "#faa916",
+  darkgrey: "#525252",
+  black: "#1e1e1e",
+  blue: "#3454d1",
+  link: "#4AD7D1",
+  linkHover: "#4AD7D1",
   linkBG: "#dfecf5",
-  offWhite: "#EDEDED",
-  maxWidth: "1000px",
-  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
+  maxWidth: "1000px"
+  // bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
 };
 
 class MyApp extends App<any> {
@@ -29,7 +32,7 @@ class MyApp extends App<any> {
           <GlobalStyle />
           <Layout>
             <NextNProgress
-              color="#E31B6D"
+              color="#FE4A49"
               startPosition={0}
               stopDelayMs={0}
               height="1.5"

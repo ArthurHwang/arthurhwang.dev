@@ -43,7 +43,7 @@ const StyledLogo = styled("div")`
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
-    border: 1px solid ${({ theme }) => theme.lightgrey};
+    border: 3px solid ${({ theme }) => theme.accent};
   }
 
   p {
@@ -57,6 +57,7 @@ const StyledLogo = styled("div")`
     font-size: 2.5rem;
     position: relative;
     bottom: 2px;
+    color: #eee;
 
     @media (max-width: 413px) {
       font-size: 1.8rem;
@@ -67,7 +68,7 @@ const StyledLogo = styled("div")`
 
   p.title {
     font-size: 1.6rem;
-    color: #b3b3b3;
+    color: #fe4a49;
     position: relative;
     bottom: 10px;
     font-style: italic;
@@ -83,8 +84,9 @@ const StyledLogo = styled("div")`
 
 const StyledHeader = styled("header")`
   font-weight: 600;
-  background-color: #fff;
+  background-color: #001730;
   z-index: 1;
+
 
   .hover-box {
     cursor: pointer;

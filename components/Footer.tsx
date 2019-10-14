@@ -39,7 +39,7 @@ export const Footer: React.FC<any> = () => {
 };
 
 const StyledFooter = styled("footer")`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.secondary};
   margin: 0;
   display: flex;
   /* position: sticky; */

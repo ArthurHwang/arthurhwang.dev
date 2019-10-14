@@ -52,11 +52,11 @@ const StyledNav = styled("nav")`
     transition: background 0.2s linear;
 
     &:hover {
-      background: ${({ theme }) => theme.linkBG};
+      background: ${({ theme }) => theme.secondaryAccent};
 
       a {
         transition: color 0.2s linear;
-        color: ${({ theme }) => theme.link};
+        color: ${({ theme }) => theme.accent};
       }
     }
   }
@@ -69,16 +69,16 @@ const StyledNav = styled("nav")`
     align-items: center;
     position: relative;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1em;
+    font-weight: 600;
+    font-size: 1.4rem;
     background: none;
     border: 0;
     cursor: pointer;
-    color: ${({ theme }) => theme.black};
+    color: #eee;
 
     &:after {
       height: 2px;
-      background: #72cc96;
+      background: #4ad7d1;
       content: "";
       width: 0;
       position: absolute;
