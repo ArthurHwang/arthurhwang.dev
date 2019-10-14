@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styled from "styled-components";
-
 interface Props {
   alt: string;
   date: string;

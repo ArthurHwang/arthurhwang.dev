@@ -2,15 +2,8 @@ import { Nav } from "./Nav";
 import styled from "styled-components";
 import Link from "next/link";
 import { NavMobile } from "./NavMobile";
-// import { useState } from "react";
 
 export const Header: React.FC<any> = () => {
-  // const [logoClick, setLogoClick] = useState(false);
-
-  // const handleLogoClick = () => {
-  //   setLogoClick(!logoClick)
-  // }
-
   return (
     <StyledHeader>
       <div className="bar">

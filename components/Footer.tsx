@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { FaReact } from "react-icons/fa";
 import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 import LogoGithub from "react-ionicons/lib/LogoGithub";
 import IosRefresh from "react-ionicons/lib/IosRefresh";
@@ -10,7 +9,6 @@ import MdHeart from "react-ionicons/lib/MdHeart";
 export const Footer: React.FC<any> = () => {
   return (
     <StyledFooter>
-      {/* <FaReact className="icon-react" /> */}
       <LogoNodejs
         onClick={() => alert("Hi!")}
         fontSize="60px"
@@ -42,12 +40,5 @@ const StyledFooter = styled("footer")`
   background-color: ${({ theme }) => theme.lightgrey};
   margin: 0;
   display: flex;
-  /* position: sticky; */
-  /* bottom: 0; */
   justify-content: space-between;
-  /* border-top: 1px solid ${({ theme }) => theme.lightgrey}; */
-  .icon-react {
-    color: blue;
-    font-size: 4rem;
-  }
 `;

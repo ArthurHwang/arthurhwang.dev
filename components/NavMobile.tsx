@@ -1,10 +1,8 @@
 import styled from "styled-components";
-// import IosApps from "react-ionicons/lib/IosApps";
-// import { Fragment } from "react";
 import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+import Link from "next/link";
 import { IoIosKeypad } from "react-icons/io";
 import { useState } from "react";
-import Link from "next/link";
 import { useEffect } from "react";
 
 export const NavMobile: React.FC<any> = () => {
@@ -12,7 +10,6 @@ export const NavMobile: React.FC<any> = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return window.addEventListener("scroll", handleScroll);
   }, []);
 
@@ -25,7 +22,6 @@ export const NavMobile: React.FC<any> = () => {
   };
 
   const handleScroll = () => {
-    console.log("hi");
     setMenuOpen(false);
   };
 
@@ -47,22 +43,22 @@ export const NavMobile: React.FC<any> = () => {
               color="#43853d"
             />
             <Link href="/about">
-              <a className="link-wrap" onClick={handleLink}>
+              <a className="link-wrap link" onClick={handleLink}>
                 About
               </a>
             </Link>
             <Link href="/projects">
-              <a className="link-wrap" onClick={handleLink}>
+              <a className="link-wrap link" onClick={handleLink}>
                 Projects
               </a>
             </Link>
             <Link href="/blog">
-              <a className="link-wrap" onClick={handleLink}>
+              <a className="link-wrap link" onClick={handleLink}>
                 Blog
               </a>
             </Link>
             <Link href="/contact">
-              <a className="link-wrap" onClick={handleLink}>
+              <a className="link-wrap link" onClick={handleLink}>
                 Contact
               </a>
             </Link>

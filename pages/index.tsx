@@ -90,7 +90,7 @@ const Home: NextPage<any> = () => {
           an online presence that provides an optimal experience.
         </p>
         <Link href="/">
-          <a>GO HOME</a>
+          <a className="link">GO HOME</a>
         </Link>
 
         <h2>Connect with me</h2>

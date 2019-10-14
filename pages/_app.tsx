@@ -16,8 +16,8 @@ const theme = {
   grey: "#525252",
   black: "#1e1e1e",
   blue: "#3454d1",
-  link: "#4AD7D1",
-  linkHover: "#4AD7D1",
+  // link: "#4AD7D1",
+  // linkHover: "#4AD7D1",
   linkBG: "#dfecf5",
   maxWidth: "1000px"
   // bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
@@ -197,7 +197,6 @@ template {
 }
 /* NormalizeCSS End*/
 
-
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -221,8 +220,6 @@ body {
   letter-spacing: 0.1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-rendering: optimizeLegibility; */
-  /* text-align: justify; */
   text-rendering: geometricPrecision;
 }
 
@@ -230,7 +227,7 @@ h1,h2,h3 {
   color: ${theme.black};
 }
 
-p {
+p, span {
   color: ${theme.grey};
 }
 
@@ -238,9 +235,16 @@ a {
   text-decoration: none;
   color: ${theme.blue};
   font-weight: 500;
-  transition: color 0.2s linear;
-  background-color: transparent;
-  background-image: linear-gradient(to right,#4AD7D1,#4AD7D1 50%,white 50%);
+  
+  &:hover {
+    color: ${theme.accent};
+  }
+}
+
+a.link {
+  text-decoration: none;
+  font-weight: 500;
+  background-image: linear-gradient(to right,#4AD7D1,#4AD7D1 50%,${theme.blue} 50%);
   background-position: 100%;
   background-size: 200% 100%;
   transition: all .4s;
@@ -248,64 +252,7 @@ a {
   -webkit-text-fill-color: transparent;
 
   &:hover {
-    /* color: ${theme.blue}; */
-    /* text-decoration: none; */
     background-position: 0%;
   }
 }
 `;
-
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// static async getInitialProps(appContext) {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//
-//   return { ...appProps }
-// }
-
-/* @font-face {
-    font-family: 'Roboto';
-    src: url('/static/fonts/Roboto-Regular.ttf');
-    font-weight: 400;
-    font-display: auto;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('/static/fonts/Roboto-Bold.ttf');
-    font-weight: 700;
-    font-display: auto;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('/static/fonts/Roboto-Medium.ttf');
-    font-weight: 500;
-    font-display: auto;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('/static/fonts/Montserrat-Regular.ttf');
-    font-weight: 400;
-    font-display: auto;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('/static/fonts/Montserrat-SemiBold.ttf');
-    font-weight: 500;
-    font-display: auto;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('/static/fonts/Montserrat-Bold.ttf');
-    font-weight: 700;
-    font-display: auto;
-    font-style: normal;
-} */
