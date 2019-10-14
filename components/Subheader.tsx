@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SubheaderHome } from "./Subheader-Home";
 // import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 
 interface Props {
@@ -38,13 +39,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
           </SubheaderInner>
         );
       default:
-        return (
-          <SubheaderInner>
-            <h1>Hi, I'm Arthur</h1>
-            <h2>Brute Force Determination</h2>
-            <h2>Heuristic Approach</h2>
-          </SubheaderInner>
-        );
+        return <SubheaderHome />;
     }
   }
   return (
@@ -61,10 +56,6 @@ const ContentWrap = styled("div")`
 `;
 
 const SubheaderInner = styled("div")`
-  /* h1,
-  h2 {
-    text-justify: left;
-  } */
   h1 {
     font-size: 5rem;
     color: ${({ theme }) => theme.primary};

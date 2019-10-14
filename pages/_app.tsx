@@ -11,15 +11,15 @@ const theme = {
   secondary: "#001730",
   accent: "#4AD7D1",
   secondaryAccent: "#FE4A49",
-  lightgrey: "#f6f6f6",
   yellow: "#faa916",
+  blue: "#3454d1",
+  lightgrey: "#f6f6f6",
   grey: "#525252",
   black: "#1e1e1e",
-  blue: "#3454d1",
+  maxWidth: "1000px"
   // link: "#4AD7D1",
   // linkHover: "#4AD7D1",
-  linkBG: "#dfecf5",
-  maxWidth: "1000px"
+  // linkBG: "#dfecf5",
   // bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
 };
 
@@ -235,7 +235,7 @@ a {
   text-decoration: none;
   color: ${theme.blue};
   font-weight: 500;
-  
+
   &:hover {
     color: ${theme.accent};
   }

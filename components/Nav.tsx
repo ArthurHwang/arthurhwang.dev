@@ -74,7 +74,7 @@ const StyledNav = styled("nav")`
     position: relative;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background: none;
     border: 0;
     cursor: pointer;
