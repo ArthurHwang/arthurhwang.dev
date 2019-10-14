@@ -1,12 +1,57 @@
 import { Fragment } from "react";
+// import { Query } from "react-apollo";
+import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+import { NextPage } from "next";
 import styled from "styled-components";
 import Head from "next/head";
+// import gql from "graphql-tag";
+// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 // import Fonts from "../util/Fonts";
+// import { withApollo } from "../lib/apollo";
+// import { useEffect } from "react";
+import Link from "next/link";
 
-export default function Home() {
+// const GET_REPOSITORIES_OF_CURRENT_USER = gql`
+//   {
+//     viewer {
+//       repositories(first: 5, orderBy: { direction: DESC, field: STARGAZERS }) {
+//         edges {
+//           node {
+//             id
+//             name
+//             url
+//             descriptionHTML
+//             primaryLanguage {
+//               name
+//             }
+//             owner {
+//               login
+//               url
+//             }
+//             stargazers {
+//               totalCount
+//             }
+//             viewerHasStarred
+//             watchers {
+//               totalCount
+//             }
+//             viewerSubscription
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
+
+const Home: NextPage<any> = () => {
   // useEffect(() => {
   //   Fonts();
   // }, []);
+
+  // interface Query {
+  //   data: any;
+  //   loading: any;
+  // }
 
   return (
     <Fragment>
@@ -17,108 +62,95 @@ export default function Home() {
           content="Full Stack Developer Brute Force Code"
         />
       </Head>
-      <StyledWrap>
+
+      <ContentWrap>
+        <h2>
+          Ideas, code; presence specialising in impactful development & design.
+        </h2>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
-          excepturi porro voluptatum magni aspernatur voluptas, perspiciatis
-          quos placeat eaque ratione doloribus sed. Consectetur placeat harum
-          animi quibusdam quisquam sunt maiores, explicabo possimus repellendus
-          dolorem hic odio magni eum voluptas dolorum nihil laborum sit tempore
-          inventore veritatis provident? Temporibus quidem voluptates commodi
-          distinctio nulla facere quo deserunt rem repellendus tenetur est, cum
-          magni necessitatibus quaerat praesentium natus amet iusto odio
-          deleniti dignissimos. Mollitia, aperiam! Quae recusandae nobis
-          reprehenderit officiis in optio ipsam ratione delectus a est. Neque
-          eius nesciunt eligendi sequi suscipit laborum maiores commodi itaque
-          repellat quod temporibus nobis illum aliquam, ducimus exercitationem
-          cupiditate hic in numquam omnis corrupti delectus quam autem. Sunt
-          harum labore commodi facilis, ducimus unde expedita et cum molestias,
-          rem cumque officia. Voluptate natus optio cumque, fugit dolore
-          nesciunt sapiente molestiae debitis perspiciatis ex non, explicabo
-          amet ipsa esse accusamus exercitationem tempora. Culpa quas
-          necessitatibus officiis dolorem dicta aliquam sit, ratione maiores,
-          delectus accusantium deserunt at perferendis. Eveniet cum
-          voluptatibus, provident cumque ipsa eos quia eaque ipsam! Quis,
-          deserunt necessitatibus? Voluptatum odio quas, excepturi praesentium
-          asperiores a vero dolorem voluptatibus animi. Quo minima
-          necessitatibus, sint, possimus nisi non, molestias obcaecati mollitia
-          dolores aperiam aut earum! Maiores deserunt impedit quo blanditiis
-          rerum! Reiciendis consequatur nesciunt fugiat commodi vero omnis aut
-          similique cum et praesentium quo sed exercitationem odit dicta maxime,
-          ipsam, illo nobis architecto est quam unde voluptatum tempora
-          voluptatibus id. Amet mollitia odit architecto soluta molestias
-          accusantium iure enim, commodi quidem sit quas ullam hic modi eum
-          libero esse fugiat ipsam maiores voluptates! Nostrum odio dolorum
-          neque tenetur commodi at exercitationem! Laborum ex consectetur
-          consequuntur quaerat esse ab nihil! Velit molestiae sunt nihil ratione
-          quidem deleniti maiores tenetur facere blanditiis fugit veritatis
-          explicabo fuga, quibusdam dolorum id dolor earum placeat labore,
-          similique, numquam ea modi ullam. Sequi exercitationem dignissimos
-          reiciendis fuga illo delectus minus quaerat veritatis odit aliquam,
-          aperiam vel, excepturi, rem laboriosam autem modi soluta accusantium
-          laborum repellendus eveniet! Doloremque, fugit consectetur! Assumenda
-          quasi, facere rem, consequuntur maxime voluptatibus velit officia
-          optio qui inventore iusto aliquid cum, sint architecto veritatis
-          distinctio error in quod minus? Ullam dicta hic minus iste temporibus
-          tempore provident ut quis soluta, impedit aliquam, quos nemo possimus
-          esse repellendus delectus. Alias harum vitae dolores, dolorem
-          perspiciatis vero inventore, aliquam rerum velit cupiditate, esse
-          sapiente. Hic quae, cumque rem, voluptatum totam non, incidunt esse
-          quia magnam exercitationem sed! Itaque ducimus eos fuga nobis nesciunt
-          delectus cupiditate porro esse eaque beatae laborum, error sapiente
-          nisi tempore explicabo dolorem assumenda eius, recusandae aperiam
-          impedit. Minus provident fugit eligendi labore soluta libero,
-          distinctio veniam ad perferendis ipsa alias cumque! Aut quasi quas
-          consequuntur est quaerat pariatur, consequatur esse voluptatem.
-          Adipisci officiis eius vero! Eum accusantium magni maiores facere ipsa
-          rerum nihil architecto consequatur dolores odio quisquam, sequi odit
-          nobis mollitia culpa! Fuga in, blanditiis sint vitae quisquam minima
-          saepe hic laboriosam magni rerum velit ad explicabo cupiditate omnis
-          at suscipit qui voluptates deleniti aliquid nihil iste? Doloribus
-          numquam suscipit reiciendis quisquam fugiat sint accusamus tempora.
+          I have worked on projects that have often exceeded expectations, while
+          meeting budget objectives and deadlines. These projects have brought
+          real and significant results for clients. I bring sound business
+          processes and progressive thinking, with a proven ability to work with
+          diverse groups of people at all levels. The value I bring to your
+          organization is not only my performance record, but also my high-level
+          analytical and decision making skills. I welcome the opportunity to
+          discuss your needs and my qualifications.
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis,
-          molestiae nostrum. Impedit maxime debitis cum nesciunt neque sapiente
-          quam commodi ratione, recusandae a? Maiores laudantium eos quos
-          expedita id, ipsa architecto quas nesciunt velit esse quibusdam est
-          eaque minima incidunt sed inventore, aspernatur ullam sit beatae
-          asperiores? Similique doloremque ipsa optio iusto? Sit nesciunt
-          suscipit quidem? Quasi tempora possimus, voluptatum placeat cum, vitae
-          quis nisi soluta iure accusantium, quia autem illo animi deserunt
-          saepe ipsa. Quasi dignissimos, at non delectus dolorem beatae
-          excepturi perferendis corrupti accusamus corporis accusantium, ab
-          voluptate nihil ipsum cum possimus, aspernatur repellat blanditiis.
-          Suscipit voluptate adipisci eaque soluta, enim asperiores
-          necessitatibus a fuga dolorem reprehenderit vitae ratione earum
-          molestiae. Voluptate tempora incidunt minima similique tenetur iure
-          corporis quas possimus architecto deserunt? Enim fugit voluptatem
-          expedita adipisci quod ipsam dolor iusto, modi dolorum sequi odit,
-          nobis doloribus quasi nihil atque eius ratione officia aspernatur et
-          voluptatum dignissimos! Autem repudiandae deleniti a impedit quaerat
-          et corporis nulla molestiae ipsa earum beatae, quae, ipsam obcaecati
-          natus asperiores dolores iste. Placeat possimus porro, eveniet impedit
-          odio soluta rem dolor ducimus ea ipsum obcaecati, magni sit,
-          accusantium similique? Iusto delectus repudiandae iste commodi eaque,
-          nam totam ipsum error neque deleniti nulla. Magnam praesentium ea in
-          porro reiciendis et eos aliquid corporis facere quasi. Accusamus ipsa
-          ad eos optio quas magni odio! Asperiores aliquid iusto provident vel
-          tempore culpa, animi dolorum optio! Quaerat, inventore praesentium sit
-          accusamus quo molestiae itaque, facere vitae impedit suscipit sequi!
-          Dolor ea, consequatur illo nostrum beatae tenetur blanditiis fugiat
-          adipisci, voluptatem eos corporis quo! Itaque laudantium cupiditate
-          vero earum a nisi non? Tempore dolorum accusantium quod! Omnis soluta
-          blanditiis nulla voluptatum voluptates non aliquam, amet delectus
-          expedita sapiente aperiam aut hic qui itaque illo repellendus nobis,
-          repudiandae cum atque maxime nesciunt! Voluptates iusto accusamus odio
-          ipsam fugit?
+          I love creating beautiful code, and cater for all kinds of projects.
+          Whether it be an e-commerce solution, events management system;
+          dashboard, or even a small business portfolio I'm your man. If you
+          would like to see some of my work just take a look at my portfolio, or
+          alternatively get in contact for more information.
         </p>
-      </StyledWrap>
+        <p>
+          The way we view and interact with the web is constantly changing. As
+          an experienced website developer, I help people and companies create
+          an online presence that provides an optimal experience.
+        </p>
+        <Link href="/">
+          <a className="link">GO HOME</a>
+        </Link>
+
+        <h2>Connect with me</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          quas, voluptatum minima ab nesciunt nemo sapiente accusantium amet
+          laboriosam velit corrupti exercitationem. Qui et similique officiis,
+          asperiores sed nisi? Eaque blanditiis animi fuga beatae delectus sint
+          reprehenderit. Ducimus, minus. Consequatur debitis deserunt a
+          excepturi earum non dolorem, doloribus ullam illum aliquid? Voluptate
+          iusto, eligendi, veniam modi cumque saepe illum in distinctio porro
+          expedita eaque quos, aliquid qui rerum tempore est obcaecati nisi quis
+          repudiandae. Saepe accusamus reiciendis blanditiis nesciunt autem,
+          temporibus facilis, ducimus in consequuntur similique incidunt
+          officiis dolorum vero eos odit eum laudantium ab! Corporis, deserunt?
+          Animi, dolor iusto ipsam non quisquam voluptas architecto enim
+          consequuntur eveniet quo quos esse similique facilis cumque,
+          dignissimos repudiandae, doloribus perspiciatis provident odit amet
+          adipisci inventore vero. Corporis mollitia in consequatur, est illo
+          impedit numquam veniam sequi deserunt, fugiat atque possimus aut
+          laborum dolores molestias. Aliquid, aperiam nostrum culpa deleniti
+          inventore eos neque sequi voluptate, iure provident officiis dolores
+          repellat itaque sunt et quas adipisci. Incidunt repellat ipsa omnis
+          reiciendis. Totam, quam saepe amet sapiente ipsa labore sint nam nobis
+          esse iusto ea doloremque molestiae explicabo. Blanditiis soluta vero
+          nam beatae. Quibusdam repudiandae harum temporibus officia molestiae
+          maiores ratione recusandae nesciunt nobis quaerat! Voluptates
+          architecto provident rem at ipsa optio, aliquam laudantium eum
+          necessitatibus, earum quia reiciendis nulla! Minus incidunt,
+          asperiores necessitatibus ratione neque velit repellat, laboriosam,
+          tempora modi rerum sapiente animi. Quisquam excepturi quis alias
+          magnam eum earum consectetur aliquid ipsam nihil corrupti nulla
+          possimus eaque, minima voluptatibus dolore, dolor minus corporis porro
+          molestias fuga, iste exercitationem? Rem, similique nulla et doloribus
+          ab fuga. Mollitia id illum itaque reiciendis odit impedit, atque,
+          voluptatem magnam, numquam sit suscipit beatae quos. Dolore veritatis
+          fuga voluptate molestias, adipisci consectetur laboriosam dolor
+          quisquam, qui nulla distinctio doloremque cum dicta. Recusandae
+          debitis modi sint rerum ipsum libero?
+        </p>
+        <LogoNodejs
+          onClick={() => alert("Hi!")}
+          style={{ zIndex: "-1" }}
+          fontSize="60px"
+          beat={true}
+          color="#43853d"
+        />
+        {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
+          {({ data, loading }: Query) => {
+            if (loading || !data) {
+              return <div>Loading ...</div>;
+            }
+            return <div>{JSON.stringify(data)}</div>;
+          }}
+        </Query> */}
+      </ContentWrap>
     </Fragment>
   );
-}
+};
 
-const StyledWrap = styled("div")`
-  /* color: red;
-  background: blue; */
-`;
+export default Home;
+
+const ContentWrap = styled("div")``;

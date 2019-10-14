@@ -2,7 +2,8 @@
   "build": {
     "env": {
       "CONTENTFUL_SPACE_ID": "@contentful_space_id",
-      "CONTENTFUL_ACCESS_TOKEN": "@contentful_access_token"
+      "CONTENTFUL_ACCESS_TOKEN": "@contentful_access_token",
+      "REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN": "@react_app_github_personal_access_token"
     }
   }
 }

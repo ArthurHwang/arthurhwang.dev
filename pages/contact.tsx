@@ -1,7 +1,8 @@
 import { Fragment } from "react";
+import { NextPage } from "next";
 import Head from "next/head";
 
-export default function Contact() {
+const Contact: NextPage<any> = () => {
   return (
     <Fragment>
       <Head>
@@ -33,6 +34,43 @@ export default function Contact() {
         corporis fugiat dolore voluptatum nisi autem, nostrum distinctio, veniam
         qui.
       </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
+        architecto! Dolorum, maiores. Culpa perferendis ipsa repellat officia
+        laboriosam, aliquam earum quis tenetur dolores reprehenderit recusandae,
+        molestiae sit odit error. Ducimus, veritatis exercitationem dicta
+        quaerat delectus omnis necessitatibus facilis obcaecati nemo tempore
+        esse autem quod quia illum aliquid ullam et cupiditate. Molestias dicta
+        veniam nemo, suscipit incidunt maiores nostrum labore accusamus!
+        Voluptatum nostrum impedit quae esse voluptate eius asperiores
+        doloribus, officia ipsa eveniet cupiditate incidunt possimus laudantium
+        ratione in. Quasi, molestiae, corrupti deserunt cum minus veniam
+        laudantium doloribus quaerat recusandae ex molestias dolor. Facere ipsa
+        aperiam quam a animi maxime alias, quibusdam, voluptatibus optio illum
+        vero ullam fugiat, saepe mollitia delectus tenetur laborum quasi autem
+        commodi? Tenetur, ipsa nisi. Possimus illo nemo in odio veniam. Deleniti
+        asperiores harum quae suscipit at fugit. Aliquid optio a suscipit.
+        Neque, error obcaecati, ab minima molestias labore provident quis
+        voluptatem dolores cum sunt repudiandae eius enim in cumque quisquam
+        unde dolorem impedit tempore vero libero autem iure commodi. Enim
+        dolorum nisi a magni similique quaerat consequatur officia vel
+        cupiditate earum eum eius incidunt excepturi, cum quas voluptatum
+        molestiae quam atque est provident consectetur unde labore sapiente. Rem
+        amet adipisci vero beatae ea voluptatibus eum expedita, qui nobis. Odio
+        mollitia architecto nisi temporibus, accusamus, fuga laborum ea eos nam
+        quae iusto eum atque laboriosam! Ipsum fugiat consectetur beatae
+        recusandae itaque officia repellendus doloribus praesentium natus rerum
+        obcaecati necessitatibus provident qui deleniti quos assumenda, possimus
+        porro? Esse enim voluptatem, blanditiis numquam voluptatibus atque
+        corporis architecto quos quis earum nostrum, molestiae ipsam ratione ab
+        distinctio fugiat ex maxime est in. Reiciendis iusto consequuntur soluta
+        quisquam cupiditate explicabo adipisci ducimus nam inventore iste eius
+        quos libero placeat, perspiciatis quod enim, eos in expedita dolore qui
+        ipsam quis odio eaque molestias. Magni quo aliquam mollitia maiores
+        repudiandae minima, hic facilis.
+      </p>
     </Fragment>
   );
-}
+};
+
+export default Contact;

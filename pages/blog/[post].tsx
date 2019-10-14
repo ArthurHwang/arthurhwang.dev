@@ -1,14 +1,49 @@
 import { Fragment } from "react";
+import { NextPage } from "next";
 import Head from "next/head";
 
-Post.getInitialProps = async ({ query }) => {
+interface Props {
+  query: any;
+}
+
+const Post: NextPage<any> = props => {
+  const post = props.post[0].fields;
+  const {
+    title,
+    date,
+    description,
+    body,
+    featureImage
+    // url,
+  } = post;
+
+  return (
+    <Fragment>
+      <Head>
+        <title>{`Arthur Hwang | ${title}`}</title>
+        <meta name="description" content={description} />
+      </Head>
+      <div>
+        <p>{date}</p>
+        <img
+          width="100%"
+          src={featureImage.fields.file.url}
+          alt={featureImage.fields.description}
+        />
+        {body}
+      </div>
+    </Fragment>
+  );
+};
+
+Post.getInitialProps = async ({ query }: Props) => {
   const client = require("contentful").createClient({
     space: process.env.SPACE_ID,
     accessToken: process.env.ACCESS_TOKEN
   });
   const getEntries = await client.getEntries();
-  let payload = [];
-  let post = [];
+  let payload: any = [];
+  let post: any = [];
   const splitItems = Object.values(getEntries)[4];
 
   // @ts-ignore
@@ -16,7 +51,7 @@ Post.getInitialProps = async ({ query }) => {
     payload.push(entry);
   });
 
-  payload.forEach(item => {
+  payload.forEach((item: any) => {
     if (item.fields.url === query.post) {
       post.push(item);
     }
@@ -28,31 +63,4 @@ Post.getInitialProps = async ({ query }) => {
   };
 };
 
-export default function Post(props) {
-  const post = props.post[0].fields;
-  console.log(props);
-  const {
-    title,
-    date,
-    description,
-    body,
-    featureImage
-    // url,
-  } = post;
-  return (
-    <Fragment>
-      <Head>
-        <title>{`Arthur Hwang | ${title}`}</title>
-        <meta name="description" content={description} />
-      </Head>
-      <div>
-        <p>{date}</p>
-        <img
-          src={featureImage.fields.file.url}
-          alt={featureImage.fields.file.description}
-        />
-        {body}
-      </div>
-    </Fragment>
-  );
-}
+export default Post;

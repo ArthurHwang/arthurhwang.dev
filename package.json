@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-app",
+  "name": "arthurhwang.dev",
   "version": "1.0.0",
-  "description": "Arthur Hwang portfolio site",
+  "description": "Arthur Hwangs portfolio",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -13,20 +13,27 @@
   "author": "Arthur Hwang",
   "license": "ISC",
   "dependencies": {
+    "@types/graphql": "^14.5.0",
+    "@types/styled-components": "^4.1.19",
+    "apollo-boost": "^0.4.4",
+    "apollo-client": "2.6.4",
     "contentful": "^7.10.0",
     "dotenv": "^8.1.0",
-    "fontfaceobserver": "^2.1.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "2.10.1",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.1.1",
-    "next-fonts": "^0.19.0",
     "nextjs-progressbar": "0.0.4",
     "react": "^16.10.2",
+    "react-apollo": "^3.1.2",
     "react-dom": "^16.10.2",
+    "react-icons": "^3.7.0",
     "react-ionicons": "^3.0.1",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
-    "@types/react": "^16.9.5",
+    "@types/react": "^16.9.6",
     "babel-plugin-styled-components": "^1.10.6",
     "typescript": "^3.6.4"
   }
