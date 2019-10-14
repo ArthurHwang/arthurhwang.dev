@@ -29,8 +29,8 @@ const StyledLogo = styled("div")`
   font-size: 2.5rem;
   position: relative;
   display: grid;
-  grid-template-columns: 65px 1fr;
-  grid-template-rows: 65px;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 50px;
   margin: 0.5rem 0.5rem 0.5rem 2rem;
 
   @media (max-width: 768px) {
@@ -38,6 +38,8 @@ const StyledLogo = styled("div")`
   }
 
   .logo-img {
+    width: 100%;
+    height: 100%;
     background-image: url("/static/me.jpg");
     background-position: 1px 50%;
     background-repeat: no-repeat;
@@ -56,37 +58,35 @@ const StyledLogo = styled("div")`
   p.name {
     font-size: 2.5rem;
     position: relative;
-    bottom: 2px;
-    color: #eee;
+    bottom: 5px;
+    color: ${({ theme }) => theme.black};
 
     @media (max-width: 413px) {
       font-size: 1.8rem;
       bottom: initial;
-      top: 8px;
+      top: 2px;
     }
   }
 
   p.title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #fe4a49;
     position: relative;
-    bottom: 10px;
+    bottom: 20px;
     font-style: italic;
     font-weight: 600;
 
     @media (max-width: 413px) {
       font-size: 1.2rem;
       bottom: initial;
-      top: 3px;
+      bottom: 7px;
     }
   }
 `;
 
 const StyledHeader = styled("header")`
   font-weight: 600;
-  background-color: #001730;
   z-index: 1;
-
 
   .hover-box {
     cursor: pointer;
@@ -94,11 +94,16 @@ const StyledHeader = styled("header")`
     transition: background 0.2s linear;
 
     &:hover {
-      background: ${({ theme }) => theme.linkBG};
+      background: ${({ theme }) => theme.accent};
 
       .text-wrapper p {
         transition: color 0.2s linear;
-        color: ${({ theme }) => theme.link};
+        color: ${({ theme }) => theme.primary};
+      }
+
+      .text-wrapper p.title {
+        transition: color 0.2s linear;
+        color: ${({ theme }) => theme.yellow};
       }
     }
   }
@@ -118,7 +123,6 @@ const StyledHeader = styled("header")`
   .sub-bar {
     display: grid;
     grid-template-columns: 1fr auto;
-    /* border-bottom: 1px solid ${({ theme }) => theme.lightgrey}; */
   }
 
   @media (max-width: 768px) {

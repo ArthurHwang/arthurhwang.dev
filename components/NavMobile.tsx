@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // import IosApps from "react-ionicons/lib/IosApps";
-import { Fragment } from "react";
+// import { Fragment } from "react";
 import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 import { IoIosKeypad } from "react-icons/io";
 import { useState } from "react";
@@ -24,43 +24,41 @@ export const NavMobile: React.FC<any> = () => {
           <IoIosKeypad />
         </IconWrapper>
         {menuOpen && (
-          <Fragment>
-            <StyledNavMenu className={menuOpen ? "fade" : "fadeOut"}>
-              <LogoNodejs
-                onClick={() => alert("Hi!")}
-                fontSize="60px"
-                beat={true}
-                color="#43853d"
-              />
-              <Link href="/about">
-                <a className="link-wrap" onClick={handleLink}>
-                  About
-                </a>
-              </Link>
-              <Link href="/projects">
-                <a className="link-wrap" onClick={handleLink}>
-                  Projects
-                </a>
-              </Link>
-              <Link href="/blog">
-                <a className="link-wrap" onClick={handleLink}>
-                  Blog
-                </a>
-              </Link>
-              <Link href="/contact">
-                <a className="link-wrap" onClick={handleLink}>
-                  Contact
-                </a>
-              </Link>
-            </StyledNavMenu>
-          </Fragment>
+          <StyledNavMenu className={menuOpen ? "fade" : "fadeOut"}>
+            <LogoNodejs
+              onClick={() => alert("Hi!")}
+              fontSize="60px"
+              beat={true}
+              color="#43853d"
+            />
+            <Link href="/about">
+              <a className="link-wrap" onClick={handleLink}>
+                About
+              </a>
+            </Link>
+            <Link href="/projects">
+              <a className="link-wrap" onClick={handleLink}>
+                Projects
+              </a>
+            </Link>
+            <Link href="/blog">
+              <a className="link-wrap" onClick={handleLink}>
+                Blog
+              </a>
+            </Link>
+            <Link href="/contact">
+              <a className="link-wrap" onClick={handleLink}>
+                Contact
+              </a>
+            </Link>
+          </StyledNavMenu>
         )}
       </StyledNavMobile>
     </NavMobileWrapper>
   );
 };
 
-const IconWrapper = styled("div")<{ rotate: string }>`
+const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
   height: 100%;
   width: 100%;
   display: flex;
@@ -70,9 +68,12 @@ const IconWrapper = styled("div")<{ rotate: string }>`
 
   svg {
     position: relative;
-    font-size: 3.5rem;
+    font-size: 3rem;
     right: 1.5rem;
-    color: ${props => (props.rotate === "true" ? `red` : "black")};
+    color: ${props =>
+      props.rotate === "true"
+        ? props.theme.yellow
+        : props.theme.black};
     transform: ${props => (props.rotate === "true" ? `rotate(225deg)` : "")};
     transition: transform 0.5s;
   }
@@ -88,7 +89,7 @@ const StyledNavMobile = styled("nav")`
 const StyledNavMenu = styled("div")`
   position: fixed;
   left: 0;
-  top: 75px;
+  top: 60px;
   width: 100vw;
   background-color: ${({ theme }) => theme.lightgrey};
   height: calc(100vh - 75px);

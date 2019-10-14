@@ -77,13 +77,15 @@ const ContentWrap = styled("div")`
 const SubheaderInner = styled("div")`
   h1 {
     font-size: 5rem;
+    color: ${({ theme }) => theme.primary};
   }
   h2 {
     font-size: 3rem;
+    color: ${({ theme }) => theme.primary};
   }
 `;
 const StyledSubheader = styled("section")`
-  background: #f5f8fa no-repeat 50%;
+  background: ${({ theme }) => theme.secondary} no-repeat 50%;
   background-size: cover;
   min-height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.125);

@@ -38,7 +38,7 @@ const StyledNav = styled("nav")`
   .active {
     a:after {
       height: 2px;
-      background: #72cc96;
+      background: ${({ theme }) => theme.yellow};
       content: "";
       width: 65px;
     }
@@ -52,11 +52,11 @@ const StyledNav = styled("nav")`
     transition: background 0.2s linear;
 
     &:hover {
-      background: ${({ theme }) => theme.secondaryAccent};
+      background: ${({ theme }) => theme.accent};
 
       a {
         transition: color 0.2s linear;
-        color: ${({ theme }) => theme.accent};
+        color: ${({ theme }) => theme.primary};
       }
     }
   }
@@ -64,7 +64,8 @@ const StyledNav = styled("nav")`
   a,
   button {
     padding: 1rem 3rem;
-    height: 100%;
+    /* height: 50px; */
+    height: 10px;
     display: flex;
     align-items: center;
     position: relative;
@@ -74,11 +75,11 @@ const StyledNav = styled("nav")`
     background: none;
     border: 0;
     cursor: pointer;
-    color: #eee;
+    color: ${({ theme }) => theme.black};
 
     &:after {
       height: 2px;
-      background: #4ad7d1;
+      background: ${({ theme }) => theme.yellow};
       content: "";
       width: 0;
       position: absolute;
@@ -86,7 +87,7 @@ const StyledNav = styled("nav")`
       transition: width 0.4s;
       transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
       left: 50%;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
     &:hover,
     &:focus {

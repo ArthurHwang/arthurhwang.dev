@@ -39,14 +39,13 @@ export const Footer: React.FC<any> = () => {
 };
 
 const StyledFooter = styled("footer")`
-  background-color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primary};
   margin: 0;
   display: flex;
   /* position: sticky; */
   /* bottom: 0; */
   justify-content: space-between;
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-
+  border-top: 1px solid ${({ theme }) => theme.lightgrey};
   .icon-react {
     color: blue;
     font-size: 4rem;

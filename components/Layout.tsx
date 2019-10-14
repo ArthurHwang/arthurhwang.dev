@@ -28,7 +28,7 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
 export default withRouter(Layout);
 
 const MobilePush = styled("div")`
-  height: 75px;
+  height: 60px;
 
   @media (min-width: 769px) {
     display: none;
@@ -44,5 +44,6 @@ const Inner = styled("section")`
   max-width: ${({ theme }) => theme.maxWidth};
   margin: 0 auto;
   padding: 2rem 0;
+  background-color: ${({theme}) => theme.primary};
   /* min-height: ; */
 `;

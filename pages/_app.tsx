@@ -32,10 +32,10 @@ class MyApp extends App<any> {
           <GlobalStyle />
           <Layout>
             <NextNProgress
-              color="#FE4A49"
+              color={theme.secondaryAccent}
               startPosition={0}
               stopDelayMs={0}
-              height="1.5"
+              height="4"
             />
             <Component {...pageProps} />
           </Layout>
