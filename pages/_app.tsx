@@ -17,10 +17,6 @@ const theme = {
   grey: "#525252",
   black: "#1e1e1e",
   maxWidth: "1000px"
-  // link: "#4AD7D1",
-  // linkHover: "#4AD7D1",
-  // linkBG: "#dfecf5",
-  // bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
 };
 
 class MyApp extends App<any> {
@@ -213,7 +209,7 @@ body {
   margin: 0;
   font-size: 1.6rem;
   line-height: 2;
-  font-family:  "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
+  font-family:  "-apple-system", "BlinkMacSystemFont", "lato", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.8;

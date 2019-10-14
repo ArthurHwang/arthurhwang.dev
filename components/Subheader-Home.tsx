@@ -3,17 +3,22 @@ import styled from "styled-components";
 export const SubheaderHome: React.FC<any> = () => {
   return (
     <ContentWrap>
-      <h1>Hi I'm Arthur</h1>
-      <br></br>
+      <TextWrap>
+        <h1>
+          Hello<span className="yellow">,</span> I'm{" "}
+          <span className="red">Arthur Hwang</span>.
+          <br />
+          I'm a full<span className="yellow">-</span>stack web developer.
+        </h1>
+      </TextWrap>
       <div className="content">
         <div className="content__container">
-          <p className="content__container__text">I Like</p>
-
+          <p className="content__container__text">I Specialize in</p>
           <ul className="content__container__list">
-            <li className="content__container__list__item">JavaScript</li>
-            <li className="content__container__list__item">React</li>
-            <li className="content__container__list__item">NodeJS</li>
-            <li className="content__container__list__item">CODE</li>
+            <li className="content__container__list__item green">Javascript</li>
+            <li className="content__container__list__item red">ReactJS</li>
+            <li className="content__container__list__item yellow">NodeJS</li>
+            <li className="content__container__list__item green">CODE</li>
           </ul>
         </div>
       </div>
@@ -21,34 +26,79 @@ export const SubheaderHome: React.FC<any> = () => {
   );
 };
 
+const TextWrap = styled("div")`
+  margin: 0 auto;
+  width: 578px;
+`;
+
 const ContentWrap = styled("div")`
-  h1,
-  div,
-  p,
-  ul,
-  li {
-    color: ${({ theme }) => theme.primary};
+  padding: 0 2rem;
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    min-height: 220px;
   }
-  position: relative;
+
+  h1,
+  h2,
+  p,
+  li {
+    color: ${({ theme }) => theme.black};
+    margin: 0;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.6;
+    font-weight: 700;
+    text-align: center;
+
+    @media (max-width: 650px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  .yellow {
+    color: ${({ theme }) => theme.yellow};
+  }
+  .green {
+    color: ${({ theme }) => theme.accent};
+  }
+  .red {
+    color: ${({ theme }) => theme.secondaryAccent};
+  }
 
   .content {
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* height: 160px; */
     overflow: hidden;
-
-    font-family: "Lato", sans-serif;
-    font-size: 35px;
+    font-size: 2rem;
     line-height: 40px;
     color: #ecf0f1;
+
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+    }
 
     &__container {
       font-weight: 600;
       overflow: hidden;
       height: 40px;
       padding: 0 40px;
+
+      @media (max-width: 480px) {
+        padding: 0 20px;
+      }
 
       &:before {
         content: "[";
@@ -64,18 +114,20 @@ const ContentWrap = styled("div")`
       &:after,
       &:before {
         position: absolute;
-        top: 0;
-
-        color: #16a085;
-        font-size: 42px;
+        top: -2px;
+        color: ${({ theme }) => theme.accent};
+        font-size: 32px;
         line-height: 40px;
-
         -webkit-animation-name: opacity;
         -webkit-animation-duration: 2s;
         -webkit-animation-iteration-count: infinite;
         animation-name: opacity;
         animation-duration: 2s;
         animation-iteration-count: infinite;
+
+        @media (max-width: 480px) {
+          top: -1px;
+        }
       }
 
       &__text {
@@ -86,16 +138,19 @@ const ContentWrap = styled("div")`
 
       &__list {
         margin-top: 0;
-        padding-left: 110px;
+        padding-left: 129px;
         text-align: left;
         list-style: none;
-
         -webkit-animation-name: change;
         -webkit-animation-duration: 10s;
         -webkit-animation-iteration-count: infinite;
         animation-name: change;
         animation-duration: 10s;
         animation-iteration-count: infinite;
+
+        @media (max-width: 480px) {
+          padding-left: 105px;
+        }
 
         &__item {
           line-height: 40px;

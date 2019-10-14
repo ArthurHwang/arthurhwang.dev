@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { SubheaderHome } from "./Subheader-Home";
-// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
-
 interface Props {
   pathName: string;
 }
@@ -14,7 +12,6 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
           <SubheaderInner>
             <h1>hi</h1>
             <h2>what</h2>
-            {/* <img width="200px" src="/static/me.jpg" /> */}
           </SubheaderInner>
         );
       case "/projects":
@@ -42,32 +39,24 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
         return <SubheaderHome />;
     }
   }
-  return (
-    <StyledSubheader>
-      <ContentWrap>{contentSwitch(pathName)}</ContentWrap>
-    </StyledSubheader>
-  );
+  return <StyledSubheader>{contentSwitch(pathName)}</StyledSubheader>;
 };
-
-const ContentWrap = styled("div")`
-  max-width: ${({ theme }) => theme.maxWidth};
-  margin: 0 auto;
-  padding: 0 2rem;
-`;
 
 const SubheaderInner = styled("div")`
   h1 {
+    margin: 0;
     font-size: 5rem;
     color: ${({ theme }) => theme.primary};
   }
   h2 {
+    margin: 0;
     font-size: 3rem;
     color: ${({ theme }) => theme.primary};
   }
 `;
+
 const StyledSubheader = styled("section")`
-  background: ${({ theme }) => theme.secondary} no-repeat 50%;
-  background-size: cover;
-  min-height: 200px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  background: ${({ theme }) => theme.lightgrey} no-repeat 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  position: relative;
 `;

@@ -4,6 +4,11 @@ import { ActiveLink as Link } from "./ActiveLink";
 export const Nav: React.FC<any> = () => {
   return (
     <StyledNav>
+      <Link activeClassName="active" href="/">
+        <div className="link-box">
+          <a>Home</a>
+        </div>
+      </Link>
       <Link activeClassName="active" href="/about">
         <div className="link-box">
           <a>About</a>
@@ -53,15 +58,12 @@ const StyledNav = styled("nav")`
   }
 
   .active {
+    background: ${({ theme }) => theme.accent};
     a:after {
       height: 2px;
       background: ${({ theme }) => theme.yellow};
       content: "";
       width: 65px;
-    }
-
-    .link-box a {
-      background: ${({ theme }) => theme.accent};
     }
   }
 
@@ -73,7 +75,8 @@ const StyledNav = styled("nav")`
     align-items: center;
     position: relative;
     text-transform: uppercase;
-    font-weight: 600;
+    letter-spacing: -0.2px;
+    font-weight: 700;
     font-size: 1.2rem;
     background: none;
     border: 0;
