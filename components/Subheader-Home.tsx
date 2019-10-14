@@ -33,7 +33,7 @@ const TextWrap = styled("div")`
   bottom: 30px;
 
   @media (max-width: 480px) {
-    bottom: 20px;
+    bottom: 25px;
   }
 `;
 
@@ -94,7 +94,7 @@ const ContentWrap = styled("div")`
 
     @media (max-width: 480px) {
       font-size: 1.6rem;
-      bottom: 10px;
+      bottom: 15px;
     }
 
     &__container {
