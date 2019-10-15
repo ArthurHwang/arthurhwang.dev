@@ -54,7 +54,7 @@ const TextWrap = styled("div")`
   margin: 0 auto;
   width: 578px;
   position: relative;
-  bottom: 30px;
+  bottom: 40px;
 
   div {
     display: inline-block;
