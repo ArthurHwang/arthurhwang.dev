@@ -1,24 +1,48 @@
 import styled from "styled-components";
+import { FaReact, FaNodeJs, FaCode, FaJs } from "react-icons/fa";
 
 export const SubheaderHome: React.FC<any> = () => {
   return (
     <ContentWrap>
       <TextWrap>
         <h1>
-          Hello<span className="yellow">,</span> I'm{" "}
-          <span className="red">Arthur Hwang</span>.
+          <div className="first-of-type">
+            Hello<span className="yellow">,</span>
+          </div>{" "}
+          <div className="second-of-type">
+            I'm <span className="red">Arthur Hwang</span>
+            <span className="green">.</span>
+          </div>
           <br />
-          I'm a full<span className="yellow">-</span>stack web developer.
+          I'm a full<span className="yellow">-</span>stack web developer
+          <span className="green">.</span>
         </h1>
       </TextWrap>
       <div className="content">
         <div className="content__container">
           <p className="content__container__text">I Specialize in</p>
           <ul className="content__container__list">
-            <li className="content__container__list__item green">Javascript</li>
-            <li className="content__container__list__item red">ReactJS</li>
-            <li className="content__container__list__item yellow">NodeJS</li>
-            <li className="content__container__list__item green">CODE</li>
+            <li className="content__container__list__item green">
+              Javascript{" "}
+              <FaJs
+                style={{ color: "#f7df1e", position: "relative", top: "2.3px" }}
+              />
+            </li>
+            <li className="content__container__list__item red">
+              ReactJS{" "}
+              <FaReact
+                style={{ color: "#61dafb", position: "relative", top: "2.3px" }}
+              />
+            </li>
+            <li className="content__container__list__item yellow">
+              NodeJS{" "}
+              <FaNodeJs
+                style={{ color: "#43853d", position: "relative", top: "2.3px" }}
+              />
+            </li>
+            <li className="content__container__list__item green">
+              CODE <FaCode style={{ position: "relative", top: "2.3px" }} />
+            </li>
           </ul>
         </div>
       </div>
@@ -32,7 +56,130 @@ const TextWrap = styled("div")`
   position: relative;
   bottom: 30px;
 
-  @media (max-width: 480px) {
+  div {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+  }
+
+  .first-of-type {
+    animation: showup 7s normal forwards;
+  }
+
+  .second-of-type {
+    width: 0px;
+    animation: reveal 7s normal forwards;
+
+    @media (max-width: 650px) {
+      animation: revealTablet 7s normal forwards;
+    }
+
+    @media (max-width: 490px) {
+      animation: revealMobile 7s normal forwards;
+    }
+
+    span {
+      margin-left: -355px;
+      animation: slidein 7s normal forwards;
+      color: white;
+    }
+  }
+
+  @keyframes showup {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slidein {
+    0% {
+      margin-left: -800px;
+    }
+    20% {
+      margin-left: -800px;
+    }
+    35% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: 0px;
+    }
+  }
+
+  @keyframes revealTablet {
+    0% {
+      opacity: 0;
+      width: 0px;
+    }
+    20% {
+      opacity: 1;
+      width: 0px;
+    }
+    30% {
+      width: 280px;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      width: 280px;
+    }
+  }
+
+  @keyframes revealMobile {
+    0% {
+      opacity: 0;
+      width: 0px;
+    }
+    20% {
+      opacity: 1;
+      width: 0px;
+    }
+    30% {
+      width: 220px;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      width: 220px;
+    }
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      width: 0px;
+    }
+    20% {
+      opacity: 1;
+      width: 0px;
+    }
+    30% {
+      width: 355px;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      width: 355px;
+    }
+  }
+
+  @media (max-width: 490px) {
     bottom: 25px;
   }
 `;
@@ -44,7 +191,20 @@ const ContentWrap = styled("div")`
   display: flex;
   align-items: center;
 
-  @media (max-width: 480px) {
+  span.yellow,
+  .yellow {
+    color: ${({ theme }) => theme.yellow};
+  }
+  span.green,
+  .green {
+    color: ${({ theme }) => theme.accent};
+  }
+  span.red,
+  .red {
+    color: ${({ theme }) => theme.secondaryAccent};
+  }
+
+  @media (max-width: 490px) {
     min-height: 220px;
   }
 
@@ -52,7 +212,7 @@ const ContentWrap = styled("div")`
   h2,
   p,
   li {
-    color: ${({ theme }) => theme.black};
+    color: ${({ theme }) => theme.primary};
     margin: 0;
     text-align: center;
   }
@@ -62,24 +222,16 @@ const ContentWrap = styled("div")`
     line-height: 1.6;
     font-weight: 700;
     text-align: center;
+    width: 100%;
 
     @media (max-width: 650px) {
       font-size: 3rem;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 490px) {
+      white-space: nowrap;
       font-size: 2.4rem;
     }
-  }
-
-  .yellow {
-    color: ${({ theme }) => theme.yellow};
-  }
-  .green {
-    color: ${({ theme }) => theme.accent};
-  }
-  .red {
-    color: ${({ theme }) => theme.secondaryAccent};
   }
 
   .content {
@@ -92,7 +244,7 @@ const ContentWrap = styled("div")`
     line-height: 40px;
     color: #ecf0f1;
 
-    @media (max-width: 480px) {
+    @media (max-width: 490px) {
       font-size: 1.6rem;
       bottom: 15px;
     }
@@ -103,19 +255,26 @@ const ContentWrap = styled("div")`
       height: 40px;
       padding: 0 40px;
 
-      @media (max-width: 480px) {
+      @media (max-width: 490px) {
         padding: 0 20px;
       }
 
       &:before {
         content: "[";
         left: 0;
+        @media (max-width: 490px) {
+          left: -3px;
+        }
       }
 
       &:after {
         content: "]";
         position: absolute;
-        right: 0;
+        right: 9px;
+
+        @media (max-width: 490px) {
+          right: 13px;
+        }
       }
 
       &:after,
@@ -132,8 +291,8 @@ const ContentWrap = styled("div")`
         animation-duration: 2s;
         animation-iteration-count: infinite;
 
-        @media (max-width: 480px) {
-          top: -1px;
+        @media (max-width: 490px) {
+          top: -3px;
         }
       }
 
@@ -145,7 +304,7 @@ const ContentWrap = styled("div")`
 
       &__list {
         margin-top: 0;
-        padding-left: 129px;
+        padding-left: 140px;
         text-align: left;
         list-style: none;
         -webkit-animation-name: change;
@@ -155,13 +314,14 @@ const ContentWrap = styled("div")`
         animation-duration: 10s;
         animation-iteration-count: infinite;
 
-        @media (max-width: 480px) {
+        @media (max-width: 490px) {
           padding-left: 105px;
         }
 
         &__item {
           line-height: 40px;
           margin: 0;
+          width: 120px;
         }
       }
     }
@@ -319,5 +479,3 @@ const ContentWrap = styled("div")`
     }
   }
 `;
-
-// const Content = styled("div")``;

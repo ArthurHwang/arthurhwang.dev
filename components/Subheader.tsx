@@ -63,7 +63,8 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
 };
 
 const StyledSubheader = styled("section")`
-  background: ${({ theme }) => theme.lightgrey} no-repeat 50%;
+  background: ${({ theme }) => theme.secondary} no-repeat 50%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   position: relative;
+  bottom: 1px;
 `;

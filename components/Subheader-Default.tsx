@@ -27,12 +27,13 @@ const ContentWrap = styled("div")`
 
   h1 {
     font-size: 4rem;
+    color: ${({ theme }) => theme.primary};
   }
 
   h2 {
     font-size: 2rem;
     font-weight: 400;
-    color: ${({ theme }) => theme.grey};
+    color: ${({ theme }) => theme.lightgrey};
   }
 
   padding: 2rem;
