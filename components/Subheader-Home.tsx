@@ -292,7 +292,7 @@ const ContentWrap = styled("div")`
         animation-iteration-count: infinite;
 
         @media (max-width: 490px) {
-          top: -3px;
+          top: -1px;
         }
       }
 
