@@ -126,14 +126,14 @@ const TextWrap = styled("div")`
       width: 0px;
     }
     30% {
-      width: 280px;
+      width: 260px;
     }
     80% {
       opacity: 1;
     }
     100% {
       opacity: 1;
-      width: 280px;
+      width: 260px;
     }
   }
 
@@ -147,14 +147,14 @@ const TextWrap = styled("div")`
       width: 0px;
     }
     30% {
-      width: 220px;
+      width: 210px;
     }
     80% {
       opacity: 1;
     }
     100% {
       opacity: 1;
-      width: 220px;
+      width: 210px;
     }
   }
 
