@@ -45,5 +45,5 @@ const Inner = styled("section")`
   margin: 0 auto;
   padding: 2rem;
   background-color: ${({ theme }) => theme.primary};
-  min-height: 600px;
+  min-height: 800px;
 `;
