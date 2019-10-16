@@ -1,45 +1,35 @@
 import styled from "styled-components";
-// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
-// import LogoGithub from "react-ionicons/lib/LogoGithub";
-// import IosRefresh from "react-ionicons/lib/IosRefresh";
-// import MdInfinite from "react-ionicons/lib/MdInfinite";
-// import LogoLinkedin from "react-ionicons/lib/LogoLinkedin";
-import LogoJavascript from "react-ionicons/lib/LogoJavascript";
 import MdHeart from "react-ionicons/lib/MdHeart";
-import { FaGithubSquare, FaLinkedin, FaMailBulk } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import { MdMail } from "react-icons/md";
-MdMail;
-
-// import Link from "next/link";
+import {
+  FaGithubSquare,
+  FaLinkedin,
+  FaFacebookSquare,
+  FaRegCopyright,
+  FaTwitterSquare
+} from "react-icons/fa";
 
 export const Footer: React.FC<any> = () => {
   return (
     <StyledFooter>
       <div className="love">
-        <span className="copyright">
-          Made With{" "}
+        <span>
+          Made with{" "}
+          <a style={{ height: "29.94px" }} href="https://nextjs.org/">
+            <img src="/static/Nextjs-logo.svg" />
+          </a>{" "}
+          and a whole lotta{" "}
           <MdHeart
-            style={{ position: "relative", top: "5px" }}
-            fontSize="25px"
+            style={{ marginLeft: "0rem", cursor: "pointer" }}
+            fontSize="35px"
             color="red"
-            beat={true}
-          />
-          and alot of
-          <LogoJavascript
-            style={{ position: "relative", top: "5px" }}
-            fontSize="25px"
-            color="#f7df1e"
+            onClick={() =>
+              alert("Thank you for visiting my website.  I love you <3.")
+            }
             beat={true}
           />
         </span>
       </div>
 
-      <div className="copyright">
-        <span>
-          &copy; 2019 <strong>Arthur Hwang</strong>. All Rights Reserved
-        </span>
-      </div>
       <div className="badges">
         <a
           title="Github"
@@ -50,76 +40,95 @@ export const Footer: React.FC<any> = () => {
         </a>
         <a
           title="LinkedIn"
-          href="https://www.linkedin.com/in/arthur-hwang/"
+          href="https://www.linkedin.com/in/arthur-hwang"
           className="link"
         >
           <FaLinkedin className="icon" />
         </a>
         <a
           title="LinkedIn"
-          href="https://www.linkedin.com/in/arthur-hwang/"
+          href="https://www.facebook.com/arthur.hwang.9"
           className="link"
         >
-          <IoMdMail className="icon" />
+          <FaFacebookSquare className="icon" />
         </a>
-        <a
-          title="LinkedIn"
-          href="https://www.linkedin.com/in/arthur-hwang/"
-          className="link"
-        >
-          <FaMailBulk className="icon" />
+        <a title="LinkedIn" href="https://www.twitter.com/" className="link">
+          <FaTwitterSquare className="icon" />
         </a>
-        <a
-          title="LinkedIn"
-          href="https://www.linkedin.com/in/arthur-hwang/"
-          className="link"
-        >
-          <MdMail className="icon" />
-        </a>
+      </div>
+      <div className="copyright">
+        <span>
+          <FaRegCopyright style={{ color: "#FE4A49", marginRight: "0.5rem" }} />{" "}
+          2019&nbsp;
+          <span style={{ color: "#FE4A49" }}>-</span>&nbsp;
+          <strong> Arthur Hwang</strong>
+          .&nbsp; All Rights Reserved
+        </span>
       </div>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled("footer")`
-  /* height: 400px; */
-  /* padding: 1rem; */
-  padding: 0 1rem;
+  padding: 1rem 2rem;
   background-color: ${({ theme }) => theme.primary};
   margin: 0;
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 
+  @media (max-width: 910px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+
   .love {
-    /* align-self: center; */
+    position: relative;
+    top: 4px;
+
+    @media (max-width: 910px) {
+      text-align: center;
+      position: initial;
+    }
+
+    img {
+      width: 65px;
+      margin: 0 0.3rem;
+      position: relative;
+      bottom: 4px;
+    }
   }
 
   .copyright {
-    font-size: 1.4rem;
-    word-spacing: -1px;
-    text-align: center;
+    justify-self: flex-end;
     align-self: center;
+    position: relative;
+    top: 2px;
+
+    @media (max-width: 910px) {
+      justify-self: center;
+    }
   }
 
   a {
     margin: 0 0.5rem;
-    /* height: auto; */
   }
 
   .badges {
-    /* display: flex;
-    justify-content: space-evenly;
-    align-items: center; */
     position: relative;
     top: 4px;
-    /* display: flex; */
-    /* align-items: center; */
-    /* align-self: center; */
-    justify-self: flex-end;
+    justify-self: center;
+
+    @media (max-width: 910px) {
+      top: 2px;
+      padding: 0.5rem 0;
+    }
   }
 
   .icon {

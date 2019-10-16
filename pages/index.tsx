@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 // import { Query } from "react-apollo";
-import LogoNodejs from "react-ionicons/lib/LogoNodejs";
+// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 import { NextPage } from "next";
 import styled from "styled-components";
 import Head from "next/head";
@@ -131,13 +131,13 @@ const Home: NextPage<any> = () => {
           quisquam, qui nulla distinctio doloremque cum dicta. Recusandae
           debitis modi sint rerum ipsum libero?
         </p>
-        <LogoNodejs
+        {/* <LogoNodejs
           onClick={() => alert("Hi!")}
           style={{ zIndex: "-1" }}
           fontSize="60px"
           beat={true}
           color="#43853d"
-        />
+        /> */}
         {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
           {({ data, loading }: Query) => {
             if (loading || !data) {

@@ -225,7 +225,9 @@ h1,h2,h3 {
 
 p, span {
   color: ${theme.grey};
+  text-align: justify;
 }
+
 
 a {
   text-decoration: none;
