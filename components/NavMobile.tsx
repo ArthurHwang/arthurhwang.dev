@@ -2,8 +2,7 @@ import styled from "styled-components";
 import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 import Link from "next/link";
 import { IoIosKeypad } from "react-icons/io";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export const NavMobile: React.FC<any> = () => {
   useEffect(() => {

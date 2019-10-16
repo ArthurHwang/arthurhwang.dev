@@ -2,31 +2,26 @@ import styled from "styled-components";
 
 interface Props {
   invert: boolean;
+  color?: string;
 }
 
-export const Divider: React.FC<Props> = ({ invert = false }) => {
+export const Divider: React.FC<Props> = ({
+  invert = false,
+  color = "yellow"
+}) => {
   return (
-    <ContentWrap invert={invert}>
+    <ContentWrap invert={invert} color={color}>
       <div className="divider div-transparent div-dot" />
     </ContentWrap>
   );
 };
 
-const ContentWrap = styled("div")<{ invert: boolean }>`
+const ContentWrap = styled("div")<{ invert: boolean; color: string }>`
   padding: 4rem;
-  /* height: 100px; */
-
-  @media (max-width: 650px) {
-    padding: 6rem;
-  }
-
-  @media (max-width: 490px) {
-    padding: 1.5rem;
-  }
   width: 100%;
+
   .divider {
     position: relative;
-    /* margin-top: 90px; */
     height: 1px;
     display: block;
     width: 100%;
@@ -52,18 +47,37 @@ const ContentWrap = styled("div")<{ invert: boolean }>`
       width: 325px;
     }
   }
+
   .div-dot:after {
     content: "";
     position: absolute;
-    /* z-index: 1; */
     top: -9px;
     left: calc(50% - 9px);
     width: 18px;
     height: 18px;
-    background-color: ${({ theme }) => theme.yellow};
+    background-color: ${props => {
+      switch (props.color) {
+        case "green":
+          return props.theme.accent;
+        case "red":
+          return props.theme.secondaryAccent;
+        case "yellow":
+          return props.theme.yellow;
+        case "blue":
+          return props.theme.blue;
+      }
+    }};
     border: 1px solid rgb(48, 49, 51);
     border-radius: 50%;
     box-shadow: inset 0 0 0 2px ${({ theme }) => theme.secondary},
       0 0 0 4px ${({ theme }) => theme.secondary};
+  }
+
+  @media (max-width: 650px) {
+    padding: 6rem;
+  }
+
+  @media (max-width: 490px) {
+    padding: 1.5rem;
   }
 `;

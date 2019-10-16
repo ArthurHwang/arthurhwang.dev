@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Divider } from "./Divider";
 
 interface Props {
   children: any;
@@ -7,13 +6,9 @@ interface Props {
 
 export const SubheaderDefault: React.FC<Props> = ({ children }) => {
   return (
-    <>
-      <Divider invert={true} />
-      <ContentWrap>
-        <TextWrap> {children}</TextWrap>
-      </ContentWrap>
-      <Divider invert={true} />
-    </>
+    <ContentWrap>
+      <TextWrap> {children}</TextWrap>
+    </ContentWrap>
   );
 };
 
