@@ -21,7 +21,7 @@ const ContentWrap = styled("div")<{ invert: boolean }>`
   }
 
   @media (max-width: 490px) {
-    padding: 1.7rem;
+    padding: 1.5rem;
   }
   width: 100%;
   .divider {
