@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FaReact, FaNodeJs, FaCode, FaJs } from "react-icons/fa";
-
+import { Divider } from "./Divider";
 export const SubheaderHome: React.FC<any> = () => {
   return (
     <ContentWrap>
@@ -18,6 +18,7 @@ export const SubheaderHome: React.FC<any> = () => {
           <span className="green">.</span>
         </h1>
       </TextWrap>
+      <Divider invert={true} />
       <div className="content">
         <div className="content__container">
           <p className="content__container__text">I Specialize in</p>
@@ -52,9 +53,9 @@ export const SubheaderHome: React.FC<any> = () => {
 
 const TextWrap = styled("div")`
   margin: 0 auto;
-  width: 578px;
-  position: relative;
-  bottom: 40px;
+  /* width: 578px; */
+  /* position: relative; */
+  /* bottom: 40px; */
 
   div {
     display: inline-block;
@@ -185,10 +186,11 @@ const TextWrap = styled("div")`
 `;
 
 const ContentWrap = styled("div")`
-  padding: 0 2rem;
+  padding: 4rem 2rem;
   width: 100%;
   min-height: 350px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   span.yellow,
@@ -236,7 +238,7 @@ const ContentWrap = styled("div")`
 
   .content {
     position: absolute;
-    bottom: 40px;
+    bottom: 25px;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
@@ -246,7 +248,7 @@ const ContentWrap = styled("div")`
 
     @media (max-width: 490px) {
       font-size: 1.6rem;
-      bottom: 15px;
+      bottom: 10px;
     }
 
     &__container {
