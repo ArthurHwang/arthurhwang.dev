@@ -44,7 +44,7 @@ const ContentWrap = styled("div")<{ invert: boolean }>`
     background-image: linear-gradient(
       to right,
       transparent,
-      rgb(48, 49, 51),
+      rgb(255, 255, 255),
       transparent
     );
 
