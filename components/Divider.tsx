@@ -3,21 +3,23 @@ import styled from "styled-components";
 interface Props {
   invert: boolean;
   color?: string;
+  padding?: number;
 }
 
 export const Divider: React.FC<Props> = ({
   invert = false,
-  color = "yellow"
+  color = "yellow",
+  padding = 4
 }) => {
   return (
-    <ContentWrap invert={invert} color={color}>
+    <ContentWrap invert={invert} color={color} padding={padding}>
       <div className="divider div-transparent div-dot" />
     </ContentWrap>
   );
 };
 
-const ContentWrap = styled("div")<{ invert: boolean; color: string }>`
-  padding: 4rem;
+const ContentWrap = styled("div")<Props>`
+  padding: ${props => `${props.padding}rem`};
   width: 100%;
 
   .divider {

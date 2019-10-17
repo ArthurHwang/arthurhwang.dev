@@ -19,6 +19,8 @@ const ContentWrap = styled("div")`
   align-items: center;
   justify-content: center;
   min-height: 200px;
+  position: relative;
+  bottom: 5px;
 
   h1,
   h2 {

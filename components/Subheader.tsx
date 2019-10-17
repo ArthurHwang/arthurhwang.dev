@@ -14,7 +14,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
         return (
           <SubheaderDefault>
             <h1>About</h1>
-            <Divider invert={true} color="green" />
+            <Divider invert={true} color="green" padding={2} />
             <h2>Some things about me.</h2>
           </SubheaderDefault>
         );
@@ -22,7 +22,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
         return (
           <SubheaderDefault>
             <h1>Projects</h1>
-            <Divider invert={true} color="red" />
+            <Divider invert={true} color="red" padding={2} />
             <h2>
               See my projects below. Unless explicity stated,{" "}
               <strong>all source code is completely authored by me.</strong>
@@ -33,7 +33,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
         return (
           <SubheaderDefault>
             <h1>Blog</h1>
-            <Divider invert={true} />
+            <Divider invert={true} padding={2} />
             <h2>
               This blog is powered by Contentful Delivery API and a lot of
               markdown parsing.
@@ -44,7 +44,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
         return (
           <SubheaderDefault>
             <h1>Blog</h1>
-            <Divider invert={true} color="green" />
+            <Divider invert={true} color="green" padding={2} />
             <h2>
               This blog is powered by Contentful Delivery API and a lot of
               markdown parsing.
@@ -55,7 +55,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
         return (
           <SubheaderDefault>
             <h1>Contact Me</h1>
-            <Divider invert={true} color="red" />
+            <Divider invert={true} color="red" padding={2} />
             <h2>
               You're awesome and I'm flattered. Please feel free to reach out to
               me for any reason!
