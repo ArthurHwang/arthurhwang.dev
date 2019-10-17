@@ -7,6 +7,7 @@ import {
   FaRegCopyright,
   FaTwitterSquare
 } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 export const Footer: React.FC<any> = () => {
   return (
@@ -46,14 +47,17 @@ export const Footer: React.FC<any> = () => {
           <FaLinkedin className="icon" />
         </a>
         <a
-          title="LinkedIn"
+          title="Facebook"
           href="https://www.facebook.com/arthur.hwang.9"
           className="link"
         >
           <FaFacebookSquare className="icon" />
         </a>
-        <a title="LinkedIn" href="https://www.twitter.com/" className="link">
+        <a title="Twitter" href="https://www.twitter.com/" className="link">
           <FaTwitterSquare className="icon" />
+        </a>
+        <a title="Email" href="mailto:mail@arthurhwang.dev" className="link">
+          <IoMdMail className="icon" />
         </a>
       </div>
       <div className="copyright">
@@ -71,11 +75,11 @@ export const Footer: React.FC<any> = () => {
 
 const StyledFooter = styled("footer")`
   padding: 1rem 2rem;
-  background-color: ${({ theme }) => theme.primary};
+  /* background-color: ${({ theme }) => theme.primary}; */
   margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.125); */
 
   @media (max-width: 910px) {
     grid-template-columns: 1fr;

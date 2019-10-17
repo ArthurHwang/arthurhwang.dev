@@ -59,7 +59,7 @@ const StyledLogo = styled("div")`
     font-size: 2.5rem;
     position: relative;
     bottom: 5px;
-    color: ${({ theme }) => theme.black};
+    color: ${({ theme }) => theme.yellow};
 
     @media (max-width: 413px) {
       font-size: 1.8rem;
@@ -86,9 +86,11 @@ const StyledLogo = styled("div")`
 
 const StyledHeader = styled("header")`
   font-weight: 600;
-  z-index: 1;
-  background: ${({ theme }) => theme.primary};
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  /* z-index: 100000; */
+  /* background: ${({ theme }) => theme.primary}; */
+  
+  /* background: transparent; */
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.125); */
 
   .hover-box {
     cursor: pointer;

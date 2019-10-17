@@ -3,3 +3,4 @@
 declare module "react-ionicons/*";
 declare module "nextjs-progressbar";
 declare module "react-icons/*";
+declare module "react-particles-js";

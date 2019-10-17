@@ -5,6 +5,7 @@ import NextNProgress from "nextjs-progressbar";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import withApolloClient from "../lib/with-apollo-client";
 import { ApolloProvider } from "react-apollo";
+import Particles from "react-particles-js";
 
 const theme = {
   primary: "#fff",
@@ -19,6 +20,65 @@ const theme = {
   maxWidth: "1000px"
 };
 
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 52,
+      density: { enable: true, value_area: 946.9771699587272 }
+    },
+    color: { value: "#ffffff" },
+    shape: {
+      type: "circle",
+      stroke: { width: 0, color: "#000000" },
+      polygon: { nb_sides: 3 },
+      image: { src: "img/github.svg", width: -520, height: 0 }
+    },
+    opacity: {
+      value: 1,
+      random: true,
+      anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+    },
+    size: {
+      value: 1.2,
+      random: true,
+      anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+    },
+    line_linked: {
+      enable: false,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 1,
+      width: 20
+    },
+    move: {
+      enable: true,
+      speed: 6,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: { enable: false, rotateX: 600, rotateY: 1200 }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" },
+      resize: true
+    },
+    modes: {
+      grab: { distance: 400, line_linked: { opacity: 1 } },
+      bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+      repulse: { distance: 200, duration: 0.4 },
+      push: { particles_nb: 4 },
+      remove: { particles_nb: 2 }
+    }
+  },
+  retina_detect: true
+};
+
 class MyApp extends App<any> {
   render() {
     const { Component, pageProps, apolloClient } = this.props;
@@ -26,15 +86,20 @@ class MyApp extends App<any> {
       <ThemeProvider theme={theme}>
         <ApolloProvider client={apolloClient}>
           <GlobalStyle />
+          {/* 
+          //@ts-ignore */}
+          <Particles className="particles" params={particlesOptions} />
           <Layout>
             <NextNProgress
               color={theme.secondaryAccent}
               startPosition={0}
               stopDelayMs={0}
-              height="4"
+              height="2"
             />
+
             <Component {...pageProps} />
           </Layout>
+          {/* <Component {...pageProps} /> */}
         </ApolloProvider>
       </ThemeProvider>
     );
@@ -44,6 +109,16 @@ class MyApp extends App<any> {
 export default withApolloClient(MyApp);
 
 const GlobalStyle = createGlobalStyle`
+
+.particles {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+background: ${theme.secondary};
+  left: 0;
+  z-index: -1 !important;
+}
 /* NormalizeCSS Start*/
 html {
   line-height: 1.15; 
@@ -220,11 +295,11 @@ body {
 }
 
 h1,h2,h3 {
-  color: ${theme.black};
+  color: ${theme.primary};
 }
 
 p, span {
-  color: ${theme.grey};
+  color: ${theme.primary};
   text-align: justify;
 }
 
