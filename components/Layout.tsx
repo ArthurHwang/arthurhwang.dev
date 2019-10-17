@@ -7,26 +7,20 @@ import styled from "styled-components";
 
 interface Props {
   children: any;
+  // pathname: string;
   router: {
     pathname: string;
   };
 }
 
 const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
-  const innerSwitch = (pathname: string) => {
-    if (pathname === "/projects") {
-      return <InnerFull>{children}</InnerFull>;
-    } else {
-      return <Inner>{children}</Inner>;
-    }
-  };
   return (
     <StyledLayout>
       <Meta />
       <MobilePush />
       <Header />
       <Subheader pathName={pathname} />
-      {innerSwitch(pathname)}
+      <Inner pathname={pathname}>{children}</Inner>
       <Footer />
     </StyledLayout>
   );
@@ -47,16 +41,9 @@ const StyledLayout = styled("div")`
   color: ${({ theme }) => theme.black};
 `;
 
-const InnerFull = styled("section")`
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: ${({ theme }) => theme.primary};
-  min-height: 800px;
-`;
-
-const Inner = styled("section")`
-  max-width: ${({ theme }) => theme.maxWidth};
+const Inner = styled("section")<{ pathname: string }>`
+  max-width: ${props =>
+    props.pathname === "/projects" ? "100%" : props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
   background-color: ${({ theme }) => theme.primary};
