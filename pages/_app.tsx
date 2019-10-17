@@ -241,7 +241,7 @@ a {
 
 a.link {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   background-image: linear-gradient(to right,#4AD7D1,#4AD7D1 50%,${theme.blue} 50%);
   background-position: 100%;
   background-size: 200% 100%;

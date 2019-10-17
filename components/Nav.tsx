@@ -9,11 +9,11 @@ export const Nav: React.FC<any> = () => {
           <a>Home</a>
         </div>
       </Link>
-      <Link activeClassName="active" href="/about">
+      {/* <Link activeClassName="active" href="/about">
         <div className="link-box">
           <a>About</a>
         </div>
-      </Link>
+      </Link> */}
       <Link activeClassName="active" href="/projects">
         <div className="link-box">
           <a>Projects</a>

@@ -56,14 +56,32 @@ const Home: NextPage<any> = () => {
   return (
     <Fragment>
       <Head>
-        <title>Arthur Hwang | Fullstack Web Developer</title>
+        <title>Arthur Hwang | Full-stack Web Developer</title>
         <meta
           name="description"
-          content="Full Stack Developer Brute Force Code"
+          content="Full-stack Web Developer Arthur Hwang"
         />
       </Head>
 
       <ContentWrap>
+        <h2>
+          I'm a Senior Front-end Developer at Torchbox. My role spans leading
+          teams, managing others and web development itself. I ❤ React and
+          Wagtail, and think Progressive Web Apps are awesome. While I work
+          mostly with UI, I also enjoy getting involved in design, back-end
+          development and improving project workflows. I work with the NHS,
+          global charities, universities and many other great organisations.
+          Browse some of my work, view my skills, or get in touch. You can also
+          find me on Twitter, Github, LinkedIn, CodePen and Instagram.
+        </h2>
+        <h2>
+          I estimate for, architect, build, optimise and launch client-side
+          solutions that users love. Managing others, leading teams and
+          consulting on front-end architecture are my day-to-day bread and
+          butter. I'm equally happy interacting directly with clients or working
+          alongside a Delivery Manager - every project is different. Here is a
+          selection of relevant technologies that I have experience with:
+        </h2>
         <h2>
           Ideas, code; presence specialising in impactful development & design.
         </h2>

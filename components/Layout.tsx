@@ -13,13 +13,20 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
+  const innerSwitch = (pathname: string) => {
+    if (pathname === "/projects") {
+      return <InnerFull>{children}</InnerFull>;
+    } else {
+      return <Inner>{children}</Inner>;
+    }
+  };
   return (
     <StyledLayout>
       <Meta />
       <MobilePush />
       <Header />
       <Subheader pathName={pathname} />
-      <Inner>{children}</Inner>
+      {innerSwitch(pathname)}
       <Footer />
     </StyledLayout>
   );
@@ -38,6 +45,14 @@ const MobilePush = styled("div")`
 const StyledLayout = styled("div")`
   background: white;
   color: ${({ theme }) => theme.black};
+`;
+
+const InnerFull = styled("section")`
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: ${({ theme }) => theme.primary};
+  min-height: 800px;
 `;
 
 const Inner = styled("section")`
