@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
-export const Contact: React.FC<any> = () => {
+export const About: React.FC<any> = () => {
   return (
     <ContentWrap>
-      <StyledContact>
+      <StyledAbout>
         <h2>
-          Lets Chat!<span>_</span>
+          About me<span>_</span>
         </h2>
         <p>
           I currently work as a web developer for a regionally well known law
           firm
         </p>
-      </StyledContact>
+      </StyledAbout>
     </ContentWrap>
   );
 };
 
 const ContentWrap = styled("div")`
   padding: 4rem;
-  background-color: ${({ theme }) => theme.lightgrey};
+  /* background-color: ${({ theme }) => theme.lightgrey}; */
 
   h2 {
     margin-top: 0;
@@ -31,7 +31,7 @@ const ContentWrap = styled("div")`
   }
 `;
 
-const StyledContact = styled("div")`
+const StyledAbout = styled("div")`
   max-width: 800px;
   margin: 0 auto;
   .flex-wrap {

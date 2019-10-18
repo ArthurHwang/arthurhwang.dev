@@ -81,7 +81,7 @@ const StyledFooter = styled("footer")`
   padding: 1rem 2rem;
   background-color: ${({ theme }) => theme.primary};
   margin: 0;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid rgba(0, 0, 0, 0.125);

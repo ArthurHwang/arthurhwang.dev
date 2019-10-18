@@ -157,7 +157,7 @@ const InnerRight = styled("div")`
 const StyledIntro = styled("div")`
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-gap: 4rem;
+  grid-gap: 6rem;
   max-width: 800px;
   /* padding: 0 40rem; */
 
