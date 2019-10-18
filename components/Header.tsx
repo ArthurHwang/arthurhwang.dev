@@ -13,7 +13,7 @@ export const Header: React.FC<any> = () => {
               <div className="logo-img"></div>
               <div className="text-wrapper">
                 <p className="name">Arthur Hwang</p>
-                <p className="title">Full-Stack Web Developer</p>
+                <p className="title">FullStack Web Developer</p>
               </div>
             </StyledLogo>
           </div>

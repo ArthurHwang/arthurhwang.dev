@@ -9,11 +9,11 @@ export const Nav: React.FC<any> = () => {
           <a>Home</a>
         </div>
       </Link>
-      <Link activeClassName="active" href="/about">
+      {/* <Link activeClassName="active" href="/about">
         <div className="link-box">
           <a>About</a>
         </div>
-      </Link>
+      </Link> */}
       <Link activeClassName="active" href="/projects">
         <div className="link-box">
           <a>Projects</a>
@@ -38,7 +38,7 @@ const StyledNav = styled("nav")`
   padding: 0;
   display: flex;
   justify-self: end;
-  font-size: 1.6rem;
+  /* font-size: 1.8rem; */
 
   .link-box {
     display: flex;

@@ -4,9 +4,11 @@ import {
   FaGithubSquare,
   FaLinkedin,
   FaFacebookSquare,
-  FaRegCopyright,
+  // FaRegCopyright,
+  FaFileCode,
   FaTwitterSquare
 } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 export const Footer: React.FC<any> = () => {
   return (
@@ -46,17 +48,23 @@ export const Footer: React.FC<any> = () => {
           <FaLinkedin className="icon" />
         </a>
         <a
-          title="LinkedIn"
+          title="Facebook"
           href="https://www.facebook.com/arthur.hwang.9"
           className="link"
         >
           <FaFacebookSquare className="icon" />
         </a>
-        <a title="LinkedIn" href="https://www.twitter.com/" className="link">
+        <a title="Twitter" href="https://www.twitter.com/" className="link">
           <FaTwitterSquare className="icon" />
         </a>
+        <a title="Resume" href="mailto:mail@arthurhwang.dev" className="link">
+          <FaFileCode className="icon" />{" "}
+        </a>
+        <a title="Email" href="mailto:mail@arthurhwang.dev" className="link">
+          <IoMdMail className="icon" />
+        </a>
       </div>
-      <div className="copyright">
+      {/* <div className="copyright">
         <span>
           <FaRegCopyright style={{ color: "#FE4A49", marginRight: "0.5rem" }} />{" "}
           2019&nbsp;
@@ -64,7 +72,7 @@ export const Footer: React.FC<any> = () => {
           <strong> Arthur Hwang</strong>
           .&nbsp; All Rights Reserved
         </span>
-      </div>
+      </div> */}
     </StyledFooter>
   );
 };
@@ -74,12 +82,18 @@ const StyledFooter = styled("footer")`
   background-color: ${({ theme }) => theme.primary};
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
+  /* position: absolute; */
+  /* left: 0; */
+  /* bottom: 0; */
+  /* width: 100%; */
 
   @media (max-width: 910px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    /* position: relative; */
   }
 
   span {
@@ -90,7 +104,7 @@ const StyledFooter = styled("footer")`
 
   .love {
     position: relative;
-    top: 4px;
+    top: 2px;
 
     @media (max-width: 910px) {
       text-align: center;
@@ -122,16 +136,17 @@ const StyledFooter = styled("footer")`
 
   .badges {
     position: relative;
-    top: 4px;
-    justify-self: center;
+    top: 6px;
+    justify-self: flex-end;
 
     @media (max-width: 910px) {
       top: 2px;
       padding: 0.5rem 0;
+      justify-self: center;
     }
   }
 
   .icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;

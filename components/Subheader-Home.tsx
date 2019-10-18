@@ -14,7 +14,7 @@ export const SubheaderHome: React.FC<any> = () => {
             <span className="green">.</span>
           </div>
           <br />
-          I'm a full<span className="yellow">-</span>stack web developer
+          I'm a fullstack web developer
           <span className="green">.</span>
         </h1>
       </TextWrap>
