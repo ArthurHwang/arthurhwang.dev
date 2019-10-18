@@ -20,7 +20,7 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
       <Header />
       <Subheader pathName={pathname} />
       <Inner pathName={pathname}>{children}</Inner>
-      <FooterPush />
+      {/* <FooterPush /> */}
       <Footer />
     </StyledLayout>
   );
@@ -28,13 +28,13 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
 // @ts-ignore
 export default withRouter(Layout);
 
-const FooterPush = styled("div")`
-  height: 46px;
+// const FooterPush = styled("div")`
+//   height: 46px;
 
-  @media (max-width: 910px) {
-    height: 107px;
-  }
-`;
+//   @media (max-width: 910px) {
+//     height: 107px;
+//   }
+// `;
 
 const MobilePush = styled("div")`
   height: 60px;
@@ -57,10 +57,28 @@ const StyledLayout = styled("div")<{ pathName: string }>`
 `;
 
 const Inner = styled("section")<{ pathName: string }>`
-  max-width: ${({ theme }) => theme.maxWidth};
   margin: 0 auto;
-  padding: 2rem;
   background-color: ${({ theme }) => theme.primary};
+  max-width: ${props => {
+    switch (props.pathName) {
+      case "/":
+        return "100%";
+      case "/projects":
+        return "100%";
+      default:
+        return props.theme.maxWidth;
+    }
+  }};
+  padding: ${props => {
+    switch (props.pathName) {
+      case "/":
+        return "";
+      case "/projects":
+        return "";
+      default:
+        return "2rem";
+    }
+  }};
   min-height: ${props => {
     switch (props.pathName) {
       case "/blog":
