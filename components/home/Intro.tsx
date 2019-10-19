@@ -14,10 +14,8 @@ import Link from "next/link";
 
 import {
   FaGithub,
-  // FaLinkedin,
   FaFacebook,
   FaLinkedinIn,
-  // FaRegCopyright,
   FaClipboardList,
   FaTwitter
 } from "react-icons/fa";
@@ -35,9 +33,9 @@ export const Intro: React.FC<any> = () => {
           <p>
             As a natural tinkerer, I love to dig out the "why" of things. Being
             a self taught developer has taught me to not fear what I don't know,
-            instead tackle i <FaLinkedinIn className="icon" />t with sheer
-            determination and an unwavering will. Having the privilege everyday
-            to produce elegant and performant software solutions makes me happy.
+            instead tackle it with sheer determination and an unwavering will.
+            Having the privilege everyday to produce elegant and performant
+            software solutions makes me happy.
           </p>
           <p>
             I am drawn to creating performance driven websites that are fully
@@ -51,9 +49,8 @@ export const Intro: React.FC<any> = () => {
           </p>
           <p>
             I am usually learning about new things such as data structures and
-            algorithms to further imp <FaLinkedinIn className="icon" />
-            rove my skills. Or testing out new hot frameworks such as apollo /
-            graphql
+            algorithms to further improve my skills. Or testing out new hot
+            frameworks such as apollo / graphql
           </p>
         </InnerLeft>
 
@@ -70,23 +67,19 @@ export const Intro: React.FC<any> = () => {
             >
               <FaGithub className="icon" /> Github
             </a>
-            <FaLinkedinIn className="icon" />
             <a
               title="LinkedIn"
               href="https://www.linkedin.com/in/arthur-hwang"
               className="link"
             >
-              <FaLinkedinIn className="icon" /> <span>LinkedIn</span>
+              <FaLinkedinIn className="icon" /> LinkedIn
             </a>
             <a
               title="Facebook"
               href="https://www.facebook.com/arthur.hwang.9"
               className="link"
             >
-              <span>
-                <FaFacebook className="icon" />
-                Facebook
-              </span>
+              <FaFacebook className="icon" /> Facebook
             </a>
             <a title="Twitter" href="https://www.twitter.com/" className="link">
               <FaTwitter className="icon" /> Twitter
@@ -113,9 +106,15 @@ export const Intro: React.FC<any> = () => {
               />{" "}
               CV
             </a>
+            <div>
+              <FaGithub className="icon" />{" "}
+              <a className="link" href="https://www.facebook.com/arthur.hwang.9">facebook</a>
+            </div>
+
+            <FaLinkedinIn className="icon" />
+            <FaFacebook className="icon" />
           </div>
         </InnerRight>
-        <FaLinkedinIn className="icon" />
         {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
           {({ data, loading }: Query) => {
             if (loading || !data) {

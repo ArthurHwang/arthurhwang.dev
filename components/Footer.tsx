@@ -2,10 +2,10 @@ import styled from "styled-components";
 import MdHeart from "react-ionicons/lib/MdHeart";
 import {
   FaGithub,
-  FaLinkedin,
-  FaFacebookSquare,
-  FaFileCode,
-  FaTwitterSquare
+  FaFacebook,
+  FaLinkedinIn,
+  FaClipboardList,
+  FaTwitter
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
@@ -44,20 +44,20 @@ export const Footer: React.FC<any> = () => {
           href="https://www.linkedin.com/in/arthur-hwang"
           className="link"
         >
-          <FaLinkedin className="icon" />
+          <FaLinkedinIn className="icon" />
         </a>
         <a
           title="Facebook"
           href="https://www.facebook.com/arthur.hwang.9"
           className="link"
         >
-          <FaFacebookSquare className="icon" />
+          <FaFacebook className="icon" />
         </a>
         <a title="Twitter" href="https://www.twitter.com/" className="link">
-          <FaTwitterSquare className="icon" />
+          <FaTwitter className="icon" />
         </a>
         <a title="Resume" href="mailto:mail@arthurhwang.dev" className="link">
-          <FaFileCode className="icon" />{" "}
+          <FaClipboardList className="icon" />{" "}
         </a>
         <a title="Email" href="mailto:mail@arthurhwang.dev" className="link">
           <IoMdMail className="icon" />
