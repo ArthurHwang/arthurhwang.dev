@@ -52,10 +52,10 @@ export const Footer: React.FC<any> = () => {
         <a title="" href="https://www.twitter.com/" className="link">
           <FaTwitter className="icon" />
         </a>
-        <a title="" href="mailto:mail@arthurhwang.dev" className="link">
+        <a title="CV" href="mailto:mail@arthurhwang.dev" className="link">
           <FaClipboardList className="icon" />{" "}
         </a>
-        <a title="" href="mailto:mail@arthurhwang.dev" className="link">
+        <a title="Email" href="mailto:mail@arthurhwang.dev" className="link">
           <IoMdMail className="icon" />
         </a>
       </div>

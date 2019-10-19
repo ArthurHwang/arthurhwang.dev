@@ -67,6 +67,7 @@ export const Intro: React.FC<any> = () => {
             >
               <FaGithub className="icon" /> Github
             </a>
+
             <a
               title=""
               href="https://www.linkedin.com/in/arthur-hwang"
@@ -141,9 +142,15 @@ const InnerLeft = styled("div")`
 
 const InnerRight = styled("div")`
   .badges {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.2rem;
+
     & a {
-      margin-bottom: 1rem;
-      /* display: flex; */
+      /* vertical-align: middle; */
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
       /* align-items: center; */
       /* height: 30px; */
       @media (max-width: 490px) {
@@ -152,18 +159,23 @@ const InnerRight = styled("div")`
         }
       }
     }
-    display: flex;
-    flex-direction: column;
+
+    .icon {
+      position: relative;
+      /* top: 4px; */
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+
+    .icon-text {
+      /* position: relative;
+      bottom: 5px; */
+      /* bottom: 5px; */
+    }
 
     @media (max-width: 490px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    .icon {
-      position: relative;
-      top: 4px;
-      font-size: 3rem;
     }
   }
 `;
