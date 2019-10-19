@@ -43,11 +43,7 @@ export const Skills: React.FC<any> = () => {
             <img src="/static/home/mongodb.png" /> MongoDB
           </span>
           <span className="skill-item">
-            <img
-              //   style={{ width: "42px", height: "auto" }}
-              src="/static/home/expressjslogo.png"
-            />{" "}
-            ExpressJS
+            <img src="/static/home/expressjslogo.png" /> ExpressJS
           </span>
           <span className="skill-item">
             <img src="/static/home/jest.png" /> Jest
@@ -79,45 +75,49 @@ export const Skills: React.FC<any> = () => {
         </h3>
         <div className="other-wrap">
           <div className="col">
-            <span>Responsive Web</span>
-            <span>Performance optimization</span>
-            <span>Cross-browser optimization</span>
-            <span>Agile Workflows</span>
+            <span className="other-item" style={{ paddingTop: "0" }}>
+              <span className="hyphen">-</span> Responsive Web
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> Performance optimization
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> Cross-browser optimization
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> Agile Workflows
+            </span>
           </div>
           <div className="col">
-            <span>User Interface / User Experience</span>
-            <span>Google Marketing Platform</span>
-            <span>Search Engine Optimization</span>
-            <span>Google Analytics</span>
+            <span className="other-item" style={{ paddingTop: "0" }}>
+              <span className="hyphen">-</span> User Interface / User Experience
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> Google Marketing Platform
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> Search Engine Optimization
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> Google Analytics
+            </span>
           </div>
           <div className="col">
-            <span>UNIX Server Administration</span>
-            <span>Cpanel / WHM</span>
-            <span>Problem Solving</span>
-            <span>Communication</span>
+            <span className="other-item" style={{ paddingTop: "0" }}>
+              <span className="hyphen">-</span> UNIX Server Administration
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> cPanel / WHM
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> CI / CD
+            </span>
+            <span className="other-item">
+              <span className="hyphen">-</span> DevOps
+            </span>
           </div>
         </div>
-        {/* <div className="flex-wrap"> */}
-
-        {/* </div> */}
       </StyledSkills>
-      {/* <StyledTools>
-        <h2>
-          Tools<span>_</span>
-        </h2>
-        <div className="flex-wrap">
-          <img src="/static/home/js.png" />
-          <img src="/static/home/typescript.svg" />
-          <img src="/static/home/react.png" />
-          <img src="/static/home/nodejs-icon.svg" />
-          <img src="/static/home/graphql.png" />
-          <img src="/static/home/gatsby.png" />
-          <img src="/static/home/next-js.svg" />
-          <img src="/static/home/html5.png" />
-          <img src="/static/home/css.png" />
-          <img src="/static/home/git.png" />
-        </div>
-      </StyledTools> */}
     </ContentWrap>
   );
 };
@@ -128,8 +128,6 @@ const ContentWrap = styled("div")`
 
   h2 {
     margin-top: 0;
-
-    /* text-align: center; */
   }
   span {
     color: ${({ theme }) => theme.accent};
@@ -143,6 +141,15 @@ const StyledSkills = styled("div")`
   /* margin-bottom: 1rem; */
 
   .other-wrap {
+    position: relative;
+    right: 10px;
+    .other-item {
+      padding: 0.5rem;
+    }
+
+    .hyphen {
+      color: ${({ theme }) => theme.black};
+    }
     .col {
       display: flex;
       flex-direction: column;
@@ -150,7 +157,7 @@ const StyledSkills = styled("div")`
     span {
       text-align: left;
       font-weight: 600;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -158,6 +165,9 @@ const StyledSkills = styled("div")`
   .skills-wrap {
     margin-bottom: 2rem;
     flex-wrap: wrap;
+
+    position: relative;
+    right: 10px;
 
     &:last-child {
       margin-bottom: 0;
@@ -170,14 +180,20 @@ const StyledSkills = styled("div")`
       display: flex;
       flex-direction: column;
     }
-    /* display: grid; */
-    /* justify-content: space-evenly; */
-    /* grid-auto-rows: 1fr; */
-    /* grid-auto-columns: 1fr; */
+
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(2, 1fr);
+
+    @media (max-width: 940px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (max-width: 490px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
     img {
       margin: 0 auto;
       width: 45px;

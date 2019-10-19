@@ -22,7 +22,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
         return (
           <SubheaderDefault>
             <h1>Projects</h1>
-            <Divider invert={true} color="red" />
+            <Divider invert={true} color="green" />
             <h2>
               See my projects below. Unless explicity stated,{" "}
               <strong>all source code is completely authored by me.</strong>

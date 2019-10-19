@@ -8,8 +8,25 @@ export const About: React.FC<any> = () => {
           About me<span>_</span>
         </h2>
         <p>
-          I currently work as a web developer for a regionally well known law
-          firm
+          I’ve always sought out opportunities and challenges that are
+          meaningful to me. Although my professional path has taken many twists
+          and turns — from touring and recording artist, to employee of the year
+          at a non-profit, to dean's scholar at UPenn, to small business owner
+          and entrepreneur — I've never stopped engaging my passion to help
+          others and solve problems. As a web developer, I enjoy using my
+          obsessive attention to detail, my unequivocal love for making things,
+          and my mission-driven work ethic to literally change the world. That's
+          why I’m excited to make a big impact at a high growth company.
+        </p>
+        <p>
+          My name is Kyle. I design and build digital products that are
+          intuitive, accessible, beautiful, and fun. I’ve done this
+          professionally since 2012, and I’ve been designing for the web since
+          2007. This is a home for things I’ve made and how I’ve made them. My
+          goal is for anyone (and anyone’s grandma) to understand what I’ve
+          written. Although the focus is on my design and the process behind it,
+          case studies occasionally detour to explore interesting, relevant
+          topics.
         </p>
       </StyledAbout>
     </ContentWrap>

@@ -55,7 +55,9 @@ export const Intro: React.FC<any> = () => {
         </InnerLeft>
 
         <InnerRight>
-          <h2>Links</h2>
+          <h2>
+            Links<span>_</span>
+          </h2>
 
           <div className="badges">
             <a
@@ -124,6 +126,10 @@ const ContentWrap = styled("div")`
   display: flex;
   justify-content: center;
   padding: 4rem;
+  span {
+    color: ${({ theme }) => theme.accent};
+    font-weight: 800;
+  }
 
   h2 {
     margin-top: 0;
@@ -132,19 +138,25 @@ const ContentWrap = styled("div")`
 
 const InnerLeft = styled("div")`
   /* padding-left: 12rem; */
-  span {
-    color: ${({ theme }) => theme.accent};
-    font-weight: 800;
-  }
 `;
 
 const InnerRight = styled("div")`
   .badges {
     & a {
       margin-bottom: 1rem;
+      @media (max-width: 490px) {
+        &:nth-child(even) {
+          padding-left: calc(100% - 66%);
+        }
+      }
     }
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 490px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     .icon {
       position: relative;
