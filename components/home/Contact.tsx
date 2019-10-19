@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { Error } from "../Error";
+import { useState } from "react";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -15,24 +16,31 @@ const validationSchema = Yup.object().shape({
   email: Yup.string()
     .email("Must be a valid email address")
     .max(255, "Must be shorter than 255")
-    .required("Must enter an email")
+    .required("Must enter an email"),
+  message: Yup.string()
+    .min(2, "Must have a character")
+    .required("Must enter a message")
 });
+
 export const Contact: React.FC<any> = () => {
+  const [alert, setAlert] = useState("");
   return (
     <ContentWrap>
       <StyledContact>
         <h2>
           Lets Chat!<span>_</span>
         </h2>
-        {/* 
-        //@ts-ignore */}
         <Formik
-          initialValues={{ firstName: "", lastName: "", email: "" }}
+          initialValues={{
+            firstName: "",
+            lastName: "",
+            email: "",
+            message: ""
+          }}
           validationSchema={validationSchema}
-          //@ts-ignore
-          onSubmit={async (values, { setSubmitting, resetForm }) => {
+          onSubmit={async (values, { setSubmitting, resetForm, setStatus }) => {
             setSubmitting(true);
-
+            setStatus(undefined);
             const response = await fetch("/api/contact", {
               method: "POST",
               body: JSON.stringify(values),
@@ -43,20 +51,19 @@ export const Contact: React.FC<any> = () => {
             });
 
             const json = await response.json();
-            console.log(json);
 
-            resetForm();
-            setSubmitting(false);
-
-            // setTimeout(() => {
-            //   alert(JSON.stringify(values, null, 2));
-            //   resetForm();
-            //   setSubmitting(false);
-            // }, 500);
+            if (response.status === 200) {
+              setStatus(json);
+              setAlert("Message sent, thank you");
+              resetForm();
+              setSubmitting(false);
+            } else {
+              setStatus(json);
+              setAlert("Message failed to send, please try again");
+              console.log("serverError");
+            }
           }}
         >
-          {/* 
-        //@ts-ignore */}
           {({
             values,
             errors,
@@ -67,9 +74,7 @@ export const Contact: React.FC<any> = () => {
             isSubmitting
           }) => (
             <form onSubmit={handleSubmit}>
-              {/* {JSON.stringify(values)} */}
               <div className="input-row">
-                <label htmlFor="firstName">First Name</label>
                 <input
                   type="text"
                   name="firstName"
@@ -86,7 +91,6 @@ export const Contact: React.FC<any> = () => {
                 <Error touched={touched.firstName} message={errors.firstName} />
               </div>
               <div className="input-row">
-                <label htmlFor="name">Last Name</label>
                 <input
                   type="text"
                   name="lastName"
@@ -103,7 +107,6 @@ export const Contact: React.FC<any> = () => {
                 <Error touched={touched.lastName} message={errors.lastName} />
               </div>
               <div className="input-row">
-                <label htmlFor="name">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -117,6 +120,23 @@ export const Contact: React.FC<any> = () => {
                 />
                 <Error touched={touched.email} message={errors.email} />
               </div>
+
+              <div className="input-row">
+                {/* <label htmlFor="message">Message</label> */}
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Enter your message"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.message}
+                  // @ts-ignore
+                  className={
+                    touched.message && errors.message ? "has-error" : null
+                  }
+                />
+                <Error touched={touched.message} message={errors.message} />
+              </div>
               <div className="input-row">
                 <button disabled={isSubmitting} type="submit">
                   Submit
@@ -125,6 +145,7 @@ export const Contact: React.FC<any> = () => {
             </form>
           )}
         </Formik>
+        {alert && <div>Message Sent! Thank you</div>}
       </StyledContact>
     </ContentWrap>
   );
@@ -148,9 +169,8 @@ const ContentWrap = styled("div")`
 
   h2 {
     margin-top: 0;
-
-    /* text-align: center; */
   }
+
   span {
     color: ${({ theme }) => theme.accent};
     font-weight: 800;
@@ -160,9 +180,9 @@ const ContentWrap = styled("div")`
 const StyledContact = styled("div")`
   max-width: 800px;
   margin: 0 auto;
+
   .flex-wrap {
     display: flex;
-
     justify-content: space-evenly;
 
     img {
