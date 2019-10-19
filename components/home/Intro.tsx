@@ -76,14 +76,17 @@ export const Intro: React.FC<any> = () => {
               href="https://www.linkedin.com/in/arthur-hwang"
               className="link"
             >
-              <FaLinkedinIn className="icon" /> LinkedIn
+              <FaLinkedinIn className="icon" /> <span>LinkedIn</span>
             </a>
             <a
               title="Facebook"
               href="https://www.facebook.com/arthur.hwang.9"
               className="link"
             >
-              <FaFacebook className="icon" /> Facebook
+              <span>
+                <FaFacebook className="icon" />
+                Facebook
+              </span>
             </a>
             <a title="Twitter" href="https://www.twitter.com/" className="link">
               <FaTwitter className="icon" /> Twitter
