@@ -35,9 +35,9 @@ export const Intro: React.FC<any> = () => {
           <p>
             As a natural tinkerer, I love to dig out the "why" of things. Being
             a self taught developer has taught me to not fear what I don't know,
-            instead tackle it with sheer determination and an unwavering will.
-            Having the privilege everyday to produce elegant and performant
-            software solutions makes me happy.
+            instead tackle i <FaLinkedinIn className="icon" />t with sheer
+            determination and an unwavering will. Having the privilege everyday
+            to produce elegant and performant software solutions makes me happy.
           </p>
           <p>
             I am drawn to creating performance driven websites that are fully
@@ -51,8 +51,9 @@ export const Intro: React.FC<any> = () => {
           </p>
           <p>
             I am usually learning about new things such as data structures and
-            algorithms to further improve my skills. Or testing out new hot
-            frameworks such as apollo / graphql
+            algorithms to further imp <FaLinkedinIn className="icon" />
+            rove my skills. Or testing out new hot frameworks such as apollo /
+            graphql
           </p>
         </InnerLeft>
 
@@ -69,6 +70,7 @@ export const Intro: React.FC<any> = () => {
             >
               <FaGithub className="icon" /> Github
             </a>
+            <FaLinkedinIn className="icon" />
             <a
               title="LinkedIn"
               href="https://www.linkedin.com/in/arthur-hwang"
@@ -110,7 +112,7 @@ export const Intro: React.FC<any> = () => {
             </a>
           </div>
         </InnerRight>
-
+        <FaLinkedinIn className="icon" />
         {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
           {({ data, loading }: Query) => {
             if (loading || !data) {
