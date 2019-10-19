@@ -4,6 +4,7 @@ import { Footer } from "./Footer";
 import { Subheader } from "./Subheader";
 import { withRouter } from "next/router";
 import styled from "styled-components";
+import { Contact } from "./Contact";
 
 interface Props {
   children: any;
@@ -21,6 +22,7 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
       <Subheader pathName={pathname} />
       <Inner pathName={pathname}>{children}</Inner>
       {/* <FooterPush /> */}
+      <Contact />
       <Footer />
     </StyledLayout>
   );

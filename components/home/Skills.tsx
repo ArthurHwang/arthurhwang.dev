@@ -145,7 +145,7 @@ const StyledSkills = styled("div")`
     grid-template-columns: repeat(3, 1fr);
 
     .two {
-      padding-left: calc(100% - 85%);
+      /* padding-left: calc(100% - 85%); */
 
       @media (max-width: 865px) {
         padding-left: 0;
@@ -153,11 +153,12 @@ const StyledSkills = styled("div")`
     }
 
     .three {
-      padding-left: calc(100% - 60%);
+      /* padding-left: calc(100% - 60%); */
+      padding-left: 2rem;
 
-      @media (max-width: 865px) {
+      /* @media (max-width: 865px) {
         padding-left: calc(100% - 90%);
-      }
+      } */
 
       @media (max-width: 768px) {
         padding-left: 0;

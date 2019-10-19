@@ -27,7 +27,7 @@ export const Intro: React.FC<any> = () => {
       <StyledIntro>
         <InnerLeft>
           <h2>
-            I like to build things with code<span>_</span>
+            I like coding<span>_</span>
           </h2>
           <p></p>
           <p>
@@ -98,7 +98,8 @@ export const Intro: React.FC<any> = () => {
             </a>
             <a
               // title="Resume"
-              href="mailto:mail@arthurhwang.dev"
+              href="mailto:mail@
+              .dev"
               className="link"
             >
               <FaClipboardList

@@ -11,9 +11,9 @@ import Head from "next/head";
 // import { useLayoutEffect } from "react";
 // import Link from "next/link";
 import { Intro } from "../components/home/Intro";
-import {Skills} from "../components/home/Skills"
-import {About} from "../components/home/About"
-import {Contact} from "../components/home/Contact"
+import { Skills } from "../components/home/Skills";
+import { About } from "../components/home/About";
+// import { Contact } from "../components/Contact";
 // import {
 //   FaGithubSquare,
 //   FaLinkedin,
@@ -76,9 +76,9 @@ const Home: NextPage<any> = () => {
         />
       </Head>
       <Intro />
-      <Skills/>
-      <About/>
-      <Contact />
+      <Skills />
+      <About />
+      {/* <Contact /> */}
 
       {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
           {({ data, loading }: Query) => {
@@ -88,12 +88,8 @@ const Home: NextPage<any> = () => {
             return <div>{JSON.stringify(data)}</div>;
           }}
         </Query> */}
-
-
     </Fragment>
   );
 };
 
 export default Home;
-
-

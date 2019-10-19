@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { Error } from "../Error";
+import { Error } from "./Error";
 import { useState } from "react";
 
 const validationSchema = Yup.object().shape({
