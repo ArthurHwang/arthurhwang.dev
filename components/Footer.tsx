@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import MdHeart from "react-ionicons/lib/MdHeart";
 import {
-  FaGithubSquare,
+  FaGithub,
   FaLinkedin,
   FaFacebookSquare,
-  // FaRegCopyright,
   FaFileCode,
   FaTwitterSquare
 } from "react-icons/fa";
@@ -38,7 +37,7 @@ export const Footer: React.FC<any> = () => {
           href="https://github.com/ArthurHwang"
           className="link"
         >
-          <FaGithubSquare className="icon" />
+          <FaGithub className="icon" />
         </a>
         <a
           title="LinkedIn"

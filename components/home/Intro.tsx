@@ -9,15 +9,17 @@ import styled from "styled-components";
 // import Fonts from "../util/Fonts";
 // import { withApollo } from "../lib/apollo";
 // import { useLayoutEffect } from "react";
+// import LogoLinkedin from "react-ionicons/lib/LogoLinkedin";
 import Link from "next/link";
 
 import {
-  FaGithubSquare,
-  FaLinkedin,
-  FaFacebookSquare,
-  FaFileCode,
+  FaGithub,
+  // FaLinkedin,
+  FaFacebook,
+  FaLinkedinIn,
   // FaRegCopyright,
-  FaTwitterSquare
+  FaClipboardList,
+  FaTwitter
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
@@ -65,24 +67,24 @@ export const Intro: React.FC<any> = () => {
               href="https://github.com/ArthurHwang"
               className="link"
             >
-              <FaGithubSquare className="icon" /> Github
+              <FaGithub className="icon" /> Github
             </a>
             <a
               title="LinkedIn"
               href="https://www.linkedin.com/in/arthur-hwang"
               className="link"
             >
-              <FaLinkedin className="icon" /> LinkedIn
+              <FaLinkedinIn className="icon" /> LinkedIn
             </a>
             <a
               title="Facebook"
               href="https://www.facebook.com/arthur.hwang.9"
               className="link"
             >
-              <FaFacebookSquare className="icon" /> Facebook
+              <FaFacebook className="icon" /> Facebook
             </a>
             <a title="Twitter" href="https://www.twitter.com/" className="link">
-              <FaTwitterSquare className="icon" /> Twitter
+              <FaTwitter className="icon" /> Twitter
             </a>
             <a
               title="Email"
@@ -90,7 +92,7 @@ export const Intro: React.FC<any> = () => {
               className="link"
             >
               <IoMdMail
-                style={{ position: "relative", top: "6px" }}
+                // style={{ position: "relative", top: "6px" }}
                 className="icon"
               />{" "}
               Email
@@ -100,8 +102,8 @@ export const Intro: React.FC<any> = () => {
               href="mailto:mail@arthurhwang.dev"
               className="link"
             >
-              <FaFileCode
-                style={{ position: "relative", top: "3px" }}
+              <FaClipboardList
+                // style={{ position: "relative", top: "3px" }}
                 className="icon"
               />{" "}
               CV
@@ -144,6 +146,9 @@ const InnerRight = styled("div")`
   .badges {
     & a {
       margin-bottom: 1rem;
+      /* display: flex; */
+      /* align-items: center; */
+      /* height: 30px; */
       @media (max-width: 490px) {
         &:nth-child(even) {
           padding-left: calc(100% - 66%);
