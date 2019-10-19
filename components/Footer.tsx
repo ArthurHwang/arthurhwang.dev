@@ -3,7 +3,7 @@ import MdHeart from "react-ionicons/lib/MdHeart";
 import {
   FaGithub,
   FaFacebook,
-  FaLinkedinIn,
+  FaLinkedin,
   FaClipboardList,
   FaTwitter
 } from "react-icons/fa";
@@ -32,34 +32,30 @@ export const Footer: React.FC<any> = () => {
       </div>
 
       <div className="badges">
-        <a
-          title="Github"
-          href="https://github.com/ArthurHwang"
-          className="link"
-        >
+        <a title="" href="https://github.com/ArthurHwang" className="link">
           <FaGithub className="icon" />
         </a>
         <a
-          title="LinkedIn"
+          title=""
           href="https://www.linkedin.com/in/arthur-hwang"
           className="link"
         >
-          <FaLinkedinIn className="icon" />
+          <FaLinkedin className="icon" />
         </a>
         <a
-          title="Facebook"
+          title=""
           href="https://www.facebook.com/arthur.hwang.9"
           className="link"
         >
           <FaFacebook className="icon" />
         </a>
-        <a title="Twitter" href="https://www.twitter.com/" className="link">
+        <a title="" href="https://www.twitter.com/" className="link">
           <FaTwitter className="icon" />
         </a>
-        <a title="Resume" href="mailto:mail@arthurhwang.dev" className="link">
+        <a title="" href="mailto:mail@arthurhwang.dev" className="link">
           <FaClipboardList className="icon" />{" "}
         </a>
-        <a title="Email" href="mailto:mail@arthurhwang.dev" className="link">
+        <a title="" href="mailto:mail@arthurhwang.dev" className="link">
           <IoMdMail className="icon" />
         </a>
       </div>

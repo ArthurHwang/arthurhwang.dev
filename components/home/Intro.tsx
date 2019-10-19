@@ -15,7 +15,7 @@ import Link from "next/link";
 import {
   FaGithub,
   FaFacebook,
-  FaLinkedinIn,
+  FaLinkedin,
   FaClipboardList,
   FaTwitter
 } from "react-icons/fa";
@@ -61,31 +61,31 @@ export const Intro: React.FC<any> = () => {
 
           <div className="badges">
             <a
-              title="Github"
+              // title="Github"
               href="https://github.com/ArthurHwang"
               className="link"
             >
               <FaGithub className="icon" /> Github
             </a>
             <a
-              title="LinkedIn"
+              title=""
               href="https://www.linkedin.com/in/arthur-hwang"
               className="link"
             >
-              <FaLinkedinIn className="icon" /> LinkedIn
+              <FaLinkedin className="icon" /> LinkedIn
             </a>
             <a
-              title="Facebook"
+              title=""
               href="https://www.facebook.com/arthur.hwang.9"
               className="link"
             >
               <FaFacebook className="icon" /> Facebook
             </a>
-            <a title="Twitter" href="https://www.twitter.com/" className="link">
+            <a title="" href="https://www.twitter.com/" className="link">
               <FaTwitter className="icon" /> Twitter
             </a>
             <a
-              title="Email"
+              // title="Email"
               href="mailto:mail@arthurhwang.dev"
               className="link"
             >
@@ -96,7 +96,7 @@ export const Intro: React.FC<any> = () => {
               Email
             </a>
             <a
-              title="Resume"
+              // title="Resume"
               href="mailto:mail@arthurhwang.dev"
               className="link"
             >
@@ -106,13 +106,6 @@ export const Intro: React.FC<any> = () => {
               />{" "}
               CV
             </a>
-            <div>
-              <FaGithub className="icon" />{" "}
-              <a className="link" href="https://www.facebook.com/arthur.hwang.9">facebook</a>
-            </div>
-
-            <FaLinkedinIn className="icon" />
-            <FaFacebook className="icon" />
           </div>
         </InnerRight>
         {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
