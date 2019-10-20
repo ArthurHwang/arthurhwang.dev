@@ -49,9 +49,7 @@ html {
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 
 }
-body {
-  margin: 0;
-}
+
 main {
   display: block;
 }
@@ -193,6 +191,14 @@ template {
 }
 /* NormalizeCSS End*/
 
+/* @font-face {
+	font-family: 'Roboto';
+	src: url('/static/fonts/Lemonada/Roboto-Regular.ttf');
+	src: url('static/fonts/Lemonada/Roboto-Bold.ttf');
+	src: url('/static/fonts/Lemonada/Roboto-Medium.ttf');
+	src: url('/static/fonts/Lemonada/Roboto-Light.ttf');
+} */
+
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -232,7 +238,7 @@ p, span {
 a {
   text-decoration: none;
   color: ${theme.blue};
-  font-weight: 500;
+  font-weight: 600;
 
   &:hover {
     color: ${theme.accent};
@@ -241,13 +247,13 @@ a {
 
 a.link {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   background-image: linear-gradient(to right,#4AD7D1,#4AD7D1 50%,${theme.blue} 50%);
   background-position: 100%;
   background-size: 200% 100%;
-  transition: all .4s;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+    transition: all .4s;
 
   &:hover {
     background-position: 0%;

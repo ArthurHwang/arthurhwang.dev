@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 interface Props {
   href: string;
-  activeClassName: string;
+  activeClassName?: string;
   children: any;
   partiallyActive?: boolean;
 }

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import MdHeart from "react-ionicons/lib/MdHeart";
 import {
-  FaGithubSquare,
+  FaGithub,
+  FaFacebook,
   FaLinkedin,
-  FaFacebookSquare,
-  FaRegCopyright,
-  FaTwitterSquare
+  FaClipboardList,
+  FaTwitter
 } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 export const Footer: React.FC<any> = () => {
   return (
@@ -31,32 +32,34 @@ export const Footer: React.FC<any> = () => {
       </div>
 
       <div className="badges">
-        <a
-          title="Github"
-          href="https://github.com/ArthurHwang"
-          className="link"
-        >
-          <FaGithubSquare className="icon" />
+        <a title="" href="https://github.com/ArthurHwang" className="link">
+          <FaGithub className="icon" />
         </a>
         <a
-          title="LinkedIn"
+          title=""
           href="https://www.linkedin.com/in/arthur-hwang"
           className="link"
         >
           <FaLinkedin className="icon" />
         </a>
         <a
-          title="LinkedIn"
+          title=""
           href="https://www.facebook.com/arthur.hwang.9"
           className="link"
         >
-          <FaFacebookSquare className="icon" />
+          <FaFacebook className="icon" />
         </a>
-        <a title="LinkedIn" href="https://www.twitter.com/" className="link">
-          <FaTwitterSquare className="icon" />
+        <a title="" href="https://www.twitter.com/" className="link">
+          <FaTwitter className="icon" />
+        </a>
+        <a title="CV" href="mailto:mail@arthurhwang.dev" className="link">
+          <FaClipboardList className="icon" />{" "}
+        </a>
+        <a title="Email" href="mailto:mail@arthurhwang.dev" className="link">
+          <IoMdMail className="icon" />
         </a>
       </div>
-      <div className="copyright">
+      {/* <div className="copyright">
         <span>
           <FaRegCopyright style={{ color: "#FE4A49", marginRight: "0.5rem" }} />{" "}
           2019&nbsp;
@@ -64,7 +67,7 @@ export const Footer: React.FC<any> = () => {
           <strong> Arthur Hwang</strong>
           .&nbsp; All Rights Reserved
         </span>
-      </div>
+      </div> */}
     </StyledFooter>
   );
 };
@@ -73,13 +76,20 @@ const StyledFooter = styled("footer")`
   padding: 1rem 2rem;
   background-color: ${({ theme }) => theme.primary};
   margin: 0;
+  /* margin-top: 2rem; */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
+  /* position: absolute; */
+  /* left: 0; */
+  /* bottom: 0; */
+  /* width: 100%; */
 
   @media (max-width: 910px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    /* position: relative; */
   }
 
   span {
@@ -90,7 +100,7 @@ const StyledFooter = styled("footer")`
 
   .love {
     position: relative;
-    top: 4px;
+    top: 2px;
 
     @media (max-width: 910px) {
       text-align: center;
@@ -122,16 +132,17 @@ const StyledFooter = styled("footer")`
 
   .badges {
     position: relative;
-    top: 4px;
-    justify-self: center;
+    top: 6px;
+    justify-self: flex-end;
 
     @media (max-width: 910px) {
       top: 2px;
       padding: 0.5rem 0;
+      justify-self: center;
     }
   }
 
   .icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;

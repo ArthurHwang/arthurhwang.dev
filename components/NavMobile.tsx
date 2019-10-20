@@ -41,11 +41,11 @@ export const NavMobile: React.FC<any> = () => {
               beat={true}
               color="#43853d"
             />
-            <Link href="/about">
+            {/* <Link href="/about">
               <a className="link-wrap link" onClick={handleLink}>
                 About
               </a>
-            </Link>
+            </Link> */}
             <Link href="/projects">
               <a className="link-wrap link" onClick={handleLink}>
                 Projects
