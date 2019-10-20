@@ -124,7 +124,7 @@ export const Skills: React.FC<any> = () => {
 };
 
 const ContentWrap = styled("div")`
-  padding: 4rem;
+  padding: 4rem 2rem;
   background-color: ${({ theme }) => theme.lightgrey};
 
   h2 {
@@ -201,6 +201,10 @@ const StyledSkills = styled("div")`
     grid-gap: 2rem;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(2, 1fr);
+
+    @media (max-width: 768px) {
+      position: initial;
+    }
 
     img {
       margin: 0 auto;

@@ -16,7 +16,7 @@ export default function handle(req: any, res: any) {
     {
       from: "mail@arthurhwang.dev",
       to: "ahwang55@gmail.com", // An array if you have multiple recipients.
-      subject: "New contact form submission from arthurhwang.dev",
+      subject: "New Form Submission",
       html: `<b>From: ${req.body.firstName} ${req.body.lastName}</b>
                <br />    
                <b>Email: ${req.body.email}</b>

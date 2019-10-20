@@ -126,7 +126,7 @@ export const Intro: React.FC<any> = () => {
 const ContentWrap = styled("div")`
   display: flex;
   justify-content: center;
-  padding: 4rem;
+  padding: 4rem 2rem;
   span {
     color: ${({ theme }) => theme.accent};
     font-weight: 800;

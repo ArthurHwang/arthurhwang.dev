@@ -1,4 +1,6 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
+// import { IoMdClose } from "react-icons/io";
 // import Link from "next/link";
 // import { useRouter } from "next/router";
 
@@ -16,5 +18,10 @@ export const Error: React.FC<any> = ({ touched, message }) => {
   if (message) {
     return <div className="form-message invalid">{message}</div>;
   }
-  return <div className="form-message valid">all good</div>;
+  return (
+    <div className="form-message valid">
+      {/* All good */}
+      <FaCheck />
+    </div>
+  );
 };

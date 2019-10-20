@@ -34,7 +34,7 @@ export const About: React.FC<any> = () => {
 };
 
 const ContentWrap = styled("div")`
-  padding: 4rem;
+  padding: 4rem 2rem;
   /* background-color: ${({ theme }) => theme.lightgrey}; */
 
   h2 {
