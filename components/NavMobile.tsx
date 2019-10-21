@@ -98,6 +98,7 @@ const StyledNavMenu = styled("div")`
   position: fixed;
   left: 0;
   top: 61px;
+  z-index: 10;
   width: 100vw;
   padding: 2rem;
   background-color: ${({ theme }) => theme.lightgrey};
