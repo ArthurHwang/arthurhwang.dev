@@ -4,35 +4,65 @@ import { CommitList } from "../components/CommitList";
 import Head from "next/head";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
+import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const Projects: NextPage<any> = () => {
+  var settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    lazyLoad: "ondemand",
+    // fade: true,
+    speed: 800
+  };
   return (
     <Fragment>
       <Head>
         <title>Arthur Hwang | Projects</title>
         <meta name="description" content="Arthur Hwang's Blog" />
+        {/* 
+        //@ts-ignore */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       </Head>
-
+      {/***************************************************************************************************/}
+      {/******************************* PROJECT 1 - Bestattorney.com-gatsby *******************************/}
+      {/***************************************************************************************************/}
       <ProjectWrap>
         <ContentWrap>
-          <a href="https://www.bestattorney.com" className="link">
+          <a href="https://www.bestattorney.netlify.com" className="link">
             Bisnar | Chase - GatsbyJS
           </a>
           <div className="project split-grid-left">
-            {/* <Link href="https://www.bestattorney.com"> */}
+            {/* 
+            //@ts-ignore */}
+            <Slider className="inner-slider" {...settings}>
+              <img src="/static/projects/bestattorney-gatsby/screenshot-1.png" />
+              <img src="/static/projects/bestattorney-gatsby/screenshot-2.png" />
+              <img src="/static/projects/bestattorney-gatsby/screenshot-3.png" />
+              <img src="/static/projects/bestattorney-gatsby/screenshot-4.png" />
+              <img src="/static/projects/bestattorney-gatsby/screenshot-5.png" />
+            </Slider>
 
-            {/* </Link> */}
-
-            <div className="img">
-              <img src="/static/projects/bestattorney-gatsby-min.webp" />
-            </div>
-            {/* <div className="commits"> */}
-            {/* <h3>Recent Commits & CI Status</h3> */}
-            <LazyLoad height={207}>
+            <LazyLoad height={221}>
               <CommitList owner="bestattorney" name="bestattorney.com-gatsby" />
             </LazyLoad>
-
-            {/* </div> */}
 
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
@@ -84,49 +114,59 @@ const Projects: NextPage<any> = () => {
                   Created Custom google maps component to display all of
                   companies locations
                 </li>
+                <li>Created entire spanish equivalent of website</li>
+                <li>7000 page statically generated website</li>
               </ul>
             </div>
           </div>
           <div className="badges">
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
+            <img src="/static/projects/logos/Gatsby-Logo.svg" />
+            <img src="/static/projects/logos/netlify.png" />
+            <img src="/static/projects/logos/React.png" />
+            <img src="/static/projects/logos/netlify.png" />
+            <img src="/static/projects/logos/Gatsby-Logo.svg" />
+            <img src="/static/projects/logos/netlify.png" />
+
+            {/* <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" /> */}
           </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-              neque.
-            </p>
+          <div className="buttons">
             <button>Source</button>
             <button>Launch</button>
           </div>
         </ContentWrap>
       </ProjectWrap>
 
+      {/***************************************************************************************************/}
+      {/*********************************** PROJECT 2 - arthurhwang.dev ***********************************/}
+      {/***************************************************************************************************/}
       <ProjectWrap className="bg-grey">
         <ContentWrap>
-          <a href="https://www.bestattorney.com" className="link">
+          <a href="/" className="link">
             arthurhwang.dev
           </a>
 
           <div className="project split-grid-right">
-            {/* <Link href="https://www.bestattorney.com"> */}
-
-            {/* </Link> */}
-
-            <div className="img">
+            {/* 
+            //@ts-ignore */}
+            <Slider className="inner-slider" {...settings}>
               <img src="/static/projects/arthurhwang.dev.png" />
-            </div>
-            <LazyLoad height={207}>
+              <img src="/static/projects/arthurhwang.dev.png" />
+              <img src="/static/projects/arthurhwang.dev.png" />
+              <img src="/static/projects/arthurhwang.dev.png" />
+              <img src="/static/projects/arthurhwang.dev.png" />
+            </Slider>
+
+            <LazyLoad height={221}>
               <CommitList owner="ArthurHwang" name="arthurhwang.dev" />
             </LazyLoad>
+
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
               <ul>
@@ -190,16 +230,12 @@ const Projects: NextPage<any> = () => {
             </div>
           </div>
           <div className="badges">
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
+            <img src="/static/projects/logos/gatsby.png" />
           </div>
           <div>
             <p>
@@ -212,21 +248,25 @@ const Projects: NextPage<any> = () => {
         </ContentWrap>
       </ProjectWrap>
 
+      {/***************************************************************************************************/}
+      {/******************************* PROJECT 3 - Bestattorney.com-admin* *******************************/}
+      {/***************************************************************************************************/}
       <ProjectWrap>
         <ContentWrap>
-          <a href="https://www.bestattorney.com" className="link">
-            Bisnar | Chase administration login
+          <a href="https://www.bestattorney.com/admin" className="link">
+            Bisnar | Chase - Admin
           </a>
 
           <div className="project split-grid-left">
-            {/* <Link href="https://www.bestattorney.com"> */}
-
-            {/* </Link> */}
-
-            <div className="img">
+            {/* 
+            //@ts-ignore */}
+            <Slider className="inner-slider" {...settings}>
               <img src="/static/projects/bestattorney.com-admin.png" />
-            </div>
-            <LazyLoad height={207}>
+              <img src="/static/projects/bestattorney.com-admin.png" />
+              <img src="/static/projects/bestattorney.com-admin.png" />
+              <img src="/static/projects/bestattorney.com-admin.png" />
+            </Slider>
+            <LazyLoad height={221}>
               <CommitList
                 owner="bestattorney"
                 name="bestattorney.com"
@@ -336,34 +376,252 @@ const Projects: NextPage<any> = () => {
         </ContentWrap>
       </ProjectWrap>
 
+      {/***************************************************************************************************/}
+      {/******************************* PROJECT 4 - Bestattorney.com **************************************/}
+      {/***************************************************************************************************/}
       <ProjectWrap className="bg-grey">
-        <div className="project">
-          {/* <Link href="https://www.bestattorney.com"> */}
+        <ContentWrap>
           <a href="https://www.bestattorney.com" className="link">
-            bestattorney.com LAMP rewrite
+            Bisnar | Chase - LAMP
           </a>
-          {/* </Link> */}
-        </div>
-      </ProjectWrap>
 
+          <div className="project split-grid-right">
+            {/* 
+            //@ts-ignore */}
+            <Slider className="inner-slider" {...settings}>
+              <img src="/static/projects/bestattorney.com-admin.png" />
+              <img src="/static/projects/bestattorney.com-admin.png" />
+              <img src="/static/projects/bestattorney.com-admin.png" />
+              <img src="/static/projects/bestattorney.com-admin.png" />
+            </Slider>
+            <LazyLoad height={207}>
+              <CommitList owner="bestattorney" name="bestattorney.com" />
+            </LazyLoad>
+
+            <div className="accomplishments">
+              <h3>Accomplishments:</h3>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="badges">
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+          </div>
+          <div>
+            {/* <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+              neque.
+            </p> */}
+            <button>Source</button>
+            <button>Launch</button>
+          </div>
+        </ContentWrap>
+      </ProjectWrap>
+      {/***************************************************************************************************/}
+      {/**************************************** PROJECT 5 - Toneify **************************************/}
+      {/***************************************************************************************************/}
       <ProjectWrap>
-        <div className="project">
-          {/* <Link href="https://www.bestattorney.com"> */}
+        <ContentWrap>
           <a href="https://www.bestattorney.com" className="link">
-            toneify
+            Toneify
           </a>
-          {/* </Link> */}
-        </div>
-      </ProjectWrap>
 
-      <ProjectWrap className="bg-grey">
-        <div className="project">
-          {/* <Link href="https://www.bestattorney.com"> */}
-          <a href="https://www.bestattorney.com" className="link">
-            Bestattorney.com
-          </a>
-          {/* </Link> */}
-        </div>
+          <div className="project split-grid-left">
+            {/* 
+            //@ts-ignore */}
+            <Slider className="inner-slider" {...settings}>
+              <img src="/static/projects/bestattorney.com-admin.png" />
+              <img src="/static/projects/bestattorney.com-admin.png" />
+              <img src="/static/projects/bestattorney.com-admin.png" />
+              <img src="/static/projects/bestattorney.com-admin.png" />
+            </Slider>
+
+            <LazyLoad height={207}>
+              <CommitList
+                owner="bestattorney"
+                name="bestattorney.com"
+                path="SPAs"
+              />
+            </LazyLoad>
+
+            <div className="accomplishments">
+              <h3>Accomplishments:</h3>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Porro, aliquid?
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="badges">
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+            <span>hi</span>
+          </div>
+          <div>
+            <button>Source</button>
+            <button>Launch</button>
+          </div>
+        </ContentWrap>
       </ProjectWrap>
     </Fragment>
   );
@@ -374,8 +632,9 @@ export default Projects;
 const ContentWrap = styled("div")`
   max-width: 1300px;
   margin: 0 auto;
-  /* border: 2px solid grey; */
-  /* padding: 0 2rem; */
+
+  border: 2px solid grey;
+  padding: 2rem;
 `;
 
 const ProjectWrap = styled("div")`
@@ -393,7 +652,14 @@ const ProjectWrap = styled("div")`
   }
 
   .badges {
-    text-align: center;
+    display: flex;
+    padding: 2rem 4rem;
+    /* text-align: center; */
+    justify-content: space-around;
+
+    img {
+      width: 80px;
+    }
   }
 
   .link {
@@ -402,18 +668,40 @@ const ProjectWrap = styled("div")`
     font-size: 3rem;
   }
 
-  /* .link .right {
-    display: block;
-    margin-bottom: 2rem;
-    text-align: right;
-    font-size: 3rem;
-  } */
+  /* FIX FOR CAROUSEL */
+  * {
+    min-height: 0;
+    min-width: 0;
+  }
 
-  .img {
-    grid-area: img;
+  .inner-slider {
+    grid-area: carousel;
+    /* border: 1px solid black; */
 
-    img {
-      width: 100%;
+    .slick-dots {
+      bottom: -10px;
+      .slick-active button:before {
+        color: ${({ theme }) => theme.accent};
+      }
+    }
+
+    .slick-prev {
+      z-index: 10;
+      left: 2%;
+    }
+
+    .slick-next {
+      z-index: 10;
+      right: 2%;
+    }
+
+    .slick-prev,
+    .slick-next {
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: ${({ theme }) => theme.accent};
     }
   }
 
@@ -423,9 +711,14 @@ const ProjectWrap = styled("div")`
 
   .accomplishments {
     grid-area: accomplishments;
+    /* background-color: grey; */
 
     li {
       font-size: 1.4rem;
+
+      /* &:nth-child(odd) {
+        background-color: ${({ theme }) => theme.lightgrey};
+      } */
     }
   }
 
@@ -434,14 +727,14 @@ const ProjectWrap = styled("div")`
     grid-gap: 2rem;
     grid-template-columns: 1.5fr 1fr;
     grid-template-areas:
-      "img accomplishments"
+      "carousel accomplishments"
       "commits accomplishments";
 
     @media (max-width: 1400px) {
       grid-template-columns: initial;
       grid-template-rows: repeat(3, auto);
       grid-template-areas:
-        "img"
+        "carousel"
         "accomplishments"
         "commits";
     }
@@ -452,14 +745,14 @@ const ProjectWrap = styled("div")`
     grid-gap: 2rem;
     grid-template-columns: 1fr 1.5fr;
     grid-template-areas:
-      "accomplishments img"
+      "accomplishments carousel"
       "accomplishments commits";
 
     @media (max-width: 1400px) {
       grid-template-columns: initial;
       grid-template-rows: repeat(3, auto);
       grid-template-areas:
-        "img"
+        "carousel"
         "accomplishments"
         "commits";
     }
