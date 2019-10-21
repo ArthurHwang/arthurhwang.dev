@@ -191,14 +191,6 @@ template {
 }
 /* NormalizeCSS End*/
 
-/* @font-face {
-	font-family: 'Roboto';
-	src: url('/static/fonts/Lemonada/Roboto-Regular.ttf');
-	src: url('static/fonts/Lemonada/Roboto-Bold.ttf');
-	src: url('/static/fonts/Lemonada/Roboto-Medium.ttf');
-	src: url('/static/fonts/Lemonada/Roboto-Light.ttf');
-} */
-
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -233,7 +225,6 @@ p, span {
   color: ${theme.grey};
   text-align: justify;
 }
-
 
 a {
   text-decoration: none;
