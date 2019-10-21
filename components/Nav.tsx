@@ -9,11 +9,6 @@ export const Nav: React.FC<any> = () => {
           <a>Home</a>
         </div>
       </Link>
-      {/* <Link activeClassName="active" href="/about">
-        <div className="link-box">
-          <a>About</a>
-        </div>
-      </Link> */}
       <Link activeClassName="active" href="/projects">
         <div className="link-box">
           <a>Projects</a>
@@ -38,7 +33,6 @@ const StyledNav = styled("nav")`
   padding: 0;
   display: flex;
   justify-self: end;
-  /* font-size: 1.8rem; */
 
   .link-box {
     display: flex;
@@ -100,16 +94,8 @@ const StyledNav = styled("nav")`
       outline: none;
       &:after {
         width: calc(100% - 30px);
-        /* @media (max-width: 833px) {
-          width: calc(100% - 45px);
-        } */
       }
     }
-    /* 
-    @media (max-width: 833px) {
-      font-size: 1.6rem;
-      padding: 0 20px;
-    } */
   }
 
   @media (max-width: 768px) {

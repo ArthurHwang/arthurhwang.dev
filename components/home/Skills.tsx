@@ -29,7 +29,6 @@ export const Skills: React.FC<any> = () => {
           <span className="skill-item">
             <img src="/static/home/next-js.svg" /> NextJS
           </span>
-
           <span className="skill-item">
             <img src="/static/home/git.png" /> Git
           </span>
@@ -145,20 +144,13 @@ const StyledSkills = styled("div")`
     grid-template-columns: repeat(3, 1fr);
 
     .two {
-      /* padding-left: calc(100% - 85%); */
-
       @media (max-width: 865px) {
         padding-left: 0;
       }
     }
 
     .three {
-      /* padding-left: calc(100% - 60%); */
       padding-left: 2rem;
-
-      /* @media (max-width: 865px) {
-        padding-left: calc(100% - 90%);
-      } */
 
       @media (max-width: 768px) {
         padding-left: 0;

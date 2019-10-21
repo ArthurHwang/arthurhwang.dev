@@ -1,15 +1,5 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa";
-// import { IoMdClose } from "react-icons/io";
-// import Link from "next/link";
-// import { useRouter } from "next/router";
-
-// interface Props {
-//   href: string;
-//   activeClassName: string;
-//   children: any;
-//   partiallyActive?: boolean;
-// }
 
 export const Error: React.FC<any> = ({ touched, message }) => {
   if (!touched) {
@@ -20,7 +10,6 @@ export const Error: React.FC<any> = ({ touched, message }) => {
   }
   return (
     <div className="form-message valid">
-      {/* All good */}
       <FaCheck />
     </div>
   );

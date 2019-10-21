@@ -53,10 +53,6 @@ export const SubheaderHome: React.FC<any> = () => {
 
 const TextWrap = styled("div")`
   margin: 0 auto;
-  z-index: 10;
-  /* width: 578px; */
-  /* position: relative; */
-  /* bottom: 40px; */
 
   div {
     display: inline-block;
@@ -182,7 +178,6 @@ const TextWrap = styled("div")`
   }
 
   @media (max-width: 490px) {
-    /* bottom: 25px; */
     margin-bottom: 1.5rem;
   }
 `;
@@ -190,7 +185,6 @@ const TextWrap = styled("div")`
 const ContentWrap = styled("div")`
   padding: 4rem 2rem;
   width: 100%;
-  /* min-height: 350px; */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -35,13 +35,11 @@ export const About: React.FC<any> = () => {
 
 const ContentWrap = styled("div")`
   padding: 4rem 2rem;
-  /* background-color: ${({ theme }) => theme.lightgrey}; */
 
   h2 {
     margin-top: 0;
-
-    /* text-align: center; */
   }
+
   span {
     color: ${({ theme }) => theme.accent};
     font-weight: 800;
@@ -51,6 +49,7 @@ const ContentWrap = styled("div")`
 const StyledAbout = styled("div")`
   max-width: 800px;
   margin: 0 auto;
+
   .flex-wrap {
     display: flex;
 

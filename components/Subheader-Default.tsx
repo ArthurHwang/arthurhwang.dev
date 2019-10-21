@@ -12,16 +12,13 @@ export const SubheaderDefault: React.FC<Props> = ({ children }) => {
   );
 };
 
-const TextWrap = styled("div")`
-  z-index: 10;
-`;
+const TextWrap = styled("div")``;
 
 const ContentWrap = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  /* min-height: 200px; */
 
   h1,
   h2 {

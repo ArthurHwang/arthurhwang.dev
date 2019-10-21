@@ -41,11 +41,6 @@ export const NavMobile: React.FC<any> = () => {
               beat={true}
               color="#43853d"
             />
-            {/* <Link href="/about">
-              <a className="link-wrap link" onClick={handleLink}>
-                About
-              </a>
-            </Link> */}
             <Link href="/projects">
               <a className="link-wrap link" onClick={handleLink}>
                 Projects
@@ -98,7 +93,6 @@ const StyledNavMenu = styled("div")`
   position: fixed;
   left: 0;
   top: 61px;
-  z-index: 10;
   width: 100vw;
   padding: 2rem;
   background-color: ${({ theme }) => theme.lightgrey};

@@ -1,15 +1,4 @@
-// import { Fragment } from "react";
-// import { Query } from "react-apollo";
-// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
-// import { NextPage } from "next";
 import styled from "styled-components";
-// import Head from "next/head";
-// import gql from "graphql-tag";
-// import LogoNodejs from "react-ionicons/lib/LogoNodejs";
-// import Fonts from "../util/Fonts";
-// import { withApollo } from "../lib/apollo";
-// import { useLayoutEffect } from "react";
-// import LogoLinkedin from "react-ionicons/lib/LogoLinkedin";
 import Link from "next/link";
 
 import {
@@ -60,64 +49,31 @@ export const Intro: React.FC<any> = () => {
           </h2>
 
           <div className="badges">
-            <a
-              // title="Github"
-              href="https://github.com/ArthurHwang"
-              className="link"
-            >
+            <a href="https://github.com/ArthurHwang" className="link">
               <FaGithub className="icon" /> Github
             </a>
 
-            <a
-              title=""
-              href="https://www.linkedin.com/in/arthur-hwang"
-              className="link"
-            >
+            <a href="https://www.linkedin.com/in/arthur-hwang" className="link">
               <FaLinkedin className="icon" /> LinkedIn
             </a>
-            <a
-              title=""
-              href="https://www.facebook.com/arthur.hwang.9"
-              className="link"
-            >
+            <a href="https://www.facebook.com/arthur.hwang.9" className="link">
               <FaFacebook className="icon" /> Facebook
             </a>
             <a title="" href="https://www.twitter.com/" className="link">
               <FaTwitter className="icon" /> Twitter
             </a>
-            <a
-              // title="Email"
-              href="mailto:mail@arthurhwang.dev"
-              className="link"
-            >
-              <IoMdMail
-                // style={{ position: "relative", top: "6px" }}
-                className="icon"
-              />{" "}
-              Email
+            <a href="mailto:mail@arthurhwang.dev" className="link">
+              <IoMdMail className="icon" /> Email
             </a>
             <a
-              // title="Resume"
               href="mailto:mail@
               .dev"
               className="link"
             >
-              <FaClipboardList
-                // style={{ position: "relative", top: "3px" }}
-                className="icon"
-              />{" "}
-              CV
+              <FaClipboardList className="icon" /> CV
             </a>
           </div>
         </InnerRight>
-        {/* <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
-          {({ data, loading }: Query) => {
-            if (loading || !data) {
-              return <div>Loading ...</div>;
-            }
-            return <div>{JSON.stringify(data)}</div>;
-          }}
-        </Query> */}
       </StyledIntro>
     </ContentWrap>
   );
@@ -137,9 +93,7 @@ const ContentWrap = styled("div")`
   }
 `;
 
-const InnerLeft = styled("div")`
-  /* padding-left: 12rem; */
-`;
+const InnerLeft = styled("div")``;
 
 const InnerRight = styled("div")`
   .badges {
@@ -148,12 +102,10 @@ const InnerRight = styled("div")`
     padding-top: 0.2rem;
 
     & a {
-      /* vertical-align: middle; */
       margin-bottom: 2rem;
       display: flex;
       align-items: center;
-      /* align-items: center; */
-      /* height: 30px; */
+
       @media (max-width: 490px) {
         &:nth-child(even) {
           padding-left: calc(100% - 66%);
@@ -163,15 +115,11 @@ const InnerRight = styled("div")`
 
     .icon {
       position: relative;
-      /* top: 4px; */
       font-size: 3rem;
       margin-right: 1rem;
     }
 
     .icon-text {
-      /* position: relative;
-      bottom: 5px; */
-      /* bottom: 5px; */
     }
 
     @media (max-width: 490px) {
@@ -186,7 +134,6 @@ const StyledIntro = styled("div")`
   grid-template-columns: 1fr auto;
   grid-gap: 6rem;
   max-width: 800px;
-  /* padding: 0 40rem; */
 
   @media (max-width: 490px) {
     grid-template-columns: initial;

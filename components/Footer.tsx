@@ -59,15 +59,6 @@ export const Footer: React.FC<any> = () => {
           <IoMdMail className="icon" />
         </a>
       </div>
-      {/* <div className="copyright">
-        <span>
-          <FaRegCopyright style={{ color: "#FE4A49", marginRight: "0.5rem" }} />{" "}
-          2019&nbsp;
-          <span style={{ color: "#FE4A49" }}>-</span>&nbsp;
-          <strong> Arthur Hwang</strong>
-          .&nbsp; All Rights Reserved
-        </span>
-      </div> */}
     </StyledFooter>
   );
 };
@@ -76,20 +67,13 @@ const StyledFooter = styled("footer")`
   padding: 1rem 2rem;
   background-color: ${({ theme }) => theme.primary};
   margin: 0;
-  /* margin-top: 2rem; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
-  /* position: absolute; */
-  /* left: 0; */
-  /* bottom: 0; */
-  /* width: 100%; */
 
   @media (max-width: 910px) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-
-    /* position: relative; */
   }
 
   span {

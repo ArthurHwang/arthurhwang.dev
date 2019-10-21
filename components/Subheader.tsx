@@ -28,11 +28,6 @@ const particlesOptions = {
       polygon: {
         nb_sides: 5
       }
-      // image: {
-      //   // src: "img/github.svg",
-      //   width: 100,
-      //   height: 100
-      // }
     },
     opacity: {
       value: 1,
@@ -192,20 +187,11 @@ const StyledSubheader = styled("section")<{ pathname: string }>`
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   position: relative;
   bottom: 1px;
-  /* z-index: 1; */
   height: 350px;
 
-@media(max-width: 490px) {
-  height: 250px;
-}
-  /* //@ts-ignore */ /* height: ${props => {
-    switch (props.pathname) {
-      case "/":
-        return "350px";
-      default:
-        return "300px";
-    }
-  }}; */ 
+  @media (max-width: 490px) {
+    height: 250px;
+  }
   .particles {
     position: absolute;
     height: 100%;

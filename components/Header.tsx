@@ -94,20 +94,6 @@ const StyledHeader = styled("header")`
     cursor: pointer;
     padding-right: 2rem;
     transition: background 0.2s linear;
-
-    /* &:hover { */
-      /* background: ${({ theme }) => theme.accent}; */
-
-      /* .text-wrapper p {
-        transition: color 0.2s linear;
-        color: ${({ theme }) => theme.primary};
-      } */
-
-      /* .text-wrapper p.title {
-        transition: color 0.2s linear;
-        color: ${({ theme }) => theme.yellow};
-      } */
-    /* } */
   }
 
   .bar {
