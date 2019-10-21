@@ -20,7 +20,7 @@ const Projects: NextPage<any> = () => {
     autoplaySpeed: 3000,
     lazyLoad: "ondemand",
     // fade: true,
-    speed: 800
+    speed: 1200
   };
   return (
     <Fragment>
@@ -59,10 +59,15 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/bestattorney-gatsby/screenshot-4.png" />
               <img src="/static/projects/bestattorney-gatsby/screenshot-5.png" />
             </Slider>
-
-            <LazyLoad height={221}>
-              <CommitList owner="bestattorney" name="bestattorney.com-gatsby" />
-            </LazyLoad>
+            <div className="commits">
+              <LazyLoad height={221}>
+                <CommitList
+                  // className="commits"
+                  owner="bestattorney"
+                  name="bestattorney.com-gatsby"
+                />
+              </LazyLoad>
+            </div>
 
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
@@ -123,9 +128,10 @@ const Projects: NextPage<any> = () => {
             <img src="/static/projects/logos/Gatsby-Logo.svg" />
             <img src="/static/projects/logos/netlify.png" />
             <img src="/static/projects/logos/React.png" />
-            <img src="/static/projects/logos/netlify.png" />
-            <img src="/static/projects/logos/Gatsby-Logo.svg" />
-            <img src="/static/projects/logos/netlify.png" />
+            <img src="/static/projects/logos/nodejs.svg" />
+            <img src="/static/projects/logos/circleci.png" />
+            <img src="/static/projects/logos/jest.png" />
+            <img src="/static/projects/logos/cypress.png" />
 
             {/* <img src="/static/projects/logos/gatsby.png" />
             <img src="/static/projects/logos/gatsby.png" />
@@ -162,10 +168,15 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/arthurhwang.dev.png" />
               <img src="/static/projects/arthurhwang.dev.png" />
             </Slider>
-
-            <LazyLoad height={221}>
-              <CommitList owner="ArthurHwang" name="arthurhwang.dev" />
-            </LazyLoad>
+            <div className="commits">
+              <LazyLoad height={221}>
+                <CommitList
+                  // className="commits"
+                  owner="ArthurHwang"
+                  name="arthurhwang.dev"
+                />
+              </LazyLoad>
+            </div>
 
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
@@ -237,7 +248,7 @@ const Projects: NextPage<any> = () => {
             <img src="/static/projects/logos/gatsby.png" />
             <img src="/static/projects/logos/gatsby.png" />
           </div>
-          <div>
+          <div className="buttons">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
               neque.
@@ -266,13 +277,15 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/bestattorney.com-admin.png" />
               <img src="/static/projects/bestattorney.com-admin.png" />
             </Slider>
-            <LazyLoad height={221}>
-              <CommitList
-                owner="bestattorney"
-                name="bestattorney.com"
-                path="SPAs"
-              />
-            </LazyLoad>
+            <div className="commits">
+              <LazyLoad height={221}>
+                <CommitList
+                  owner="bestattorney"
+                  name="bestattorney.com"
+                  path="SPAs"
+                />
+              </LazyLoad>
+            </div>
 
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
@@ -365,7 +378,7 @@ const Projects: NextPage<any> = () => {
             <span>hi</span>
             <span>hi</span>
           </div>
-          <div>
+          <div className="buttons">
             {/* <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
               neque.
@@ -394,9 +407,11 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/bestattorney.com-admin.png" />
               <img src="/static/projects/bestattorney.com-admin.png" />
             </Slider>
-            <LazyLoad height={207}>
-              <CommitList owner="bestattorney" name="bestattorney.com" />
-            </LazyLoad>
+            <div className="commits">
+              <LazyLoad height={207}>
+                <CommitList owner="bestattorney" name="bestattorney.com" />
+              </LazyLoad>
+            </div>
 
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
@@ -489,7 +504,7 @@ const Projects: NextPage<any> = () => {
             <span>hi</span>
             <span>hi</span>
           </div>
-          <div>
+          <div className="buttons">
             {/* <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
               neque.
@@ -517,14 +532,11 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/bestattorney.com-admin.png" />
               <img src="/static/projects/bestattorney.com-admin.png" />
             </Slider>
-
-            <LazyLoad height={207}>
-              <CommitList
-                owner="bestattorney"
-                name="bestattorney.com"
-                path="SPAs"
-              />
-            </LazyLoad>
+            <div className="commits">
+              <LazyLoad height={207}>
+                <CommitList owner="ArthurHwang" name="toneify" />
+              </LazyLoad>
+            </div>
 
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
@@ -617,7 +629,7 @@ const Projects: NextPage<any> = () => {
             <span>hi</span>
             <span>hi</span>
           </div>
-          <div>
+          <div className="buttons">
             <button>Source</button>
             <button>Launch</button>
           </div>
@@ -632,14 +644,19 @@ export default Projects;
 const ContentWrap = styled("div")`
   max-width: 1300px;
   margin: 0 auto;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
 
-  border: 2px solid grey;
-  padding: 2rem;
+  /* border: 2px solid grey; */
+  padding: 1rem 2rem 2rem;
 `;
 
 const ProjectWrap = styled("div")`
   height: auto;
   padding: 4rem 2rem;
+
+  .buttons {
+
+  }
 
   &.bg-grey {
     background: ${({ theme }) => theme.lightgrey};
@@ -648,7 +665,7 @@ const ProjectWrap = styled("div")`
   h3,
   h4 {
     margin: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid grey;
   }
 
   .badges {
@@ -664,7 +681,8 @@ const ProjectWrap = styled("div")`
 
   .link {
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    /* padding: 2rem 0; */
     font-size: 3rem;
   }
 
@@ -706,19 +724,36 @@ const ProjectWrap = styled("div")`
   }
 
   .commits {
-    grid-area: commits;
+    grid-area: commits;   
   }
 
   .accomplishments {
     grid-area: accomplishments;
+     /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); */
     /* background-color: grey; */
 
-    li {
-      font-size: 1.4rem;
+    ul {
+      padding-left: 1.5rem;
+      /* padding-left: 1.7rem; */
+      list-style-type: none;
 
-      /* &:nth-child(odd) {
-        background-color: ${({ theme }) => theme.lightgrey};
-      } */
+      li {
+        font-size: 1.4rem;
+        text-indent: -16px;
+
+        /* &:nth-child(even) {
+          background-color: ${({ theme }) => theme.lightgrey};
+        } */
+
+        &:before {
+          content: "-";
+          text-indent: -10px;
+          font-weight: 800;
+          font-size: 1.6rem;
+          color: ${({ theme }) => theme.secondaryAccent};
+          margin-right: 1rem;
+        }
+      }
     }
   }
 

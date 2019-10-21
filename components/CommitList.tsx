@@ -65,7 +65,7 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
         // console.log(commitHistory);
         return (
           <ContentWrapper>
-            <h3>Recent Commits || CI/CD Status'</h3>
+            <h3>Recent Commits || CI/CD Status</h3>
 
             <StyledCommits>
               {/* <LoadingDots /> */}
@@ -113,6 +113,7 @@ const StyledCommits = styled("ul")`
   a.link {
     margin: 0;
     font-size: 1.4rem;
+    cursor: pointer;
     /* flex: 1; */
 
     span {
@@ -121,6 +122,10 @@ const StyledCommits = styled("ul")`
       font-size: 1.6rem;
     }
   }
+
+  /* ul {
+    list-style-type: none;
+  } */
 
   li {
     display: flex;
@@ -139,5 +144,6 @@ const ContentWrapper = styled("div")`
   /* width: 100%;
   height: 100%; */
   /* min-height: 100%; */
+  /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); */
   /* height: 100%; */
 `;
