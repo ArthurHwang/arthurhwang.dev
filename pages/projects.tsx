@@ -1,46 +1,10 @@
 import { Fragment } from "react";
 import { NextPage } from "next";
+import { CommitList } from "../components/CommitList";
 import Head from "next/head";
 import styled from "styled-components";
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
+import LazyLoad from "react-lazyload";
 
-interface Query {
-  data: any;
-  loading: any;
-}
-
-const GET_REPOSITORIES_OF_CURRENT_USER = gql`
-  {
-    viewer {
-      repositories(first: 5, orderBy: { direction: DESC, field: STARGAZERS }) {
-        edges {
-          node {
-            id
-            name
-            url
-            descriptionHTML
-            primaryLanguage {
-              name
-            }
-            owner {
-              login
-              url
-            }
-            stargazers {
-              totalCount
-            }
-            viewerHasStarred
-            watchers {
-              totalCount
-            }
-            viewerSubscription
-          }
-        }
-      }
-    }
-  }
-`;
 const Projects: NextPage<any> = () => {
   return (
     <Fragment>
@@ -48,121 +12,77 @@ const Projects: NextPage<any> = () => {
         <title>Arthur Hwang | Projects</title>
         <meta name="description" content="Arthur Hwang's Blog" />
       </Head>
+
       <ProjectWrap>
         <ContentWrap>
           <a href="https://www.bestattorney.com" className="link">
             Bisnar | Chase - GatsbyJS
           </a>
-
           <div className="project split-grid-left">
             {/* <Link href="https://www.bestattorney.com"> */}
 
             {/* </Link> */}
 
             <div className="img">
-              <img src="/static/projects/bestattorney-gatsby.png" />
+              <img src="/static/projects/bestattorney-gatsby-min.webp" />
             </div>
-            <div className="commits">
-              <h3>Recent Commits</h3>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-              </ul>
-            </div>
+            {/* <div className="commits"> */}
+            {/* <h3>Recent Commits & CI Status</h3> */}
+            <LazyLoad height={207}>
+              <CommitList owner="bestattorney" name="bestattorney.com-gatsby" />
+            </LazyLoad>
+
+            {/* </div> */}
 
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
               <ul>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Single handedly rewrote entire old application to use modern
+                  technolgies with React using GatsbyJS for code splitting,
+                  performance, SEO benefits.
+                </li>
+                <li>Integrated Blog powered by custom headless wordpress</li>
+                <li>
+                  Integrated custom Google AMP (Accelerated Mobile Pages) for
+                  blog
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Integrated E2E (cypress) / Unit Tests (jest) into project
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Created a design and typography system to easily empower
+                  non-developers to be able to change application look
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Created proprietary folder structure to empower non-developers
+                  to be able to change things on the application
                 </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
+                <li>Implemented custom CI / CD workflows with CircleCI</li>
 
+                <li>Entire application is responsive web ready</li>
+                <li>Integrated project with Google marketing suite</li>
+                <li>Integrated SEO for entire site complete with JSON-LD</li>
+                <li>Cross Browser Compatibility</li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Used styled components library to create reuseable components
+                  and scoped CSS to avoid global conflicts
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Written with typescript for reduced bugs and better
+                  development tools
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Implemented automation webhooks to alert company of contact
+                  form submissions and scholarship submission
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Correctly server rendered lazy loaded images for maximum SEO
+                  benefit
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Created Custom google maps component to display all of
+                  companies locations
                 </li>
               </ul>
             </div>
@@ -204,76 +124,36 @@ const Projects: NextPage<any> = () => {
             <div className="img">
               <img src="/static/projects/arthurhwang.dev.png" />
             </div>
-            <div className="commits">
-              <h3>Recent Commits</h3>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-              </ul>
-            </div>
-
+            <LazyLoad height={207}>
+              <CommitList owner="ArthurHwang" name="arthurhwang.dev" />
+            </LazyLoad>
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
               <ul>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Used NextJS to write server rendered isomorphic application
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Used Formik and express to handle backend logic handling form
+                  submissions
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Use Apollo and GraphQL to programatically load data fetched
+                  from Github API
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Implemented and Used Contentful Delivery API to source data
+                  from CMS.{" "}
                 </li>
+                <li>Parse markdown data into blog template</li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Setup custom hosting solution with cloudflare and zeit NOW
                 </li>
 
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
+                <li>Fully responsive application</li>
+                <li>Implemented custom form validation using Formik and Yup</li>
+                <li>Used styled components to create reusable components</li>
+                <li>Use Particlejs to render custom header background</li>
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Porro, aliquid?
@@ -346,31 +226,13 @@ const Projects: NextPage<any> = () => {
             <div className="img">
               <img src="/static/projects/bestattorney.com-admin.png" />
             </div>
-            <div className="commits">
-              <h3>Recent Commits</h3>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus, impedit?
-                </li>
-              </ul>
-            </div>
+            <LazyLoad height={207}>
+              <CommitList
+                owner="bestattorney"
+                name="bestattorney.com"
+                path="SPAs"
+              />
+            </LazyLoad>
 
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
@@ -503,15 +365,6 @@ const Projects: NextPage<any> = () => {
           {/* </Link> */}
         </div>
       </ProjectWrap>
-
-      <Query query={GET_REPOSITORIES_OF_CURRENT_USER}>
-        {({ data, loading }: Query) => {
-          if (loading || !data) {
-            return <div>Loading ...</div>;
-          }
-          return <div>{JSON.stringify(data)}</div>;
-        }}
-      </Query>
     </Fragment>
   );
 };
@@ -522,12 +375,12 @@ const ContentWrap = styled("div")`
   max-width: 1300px;
   margin: 0 auto;
   /* border: 2px solid grey; */
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 `;
 
 const ProjectWrap = styled("div")`
   height: auto;
-  padding: 4rem;
+  padding: 4rem 2rem;
 
   &.bg-grey {
     background: ${({ theme }) => theme.lightgrey};
@@ -570,12 +423,16 @@ const ProjectWrap = styled("div")`
 
   .accomplishments {
     grid-area: accomplishments;
+
+    li {
+      font-size: 1.4rem;
+    }
   }
 
   .split-grid-left {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     grid-template-areas:
       "img accomplishments"
       "commits accomplishments";
@@ -593,7 +450,7 @@ const ProjectWrap = styled("div")`
   .split-grid-right {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-areas:
       "accomplishments img"
       "accomplishments commits";
