@@ -5,8 +5,10 @@ import Head from "next/head";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import "../util/slick.min.css"
+// import "../util/slick-theme.min.css"
 
 const Projects: NextPage<any> = () => {
   var settings = {
@@ -18,7 +20,7 @@ const Projects: NextPage<any> = () => {
     draggable: true,
     autoplay: true,
     autoplaySpeed: 5000,
-    lazyLoad: "progressive",
+    lazyLoad: "ondemand",
     fade: false,
     speed: 1800
   };
@@ -27,6 +29,17 @@ const Projects: NextPage<any> = () => {
       <Head>
         <title>Arthur Hwang | Projects</title>
         <meta name="description" content="Arthur Hwang's Blog" />
+        {/* <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        /> */}
       </Head>
       {/***************************************************************************************************/}
       {/******************************* PROJECT 1 - Bestattorney.com-gatsby *******************************/}
@@ -121,15 +134,6 @@ const Projects: NextPage<any> = () => {
             <img src="/static/projects/logos/circleci.png" />
             <img src="/static/projects/logos/jest.png" />
             <img src="/static/projects/logos/cypress.png" />
-
-            {/* <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" /> */}
           </div>
           <div className="buttons">
             <button>Source</button>

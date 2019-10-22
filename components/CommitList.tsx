@@ -128,8 +128,6 @@ const StyledCommits = styled("ul")`
     margin: 0;
     font-size: 1.4rem;
     cursor: pointer;
-    /* white-space: nowrap; */
-    /* flex: 1; */
 
     @media (max-width: 490px) {
       font-size: 1.2rem;
@@ -150,10 +148,6 @@ const StyledCommits = styled("ul")`
     display: flex;
     justify-content: space-between;
     align-content: center;
-
-    /* &:nth-child(even) {
-      background-color: ${({ theme }) => theme.lightgrey};
-    } */
   }
 `;
 
