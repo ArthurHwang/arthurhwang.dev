@@ -5,8 +5,8 @@ import Head from "next/head";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Projects: NextPage<any> = () => {
   var settings = {
@@ -17,29 +17,16 @@ const Projects: NextPage<any> = () => {
     slidesToScroll: 1,
     draggable: true,
     autoplay: true,
-    autoplaySpeed: 3000,
-    lazyLoad: "ondemand",
-    // fade: true,
-    speed: 1200
+    autoplaySpeed: 5000,
+    lazyLoad: "progressive",
+    fade: false,
+    speed: 1800
   };
   return (
     <Fragment>
       <Head>
         <title>Arthur Hwang | Projects</title>
         <meta name="description" content="Arthur Hwang's Blog" />
-        {/* 
-        //@ts-ignore */}
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charset="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
       </Head>
       {/***************************************************************************************************/}
       {/******************************* PROJECT 1 - Bestattorney.com-gatsby *******************************/}
@@ -50,15 +37,17 @@ const Projects: NextPage<any> = () => {
             Bisnar | Chase - GatsbyJS
           </a>
           <div className="project split-grid-left">
-            {/* 
+            <div>
+              {/* 
             //@ts-ignore */}
-            <Slider className="inner-slider" {...settings}>
-              <img src="/static/projects/bestattorney-gatsby/screenshot-1.png" />
-              <img src="/static/projects/bestattorney-gatsby/screenshot-2.png" />
-              <img src="/static/projects/bestattorney-gatsby/screenshot-3.png" />
-              <img src="/static/projects/bestattorney-gatsby/screenshot-4.png" />
-              <img src="/static/projects/bestattorney-gatsby/screenshot-5.png" />
-            </Slider>
+              <Slider className="inner-slider" {...settings}>
+                <img src="/static/projects/bestattorney-gatsby/screenshot-1.png" />
+                <img src="/static/projects/bestattorney-gatsby/screenshot-2.png" />
+                <img src="/static/projects/bestattorney-gatsby/screenshot-3.png" />
+                <img src="/static/projects/bestattorney-gatsby/screenshot-4.png" />
+                <img src="/static/projects/bestattorney-gatsby/screenshot-5.png" />
+              </Slider>
+            </div>
             <div className="commits">
               <LazyLoad height={221}>
                 <CommitList
@@ -159,15 +148,17 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-right">
-            {/* 
+            <div>
+              {/* 
             //@ts-ignore */}
-            <Slider className="inner-slider" {...settings}>
-              <img src="/static/projects/arthurhwang.dev.png" />
-              <img src="/static/projects/arthurhwang.dev.png" />
-              <img src="/static/projects/arthurhwang.dev.png" />
-              <img src="/static/projects/arthurhwang.dev.png" />
-              <img src="/static/projects/arthurhwang.dev.png" />
-            </Slider>
+              <Slider className="inner-slider" {...settings}>
+                <img src="/static/projects/arthurhwang.dev.png" />
+                <img src="/static/projects/arthurhwang.dev.png" />
+                <img src="/static/projects/arthurhwang.dev.png" />
+                <img src="/static/projects/arthurhwang.dev.png" />
+                <img src="/static/projects/arthurhwang.dev.png" />
+              </Slider>
+            </div>
             <div className="commits">
               <LazyLoad height={221}>
                 <CommitList
@@ -269,14 +260,16 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-left">
-            {/* 
+            <div>
+              {/* 
             //@ts-ignore */}
-            <Slider className="inner-slider" {...settings}>
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-            </Slider>
+              <Slider className="inner-slider" {...settings}>
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+              </Slider>
+            </div>
             <div className="commits">
               <LazyLoad height={221}>
                 <CommitList
@@ -399,14 +392,16 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-right">
-            {/* 
+            <div>
+              {/* 
             //@ts-ignore */}
-            <Slider className="inner-slider" {...settings}>
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-            </Slider>
+              <Slider className="inner-slider" {...settings}>
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+              </Slider>
+            </div>
             <div className="commits">
               <LazyLoad height={207}>
                 <CommitList owner="bestattorney" name="bestattorney.com" />
@@ -524,14 +519,16 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-left">
-            {/* 
+            <div>
+              {/* 
             //@ts-ignore */}
-            <Slider className="inner-slider" {...settings}>
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-              <img src="/static/projects/bestattorney.com-admin.png" />
-            </Slider>
+              <Slider className="inner-slider" {...settings}>
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com-admin.png" />
+              </Slider>
+            </div>
             <div className="commits">
               <LazyLoad height={207}>
                 <CommitList owner="ArthurHwang" name="toneify" />
@@ -684,6 +681,10 @@ const ProjectWrap = styled("div")`
     margin-bottom: 1rem;
     /* padding: 2rem 0; */
     font-size: 3rem;
+
+    @media(max-width: 490px) {
+      font-size: 2.2rem;
+    }
   }
 
   /* FIX FOR CAROUSEL */
@@ -697,7 +698,7 @@ const ProjectWrap = styled("div")`
     /* border: 1px solid black; */
 
     .slick-dots {
-      bottom: -10px;
+      bottom: -20px;
       .slick-active button:before {
         color: ${({ theme }) => theme.accent};
       }

@@ -45,6 +45,10 @@ const COMMIT_LIST_QUERY = gql`
   }
 `;
 
+// function truncateText(str: string) {
+//   return str.substring(0, 40);
+// }
+
 export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
   return (
     <Query query={COMMIT_LIST_QUERY} variables={{ owner, name, path }}>
@@ -71,7 +75,7 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
               {/* <LoadingDots /> */}
               {commitHistory.map((commit: any) => (
                 <li key={commit.node.oid}>
-                  <div>
+                  <div className="commit-wrap">
                     <a
                       className="link"
                       href={
@@ -84,7 +88,7 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
                     </a>
                   </div>
                   <a
-                    className=""
+                    className="commit-status"
                     href={
                       commit.node.status
                         ? commit.node.status.contexts[0].targetUrl
@@ -109,12 +113,27 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
 
 const StyledCommits = styled("ul")`
   /* height: 100%; */
+
   padding: 0;
+
+  .commit-wrap {
+    max-width: 75%;
+  }
+
+  .commit-status {
+    display: flex;
+    align-items: center;
+  }
   a.link {
     margin: 0;
     font-size: 1.4rem;
     cursor: pointer;
+    /* white-space: nowrap; */
     /* flex: 1; */
+
+    @media (max-width: 490px) {
+      font-size: 1.2rem;
+    }
 
     span {
       color: ${({ theme }) => theme.accent};
@@ -131,6 +150,10 @@ const StyledCommits = styled("ul")`
     display: flex;
     justify-content: space-between;
     align-content: center;
+
+    /* &:nth-child(even) {
+      background-color: ${({ theme }) => theme.lightgrey};
+    } */
   }
 `;
 
