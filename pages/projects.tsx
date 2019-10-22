@@ -1,17 +1,14 @@
-import { Fragment } from "react";
 import { NextPage } from "next";
 import { CommitList } from "../components/CommitList";
 import Head from "next/head";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import "../util/slick.min.css"
-// import "../util/slick-theme.min.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Projects: NextPage<any> = () => {
-  var settings = {
+  const settings = {
     dots: true,
     arrows: true,
     infinite: true,
@@ -25,21 +22,10 @@ const Projects: NextPage<any> = () => {
     speed: 1800
   };
   return (
-    <Fragment>
+    <ProjectsWrapper>
       <Head>
         <title>Arthur Hwang | Projects</title>
-        <meta name="description" content="Arthur Hwang's Blog" />
-        {/* <link
-          rel="stylesheet"
-          type="text/css"
-          charset="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        /> */}
+        <meta name="description" content="Arthur Hwang's Projects" />
       </Head>
       {/***************************************************************************************************/}
       {/******************************* PROJECT 1 - Bestattorney.com-gatsby *******************************/}
@@ -376,10 +362,6 @@ const Projects: NextPage<any> = () => {
             <span>hi</span>
           </div>
           <div className="buttons">
-            {/* <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-              neque.
-            </p> */}
             <button>Source</button>
             <button>Launch</button>
           </div>
@@ -504,10 +486,6 @@ const Projects: NextPage<any> = () => {
             <span>hi</span>
           </div>
           <div className="buttons">
-            {/* <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-              neque.
-            </p> */}
             <button>Source</button>
             <button>Launch</button>
           </div>
@@ -636,28 +614,27 @@ const Projects: NextPage<any> = () => {
           </div>
         </ContentWrap>
       </ProjectWrap>
-    </Fragment>
+    </ProjectsWrapper>
   );
 };
 
 export default Projects;
 
+const ProjectsWrapper = styled("div")``;
+
 const ContentWrap = styled("div")`
   max-width: 1300px;
   margin: 0 auto;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
-
-  /* border: 2px solid grey; */
   padding: 1rem 2rem 2rem;
 `;
 
 const ProjectWrap = styled("div")`
   height: auto;
   padding: 4rem 2rem;
+  /* .buttons {
 
-  .buttons {
-
-  }
+  } */
 
   &.bg-grey {
     background: ${({ theme }) => theme.lightgrey};
@@ -672,7 +649,6 @@ const ProjectWrap = styled("div")`
   .badges {
     display: flex;
     padding: 2rem 4rem;
-    /* text-align: center; */
     justify-content: space-around;
 
     img {
@@ -683,10 +659,9 @@ const ProjectWrap = styled("div")`
   .link {
     display: block;
     margin-bottom: 1rem;
-    /* padding: 2rem 0; */
     font-size: 3rem;
 
-    @media(max-width: 490px) {
+    @media (max-width: 490px) {
       font-size: 2.2rem;
     }
   }
@@ -699,7 +674,6 @@ const ProjectWrap = styled("div")`
 
   .inner-slider {
     grid-area: carousel;
-    /* border: 1px solid black; */
 
     .slick-dots {
       bottom: -20px;
@@ -718,10 +692,6 @@ const ProjectWrap = styled("div")`
       right: 2%;
     }
 
-    .slick-prev,
-    .slick-next {
-    }
-
     .slick-prev:before,
     .slick-next:before {
       color: ${({ theme }) => theme.accent};
@@ -729,26 +699,19 @@ const ProjectWrap = styled("div")`
   }
 
   .commits {
-    grid-area: commits;   
+    grid-area: commits;
   }
 
   .accomplishments {
     grid-area: accomplishments;
-     /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); */
-    /* background-color: grey; */
 
     ul {
       padding-left: 1.5rem;
-      /* padding-left: 1.7rem; */
       list-style-type: none;
 
       li {
         font-size: 1.4rem;
         text-indent: -16px;
-
-        /* &:nth-child(even) {
-          background-color: ${({ theme }) => theme.lightgrey};
-        } */
 
         &:before {
           content: "-";

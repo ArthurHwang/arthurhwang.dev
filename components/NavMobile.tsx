@@ -66,6 +66,7 @@ export const NavMobile: React.FC<any> = () => {
 const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
   height: 100%;
   width: 100%;
+  z-index: 20;
   display: flex;
   justify-content: flex-end;
   align-items: center;

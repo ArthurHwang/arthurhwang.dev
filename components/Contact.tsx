@@ -140,7 +140,6 @@ export const Contact: React.FC<any> = () => {
                   </div>
                 </div>
                 <div className="input-row">
-                  {/* <label htmlFor="message">Message</label> */}
                   <textarea
                     name="message"
                     id="message"

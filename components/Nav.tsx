@@ -11,7 +11,7 @@ export const Nav: React.FC<any> = () => {
       </Link>
       <Link activeClassName="active" href="/projects">
         <div className="link-box">
-          <a>Projects</a>
+          <a href="/projects">Projects</a>
         </div>
       </Link>
       <Link activeClassName="active" partiallyActive={true} href="/blog">

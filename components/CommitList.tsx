@@ -45,10 +45,6 @@ const COMMIT_LIST_QUERY = gql`
   }
 `;
 
-// function truncateText(str: string) {
-//   return str.substring(0, 40);
-// }
-
 export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
   return (
     <Query query={COMMIT_LIST_QUERY} variables={{ owner, name, path }}>
@@ -56,7 +52,6 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
         if (loading || !data) {
           return (
             <ContentWrapper>
-              {/* <h3>Recent Commits & CI/CD Status</h3> */}
               <StyledCommits>
                 <LoadingDots />
               </StyledCommits>
@@ -66,13 +61,11 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
 
         const commitHistory = data.repository.ref.target.history.edges;
 
-        // console.log(commitHistory);
         return (
           <ContentWrapper>
             <h3>Recent Commits || CI/CD Status</h3>
 
             <StyledCommits>
-              {/* <LoadingDots /> */}
               {commitHistory.map((commit: any) => (
                 <li key={commit.node.oid}>
                   <div className="commit-wrap">
@@ -112,18 +105,8 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
 };
 
 const StyledCommits = styled("ul")`
-  /* height: 100%; */
-
   padding: 0;
 
-  .commit-wrap {
-    max-width: 75%;
-  }
-
-  .commit-status {
-    display: flex;
-    align-items: center;
-  }
   a.link {
     margin: 0;
     font-size: 1.4rem;
@@ -140,27 +123,25 @@ const StyledCommits = styled("ul")`
     }
   }
 
-  /* ul {
-    list-style-type: none;
-  } */
-
   li {
     display: flex;
     justify-content: space-between;
     align-content: center;
   }
+
+  .commit-wrap {
+    max-width: 75%;
+  }
+
+  .commit-status {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 const CIButton = styled("div")`
-  /* background-color: red; */
   color: red;
   font-size: 1.4rem;
 `;
 
-const ContentWrapper = styled("div")`
-  /* width: 100%;
-  height: 100%; */
-  /* min-height: 100%; */
-  /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); */
-  /* height: 100%; */
-`;
+const ContentWrapper = styled("div")``;

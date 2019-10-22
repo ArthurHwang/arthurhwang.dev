@@ -2,20 +2,21 @@ require("dotenv").config();
 const withCSS = require("@zeit/next-css");
 // const withFonts = require("next-fonts");
 module.exports = withCSS({
-  cssModules: true,
+  // cssModules: true,
   webpack: function(config) {
     config.module.rules.push({
       test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
       use: {
         loader: "url-loader",
         options: {
-          limit: false,
+          limit: 100000,
           name: "[name].[ext]"
         }
       }
     });
     return config;
   },
+
   env: {
     SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,

@@ -49,6 +49,7 @@ const ContentWrap = styled("div")`
     font-weight: 400;
     color: ${({ theme }) => theme.lightgrey};
     padding: 0 3rem;
+
     @media (max-width: 490px) {
       font-size: 1.4rem;
     }

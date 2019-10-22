@@ -114,10 +114,10 @@ const ErrorPage: NextPage<any> = () => {
         <meta name="description" content="error page, oh noes" />
       </Head>
       {/* 
-      //@ts-ignore */}
+        //@ts-ignore */}
       <ContentWrap>
         {/* 
-    //@ts-ignore */}
+        //@ts-ignore */}
         <Particles className="particles" params={particlesOptions} />;
         <div className="container">
           <div className="text">
@@ -141,19 +141,10 @@ const ErrorPage: NextPage<any> = () => {
     </Fragment>
   );
 };
-// style="text-shadow: -3px 0 0 rgba(255,0,0,.7),
-// 3px 0 0 rgba(0,255,255,.7);"
 
-// style="text-shadow: -3px 0 0 rgba(255,0,0,.7),
-// 3px 0 0 rgba(0,255,255,.7);"
 const ContentWrap = styled("div")`
-  /* height: 100%; */
   .container {
     width: 100%;
-    /* height: 100%; */
-    /* height: 100vh;
-    height: 100% */
-    /* height: 100%; */
     height: 96vh;
     overflow: hidden !important;
   }

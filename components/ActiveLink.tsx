@@ -17,8 +17,8 @@ export const ActiveLink: React.FC<Props> = ({
 }) => {
   const router = useRouter();
   const child = React.Children.only(children);
-
   let className = child.props.className || "";
+
   if (router.pathname === href && activeClassName) {
     className = `${className} ${activeClassName}`.trim();
   }
@@ -26,5 +26,6 @@ export const ActiveLink: React.FC<Props> = ({
   if (router.pathname === "/blog/[post]" && partiallyActive) {
     className = `${className} ${activeClassName}`.trim();
   }
+
   return <Link href={href}>{React.cloneElement(child, { className })}</Link>;
 };
