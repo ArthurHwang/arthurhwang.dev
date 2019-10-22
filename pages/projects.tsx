@@ -18,7 +18,7 @@ const Projects: NextPage<any> = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     lazyLoad: "ondemand",
-    fade: false,
+    fade: true,
     speed: 1800
   };
   return (
@@ -32,7 +32,10 @@ const Projects: NextPage<any> = () => {
       {/***************************************************************************************************/}
       <ProjectWrap>
         <ContentWrap>
-          <a href="https://www.bestattorney.netlify.com" className="link">
+          <a
+            href="https://www.bestattorney.netlify.com"
+            className="link  project-title"
+          >
             Bisnar | Chase - GatsbyJS
           </a>
           <div className="project split-grid-left">
@@ -496,7 +499,7 @@ const Projects: NextPage<any> = () => {
       {/***************************************************************************************************/}
       <ProjectWrap>
         <ContentWrap>
-          <a href="https://www.bestattorney.com" className="link">
+          <a href="https://www.bestattorney.com" className="link project-title">
             Toneify
           </a>
 
@@ -640,10 +643,14 @@ const ProjectWrap = styled("div")`
     background: ${({ theme }) => theme.lightgrey};
   }
 
+  .project-title {
+    /* border-bottom: 1px solid #ebeaeb; */
+  }
+
   h3,
   h4 {
     margin: 0;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ebeaeb;
   }
 
   .badges {
@@ -659,7 +666,7 @@ const ProjectWrap = styled("div")`
   .link {
     display: block;
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 2.6rem;
 
     @media (max-width: 490px) {
       font-size: 2.2rem;
@@ -676,7 +683,7 @@ const ProjectWrap = styled("div")`
     grid-area: carousel;
 
     .slick-dots {
-      bottom: -20px;
+      bottom: 13px;
       .slick-active button:before {
         color: ${({ theme }) => theme.accent};
       }

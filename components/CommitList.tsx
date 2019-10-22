@@ -22,6 +22,11 @@ const COMMIT_LIST_QUERY = gql`
               }
               edges {
                 node {
+                  author {
+                    avatarUrl
+                    name
+                    date
+                  }
                   oid
                   commitUrl
                   messageHeadline
@@ -45,6 +50,47 @@ const COMMIT_LIST_QUERY = gql`
   }
 `;
 
+const StatusButton: any = (status: string | null) => {
+  switch (status) {
+    case "SUCCESS":
+      return (
+        <div className="ci-btn success">
+          <div className="status-icon">
+            <img src="/static/check.svg" />
+          </div>
+          <div className="badge-label success">passed</div>
+        </div>
+      );
+    case "FAILURE":
+      return (
+        <div className="ci-btn failed">
+          <div className="status-icon ">
+            <img src="/static/error.svg" />
+          </div>
+          <div className="badge-label failed">failed</div>
+        </div>
+      );
+    case "PENDING":
+      return (
+        <div className="ci-btn pending">
+          <div className="status-icon ">
+            <img src="/static/pending.svg" />
+          </div>
+          <div className="badge-label pending">pending</div>
+        </div>
+      );
+    default:
+      return (
+        <div className="ci-btn null">
+          <div className="status-icon pending">
+            <img src="/static/null.svg" />
+          </div>
+          <div className="badge-label null">NO DATA</div>
+        </div>
+      );
+  }
+};
+
 export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
   return (
     <Query query={COMMIT_LIST_QUERY} variables={{ owner, name, path }}>
@@ -63,36 +109,39 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
 
         return (
           <ContentWrapper>
-            <h3>Recent Commits || CI/CD Status</h3>
+            <h3>Real-Time Project Commits || CI/CD Status Links</h3>
 
             <StyledCommits>
               {commitHistory.map((commit: any) => (
                 <li key={commit.node.oid}>
                   <div className="commit-wrap">
-                    <a
-                      className="link"
-                      href={
-                        commit.node.status
-                          ? commit.node.status.contexts[0].targetUrl
-                          : null
-                      }
-                    >
-                      <span>-</span> {commit.node.messageHeadline}
-                    </a>
+                    <div className="author-wrap">
+                      <img src={commit.node.author.avatarUrl} /> {/* </div> */}
+                    </div>
+                    <div>
+                      <div> {commit.node.author.name}</div>
+                      <a className="link" href={commit.node.commitUrl}>
+                        <span>-</span> {commit.node.messageHeadline}
+                      </a>
+                    </div>
                   </div>
                   <a
-                    className="commit-status"
+                    className={`commit-status ${
+                      commit.node.status ? "" : "disabled"
+                    }`}
                     href={
                       commit.node.status
                         ? commit.node.status.contexts[0].targetUrl
                         : null
                     }
                   >
-                    <CIButton>
-                      {commit.node.status
-                        ? commit.node.status.contexts[0].state
-                        : "ERROR"}
-                    </CIButton>
+                    <StyledStatus>
+                      {StatusButton(
+                        commit.node.status
+                          ? commit.node.status.contexts[0].state
+                          : null
+                      )}
+                    </StyledStatus>
                   </a>
                 </li>
               ))}
@@ -103,6 +152,59 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
     </Query>
   );
 };
+
+const StyledStatus = styled("div")`
+  color: red;
+  font-size: 1.4rem;
+
+  .status-icon {
+    height: 20px;
+  }
+
+  .ci-btn {
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 13px;
+    width: 100px;
+
+    &.success {
+      background-color: #42c88a;
+    }
+    &.failed {
+      background-color: #ed5c5c;
+    }
+    &.pending {
+      background-color: #66d3e4;
+    }
+    &.null {
+      background-color: #898989;
+    }
+
+    .badge-label {
+      color: ${({ theme }) => theme.primary};
+      text-align: left;
+
+      &.success {
+        width: 52px;
+      }
+      &.failed {
+        width: 52px;
+      }
+    }
+
+    img {
+      width: 20px;
+    }
+
+    @media (max-width: 490px) {
+      width: 95px;
+    }
+  }
+`;
 
 const StyledCommits = styled("ul")`
   padding: 0;
@@ -129,19 +231,36 @@ const StyledCommits = styled("ul")`
     align-content: center;
   }
 
+  .author-wrap {
+    img {
+      /* width: 48px; */
+      height: 100%;
+      width: 100%;
+      margin-right: 1rem;
+      object-fit: cover;
+
+      @media (max-width: 730px) {
+        object-fit: contain;
+      }
+    }
+  }
+
   .commit-wrap {
-    max-width: 75%;
+    max-width: calc(100% - 100px - 3%);
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 50px 1fr;
+    overflow: hidden;
   }
 
   .commit-status {
     display: flex;
     align-items: center;
-  }
-`;
 
-const CIButton = styled("div")`
-  color: red;
-  font-size: 1.4rem;
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
 `;
 
 const ContentWrapper = styled("div")``;
