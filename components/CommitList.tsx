@@ -92,6 +92,13 @@ const StatusButton: any = (status: string | null) => {
 };
 
 export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
+  const fixUsername = (username: string) => {
+    if (username === "Arthur Hwang") {
+      return username.split(" ").join("");
+    } else {
+      return username;
+    }
+  };
   return (
     <Query query={COMMIT_LIST_QUERY} variables={{ owner, name, path }}>
       {({ data, loading }: any) => {
@@ -110,7 +117,6 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
         return (
           <ContentWrapper>
             <h3>Real-Time Project Commits || CI/CD Status Links</h3>
-
             <StyledCommits>
               {commitHistory.map((commit: any) => (
                 <li key={commit.node.oid}>
@@ -119,7 +125,7 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
                       <img src={commit.node.author.avatarUrl} /> {/* </div> */}
                     </div>
                     <div>
-                      <div> {commit.node.author.name}</div>
+                      <div> {fixUsername(commit.node.author.name)}</div>
                       <a className="link" href={commit.node.commitUrl}>
                         <span>-</span> {commit.node.messageHeadline}
                       </a>
@@ -229,11 +235,18 @@ const StyledCommits = styled("ul")`
     display: flex;
     justify-content: space-between;
     align-content: center;
+    /* box-shadow: 0px -4px 6px -6px #222; */
+
+    border-top: 1px solid #ebeaeb;
+
+    &:first-child {
+      /* box-shadow: none; */
+      border-top: none;
+    }
   }
 
   .author-wrap {
     img {
-      /* width: 48px; */
       height: 100%;
       width: 100%;
       margin-right: 1rem;
