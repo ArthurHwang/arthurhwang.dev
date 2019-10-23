@@ -49,7 +49,7 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney-gatsby/screenshot-1-min.png" />
+                <img src="/static/projects/bestattorney-gatsby/screenshot-1.png" />
                 <div className="vertical-wrapper">
                   <img
                     className="vertical"
@@ -821,6 +821,7 @@ const ProjectWrap = styled("div")`
   h4 {
     margin: 0;
     border-bottom: 1px solid #ebeaeb;
+    text-transform: uppercase;
   }
 
   .badges {
@@ -848,7 +849,7 @@ const ProjectWrap = styled("div")`
   }
 
   .project-title {
-    display: block;
+    display: inline-block;
     /* margin-bottom: 1rem; */
     font-size: 2.6rem;
     /* -webkit-box-shadow: 0 4px 6px -6px #222; */
@@ -870,6 +871,8 @@ const ProjectWrap = styled("div")`
 
   .inner-slider {
     grid-area: carousel;
+
+    /* max-height: 399px; */
 
     .vertical-wrapper {
       display: flex !important;
@@ -898,12 +901,12 @@ const ProjectWrap = styled("div")`
       bottom: -39px;
 
       &:after {
-        content: "-swipe or drag images to scroll-";
+        content: "<swipe or drag images to scroll>";
         display: block;
         position: relative;
         bottom: 5px;
         font-size: 1rem;
-        color: ${({ theme }) => theme.grey};
+        color: ${({ theme }) => theme.secondaryAccent};
       }
 
       @media (max-width: 768px) {

@@ -221,6 +221,15 @@ h1,h2,h3 {
   color: ${theme.black};
 }
 
+@media(max-width:490px) {
+  h2 {
+    font-size: 2rem; 
+  }
+  p {
+    font-size: 1.4rem;
+  }
+}
+
 p, span {
   color: ${theme.grey};
   text-align: justify;

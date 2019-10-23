@@ -126,14 +126,16 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
                     </div>
                     <div>
                       <div> {fixUsername(commit.node.author.name)}</div>
-                      <a
-                        target="_blank"
-                        rel="noopener"
-                        className="link"
-                        href={commit.node.commitUrl}
-                      >
-                        <span>-</span> {commit.node.messageHeadline}
-                      </a>
+                      <div className="commit-message">
+                        <a
+                          target="_blank"
+                          rel="noopener"
+                          className="link"
+                          href={commit.node.commitUrl}
+                        >
+                          <span>-</span> {commit.node.messageHeadline}
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <a
@@ -230,6 +232,9 @@ const StyledCommits = styled("ul")`
   a.link {
     margin: 0;
     font-size: 1.4rem;
+      /* text-indent: -16px; */
+      /* line-height: 1; */
+      /* text-indent: 100%; */
     cursor: pointer;
 
     @media (max-width: 490px) {
@@ -242,6 +247,38 @@ const StyledCommits = styled("ul")`
       font-size: 1.6rem;
     }
   }
+
+  /* ul {
+    padding-left: 1.5rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 91%;
+
+    li {
+      font-size: 1.4rem;
+      text-indent: -16px;
+
+      &:before {
+        content: "-";
+        text-indent: -10px;
+        font-weight: 800;
+        font-size: 1.6rem;
+        color: ${({ theme }) => theme.secondaryAccent};
+        margin-right: 1rem;
+      }
+    }
+  } */
+
+  /* ul {
+    padding-left: 1.5rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 91%;
+  } */
 
   li {
     display: flex;
@@ -276,6 +313,18 @@ const StyledCommits = styled("ul")`
     grid-gap: 1rem;
     grid-template-columns: 50px 1fr;
     overflow: hidden;
+
+    .commit-message {
+   
+
+      @media(max-width:490px) {
+        margin-bottom: 1rem;
+        line-height: 20px;
+        text-indent: -0.5em;
+        padding-left: 0.5em;
+      }
+   
+    }
   }
 
   .commit-status {
