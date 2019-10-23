@@ -126,12 +126,19 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
                     </div>
                     <div>
                       <div> {fixUsername(commit.node.author.name)}</div>
-                      <a className="link" href={commit.node.commitUrl}>
+                      <a
+                        target="_blank"
+                        rel="noopener"
+                        className="link"
+                        href={commit.node.commitUrl}
+                      >
                         <span>-</span> {commit.node.messageHeadline}
                       </a>
                     </div>
                   </div>
                   <a
+                    target="_blank"
+                    rel="noopener"
                     className={`commit-status ${
                       commit.node.status ? "" : "disabled"
                     }`}

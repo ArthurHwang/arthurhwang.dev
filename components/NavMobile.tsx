@@ -92,6 +92,7 @@ const StyledNavMobile = styled("nav")`
 
 const StyledNavMenu = styled("div")`
   position: fixed;
+  z-index: 20;
   left: 0;
   top: 61px;
   width: 100vw;

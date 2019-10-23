@@ -12,16 +12,17 @@ import { FaGithub, FaPlay } from "react-icons/fa";
 const Projects: NextPage<any> = () => {
   const settings = {
     dots: true,
-    arrows: true,
+    arrows: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     lazyLoad: "progressive",
+    pauseOnHover: false,
     fade: true,
-    speed: 1800,
+    speed: 1200,
     adaptiveHeight: true
   };
   return (
@@ -36,6 +37,8 @@ const Projects: NextPage<any> = () => {
       <ProjectWrap>
         <ContentWrap>
           <a
+            target="_blank"
+            rel="noopener"
             href="https://bestattorney.netlify.com"
             className="link  project-title"
           >
@@ -57,6 +60,8 @@ const Projects: NextPage<any> = () => {
                     src="/static/projects/bestattorney-gatsby/screenshot-3.png"
                   />
                 </div>
+                <img src="/static/projects/bestattorney-gatsby/screenshot-9.png" />
+                <img src="/static/projects/bestattorney-gatsby/screenshot-8.png" />
 
                 <img src="/static/projects/bestattorney-gatsby/screenshot-4.png" />
                 <img src="/static/projects/bestattorney-gatsby/screenshot-5.png" />
@@ -139,7 +144,7 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/logos/cypress.png" />
               <img src="/static/projects/logos/nodejs.png" />
               <img
-                style={{ width: "50px" }}
+                style={{ width: "60px" }}
                 src="/static/projects/logos/styled-components.png"
               />
               <img src="/static/projects/logos/netlify.png" />{" "}
@@ -148,12 +153,20 @@ const Projects: NextPage<any> = () => {
             </div>
           </LazyLoad>
           <div className="buttons">
-            <a href="https://www.github.com/ArthurHwang">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.github.com/ArthurHwang"
+            >
               <ProjectButton color="blue">
                 Source <FaGithub />
               </ProjectButton>
             </a>
-            <a href="https://bestattorney.netlify.com">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://bestattorney.netlify.com"
+            >
               <ProjectButton color="green">
                 Launch <FaPlay />
               </ProjectButton>
@@ -167,7 +180,12 @@ const Projects: NextPage<any> = () => {
       {/***************************************************************************************************/}
       <ProjectWrap className="bg-grey">
         <ContentWrap>
-          <a href="/" className="link project-title">
+          <a
+            // target="_blank"
+            // rel="noopener"
+            href="/"
+            className="link project-title"
+          >
             arthurhwang.dev
           </a>
 
@@ -176,11 +194,8 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/arthurhwang.dev.png" />
-                <img src="/static/projects/arthurhwang.dev.png" />
-                <img src="/static/projects/arthurhwang.dev.png" />
-                <img src="/static/projects/arthurhwang.dev.png" />
-                <img src="/static/projects/arthurhwang.dev.png" />
+                <img src="/static/projects/arthurhwang.dev/screenshot-1.png" />
+                <img src="/static/projects/arthurhwang.dev/screenshot-2.png" />
               </Slider>
             </div>
             <div className="commits">
@@ -266,12 +281,20 @@ const Projects: NextPage<any> = () => {
             </div>
           </LazyLoad>
           <div className="buttons">
-            <a href="https://www.github.com/ArthurHwang">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.github.com/ArthurHwang"
+            >
               <ProjectButton color="blue">
                 Source <FaGithub />
               </ProjectButton>
             </a>
-            <a href="https://bestattorney.netlify.com">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://bestattorney.netlify.com"
+            >
               <ProjectButton color="green">
                 Launch <FaPlay />
               </ProjectButton>
@@ -286,6 +309,8 @@ const Projects: NextPage<any> = () => {
       <ProjectWrap>
         <ContentWrap>
           <a
+            target="_blank"
+            rel="noopener"
             href="https://www.bestattorney.com/admin"
             className="link project-title"
           >
@@ -297,10 +322,10 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney-admin/screenshot-1.png" />
+                <img src="/static/projects/bestattorney-admin/screenshot-2.png" />
+                <img src="/static/projects/bestattorney-admin/screenshot-3.png" />
+                <img src="/static/projects/bestattorney-admin/screenshot-4.png" />
               </Slider>
             </div>
             <div className="commits">
@@ -407,12 +432,20 @@ const Projects: NextPage<any> = () => {
             </div>
           </LazyLoad>
           <div className="buttons">
-            <a href="https://www.github.com/ArthurHwang">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.github.com/ArthurHwang"
+            >
               <ProjectButton color="blue">
                 Source <FaGithub />
               </ProjectButton>
             </a>
-            <a href="https://bestattorney.netlify.com">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://bestattorney.netlify.com"
+            >
               <ProjectButton color="green">
                 Launch <FaPlay />
               </ProjectButton>
@@ -426,7 +459,12 @@ const Projects: NextPage<any> = () => {
       {/***************************************************************************************************/}
       <ProjectWrap className="bg-grey">
         <ContentWrap>
-          <a href="https://www.bestattorney.com" className="link project-title">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.bestattorney.com"
+            className="link project-title"
+          >
             Bisnar | Chase - LAMP
           </a>
 
@@ -435,10 +473,21 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/bestattorney.com/screenshot-1.png" />
+
+                <div className="vertical-wrapper">
+                  <img
+                    className="vertical"
+                    src="/static/projects/bestattorney.com/screenshot-3.png"
+                  />
+                  <img
+                    className="vertical"
+                    src="/static/projects/bestattorney.com/screenshot-2.png"
+                  />
+                </div>
+                <img src="/static/projects/bestattorney.com/screenshot-4.png" />
+                <img src="/static/projects/bestattorney.com/screenshot-5.png" />
+                {/* <img src="/static/projects/bestattorney.com/screenshot-1.png" /> */}
               </Slider>
             </div>
             <div className="commits">
@@ -541,12 +590,16 @@ const Projects: NextPage<any> = () => {
             </div>
           </LazyLoad>
           <div className="buttons">
-            <a href="https://www.github.com/ArthurHwang">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.github.com/ArthurHwang"
+            >
               <ProjectButton color="blue">
                 Source <FaGithub />
               </ProjectButton>
             </a>
-            <a href="https://bestattorney.netlify.com">
+            <a target="_blank" rel="noopener" href="https://bestattorney.com">
               <ProjectButton color="green">
                 Launch <FaPlay />
               </ProjectButton>
@@ -559,7 +612,12 @@ const Projects: NextPage<any> = () => {
       {/***************************************************************************************************/}
       <ProjectWrap>
         <ContentWrap>
-          <a href="https://www.bestattorney.com" className="link project-title">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://toneify-arthurhwang.herokuapp.com/"
+            className="link project-title"
+          >
             Toneify
           </a>
 
@@ -674,12 +732,20 @@ const Projects: NextPage<any> = () => {
             </div>
           </LazyLoad>
           <div className="buttons">
-            <a href="https://www.github.com/ArthurHwang">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/ArthurHwang/toneify"
+            >
               <ProjectButton color="blue">
                 Source <FaGithub />
               </ProjectButton>
             </a>
-            <a href="https://bestattorney.netlify.com">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://toneify-arthurhwang.herokuapp.com/"
+            >
               <ProjectButton color="green">
                 Launch <FaPlay />
               </ProjectButton>
@@ -760,15 +826,14 @@ const ProjectWrap = styled("div")`
   .badges {
     display: flex;
     padding: 2rem 2rem;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-top: 1px solid #ebeaeb;
     border-bottom: 1px solid #ebeaeb;
-
     flex-wrap: wrap;
 
     img {
-      width: 80px;
+      width: 85px;
     }
 
     @media (max-width: 768px) {
@@ -789,6 +854,7 @@ const ProjectWrap = styled("div")`
     /* -webkit-box-shadow: 0 4px 6px -6px #222; */
     /* -moz-box-shadow: 0 4px 6px -6px #222; */
     /* box-shadow: 0 4px 6px -6px #222; */
+    text-transform: uppercase;
     padding: 1rem 0;
 
     @media (max-width: 490px) {
@@ -829,14 +895,23 @@ const ProjectWrap = styled("div")`
     }
 
     .slick-dots {
-      bottom: -15px;
+      bottom: -39px;
+
+      &:after {
+        content: "-swipe or drag images to scroll-";
+        display: block;
+        position: relative;
+        bottom: 5px;
+        font-size: 1rem;
+        color: ${({ theme }) => theme.grey};
+      }
 
       @media (max-width: 768px) {
-        bottom: -25px;
+        bottom: -45px;
       }
 
       @media (max-width: 490px) {
-        bottom: -20px;
+        bottom: -40px;
       }
 
       .slick-active button:before {
@@ -845,13 +920,17 @@ const ProjectWrap = styled("div")`
     }
 
     .slick-prev {
-      z-index: 10;
+      z-index: 0;
       left: 2%;
+      top: initial;
+      bottom: -30px;
     }
 
     .slick-next {
-      z-index: 10;
+      z-index: 0;
       right: 2%;
+      top: initial;
+      bottom: -30px;
     }
 
     .slick-prev:before,
@@ -861,11 +940,24 @@ const ProjectWrap = styled("div")`
   }
 
   .commits {
+    margin-top: 2rem;
     grid-area: commits;
+
+    @media (max-width: 1400px) {
+      margin-top: 0;
+    }
   }
 
   .accomplishments {
     grid-area: accomplishments;
+
+    @media (max-width: 1400px) {
+      margin-top: 4rem;
+    }
+
+    /* @media (max-width: 768px) {
+      margin-top: 4rem;
+    } */
 
     ul {
       padding-left: 1.5rem;
@@ -902,6 +994,7 @@ const ProjectWrap = styled("div")`
     @media (max-width: 1400px) {
       grid-template-columns: initial;
       grid-template-rows: repeat(3, auto);
+      grid-gap: 0;
       grid-template-areas:
         "carousel"
         "accomplishments"
@@ -920,6 +1013,7 @@ const ProjectWrap = styled("div")`
     @media (max-width: 1400px) {
       grid-template-columns: initial;
       grid-template-rows: repeat(3, auto);
+      grid-gap: 0;
       grid-template-areas:
         "carousel"
         "accomplishments"
