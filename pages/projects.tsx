@@ -17,7 +17,7 @@ const Projects: NextPage<any> = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     lazyLoad: "progressive",
     fade: true,
@@ -720,11 +720,19 @@ const ProjectWrap = styled("div")`
   padding: 4rem 2rem;
 
   .buttons {
-    padding: 4rem 4rem 2rem;
-    width: 500px;
+    padding: 2rem 4rem 0;
+    /* width: 100%; */
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    /* text-align: center; */
+    /* flex: 1 0 10px; */
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* margin: 0 auto; */
+
+    button {
+      margin: 1rem;
+    }
   }
 
   &.bg-grey {
@@ -791,6 +799,7 @@ const ProjectWrap = styled("div")`
 
       .vertical {
         width: 196.5px !important;
+        max-height: 398.4px;
       }
 
       @media (max-width: 490px) {

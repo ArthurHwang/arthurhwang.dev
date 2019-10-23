@@ -176,6 +176,11 @@ const StyledStatus = styled("div")`
     text-transform: uppercase;
     border-radius: 13px;
     width: 100px;
+    transition: transform 0.1s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     &.success {
       background-color: #42c88a;
