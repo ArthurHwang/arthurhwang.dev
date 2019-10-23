@@ -50,8 +50,7 @@ export const Intro: React.FC<any> = () => {
 
           <div className="badges-2">
             <a href="https://github.com/ArthurHwang" className="link">
-              <FaGithub className="icon" />
-              <span>Github</span>
+              <FaGithub className="icon" /> <span>Github</span>
             </a>
 
             <a href="https://www.linkedin.com/in/arthur-hwang" className="link">
@@ -86,7 +85,7 @@ const ContentWrap = styled("div")`
   padding: 4rem 2rem;
   span {
     color: ${({ theme }) => theme.accent};
-    font-weight: 800;
+    /* font-weight: 800; */
   }
 
   h2 {
@@ -109,22 +108,31 @@ const InnerRight = styled("div")`
     } */
 
     a.link {
-      display: flex;
-      align-items: center;
+      /* display: flex; */
+      /* align-items: center; */
+      position: relative;
+      bottom: 9px;
+
+      @media (max-width: 490px) {
+        &:nth-child(even) {
+          padding-left: calc(100% - 63%);
+        }
+      }
     }
 
     .icon {
       position: relative;
+      top: 8px;
       font-size: 3rem;
-      margin-right: 1rem;
+      margin-right: 0.9rem;
     }
 
     @media (max-width: 490px) {
-      &:nth-child(even) {
-        padding-left: calc(100% - 66%);
-      }
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
+
   .badges {
     display: flex;
     flex-direction: column;

@@ -251,7 +251,7 @@ const ContentWrap = styled("div")`
       font-weight: 600;
       overflow: hidden;
       height: 40px;
-      padding: 0 40px;
+      padding: 0 40px 0 50px;
 
       @media (max-width: 490px) {
         padding: 0 20px;
@@ -319,7 +319,11 @@ const ContentWrap = styled("div")`
         &__item {
           line-height: 40px;
           margin: 0;
-          width: 120px;
+          width: 140px;
+
+          @media (max-width: 490px) {
+            width: 120px;
+          }
         }
       }
     }
