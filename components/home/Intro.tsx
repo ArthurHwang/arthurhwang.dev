@@ -47,16 +47,6 @@ export const Intro: React.FC<any> = () => {
           <h2>
             Links<span>_</span>
           </h2>
-          <a href="https://www.linkedin.com/in/arthur-hwang">Github</a>
-
-          <a href="https://www.linkedin.com/in/arthur-hwang" className="link">
-            <FaLinkedin className="icon" /> <span>LinkedIn</span>
-          </a>
-
-          <a href="https://github.com/ArthurHwang" className="link">
-            <FaGithub className="icon" />
-            Github
-          </a>
 
           <div className="badges">
             <a href="https://github.com/ArthurHwang" className="link">
@@ -65,16 +55,16 @@ export const Intro: React.FC<any> = () => {
             </a>
 
             <a href="https://www.linkedin.com/in/arthur-hwang" className="link">
-              <FaLinkedin className="icon" /> <span>LinkedIn</span>
+              <FaLinkedin className="icon" /> LinkedIn
             </a>
             <a href="https://www.facebook.com/arthur.hwang.9" className="link">
-              <FaFacebook className="icon" /> <span>Facebook</span>
+              <FaFacebook className="icon" /> Facebook
             </a>
             <a title="" href="https://www.twitter.com/" className="link">
-              <FaTwitter className="icon" /> <span>Twitter</span>
+              <FaTwitter className="icon" /> Twitter
             </a>
             <a href="mailto:mail@arthurhwang.dev" className="link">
-              <IoMdMail className="icon" /> <span>Email</span>
+              <IoMdMail className="icon" /> Email
             </a>
             <a
               href="mailto:mail@
@@ -115,7 +105,7 @@ const InnerRight = styled("div")`
     & a {
       margin-bottom: 2rem;
       display: flex;
-      align-items: center;
+      /* align-items: center; */
 
       @media (max-width: 490px) {
         &:nth-child(even) {
