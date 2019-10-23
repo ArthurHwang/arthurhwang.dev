@@ -17,7 +17,7 @@ const Projects: NextPage<any> = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
     lazyLoad: "progressive",
     fade: true,
@@ -138,6 +138,10 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/logos/jest.png" />
               <img src="/static/projects/logos/cypress.png" />
               <img src="/static/projects/logos/nodejs.png" />
+              <img
+                style={{ width: "50px" }}
+                src="/static/projects/logos/styled-components.png"
+              />
               <img src="/static/projects/logos/netlify.png" />{" "}
               <img src="/static/projects/logos/ga.png" />
               <img src="/static/projects/logos/gmp.jpg" />
@@ -796,17 +800,12 @@ const ProjectWrap = styled("div")`
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
-      max-height: 390.98px;
+      /* max-height: 390.98px; */
+
       .vertical {
-        /* /* max-width: 196.5px !important; */
-        /* max-height: 398.4px; */
-        /* max-width: 50% !important; */
-        width: 196.5px !important;
-        /* width: auto !important; */
-        /* width: 196.5px !important; */
-        /* width: auto !important; */
-        /* width: 50%; */
-        /* height: 100%; */
+        width: 196.5px;
+        /* max-width: 196.5px ; */
+        flex-shrink: 1;
       }
 
       @media (max-width: 490px) {
