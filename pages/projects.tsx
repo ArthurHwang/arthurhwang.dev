@@ -128,7 +128,7 @@ const Projects: NextPage<any> = () => {
               </ul>
             </div>
           </div>
-          <LazyLoad>
+          <LazyLoad height={91}>
             <div className="badges">
               <img src="/static/projects/logos/Gatsby-Logo.svg" />
               <img src="/static/projects/logos/React.png" />
@@ -255,14 +255,16 @@ const Projects: NextPage<any> = () => {
               </ul>
             </div>
           </div>
-          <div className="badges">
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-            <img src="/static/projects/logos/gatsby.png" />
-          </div>
+          <LazyLoad height={91}>
+            <div className="badges">
+              <img src="/static/projects/logos/gatsby.png" />
+              <img src="/static/projects/logos/gatsby.png" />
+              <img src="/static/projects/logos/gatsby.png" />
+              <img src="/static/projects/logos/gatsby.png" />
+              <img src="/static/projects/logos/gatsby.png" />
+              <img src="/static/projects/logos/gatsby.png" />
+            </div>
+          </LazyLoad>
           <div className="buttons">
             <a href="https://www.github.com/ArthurHwang">
               <ProjectButton color="blue">
@@ -390,18 +392,20 @@ const Projects: NextPage<any> = () => {
               </ul>
             </div>
           </div>
-          <div className="badges">
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-          </div>
+          <LazyLoad height={91}>
+            <div className="badges">
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+            </div>
+          </LazyLoad>
           <div className="buttons">
             <a href="https://www.github.com/ArthurHwang">
               <ProjectButton color="blue">
@@ -522,18 +526,20 @@ const Projects: NextPage<any> = () => {
               </ul>
             </div>
           </div>
-          <div className="badges">
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-          </div>
+          <LazyLoad height={91}>
+            <div className="badges">
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+            </div>
+          </LazyLoad>
           <div className="buttons">
             <a href="https://www.github.com/ArthurHwang">
               <ProjectButton color="blue">
@@ -653,18 +659,20 @@ const Projects: NextPage<any> = () => {
               </ul>
             </div>
           </div>
-          <div className="badges">
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-            <span>hi</span>
-          </div>
+          <LazyLoad height={91}>
+            <div className="badges">
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+              <span>hi</span>
+            </div>
+          </LazyLoad>
           <div className="buttons">
             <a href="https://www.github.com/ArthurHwang">
               <ProjectButton color="blue">
@@ -776,11 +784,11 @@ const ProjectWrap = styled("div")`
 
   .project-title {
     display: block;
-    margin-bottom: 2rem;
+    /* margin-bottom: 1rem; */
     font-size: 2.6rem;
-    -webkit-box-shadow: 0 4px 6px -6px #222;
-    -moz-box-shadow: 0 4px 6px -6px #222;
-    box-shadow: 0 4px 6px -6px #222;
+    /* -webkit-box-shadow: 0 4px 6px -6px #222; */
+    /* -moz-box-shadow: 0 4px 6px -6px #222; */
+    /* box-shadow: 0 4px 6px -6px #222; */
     padding: 1rem 0;
 
     @media (max-width: 490px) {
@@ -800,7 +808,7 @@ const ProjectWrap = styled("div")`
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
-      max-height: 390.98px;
+      max-height: 398.84px;
 
       .vertical {
         width: 196.5px;
@@ -816,12 +824,21 @@ const ProjectWrap = styled("div")`
     @media (max-width: 490px) {
       margin-right: -2rem;
       margin-left: -2rem;
-      border-bottom: 1px solid #ebeaeb;
-      border-top: 1px solid #ebeaeb;
+      /* border-bottom: 1px solid #ebeaeb; */
+      /* border-top: 1px solid #ebeaeb; */
     }
 
     .slick-dots {
-      bottom: 13px;
+      bottom: -15px;
+
+      @media (max-width: 768px) {
+        bottom: -25px;
+      }
+
+      @media (max-width: 490px) {
+        bottom: -20px;
+      }
+
       .slick-active button:before {
         color: ${({ theme }) => theme.accent};
       }
