@@ -798,8 +798,10 @@ const ProjectWrap = styled("div")`
       justify-content: space-evenly;
 
       .vertical {
-        width: 196.5px !important;
-        max-height: 398.4px;
+        /* max-width: 196.5px !important;
+        max-height: 398.4px; */
+
+        width: 50%;
       }
 
       @media (max-width: 490px) {
