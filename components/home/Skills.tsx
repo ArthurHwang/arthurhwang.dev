@@ -159,7 +159,7 @@ const StyledSkills = styled("div")`
 
     .other-item {
       padding: 0.3rem;
-      text-shadow: black 0px 0px 0.1px;
+      /* text-shadow: black 0px 0px 0.1px; */
     }
 
     .hyphen {

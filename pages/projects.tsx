@@ -1007,7 +1007,7 @@ const ProjectWrap = styled("div")`
       "commits accomplishments";
 
     @media (max-width: 1400px) {
-      grid-template-columns: initial;
+      grid-template-columns: 1fr;
       grid-template-rows: repeat(3, auto);
       grid-gap: 0;
       grid-template-areas:
@@ -1026,7 +1026,7 @@ const ProjectWrap = styled("div")`
       "accomplishments commits";
 
     @media (max-width: 1400px) {
-      grid-template-columns: initial;
+      grid-template-columns: 1fr;
       grid-template-rows: repeat(3, auto);
       grid-gap: 0;
       grid-template-areas:
