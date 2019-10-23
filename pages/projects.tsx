@@ -796,12 +796,14 @@ const ProjectWrap = styled("div")`
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
-
+      max-height: 390.98px;
       .vertical {
-        /* max-width: 196.5px !important;
-        max-height: 398.4px; */
-
-        width: 50%;
+        /* /* max-width: 196.5px !important; */
+        /* max-height: 398.4px; */
+        max-width: 196.5px !important;
+        width: 196.5px !important;
+        /* width: 50%; */
+        /* height: 100%; */
       }
 
       @media (max-width: 490px) {
