@@ -51,20 +51,20 @@ export const Intro: React.FC<any> = () => {
           <div className="badges-2">
             <a href="https://github.com/ArthurHwang" className="link">
               <FaGithub className="icon" />
-              Github
+              <span>Github</span>
             </a>
 
             <a href="https://www.linkedin.com/in/arthur-hwang" className="link">
-              <FaLinkedin className="icon" /> LinkedIn
+              <FaLinkedin className="icon" /> <span>LinkedIn</span>
             </a>
             <a href="https://www.facebook.com/arthur.hwang.9" className="link">
-              <FaFacebook className="icon" /> Facebook
+              <FaFacebook className="icon" /> <span>Facebook</span>
             </a>
             <a title="" href="https://www.twitter.com/" className="link">
-              <FaTwitter className="icon" /> Twitter
+              <FaTwitter className="icon" /> <span>Twitter</span>
             </a>
             <a href="mailto:mail@arthurhwang.dev" className="link">
-              <IoMdMail className="icon" /> Email
+              <IoMdMail className="icon" /> <span>Email</span>
             </a>
             <a
               href="mailto:mail@
@@ -100,6 +100,30 @@ const InnerRight = styled("div")`
   .badges-2 {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 63px - 19.92px);
+
+    /* span {
+      position: relative;
+      bottom: 5px;
+    } */
+
+    a.link {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      position: relative;
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+
+    @media (max-width: 490px) {
+      &:nth-child(even) {
+        padding-left: calc(100% - 66%);
+      }
+    }
   }
   .badges {
     display: flex;
