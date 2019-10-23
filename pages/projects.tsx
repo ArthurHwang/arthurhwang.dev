@@ -267,18 +267,6 @@ const Projects: NextPage<any> = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Porro, aliquid?
                 </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
               </ul>
             </div>
           </div>
@@ -378,26 +366,6 @@ const Projects: NextPage<any> = () => {
                   Porro, aliquid?
                 </li>
 
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Porro, aliquid?
@@ -560,30 +528,6 @@ const Projects: NextPage<any> = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Porro, aliquid?
                 </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
               </ul>
             </div>
           </div>
@@ -681,26 +625,6 @@ const Projects: NextPage<any> = () => {
                   Porro, aliquid?
                 </li>
 
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Porro, aliquid?

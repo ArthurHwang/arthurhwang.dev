@@ -346,4 +346,6 @@ const StyledCommits = styled("ul")`
   }
 `;
 
-const ContentWrapper = styled("div")``;
+const ContentWrapper = styled("div")`
+  /* min-height: 344px; */
+`;

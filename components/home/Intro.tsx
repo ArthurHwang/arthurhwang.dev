@@ -70,7 +70,7 @@ export const Intro: React.FC<any> = () => {
               .dev"
               className="link"
             >
-              <FaClipboardList className="icon" /> CV
+              <FaClipboardList className="icon" /> <span>CV</span>
             </a>
           </div>
         </InnerRight>
