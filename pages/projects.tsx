@@ -800,8 +800,9 @@ const ProjectWrap = styled("div")`
       .vertical {
         /* /* max-width: 196.5px !important; */
         /* max-height: 398.4px; */
-        max-width: 196.5px !important;
+        max-width: 50% !important;
         width: 196.5px !important;
+        /* width: auto !important; */
         /* width: 50%; */
         /* height: 100%; */
       }
