@@ -49,7 +49,7 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney-gatsby/screenshot-1.png" />
+                <img src="/static/projects/bestattorney-gatsby/screenshot-1.webp" />
                 <div className="vertical-wrapper">
                   <img
                     className="vertical"
