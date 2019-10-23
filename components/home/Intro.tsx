@@ -48,7 +48,7 @@ export const Intro: React.FC<any> = () => {
             Links<span>_</span>
           </h2>
 
-          <div className="badges">
+          <div className="badges-2">
             <a href="https://github.com/ArthurHwang" className="link">
               <FaGithub className="icon" />
               Github
@@ -97,6 +97,10 @@ const ContentWrap = styled("div")`
 const InnerLeft = styled("div")``;
 
 const InnerRight = styled("div")`
+  .badges-2 {
+    display: flex;
+    flex-direction: column;
+  }
   .badges {
     display: flex;
     flex-direction: column;
