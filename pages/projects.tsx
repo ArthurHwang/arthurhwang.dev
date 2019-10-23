@@ -800,12 +800,12 @@ const ProjectWrap = styled("div")`
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
-      /* max-height: 390.98px; */
+      max-height: 390.98px;
 
       .vertical {
         width: 196.5px;
         /* max-width: 196.5px ; */
-        flex-shrink: 1;
+        /* flex-shrink: 1; */
       }
 
       @media (max-width: 490px) {
