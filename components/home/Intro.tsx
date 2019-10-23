@@ -47,14 +47,21 @@ export const Intro: React.FC<any> = () => {
           <h2>
             Links<span>_</span>
           </h2>
+          <a href="https://www.linkedin.com/in/arthur-hwang">Github</a>
+
+          <a href="https://www.linkedin.com/in/arthur-hwang" className="link">
+            <FaLinkedin className="icon" /> <span>LinkedIn</span>
+          </a>
+
+          <a href="https://github.com/ArthurHwang" className="link">
+            <FaGithub className="icon" />
+            Github
+          </a>
 
           <div className="badges">
             <a href="https://github.com/ArthurHwang" className="link">
-              <div>
-                {" "}
-                <FaGithub className="icon" />
-              </div>
-              <div>Github</div>
+              <FaGithub className="icon" />
+              Github
             </a>
 
             <a href="https://www.linkedin.com/in/arthur-hwang" className="link">

@@ -638,10 +638,13 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
-                <img src="/static/projects/bestattorney.com-admin.png" />
+                <img src="/static/projects/toneify/screenshot-1.png" />
+                <img src="/static/projects/toneify/screenshot-2.png" />
+                <img src="/static/projects/toneify/screenshot-4.png" />
+                <img src="/static/projects/toneify/screenshot-7.png" />
+                <img src="/static/projects/toneify/screenshot-5.png" />
+                <img src="/static/projects/toneify/screenshot-6.png" />
+                <img src="/static/projects/toneify/screenshot-8.png" />
               </Slider>
             </div>
             <div className="commits">
