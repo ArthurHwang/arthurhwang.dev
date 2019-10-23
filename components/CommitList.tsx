@@ -209,10 +209,10 @@ const StyledStatus = styled("div")`
       text-align: left;
 
       &.success {
-        width: 52px;
+        width: 55px;
       }
       &.failed {
-        width: 52px;
+        width: 55px;
       }
     }
 
