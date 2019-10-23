@@ -177,7 +177,7 @@ const StyledStatus = styled("div")`
   }
 
   .ci-btn {
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -209,10 +209,14 @@ const StyledStatus = styled("div")`
       text-align: left;
 
       &.success {
-        width: 55px;
+        /* width: 55px; */
+        width: 100%;
+        text-align: right;
       }
       &.failed {
-        width: 55px;
+        width: 100%;
+        text-align: right;
+        /* width: 55px; */
       }
     }
 
