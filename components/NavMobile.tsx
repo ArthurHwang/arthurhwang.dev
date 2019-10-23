@@ -108,6 +108,7 @@ const StyledNavMenu = styled("div")`
 `;
 
 const NavMobileWrapper = styled.div`
+  z-index: 20;
   .fade {
     animation: fadein 0.8s;
     -moz-animation: fadein 0.8s; /* Firefox */
