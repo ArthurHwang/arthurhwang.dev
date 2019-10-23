@@ -50,7 +50,11 @@ export const Intro: React.FC<any> = () => {
 
           <div className="badges">
             <a href="https://github.com/ArthurHwang" className="link">
-              <FaGithub className="icon" /> <span>Github</span>
+              <div>
+                {" "}
+                <FaGithub className="icon" />
+              </div>
+              <div>Github</div>
             </a>
 
             <a href="https://www.linkedin.com/in/arthur-hwang" className="link">
@@ -119,8 +123,8 @@ const InnerRight = styled("div")`
       margin-right: 1rem;
     }
 
-    .icon-text {
-    }
+    /* .icon-text {
+    } */
 
     @media (max-width: 490px) {
       display: grid;

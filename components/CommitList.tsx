@@ -177,7 +177,7 @@ const StyledStatus = styled("div")`
   }
 
   .ci-btn {
-    padding: 0.2rem 0.7rem 0.2rem 0.5rem;
+    padding: 0.2rem 0.7rem 0.2rem 0.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
