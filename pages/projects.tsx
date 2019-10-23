@@ -49,9 +49,9 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney-gatsby/screenshot-1.webp" />
+                <img src="/static/projects/bestattorney-gatsby/screenshot-1.png" />
 
-                <picture>
+                {/* <picture>
                   <source
                     srcSet="/static/projects/bestattorney-gatsby/screenshot-1.webp"
                     type="image/webp"
@@ -61,7 +61,7 @@ const Projects: NextPage<any> = () => {
                     type="image/png"
                   />
                   <img src="/static/projects/bestattorney-gatsby/screenshot-1.webp" />
-                </picture>
+                </picture> */}
                 <div className="vertical-wrapper">
                   <img
                     className="vertical"
