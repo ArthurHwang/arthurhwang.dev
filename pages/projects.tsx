@@ -227,6 +227,10 @@ const Projects: NextPage<any> = () => {
                   src="/static/projects/arthurhwang.dev/screenshot-2.png"
                   alt="screenshot 2"
                 />
+                <img
+                  src="/static/projects/arthurhwang.dev/screenshot-3.png"
+                  alt="screenshot 3"
+                />
               </Slider>
             </div>
             <div className="commits">
