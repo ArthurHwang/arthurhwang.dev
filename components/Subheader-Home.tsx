@@ -53,9 +53,6 @@ export const SubheaderHome: React.FC<any> = () => {
 
 const TextWrap = styled("div")`
   margin: 0 auto;
-  /* width: 578px; */
-  /* position: relative; */
-  /* bottom: 40px; */
 
   div {
     display: inline-block;
@@ -181,14 +178,13 @@ const TextWrap = styled("div")`
   }
 
   @media (max-width: 490px) {
-    bottom: 25px;
+    margin-bottom: 1.5rem;
   }
 `;
 
 const ContentWrap = styled("div")`
   padding: 4rem 2rem;
   width: 100%;
-  min-height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -255,7 +251,7 @@ const ContentWrap = styled("div")`
       font-weight: 600;
       overflow: hidden;
       height: 40px;
-      padding: 0 40px;
+      padding: 0 40px 0 50px;
 
       @media (max-width: 490px) {
         padding: 0 20px;
@@ -323,7 +319,11 @@ const ContentWrap = styled("div")`
         &__item {
           line-height: 40px;
           margin: 0;
-          width: 120px;
+          width: 140px;
+
+          @media (max-width: 490px) {
+            width: 120px;
+          }
         }
       }
     }

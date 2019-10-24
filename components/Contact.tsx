@@ -140,7 +140,6 @@ export const Contact: React.FC<any> = () => {
                   </div>
                 </div>
                 <div className="input-row">
-                  {/* <label htmlFor="message">Message</label> */}
                   <textarea
                     name="message"
                     id="message"
@@ -167,7 +166,6 @@ export const Contact: React.FC<any> = () => {
             </form>
           )}
         </Formik>
-        {/* {alert && <div>Message Sent! Thank you</div>} */}
       </StyledContact>
     </ContentWrap>
   );
@@ -178,19 +176,14 @@ const StyledContact = styled("div")`
   margin: 0 auto;
 
   button {
-    /* width: 100px; */
     background-color: ${({ theme }) => theme.accent};
     color: ${({ theme }) => theme.primary};
     text-shadow: black 0px 0px 3px;
     font-weight: 600;
     padding: 1rem 6rem;
-    /* background: 0 0; */
     cursor: pointer;
     border-radius: 4px;
     border: none;
-    /* border-radius: 10px; */
-    /* box-shadow: none; */
-
     transition: transform 0.1s linear;
 
     &:disabled {
@@ -231,7 +224,6 @@ const StyledContact = styled("div")`
     }
 
     textarea {
-      /* border-radius: 4px; */
       width: 100%;
       height: 206px;
       resize: none;
@@ -247,15 +239,6 @@ const StyledContact = styled("div")`
   .submit {
     text-align: center;
   }
-
-  /* .flex-wrap {
-    display: flex;
-    justify-content: space-evenly;
-
-    img {
-      width: 50px;
-    }
-  } */
 `;
 
 const ContentWrap = styled("div")`
@@ -267,7 +250,6 @@ const ContentWrap = styled("div")`
     text-align: right;
     font-size: 1.2rem;
     height: 28px;
-    /* padding-right: 0.5rem; */
   }
 
   .invalid {
@@ -275,7 +257,6 @@ const ContentWrap = styled("div")`
     text-align: right;
     font-size: 1.2rem;
     height: 28px;
-    /* padding-right: 0.5rem; */
   }
 
   .has-error {

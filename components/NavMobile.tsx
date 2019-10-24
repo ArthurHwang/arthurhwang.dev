@@ -41,11 +41,6 @@ export const NavMobile: React.FC<any> = () => {
               beat={true}
               color="#43853d"
             />
-            {/* <Link href="/about">
-              <a className="link-wrap link" onClick={handleLink}>
-                About
-              </a>
-            </Link> */}
             <Link href="/projects">
               <a className="link-wrap link" onClick={handleLink}>
                 Projects
@@ -71,6 +66,7 @@ export const NavMobile: React.FC<any> = () => {
 const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
   height: 100%;
   width: 100%;
+  z-index: 20;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -96,6 +92,7 @@ const StyledNavMobile = styled("nav")`
 
 const StyledNavMenu = styled("div")`
   position: fixed;
+  z-index: 20;
   left: 0;
   top: 61px;
   width: 100vw;
@@ -112,6 +109,7 @@ const StyledNavMenu = styled("div")`
 `;
 
 const NavMobileWrapper = styled.div`
+  z-index: 20;
   .fade {
     animation: fadein 0.8s;
     -moz-animation: fadein 0.8s; /* Firefox */

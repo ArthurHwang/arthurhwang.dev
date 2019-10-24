@@ -18,7 +18,7 @@ const ContentWrap = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  height: 100%;
 
   h1,
   h2 {
@@ -48,6 +48,11 @@ const ContentWrap = styled("div")`
     font-size: 2rem;
     font-weight: 400;
     color: ${({ theme }) => theme.lightgrey};
+    padding: 0 3rem;
+
+    @media (max-width: 490px) {
+      font-size: 1.4rem;
+    }
   }
 
   padding: 2rem;

@@ -5,6 +5,7 @@ import { Subheader } from "./Subheader";
 import { withRouter } from "next/router";
 import styled from "styled-components";
 import { Contact } from "./Contact";
+import "./slick-fix.css";
 
 interface Props {
   children: any;
@@ -19,9 +20,8 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
       <Meta />
       <MobilePush />
       <Header />
-      <Subheader pathName={pathname} />
+      {pathname !== "/_error" && <Subheader pathName={pathname} />}
       <Inner pathName={pathname}>{children}</Inner>
-      {/* <FooterPush /> */}
       <Contact />
       <Footer />
     </StyledLayout>
@@ -29,14 +29,6 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
 };
 // @ts-ignore
 export default withRouter(Layout);
-
-// const FooterPush = styled("div")`
-//   height: 46px;
-
-//   @media (max-width: 910px) {
-//     height: 107px;
-//   }
-// `;
 
 const MobilePush = styled("div")`
   height: 60px;
@@ -48,9 +40,7 @@ const MobilePush = styled("div")`
 
 const StyledLayout = styled("div")<{ pathName: string }>`
   background: white;
-  /* position: ${props => (props.pathName === "/" ? "initial" : "relative")}; */
   color: ${({ theme }) => theme.black};
-  /* height: 100vh; */
   width: 100%;
 
   @media (max-width: 910px) {
@@ -67,6 +57,8 @@ const Inner = styled("section")<{ pathName: string }>`
         return "100%";
       case "/projects":
         return "100%";
+      case "/_error":
+        return "100%";
       default:
         return props.theme.maxWidth;
     }
@@ -76,6 +68,8 @@ const Inner = styled("section")<{ pathName: string }>`
       case "/":
         return "";
       case "/projects":
+        return "";
+      case "/_error":
         return "";
       default:
         return "2rem";

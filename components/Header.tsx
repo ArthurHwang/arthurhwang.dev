@@ -10,7 +10,7 @@ export const Header: React.FC<any> = () => {
         <Link href="/">
           <div className="hover-box">
             <StyledLogo>
-              <div className="logo-img"></div>
+              <div className="logo-img" />
               <div className="text-wrapper">
                 <p className="name">Arthur Hwang</p>
                 <p className="title">FullStack Web Developer</p>
@@ -94,20 +94,6 @@ const StyledHeader = styled("header")`
     cursor: pointer;
     padding-right: 2rem;
     transition: background 0.2s linear;
-
-    /* &:hover { */
-      /* background: ${({ theme }) => theme.accent}; */
-
-      /* .text-wrapper p {
-        transition: color 0.2s linear;
-        color: ${({ theme }) => theme.primary};
-      } */
-
-      /* .text-wrapper p.title {
-        transition: color 0.2s linear;
-        color: ${({ theme }) => theme.yellow};
-      } */
-    /* } */
   }
 
   .bar {
