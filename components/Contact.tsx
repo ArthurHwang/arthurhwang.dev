@@ -241,7 +241,7 @@ const StyledContact = styled("div")`
   }
 `;
 
-const ContentWrap = styled("div")`
+const ContentWrap = styled("section")`
   padding: 4rem 2rem;
   background-color: ${({ theme }) => theme.lightgrey};
 
