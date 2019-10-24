@@ -20,7 +20,7 @@ const Post: NextPage<any> = props => {
   return (
     <Fragment>
       <Head>
-        <title>{`Arthur Hwang | ${title}`}</title>
+        <title>{`Arthur Hwang | ${title}`}</title> */}
         <meta name="description" content={description} />
       </Head>
       <div>
@@ -30,7 +30,7 @@ const Post: NextPage<any> = props => {
           src={featureImage.fields.file.url}
           alt={featureImage.fields.description}
         />
-        {body}
+        <p>{body}</p>
       </div>
     </Fragment>
   );
@@ -42,6 +42,7 @@ Post.getInitialProps = async ({ query }: Props) => {
     accessToken: process.env.ACCESS_TOKEN
   });
   const getEntries = await client.getEntries();
+
   let payload: any = [];
   let post: any = [];
   const splitItems = Object.values(getEntries)[4];
@@ -52,7 +53,12 @@ Post.getInitialProps = async ({ query }: Props) => {
   });
 
   payload.forEach((item: any) => {
-    if (item.fields.url === query.post) {
+    if (
+      item.fields.title
+        .toLowerCase()
+        .split(" ")
+        .join("-") === query.post
+    ) {
       post.push(item);
     }
   });

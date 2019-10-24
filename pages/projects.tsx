@@ -727,7 +727,7 @@ const Projects: NextPage<any> = () => {
           </div>
           <LazyLoad height={91}>
             <div className="badges">
-              <img src="/static/projects/logos/react.png" alt="react" />
+              <img src="/static/projects/logos/React.png" alt="react" />
               <img src="/static/projects/logos/redux.png" alt="redux" />
               <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
               <img src="/static/projects/logos/express.svg" alt="express" />

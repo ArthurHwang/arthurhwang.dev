@@ -18,7 +18,8 @@ const HomePage: NextPage<any> = () => {
 
   async function fetchEntriesForContentType(contentType: any) {
     const entries = await client.getEntries({
-      content_type: contentType.sys
+      content_type: contentType.sys,
+      order: "-sys.createdAt"
     });
     if (entries.items) return entries.items;
     console.log(`Error getting Entries for ${contentType.name}.`);
@@ -36,6 +37,7 @@ const HomePage: NextPage<any> = () => {
     getPosts();
   }, []);
   return (
+    // @ts-ignore
     <Fragment>
       <Head>
         <title>Arthur Hwang | Blog</title>
@@ -45,12 +47,13 @@ const HomePage: NextPage<any> = () => {
         {posts.length > 0
           ? posts.map((p: any) => (
               <Post
+                title={p.fields.title}
+                description={p.fields.description}
                 alt={p.fields.featureImage.fields.description}
-                date={p.fields.date}
+                date={p.sys.createdAt}
                 key={p.fields.title}
                 image={p.fields.featureImage.fields.file.url}
-                title={p.fields.title}
-                url={p.fields.url}
+                url={p.fields.title}
               />
             ))
           : null}
