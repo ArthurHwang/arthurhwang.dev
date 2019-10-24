@@ -85,7 +85,6 @@ const ContentWrap = styled("div")`
   padding: 4rem 2rem;
   span {
     color: ${({ theme }) => theme.accent};
-    /* font-weight: 800; */
   }
 
   h2 {
@@ -102,14 +101,7 @@ const InnerRight = styled("div")`
     justify-content: space-between;
     height: calc(100% - 63px - 19.92px);
 
-    /* span {
-      position: relative;
-      bottom: 5px;
-    } */
-
     a.link {
-      /* display: flex; */
-      /* align-items: center; */
       position: relative;
       bottom: 9px;
 
@@ -141,7 +133,6 @@ const InnerRight = styled("div")`
     & a {
       margin-bottom: 2rem;
       display: flex;
-      /* align-items: center; */
 
       @media (max-width: 490px) {
         &:nth-child(even) {
@@ -155,9 +146,6 @@ const InnerRight = styled("div")`
       font-size: 3rem;
       margin-right: 1rem;
     }
-
-    /* .icon-text {
-    } */
 
     @media (max-width: 490px) {
       display: grid;

@@ -19,11 +19,8 @@ export const Post: React.FC<Props> = ({
   url,
   readingTime
 }: Props) => {
-  let parsedDate = new Date(date);
-
-  console.log(readingTime);
-
-  let transformedDate = `${parsedDate.getMonth() +
+  const parsedDate = new Date(date);
+  const transformedDate = `${parsedDate.getMonth() +
     1}/${parsedDate.getDate()}/${parsedDate.getFullYear()}`;
 
   return (
@@ -43,7 +40,6 @@ export const Post: React.FC<Props> = ({
                 {transformedDate} - {readingTime}
               </p>
             </div>
-            {/* <p>{readingTime}</p> */}
           </div>
 
           <div className="image-block">
@@ -51,7 +47,6 @@ export const Post: React.FC<Props> = ({
           </div>
           <div className="text-block">
             <h2>{title}</h2>
-            {/* <h4>{transformedDate}</h4> */}
             <p>{description}</p>
           </div>
         </div>
@@ -63,15 +58,11 @@ export const Post: React.FC<Props> = ({
 const StyledPost = styled("div")`
   .container {
     overflow: hidden;
-    /* text-align: center; */
     cursor: pointer;
-    /* height: 453px; */
     width: 80%;
     margin: 0 auto 48px;
-    /* margin-bottom: 48px; */
     position: relative;
     border: 1px solid black;
-    /* padding: 2rem; */
     border: none;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
     transition: transform 0.1s linear;
@@ -100,22 +91,12 @@ const StyledPost = styled("div")`
   .image-block {
     position: relative;
     width: 100%;
-    /* height: 250px; */
-    /* height: auto; */
-    /* max-height: 300px; */
-    /* min-height: 200px; */
-    /* height: 20%
-     */
-    /* min-height: 200px; */
-    /* max-height: 350px; */
-    /* padding: 0 16rem; */
 
     .image {
       object-fit: cover;
       object-position: center center;
       width: 100%;
       height: 100%;
-      /* max-height: 350px; */
     }
   }
 
@@ -151,36 +132,4 @@ const StyledPost = styled("div")`
       object-fit: cover;
     }
   }
-
-  /* img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  } */
-  /* a {
-    border-bottom: none;
-  }
-  a:hover {
-    border-bottom: none;
-  }
-  .text {
-    padding: 24px;
-    position: absolute;
-    top: 0;
-
-    & > * {
-      color: red;
-    }
-  } */
-  /* h2 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 0;
-  }
-  h4 {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 8px;
-  } */
 `;

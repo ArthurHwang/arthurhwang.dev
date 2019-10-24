@@ -14,17 +14,14 @@ const readingTime = require("reading-time");
 const Post: NextPage<any> = props => {
   const post = props.post[0].fields;
   const parsedDate = new Date(props.post[0].sys.createdAt);
-  const transformedDate = `${parsedDate.getMonth() +
-    1}/${parsedDate.getDate()}/${parsedDate.getFullYear()}`;
-
   const { title, description, body, featureImage } = post;
-
   const readTime = readingTime(body).text;
-
   const canonicalURL = `https://arthurhwang.dev/${title
     .toLowerCase()
     .split(" ")
     .join("-")}`;
+  const transformedDate = `${parsedDate.getMonth() +
+    1}/${parsedDate.getDate()}/${parsedDate.getFullYear()}`;
 
   return (
     <Fragment>
@@ -57,7 +54,6 @@ const Post: NextPage<any> = props => {
           renderers={{ code: CodeBlock }}
           source={body}
         />
-        {/* <p>{body}</p> */}
       </ContentWrap>
     </Fragment>
   );
@@ -109,6 +105,7 @@ const ContentWrap = styled("div")`
       text-align: left;
     }
   }
+
   .author-block {
     display: grid;
     grid-template-columns: 50px 1fr;
@@ -174,10 +171,8 @@ const ContentWrap = styled("div")`
     margin-bottom: 0;
     font-size: 3.6rem;
     line-height: 4rem;
-    /* width: 75%; */
+
     @media (max-width: 490px) {
-      /* font-size: 3rem; */
-      /* width: 100%; */
       font-size: 3rem;
     }
   }

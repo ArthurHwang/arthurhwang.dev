@@ -70,7 +70,6 @@ const BlogHome: NextPage<any> = () => {
 const StyledPosts = styled("div")`
   width: 100%;
   margin-top: 2rem;
-  /* min-height: 800px; */
 `;
 
 export default BlogHome;
