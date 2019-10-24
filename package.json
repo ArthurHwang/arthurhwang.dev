@@ -46,6 +46,7 @@
     "react-particles-js": "^2.7.0",
     "react-slick": "^0.25.2",
     "react-syntax-highlighter": "^11.0.2",
+    "reading-time": "^1.2.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.0",
     "url-loader": "^2.2.0",

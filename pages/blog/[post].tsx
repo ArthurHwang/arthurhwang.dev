@@ -9,21 +9,17 @@ interface Props {
   query: any;
 }
 
+const readingTime = require("reading-time");
+
 const Post: NextPage<any> = props => {
   const post = props.post[0].fields;
   const parsedDate = new Date(props.post[0].sys.createdAt);
   const transformedDate = `${parsedDate.getMonth() +
     1}/${parsedDate.getDate()}/${parsedDate.getFullYear()}`;
 
-  // console.log(t)
-  const {
-    title,
-    // date,
-    description,
-    body,
-    featureImage
-    // url,
-  } = post;
+  const { title, description, body, featureImage } = post;
+
+  const readTime = readingTime(body).text;
 
   const canonicalURL = `https://arthurhwang.dev/${title
     .toLowerCase()
@@ -35,17 +31,20 @@ const Post: NextPage<any> = props => {
       <Head>
         <title>{`Arthur Hwang | ${title}`}</title> */}
         <meta name="description" content={description} />
-        <link rel="cacnonical" href={canonicalURL} />
+        <link rel="canonical" href={canonicalURL} />
       </Head>
       <ContentWrap>
         <h1>{title}</h1>
+        <p className="post-description">{description}</p>
         <div className="author-block">
           <img className="me" src="/static/me.jpg" />
           <div className="author-date">
             <p>
               <span>by</span> Arthur Hwang
             </p>
-            <p>{transformedDate}</p>
+            <p>
+              {transformedDate} - {readTime}
+            </p>
           </div>
         </div>
         <img
@@ -100,17 +99,27 @@ Post.getInitialProps = async ({ query }: Props) => {
 export default Post;
 
 const ContentWrap = styled("div")`
+  .post-description {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 
+    @media (max-width: 490px) {
+      font-size: 1.6rem;
+      text-align: left;
+    }
+  }
   .author-block {
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-rows: 50px;
     padding: 0 0 2rem 0;
     grid-gap: 1rem;
+
     align-items: center;
 
     @media (max-width: 490px) {
-      padding: 1rem;
+      padding: 0 0 1rem 0;
     }
 
     .author-date {
@@ -133,29 +142,27 @@ const ContentWrap = styled("div")`
       object-fit: cover;
     }
   }
+
   .markdown {
-
-
-
-
- a {
+    a {
       text-decoration: none;
-  font-weight: 600;
-  background-image: linear-gradient(to right,#4AD7D1,#4AD7D1 50%,#3454d1 50%);
-  background-position: 100%;
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    transition: all .4s;
+      font-weight: 600;
+      background-image: linear-gradient(
+        to right,
+        #4ad7d1,
+        #4ad7d1 50%,
+        #3454d1 50%
+      );
+      background-position: 100%;
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.4s;
 
-  &:hover {
-    background-position: 0%;
-  }
-}
-
-
-
-
+      &:hover {
+        background-position: 0%;
+      }
+    }
   }
 
   code {
@@ -163,41 +170,35 @@ const ContentWrap = styled("div")`
     color: ${({ theme }) => theme.secondaryAccent};
   }
 
-
-h1 {
-  margin-bottom: 0;
-  @media(max-width:490px) {
-    font-size: 2.4rem;
+  h1 {
+    margin-bottom: 0;
+    font-size: 3.6rem;
+    line-height: 4rem;
+    /* width: 75%; */
+    @media (max-width: 490px) {
+      /* font-size: 3rem; */
+      /* width: 100%; */
+      font-size: 3rem;
+    }
   }
-}
   pre {
-    overflow: auto ;
+    overflow: auto;
     overflow-y: hidden;
-    /* background-color: ${({ theme }) => theme.lightgrey}; */
 
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #001730;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #4ad7d1;
+    }
+    &::-webkit-scrollbar-corner {
+      background-color: #001730;
+    }
+  }
 
-    
-
-    
-  &::-webkit-scrollbar {
-    /* width: 2px !important; */
-    height:5px;
-  }
-  &::-webkit-scrollbar-track {
-    background-color:#001730;
-    /* width: 5px; */
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #4AD7D1;
-    /* width: 5px; */
-  }
-  /* &::-webkit-scrollbar-button {
-    background-color: ${({ theme }) => theme.colors.secondary};
-  } */
-  &::-webkit-scrollbar-corner {
-    background-color: #001730;
-  }
-  }
   img {
     width: 100%;
   }

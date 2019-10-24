@@ -9,7 +9,9 @@ const client = require("contentful").createClient({
   accessToken: process.env.ACCESS_TOKEN
 });
 
-const HomePage: NextPage<any> = () => {
+const readingTime = require("reading-time");
+
+const BlogHome: NextPage<any> = () => {
   async function fetchContentTypes() {
     const types = await client.getContentTypes();
     if (types.items) return types.items;
@@ -38,27 +40,30 @@ const HomePage: NextPage<any> = () => {
   }, []);
   return (
     // @ts-ignore
-    <Fragment>
-      <Head>
-        <title>Arthur Hwang | Blog</title>
-        <meta name="description" content="Arthur Hwang's Blog" />
-      </Head>
-      <StyledPosts>
-        {posts.length > 0
-          ? posts.map((p: any) => (
-              <Post
-                title={p.fields.title}
-                description={p.fields.description}
-                alt={p.fields.featureImage.fields.description}
-                date={p.sys.createdAt}
-                key={p.fields.title}
-                image={p.fields.featureImage.fields.file.url}
-                url={p.fields.title}
-              />
-            ))
-          : null}
-      </StyledPosts>
-    </Fragment>
+    console.log(posts) || (
+      <Fragment>
+        <Head>
+          <title>Arthur Hwang | Blog</title>
+          <meta name="description" content="Arthur Hwang's Blog" />
+        </Head>
+        <StyledPosts>
+          {posts.length > 0
+            ? posts.map((p: any) => (
+                <Post
+                  title={p.fields.title}
+                  description={p.fields.description}
+                  alt={p.fields.featureImage.fields.description}
+                  date={p.sys.createdAt}
+                  key={p.fields.title}
+                  image={p.fields.featureImage.fields.file.url}
+                  url={p.fields.title}
+                  readingTime={readingTime(p.fields.body).text}
+                />
+              ))
+            : null}
+        </StyledPosts>
+      </Fragment>
+    )
   );
 };
 
@@ -68,4 +73,4 @@ const StyledPosts = styled("div")`
   /* min-height: 800px; */
 `;
 
-export default HomePage;
+export default BlogHome;

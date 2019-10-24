@@ -7,6 +7,7 @@ interface Props {
   title: string;
   url: string;
   description: string;
+  readingTime: string;
 }
 
 export const Post: React.FC<Props> = ({
@@ -15,11 +16,12 @@ export const Post: React.FC<Props> = ({
   image,
   title,
   description,
-  url
+  url,
+  readingTime
 }: Props) => {
   let parsedDate = new Date(date);
 
-  // console.log(parsedDate);
+  console.log(readingTime);
 
   let transformedDate = `${parsedDate.getMonth() +
     1}/${parsedDate.getDate()}/${parsedDate.getFullYear()}`;
@@ -37,8 +39,11 @@ export const Post: React.FC<Props> = ({
             <img className="me" src="/static/me.jpg" />
             <div className="author-date">
               <p>Arthur Hwang</p>
-              <p>{transformedDate}</p>
+              <p>
+                {transformedDate} - {readingTime}
+              </p>
             </div>
+            {/* <p>{readingTime}</p> */}
           </div>
 
           <div className="image-block">
