@@ -105,7 +105,7 @@ const Projects: NextPage<any> = () => {
               </Slider>
             </div>
             <div className="commits">
-              <LazyLoad height={221}>
+              <LazyLoad height={344}>
                 <CommitList
                   owner="bestattorney"
                   name="bestattorney.com-gatsby"
@@ -247,7 +247,7 @@ const Projects: NextPage<any> = () => {
               </Slider>
             </div>
             <div className="commits">
-              <LazyLoad height={221}>
+              <LazyLoad height={344}>
                 <CommitList
                   // className="commits"
                   owner="ArthurHwang"
@@ -397,7 +397,7 @@ const Projects: NextPage<any> = () => {
               </Slider>
             </div>
             <div className="commits">
-              <LazyLoad height={221}>
+              <LazyLoad height={344}>
                 <CommitList
                   owner="bestattorney"
                   name="bestattorney.com"
@@ -546,7 +546,7 @@ const Projects: NextPage<any> = () => {
               </Slider>
             </div>
             <div className="commits">
-              <LazyLoad height={207}>
+              <LazyLoad height={344}>
                 <CommitList owner="bestattorney" name="bestattorney.com" />
               </LazyLoad>
             </div>
@@ -688,7 +688,7 @@ const Projects: NextPage<any> = () => {
               </Slider>
             </div>
             <div className="commits">
-              <LazyLoad height={207}>
+              <LazyLoad height={344}>
                 <CommitList owner="ArthurHwang" name="toneify" />
               </LazyLoad>
             </div>
