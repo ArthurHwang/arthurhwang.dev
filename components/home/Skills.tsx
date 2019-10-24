@@ -16,58 +16,59 @@ export const Skills: React.FC<any> = () => {
             TypeScript
           </span>
           <span className="skill-item">
-            <img src="/static/home/react.png" /> React
+            <img src="/static/home/react.png" alt="react" /> React
           </span>
           <span className="skill-item">
-            <img src="/static/home/nodejs-icon.svg" /> NodeJS
+            <img src="/static/home/nodejs-icon.svg" alt="nodejs" /> NodeJS
           </span>
           <span className="skill-item">
-            <img src="/static/home/graphql.png" /> GraphQL
+            <img src="/static/home/graphql.png" alt="graphql" /> GraphQL
           </span>
           <span className="skill-item">
-            <img src="/static/home/gatsby.png" /> GatsbyJS
+            <img src="/static/home/gatsby.png" alt="gatsbyjs" /> GatsbyJS
           </span>
           <span className="skill-item">
-            <img src="/static/home/next-js.svg" /> NextJS
+            <img src="/static/home/next-js.svg" alt="nextjs" /> NextJS
           </span>
           <span className="skill-item">
-            <img src="/static/home/git.png" /> Git
+            <img src="/static/home/git.png" alt="git" /> Git
           </span>
           <span className="skill-item">
-            <img src="/static/home/redux.png" /> Redux
+            <img src="/static/home/redux.png" alt="redux" /> Redux
           </span>
           <span className="skill-item">
-            <img src="/static/home/npmlogo.png" /> npm
+            <img src="/static/home/npmlogo.png" alt="npm" /> npm
           </span>
           <span className="skill-item">
-            <img src="/static/home/mongodb.png" /> MongoDB
+            <img src="/static/home/mongodb.png" alt="mongodb" /> MongoDB
           </span>
           <span className="skill-item">
-            <img src="/static/home/expressjslogo.png" /> ExpressJS
+            <img src="/static/home/expressjslogo.png" alt="express" /> ExpressJS
           </span>
           <span className="skill-item">
-            <img src="/static/home/jest.png" /> Jest
+            <img src="/static/home/jest.png" alt="jest" /> Jest
           </span>
           <span className="skill-item">
-            <img src="/static/home/cypress.png" /> Cypress
+            <img src="/static/home/cypress.png" alt="cypress" /> Cypress
           </span>
           <span className="skill-item">
-            <img src="/static/home/contentful.png" /> Contentful
+            <img src="/static/home/contentful.png" alt="contentful" />{" "}
+            Contentful
           </span>
           <span className="skill-item">
-            <img src="/static/home/wordpress.png" /> Wordpress
+            <img src="/static/home/wordpress.png" alt="wordpress" /> Wordpress
           </span>
           <span className="skill-item">
-            <img src="/static/home/semantic.png" /> Semantic
+            <img src="/static/home/semantic.png" alt="semantic ui" /> Semantic
           </span>
           <span className="skill-item">
-            <img src="/static/home/bootstrap.png" /> Bootstrap
+            <img src="/static/home/bootstrap.png" alt="bootstrap" /> Bootstrap
           </span>
           <span className="skill-item">
-            <img src="/static/home/html5.png" /> HTML5
+            <img src="/static/home/html5.png" alt="html5" /> HTML5
           </span>
           <span className="skill-item">
-            <img src="/static/home/css.png" /> CSS3
+            <img src="/static/home/css.png" alt="css3" /> CSS3
           </span>
         </div>
         <h3>

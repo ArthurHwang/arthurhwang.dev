@@ -2,6 +2,9 @@
   "name": "arthurhwang.dev",
   "version": "1.0.0",
   "description": "Arthur Hwangs portfolio",
+  "repository": {
+    "private": true
+  },
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -52,7 +55,7 @@
     }
   },
   "devDependencies": {
-    "@types/node": "^12.11.5",
+    "@types/node": "^12.11.6",
     "@types/react": "^16.9.9",
     "babel-plugin-styled-components": "^1.10.6",
     "typescript": "^3.6.4"

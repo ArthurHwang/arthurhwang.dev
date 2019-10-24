@@ -370,7 +370,7 @@ const Projects: NextPage<any> = () => {
             href="https://www.bestattorney.com/admin"
             className="link project-title"
           >
-            Bisnar | Chase - Admin
+            Bisnar | Chase - Admin Login System
           </a>
 
           <div className="project split-grid-left">
@@ -410,57 +410,26 @@ const Projects: NextPage<any> = () => {
               <h3>Accomplishments:</h3>
               <ul>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Created live production ready user authentication / user login
+                  system for people in the company to log in and see
+                  documentation
                 </li>
+                <li>Used Angular for front end application development</li>
+                <li>Used Express to handle back end logic</li>
+                <li>Ensured data privacy using bCrypt to hash passwords</li>
+                <li>Stored sessions with JWT tokens</li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Used Sequelize ORM in conjunction with mysql node driver as
+                  backend database
                 </li>
 
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Complete authentication flow implemented with signup, signin,
+                  logout and account credential editing
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Used reverse proxy to get application running under existing
+                  apache server.
                 </li>
               </ul>
             </div>
@@ -471,6 +440,7 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/logos/express.svg" alt="express" />
               <img src="/static/projects/logos/ts.png" alt="typescript" />
               <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+              <img src="/static/projects/logos/jwt.png" alt="json web token" />
               <img src="/static/projects/logos/sequelize.png" alt="sequelize" />
               <img src="/static/projects/logos/bootstrap.png" alt="bootstrap" />
             </div>
@@ -555,34 +525,35 @@ const Projects: NextPage<any> = () => {
               <h3>Accomplishments:</h3>
               <ul>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  server administration. Used web domain hosts to manage a fully
+                  fledged application website and managed a wordpress suite for
+                  the marketing team to easily create new content. Used apache /
+                  linux / ssh / to adminster server.
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  performed SEO optimization to help reduce bounce rate of
+                  website
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Worked in tandem with graphic designer to bring new life to
+                  website. Worked and planned new site layouts / graphics and
+                  landing pages to improve site look , feel and content.
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Ensured cross browser compatibility both desktop and mobile.
+                  IOS / android / firefox.
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Implemented new security features that logged user information
+                  to intake teams.
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Increased site traffic and overall business. Directly impacted
+                  intake team recieving more customers through site performance
+                  and google analytics.
                 </li>
 
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
+                <li>Administered entire Github repo for 6 people.</li>
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Porro, aliquid?
@@ -608,16 +579,21 @@ const Projects: NextPage<any> = () => {
           </div>
           <LazyLoad height={91}>
             <div className="badges">
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
+              <img src="/static/projects/logos/ga.png" alt="google analytics" />
+              <img
+                src="/static/projects/logos/gmp.jpg"
+                alt="google marketing platform"
+              />
+              <img
+                src="/static/projects/logos/gsc.png"
+                alt="google search console"
+              />
+              <img src="/static/projects/logos/lamp.png" alt="lamp" />
+              <img src="/static/projects/logos/circleci.png" alt="circleci" />
+              <img src="/static/projects/logos/wordpress.png" alt="wordpress" />
+              <img src="/static/projects/logos/whm.png" alt="whm" />
+              <img src="/static/projects/logos/cpanel.png" alt="cpanel" />
+              <img src="/static/projects/logos/semrush.png" alt="semrush" />
             </div>
           </LazyLoad>
           <div className="buttons">
@@ -697,38 +673,35 @@ const Projects: NextPage<any> = () => {
               <h3>Accomplishments:</h3>
               <ul>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  server administration. Used web domain hosts to manage a fully
+                  fledged application website and managed a wordpress suite for
+                  the marketing team to easily create new content. Used apache /
+                  linux / ssh / to adminster server.
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  performed SEO optimization to help reduce bounce rate of
+                  website
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Worked in tandem with graphic designer to bring new life to
+                  website. Worked and planned new site layouts / graphics and
+                  landing pages to improve site look , feel and content.
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Ensured cross browser compatibility both desktop and mobile.
+                  IOS / android / firefox.
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Implemented new security features that logged user information
+                  to intake teams.
                 </li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
+                  Increased site traffic and overall business. Directly impacted
+                  intake team recieving more customers through site performance
+                  and google analytics.
                 </li>
 
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, aliquid?
-                </li>
+                <li>Administered entire Github repo for 6 people.</li>
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Porro, aliquid?
@@ -754,16 +727,17 @@ const Projects: NextPage<any> = () => {
           </div>
           <LazyLoad height={91}>
             <div className="badges">
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
+              <img src="/static/projects/logos/react.png" alt="react" />
+              <img src="/static/projects/logos/redux.png" alt="redux" />
+              <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+              <img src="/static/projects/logos/express.svg" alt="express" />
+              <img src="/static/projects/logos/mongodb.svg" alt="mongodb" />
+              <img
+                style={{ width: "60px" }}
+                src="/static/projects/logos/semantic.png"
+                alt="semantic UI"
+              />
+              <img src="/static/projects/logos/stripe.png" alt="stripe" />
             </div>
           </LazyLoad>
           <div className="buttons">
