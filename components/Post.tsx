@@ -81,7 +81,7 @@ const StyledPost = styled("div")`
   }
 
   .text-block {
-    padding: 0 2rem 2rem;
+    padding: 0.5rem 2rem 2rem;
     @media (max-width: 490px) {
       padding: 0 1rem 1rem;
     }
@@ -96,6 +96,7 @@ const StyledPost = styled("div")`
     position: relative;
     width: 100%;
     /* height: 250px; */
+    /* height: auto; */
     /* max-height: 300px; */
     /* min-height: 200px; */
     /* height: 20%

@@ -1,6 +1,10 @@
 import Head from "next/head";
 
-export const Meta: React.FC<any> = () => (
+interface Props {
+  pathName: string;
+}
+
+export const Meta: React.FC<Props> = ({ pathName }) => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, no follow" />
@@ -23,6 +27,7 @@ export const Meta: React.FC<any> = () => (
       href="/static/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/static/favicon/site.webmanifest" />
+    <link rel="canonical" href={`https://arthurhwang.dev${pathName}`} />
     <title>ArthurHwang.dev</title>
   </Head>
 );

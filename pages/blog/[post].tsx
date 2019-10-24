@@ -17,11 +17,17 @@ const Post: NextPage<any> = props => {
     // url,
   } = post;
 
+  const canonicalURL = `https://arthurhwang.dev/${title
+    .toLowerCase()
+    .split(" ")
+    .join("-")}`;
+
   return (
     <Fragment>
       <Head>
         <title>{`Arthur Hwang | ${title}`}</title> */}
         <meta name="description" content={description} />
+        <link rel="cacnonical" href={canonicalURL} />
       </Head>
       <div>
         <p>{date}</p>
