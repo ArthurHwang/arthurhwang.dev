@@ -189,7 +189,7 @@ const Projects: NextPage<any> = () => {
               <img src="/static/projects/logos/netlify.png" alt="netlify" />
               <img src="/static/projects/logos/ga.png" alt="google analytics" />
               <img
-                src="/static/projects/logos/gmp.jpg"
+                src="/static/projects/logos/gmp.png"
                 alt="google marketing platform"
               />
             </div>
@@ -309,7 +309,7 @@ const Projects: NextPage<any> = () => {
           <LazyLoad height={91}>
             <div className="badges">
               <img src="/static/projects/logos/nextjs.png" alt="nextjs" />
-              <img src="/static/projects/logos/react.png" alt="reactjs" />
+              <img src="/static/projects/logos/React.png" alt="reactjs" />
               <img src="/static/projects/logos/ts.png" alt="typescript" />
               <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
               <img src="/static/projects/logos/apollo.png" alt="apollo" />
@@ -581,7 +581,7 @@ const Projects: NextPage<any> = () => {
             <div className="badges">
               <img src="/static/projects/logos/ga.png" alt="google analytics" />
               <img
-                src="/static/projects/logos/gmp.jpg"
+                src="/static/projects/logos/gmp.png"
                 alt="google marketing platform"
               />
               <img
