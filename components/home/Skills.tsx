@@ -9,10 +9,11 @@ export const Skills: React.FC<any> = () => {
         </h2>
         <div className="skills-wrap">
           <span className="skill-item">
-            <img src="/static/home/js.png" /> JavaScript
+            <img src="/static/home/js.png" alt="javascript" /> JavaScript
           </span>
           <span className="skill-item">
-            <img src="/static/home/typescript.svg" /> TypeScript
+            <img src="/static/home/typescript.svg" alt="typescript" />{" "}
+            TypeScript
           </span>
           <span className="skill-item">
             <img src="/static/home/react.png" /> React

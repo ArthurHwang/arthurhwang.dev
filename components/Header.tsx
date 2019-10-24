@@ -10,7 +10,7 @@ export const Header: React.FC<any> = () => {
         <Link href="/">
           <div className="hover-box">
             <StyledLogo>
-              <div className="logo-img"></div>
+              <div className="logo-img" />
               <div className="text-wrapper">
                 <p className="name">Arthur Hwang</p>
                 <p className="title">FullStack Web Developer</p>

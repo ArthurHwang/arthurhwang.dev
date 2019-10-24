@@ -16,7 +16,7 @@ export const Footer: React.FC<any> = () => {
         <span>
           Made with{" "}
           <a style={{ height: "29.94px" }} href="https://nextjs.org/">
-            <img src="/static/Nextjs-logo.svg" />
+            <img src="/static/Nextjs-logo.svg" alt="nextjs" />
           </a>{" "}
           and a whole lotta{" "}
           <MdHeart

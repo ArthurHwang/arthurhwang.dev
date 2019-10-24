@@ -42,14 +42,17 @@ const Projects: NextPage<any> = () => {
             href="https://bestattorney.netlify.com"
             className="link  project-title"
           >
-            Bisnar | Chase - GatsbyJS
+            Bisnar | Chase - Gatsby
           </a>
           <div className="project split-grid-left">
             <div>
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney-gatsby/screenshot-1.png" />
+                <img
+                  src="/static/projects/bestattorney-gatsby/screenshot-1.png"
+                  alt="screenshot 1"
+                />
 
                 {/* <picture>
                   <source
@@ -66,19 +69,39 @@ const Projects: NextPage<any> = () => {
                   <img
                     className="vertical"
                     src="/static/projects/bestattorney-gatsby/screenshot-2.png"
+                    alt="screenshot 2"
                   />
                   <img
                     className="vertical"
                     src="/static/projects/bestattorney-gatsby/screenshot-3.png"
+                    alt="screenshot 3"
                   />
                 </div>
-                <img src="/static/projects/bestattorney-gatsby/screenshot-9.png" />
-                <img src="/static/projects/bestattorney-gatsby/screenshot-8.png" />
+                <img
+                  src="/static/projects/bestattorney-gatsby/screenshot-9.png"
+                  alt="screenshot 9"
+                />
+                <img
+                  src="/static/projects/bestattorney-gatsby/screenshot-8.png"
+                  alt="screenshot 8"
+                />
 
-                <img src="/static/projects/bestattorney-gatsby/screenshot-4.png" />
-                <img src="/static/projects/bestattorney-gatsby/screenshot-5.png" />
-                <img src="/static/projects/bestattorney-gatsby/screenshot-6.png" />
-                <img src="/static/projects/bestattorney-gatsby/screenshot-7.png" />
+                <img
+                  src="/static/projects/bestattorney-gatsby/screenshot-4.png"
+                  alt="screenshot 4"
+                />
+                <img
+                  src="/static/projects/bestattorney-gatsby/screenshot-5.png"
+                  alt="screenshot 5"
+                />
+                <img
+                  src="/static/projects/bestattorney-gatsby/screenshot-6.png"
+                  alt="screenshot 6"
+                />
+                <img
+                  src="/static/projects/bestattorney-gatsby/screenshot-7.png"
+                  alt="screenshot 7"
+                />
               </Slider>
             </div>
             <div className="commits">
@@ -147,21 +170,28 @@ const Projects: NextPage<any> = () => {
           </div>
           <LazyLoad height={91}>
             <div className="badges">
-              <img src="/static/projects/logos/Gatsby-Logo.svg" />
-              <img src="/static/projects/logos/React.png" />
-              <img src="/static/projects/logos/ts.png" />
-              <img src="/static/projects/logos/gql.png" />
-              <img src="/static/projects/logos/circleci.png" />
-              <img src="/static/projects/logos/jest.png" />
-              <img src="/static/projects/logos/cypress.png" />
-              <img src="/static/projects/logos/nodejs.png" />
+              <img
+                src="/static/projects/logos/Gatsby-Logo.svg"
+                alt="gatsbyjs"
+              />
+              <img src="/static/projects/logos/React.png" alt="reactjs" />
+              <img src="/static/projects/logos/ts.png" alt="typescript" />
+              <img src="/static/projects/logos/gql.png" alt="graphql" />
+              <img src="/static/projects/logos/circleci.png" alt="circleci" />
+              <img src="/static/projects/logos/jest.png" alt="jest" />
+              <img src="/static/projects/logos/cypress.png" alt="cypress" />
+              <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
               <img
                 style={{ width: "60px" }}
                 src="/static/projects/logos/styled-components.png"
+                alt="styled components"
               />
-              <img src="/static/projects/logos/netlify.png" />{" "}
-              <img src="/static/projects/logos/ga.png" />
-              <img src="/static/projects/logos/gmp.jpg" />
+              <img src="/static/projects/logos/netlify.png" alt="netlify" />
+              <img src="/static/projects/logos/ga.png" alt="google analytics" />
+              <img
+                src="/static/projects/logos/gmp.jpg"
+                alt="google marketing platform"
+              />
             </div>
           </LazyLoad>
           <div className="buttons">
@@ -206,8 +236,14 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/arthurhwang.dev/screenshot-1.png" />
-                <img src="/static/projects/arthurhwang.dev/screenshot-2.png" />
+                <img
+                  src="/static/projects/arthurhwang.dev/screenshot-1.png"
+                  alt="screenshot 1"
+                />
+                <img
+                  src="/static/projects/arthurhwang.dev/screenshot-2.png"
+                  alt="screenshot 2"
+                />
               </Slider>
             </div>
             <div className="commits">
@@ -272,12 +308,32 @@ const Projects: NextPage<any> = () => {
           </div>
           <LazyLoad height={91}>
             <div className="badges">
-              <img src="/static/projects/logos/gatsby.png" />
-              <img src="/static/projects/logos/gatsby.png" />
-              <img src="/static/projects/logos/gatsby.png" />
-              <img src="/static/projects/logos/gatsby.png" />
-              <img src="/static/projects/logos/gatsby.png" />
-              <img src="/static/projects/logos/gatsby.png" />
+              <img src="/static/projects/logos/nextjs.png" alt="nextjs" />
+              <img src="/static/projects/logos/react.png" alt="reactjs" />
+              <img src="/static/projects/logos/ts.png" alt="typescript" />
+              <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+              <img src="/static/projects/logos/apollo.png" alt="apollo" />
+              <img src="/static/projects/logos/gql.png" alt="graphql" />
+              <img
+                style={{ width: "60px" }}
+                src="/static/projects/logos/styled-components.png"
+                alt="styled components"
+              />
+              <img
+                src="/static/projects/logos/contentful.png"
+                alt="contentful"
+              />
+              <img
+                src="/static/projects/logos/formik.png"
+                style={{ width: "60px" }}
+                alt="formik"
+              />
+              <img
+                src="/static/projects/logos/cloudflare.png"
+                alt="cloudflare"
+              />
+              <img src="/static/projects/logos/mailgun.png" alt="mailgun" />
+              <img src="/static/projects/logos/now.png" alt="now" />
             </div>
           </LazyLoad>
           <div className="buttons">
@@ -322,10 +378,22 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney-admin/screenshot-1.png" />
-                <img src="/static/projects/bestattorney-admin/screenshot-2.png" />
-                <img src="/static/projects/bestattorney-admin/screenshot-3.png" />
-                <img src="/static/projects/bestattorney-admin/screenshot-4.png" />
+                <img
+                  src="/static/projects/bestattorney-admin/screenshot-1.png"
+                  alt="screenshot 1"
+                />
+                <img
+                  src="/static/projects/bestattorney-admin/screenshot-2.png"
+                  alt="screenshot 2"
+                />
+                <img
+                  src="/static/projects/bestattorney-admin/screenshot-3.png"
+                  alt="screenshot 3"
+                />
+                <img
+                  src="/static/projects/bestattorney-admin/screenshot-4.png"
+                  alt="screenshot 4"
+                />
               </Slider>
             </div>
             <div className="commits">
@@ -399,16 +467,12 @@ const Projects: NextPage<any> = () => {
           </div>
           <LazyLoad height={91}>
             <div className="badges">
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
-              <span>hi</span>
+              <img src="/static/projects/logos/angular.svg" alt="angular" />
+              <img src="/static/projects/logos/express.svg" alt="express" />
+              <img src="/static/projects/logos/ts.png" alt="typescript" />
+              <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+              <img src="/static/projects/logos/sequelize.png" alt="sequelize" />
+              <img src="/static/projects/logos/bootstrap.png" alt="bootstrap" />
             </div>
           </LazyLoad>
           <div className="buttons">
@@ -453,20 +517,31 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/bestattorney.com/screenshot-1.png" />
+                <img
+                  src="/static/projects/bestattorney.com/screenshot-1.png"
+                  alt="screenshot 1"
+                />
 
                 <div className="vertical-wrapper">
                   <img
                     className="vertical"
                     src="/static/projects/bestattorney.com/screenshot-3.png"
+                    alt="screenshot 3"
                   />
                   <img
                     className="vertical"
                     src="/static/projects/bestattorney.com/screenshot-2.png"
+                    alt="screenshot 2"
                   />
                 </div>
-                <img src="/static/projects/bestattorney.com/screenshot-4.png" />
-                <img src="/static/projects/bestattorney.com/screenshot-5.png" />
+                <img
+                  src="/static/projects/bestattorney.com/screenshot-4.png"
+                  alt="screenshot 4"
+                />
+                <img
+                  src="/static/projects/bestattorney.com/screenshot-5.png"
+                  alt="screenshot 5"
+                />
                 {/* <img src="/static/projects/bestattorney.com/screenshot-1.png" /> */}
               </Slider>
             </div>
@@ -582,13 +657,34 @@ const Projects: NextPage<any> = () => {
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
-                <img src="/static/projects/toneify/screenshot-1.png" />
-                <img src="/static/projects/toneify/screenshot-2.png" />
-                <img src="/static/projects/toneify/screenshot-4.png" />
-                <img src="/static/projects/toneify/screenshot-7.png" />
-                <img src="/static/projects/toneify/screenshot-5.png" />
-                <img src="/static/projects/toneify/screenshot-6.png" />
-                <img src="/static/projects/toneify/screenshot-8.png" />
+                <img
+                  src="/static/projects/toneify/screenshot-1.png"
+                  alt="screenshot 1"
+                />
+                <img
+                  src="/static/projects/toneify/screenshot-2.png"
+                  alt="screenshot 2"
+                />
+                <img
+                  src="/static/projects/toneify/screenshot-4.png"
+                  alt="screenshot 4"
+                />
+                <img
+                  src="/static/projects/toneify/screenshot-7.png"
+                  alt="screenshot 7"
+                />
+                <img
+                  src="/static/projects/toneify/screenshot-5.png"
+                  alt="screenshot 5"
+                />
+                <img
+                  src="/static/projects/toneify/screenshot-6.png"
+                  alt="screenshot 6"
+                />
+                <img
+                  src="/static/projects/toneify/screenshot-8.png"
+                  alt="screenshot 8"
+                />
               </Slider>
             </div>
             <div className="commits">
