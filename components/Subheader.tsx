@@ -113,6 +113,7 @@ const particlesOptions = {
   retina_detect: true
 };
 
+// @ts-ignore
 export const Subheader: React.FC<Props> = ({ pathName }) => {
   function contentSwitch(path: string) {
     switch (path) {
@@ -147,16 +148,17 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
           </SubheaderDefault>
         );
       case "/blog/[post]":
-        return (
-          <SubheaderDefault>
-            <h1>Blog</h1>
-            <Divider invert={true} color="green" />
-            <h2>
-              This blog is powered by Contentful Delivery API and a lot of
-              markdown parsing.
-            </h2>
-          </SubheaderDefault>
-        );
+        return null;
+      // (
+      // <SubheaderDefault>
+      //   <h1>Blog</h1>
+      //   <Divider invert={true} color="green" />
+      //   <h2>
+      //     This blog is powered by Contentful Delivery API and a lot of
+      //     markdown parsing.
+      //   </h2>
+      // </SubheaderDefault>
+      // );
       case "/contact":
         return (
           <SubheaderDefault>
@@ -173,12 +175,14 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
     }
   }
   return (
-    <StyledSubheader pathname={pathName}>
-      {/* 
+    pathName !== "/blog/[post]" && (
+      <StyledSubheader pathname={pathName}>
+        {/* 
       //@ts-ignore */}
-      <Particles className="particles" params={particlesOptions} />
-      {contentSwitch(pathName)}
-    </StyledSubheader>
+        <Particles className="particles" params={particlesOptions} />
+        {contentSwitch(pathName)}
+      </StyledSubheader>
+    )
   );
 };
 
@@ -191,7 +195,6 @@ const StyledSubheader = styled("section")<{ pathname: string }>`
 
   @media (max-width: 490px) {
     height: ${props => (props.pathname === "/" ? "250px" : "200px")};
-    /* height: 250px; */
   }
   .particles {
     position: absolute;

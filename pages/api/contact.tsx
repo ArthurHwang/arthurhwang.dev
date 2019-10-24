@@ -15,7 +15,7 @@ export default function handle(req: any, res: any) {
   nodemailerMailgun.sendMail(
     {
       from: "mail@arthurhwang.dev",
-      to: "ahwang55@gmail.com", // An array if you have multiple recipients.
+      to: "ahwang55@gmail.com",
       subject: "New Form Submission",
       html: `<b>From: ${req.body.firstName} ${req.body.lastName}</b>
                <br />    
@@ -34,5 +34,4 @@ export default function handle(req: any, res: any) {
       }
     }
   );
-  //   res.status(200).json({ message: "Message sent, thank you." });
 }

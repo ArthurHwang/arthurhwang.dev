@@ -9,7 +9,9 @@ const client = require("contentful").createClient({
   accessToken: process.env.ACCESS_TOKEN
 });
 
-const HomePage: NextPage<any> = () => {
+const readingTime = require("reading-time");
+
+const BlogHome: NextPage<any> = () => {
   async function fetchContentTypes() {
     const types = await client.getContentTypes();
     if (types.items) return types.items;
@@ -18,7 +20,8 @@ const HomePage: NextPage<any> = () => {
 
   async function fetchEntriesForContentType(contentType: any) {
     const entries = await client.getEntries({
-      content_type: contentType.sys
+      content_type: contentType.sys,
+      order: "-sys.createdAt"
     });
     if (entries.items) return entries.items;
     console.log(`Error getting Entries for ${contentType.name}.`);
@@ -36,33 +39,37 @@ const HomePage: NextPage<any> = () => {
     getPosts();
   }, []);
   return (
-    <Fragment>
-      <Head>
-        <title>Arthur Hwang | Blog</title>
-        <meta name="description" content="Arthur Hwang's Blog" />
-      </Head>
-      <StyledPosts>
-        {posts.length > 0
-          ? posts.map((p: any) => (
-              <Post
-                alt={p.fields.featureImage.fields.description}
-                date={p.fields.date}
-                key={p.fields.title}
-                image={p.fields.featureImage.fields.file.url}
-                title={p.fields.title}
-                url={p.fields.url}
-              />
-            ))
-          : null}
-      </StyledPosts>
-    </Fragment>
+    // @ts-ignore
+    console.log(posts) || (
+      <Fragment>
+        <Head>
+          <title>Arthur Hwang | Blog</title>
+          <meta name="description" content="Arthur Hwang's Blog" />
+        </Head>
+        <StyledPosts>
+          {posts.length > 0
+            ? posts.map((p: any) => (
+                <Post
+                  title={p.fields.title}
+                  description={p.fields.description}
+                  alt={p.fields.featureImage.fields.description}
+                  date={p.sys.createdAt}
+                  key={p.fields.title}
+                  image={p.fields.featureImage.fields.file.url}
+                  url={p.fields.title}
+                  readingTime={readingTime(p.fields.body).text}
+                />
+              ))
+            : null}
+        </StyledPosts>
+      </Fragment>
+    )
   );
 };
 
 const StyledPosts = styled("div")`
   width: 100%;
   margin-top: 2rem;
-  /* min-height: 800px; */
 `;
 
-export default HomePage;
+export default BlogHome;

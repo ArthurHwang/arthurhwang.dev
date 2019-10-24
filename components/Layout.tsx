@@ -17,7 +17,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
   return (
     <StyledLayout pathName={pathname}>
-      <Meta />
+      <Meta pathName={pathname} />
       <MobilePush />
       <Header />
       {pathname !== "/_error" && <Subheader pathName={pathname} />}

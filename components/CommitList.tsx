@@ -194,12 +194,15 @@ const StyledStatus = styled("div")`
     &.success {
       background-color: #42c88a;
     }
+
     &.failed {
       background-color: #ed5c5c;
     }
+
     &.pending {
       background-color: #66d3e4;
     }
+
     &.null {
       background-color: #898989;
     }
@@ -209,19 +212,16 @@ const StyledStatus = styled("div")`
       text-align: left;
 
       &.success {
-        /* width: 55px; */
         width: 100%;
         text-align: right;
       }
       &.failed {
         width: 100%;
         text-align: right;
-        /* width: 55px; */
       }
       &.null {
         width: 100%;
         text-align: right;
-        /* width: 55px; */
       }
     }
 
@@ -241,9 +241,6 @@ const StyledCommits = styled("ul")`
   a.link {
     margin: 0;
     font-size: 1.4rem;
-      /* text-indent: -16px; */
-      /* line-height: 1; */
-      /* text-indent: 100%; */
     cursor: pointer;
 
     @media (max-width: 490px) {
@@ -257,48 +254,14 @@ const StyledCommits = styled("ul")`
     }
   }
 
-  /* ul {
-    padding-left: 1.5rem;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 91%;
-
-    li {
-      font-size: 1.4rem;
-      text-indent: -16px;
-
-      &:before {
-        content: "-";
-        text-indent: -10px;
-        font-weight: 800;
-        font-size: 1.6rem;
-        color: ${({ theme }) => theme.secondaryAccent};
-        margin-right: 1rem;
-      }
-    }
-  } */
-
-  /* ul {
-    padding-left: 1.5rem;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 91%;
-  } */
-
   li {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    /* box-shadow: 0px -4px 6px -6px #222; */
 
     border-top: 1px solid #ebeaeb;
 
     &:first-child {
-      /* box-shadow: none; */
       border-top: none;
     }
   }
@@ -324,15 +287,12 @@ const StyledCommits = styled("ul")`
     overflow: hidden;
 
     .commit-message {
-   
-
-      @media(max-width:490px) {
+      @media (max-width: 490px) {
         margin-bottom: 1rem;
         line-height: 20px;
         text-indent: -0.5em;
         padding-left: 0.5em;
       }
-   
     }
   }
 
@@ -346,6 +306,4 @@ const StyledCommits = styled("ul")`
   }
 `;
 
-const ContentWrapper = styled("div")`
-  /* min-height: 344px; */
-`;
+const ContentWrapper = styled("div")``;

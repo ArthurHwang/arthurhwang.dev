@@ -53,18 +53,6 @@ const Projects: NextPage<any> = () => {
                   src="/static/projects/bestattorney-gatsby/screenshot-1.png"
                   alt="screenshot 1"
                 />
-
-                {/* <picture>
-                  <source
-                    srcSet="/static/projects/bestattorney-gatsby/screenshot-1.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet="/static/projects/bestattorney-gatsby/screenshot-1.png"
-                    type="image/png"
-                  />
-                  <img src="/static/projects/bestattorney-gatsby/screenshot-1.webp" />
-                </picture> */}
                 <div className="vertical-wrapper">
                   <img
                     className="vertical"
@@ -222,12 +210,7 @@ const Projects: NextPage<any> = () => {
       {/***************************************************************************************************/}
       <ProjectWrap className="bg-grey">
         <ContentWrap>
-          <a
-            // target="_blank"
-            // rel="noopener"
-            href="/"
-            className="link project-title"
-          >
+          <a href="/" className="link project-title">
             arthurhwang.dev
           </a>
 
@@ -243,6 +226,10 @@ const Projects: NextPage<any> = () => {
                 <img
                   src="/static/projects/arthurhwang.dev/screenshot-2.png"
                   alt="screenshot 2"
+                />
+                <img
+                  src="/static/projects/arthurhwang.dev/screenshot-3.png"
+                  alt="screenshot 3"
                 />
               </Slider>
             </div>
@@ -727,7 +714,7 @@ const Projects: NextPage<any> = () => {
           </div>
           <LazyLoad height={91}>
             <div className="badges">
-              <img src="/static/projects/logos/react.png" alt="react" />
+              <img src="/static/projects/logos/React.png" alt="react" />
               <img src="/static/projects/logos/redux.png" alt="redux" />
               <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
               <img src="/static/projects/logos/express.svg" alt="express" />
@@ -808,14 +795,10 @@ const ProjectWrap = styled("div")`
 
   .buttons {
     padding: 2rem 4rem 0;
-    /* width: 100%; */
     display: flex;
-    /* text-align: center; */
-    /* flex: 1 0 10px; */
     width: auto;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* margin: 0 auto; */
 
     button {
       margin: 1rem;
@@ -859,11 +842,7 @@ const ProjectWrap = styled("div")`
 
   .project-title {
     display: inline-block;
-    /* margin-bottom: 1rem; */
     font-size: 2.6rem;
-    /* -webkit-box-shadow: 0 4px 6px -6px #222; */
-    /* -moz-box-shadow: 0 4px 6px -6px #222; */
-    /* box-shadow: 0 4px 6px -6px #222; */
     text-transform: uppercase;
     padding: 1rem 0;
 
@@ -881,8 +860,6 @@ const ProjectWrap = styled("div")`
   .inner-slider {
     grid-area: carousel;
 
-    /* max-height: 399px; */
-
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
@@ -890,8 +867,6 @@ const ProjectWrap = styled("div")`
 
       .vertical {
         width: 196.5px;
-        /* max-width: 196.5px ; */
-        /* flex-shrink: 1; */
       }
 
       @media (max-width: 490px) {
@@ -902,8 +877,6 @@ const ProjectWrap = styled("div")`
     @media (max-width: 490px) {
       margin-right: -2rem;
       margin-left: -2rem;
-      /* border-bottom: 1px solid #ebeaeb; */
-      /* border-top: 1px solid #ebeaeb; */
     }
 
     .slick-dots {
@@ -966,10 +939,6 @@ const ProjectWrap = styled("div")`
     @media (max-width: 1400px) {
       margin-top: 4rem;
     }
-
-    /* @media (max-width: 768px) {
-      margin-top: 4rem;
-    } */
 
     ul {
       padding-left: 1.5rem;
