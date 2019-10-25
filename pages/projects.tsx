@@ -215,7 +215,7 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-right">
-            <div>
+            <LazyLoad>
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
@@ -232,7 +232,7 @@ const Projects: NextPage<any> = () => {
                   alt="screenshot 3"
                 />
               </Slider>
-            </div>
+            </LazyLoad>
             <div className="commits">
               <LazyLoad height={344}>
                 <CommitList
@@ -361,7 +361,7 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-left">
-            <div>
+            <LazyLoad>
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
@@ -382,7 +382,7 @@ const Projects: NextPage<any> = () => {
                   alt="screenshot 4"
                 />
               </Slider>
-            </div>
+            </LazyLoad>
             <div className="commits">
               <LazyLoad height={344}>
                 <CommitList
@@ -470,7 +470,7 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-right">
-            <div>
+            <LazyLoad>
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
@@ -501,7 +501,7 @@ const Projects: NextPage<any> = () => {
                 />
                 {/* <img src="/static/projects/bestattorney.com/screenshot-1.png" /> */}
               </Slider>
-            </div>
+            </LazyLoad>
             <div className="commits">
               <LazyLoad height={344}>
                 <CommitList owner="bestattorney" name="bestattorney.com" />
@@ -616,7 +616,7 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-left">
-            <div>
+            <LazyLoad>
               {/* 
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
@@ -649,7 +649,7 @@ const Projects: NextPage<any> = () => {
                   alt="screenshot 8"
                 />
               </Slider>
-            </div>
+            </LazyLoad>
             <div className="commits">
               <LazyLoad height={344}>
                 <CommitList owner="ArthurHwang" name="toneify" />
@@ -830,9 +830,9 @@ const ProjectWrap = styled("div")`
     }
 
     @media (max-width: 768px) {
-      padding: 0;
-      margin-left: -2rem;
-      margin-right: -2rem;
+      padding: 1rem 0;
+      /* margin-left: -2rem; */
+      /* margin-right: -2rem; */
 
       img {
         margin: 1rem;

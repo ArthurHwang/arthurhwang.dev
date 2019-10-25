@@ -27,7 +27,9 @@ export const Meta: React.FC<Props> = ({ pathName }) => (
       href="/static/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/static/favicon/site.webmanifest" />
-    <link rel="canonical" href={`https://arthurhwang.dev${pathName}`} />
+    {!pathName.includes("[post]") && (
+      <link rel="canonical" href={`https://arthurhwang.dev${pathName}`} />
+    )}
     <title>ArthurHwang.dev</title>
   </Head>
 );
