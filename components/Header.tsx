@@ -1,6 +1,6 @@
-import { Nav } from "./Nav";
 import styled from "styled-components";
 import Link from "next/link";
+import { Nav } from "./Nav";
 import { NavMobile } from "./NavMobile";
 
 export const Header: React.FC<any> = () => {

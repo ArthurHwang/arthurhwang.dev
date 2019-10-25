@@ -1,8 +1,8 @@
-import { useEffect, useState, Fragment } from "react";
+import styled from "styled-components";
 import Head from "next/head";
+import { useEffect, useState, Fragment } from "react";
 import { NextPage } from "next";
 import { Post } from "../../components/Post";
-import styled from "styled-components";
 import { client } from "../../services/blog";
 
 const readingTime = require("reading-time");

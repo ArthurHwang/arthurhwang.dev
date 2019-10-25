@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Query } from "react-apollo";
 import gql from "graphql-tag";
+import { Query } from "react-apollo";
 import { LoadingDots } from "./LoadingDots";
 
 interface Props {

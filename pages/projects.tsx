@@ -1,13 +1,14 @@
-import { NextPage } from "next";
-import { CommitList } from "../components/CommitList";
 import Head from "next/head";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
+import { NextPage } from "next";
+import { CommitList } from "../components/CommitList";
 import { Fragment } from "react";
+import { FaGithub, FaPlay } from "react-icons/fa";
+import { withApollo } from "../lib/apollo";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaGithub, FaPlay } from "react-icons/fa";
 
 const Projects: NextPage<any> = () => {
   const settings = {
@@ -753,7 +754,7 @@ const Projects: NextPage<any> = () => {
   );
 };
 
-export default Projects;
+export default withApollo(Projects);
 
 const ProjectButton = styled("button")<{ color: string }>`
   background-color: ${props =>

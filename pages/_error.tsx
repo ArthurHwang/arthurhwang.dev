@@ -1,9 +1,9 @@
-import { Fragment } from "react";
 import Head from "next/head";
 import styled from "styled-components";
-import { NextPage } from "next";
 import Link from "next/link";
 import Particles from "react-particles-js";
+import { NextPage } from "next";
+import { Fragment } from "react";
 
 const particlesOptions = {
   particles: {

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FaReact, FaNodeJs, FaCode, FaJs } from "react-icons/fa";
 import { Divider } from "./Divider";
+
 export const SubheaderHome: React.FC<any> = () => {
   return (
     <ContentWrap>

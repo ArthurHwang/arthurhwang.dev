@@ -1,9 +1,10 @@
-import { Fragment } from "react";
-import { NextPage } from "next";
 import Head from "next/head";
+import Disqus from "disqus-react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import CodeBlock from "../../components/CodeBlock";
+import { Fragment } from "react";
+import { NextPage } from "next";
 import { client } from "../../services/blog";
 
 interface Props {
@@ -17,12 +18,19 @@ const Post: NextPage<any> = props => {
   const parsedDate = new Date(props.post[0].sys.createdAt);
   const { title, description, body, featureImage } = post;
   const readTime = readingTime(body).text;
-  const canonicalURL = `https://arthurhwang.dev/${title
+  const canonicalURL = `https://arthurhwang.dev/blog/${title
     .toLowerCase()
     .split(" ")
     .join("-")}`;
   const transformedDate = `${parsedDate.getMonth() +
     1}/${parsedDate.getDate()}/${parsedDate.getFullYear()}`;
+
+  const disqusShortname = "arthurhwang-dev";
+  const disqusConfig = {
+    url: canonicalURL,
+    identifier: props.post[0].sys.id,
+    title: title
+  };
 
   return (
     <Fragment>
@@ -54,6 +62,10 @@ const Post: NextPage<any> = props => {
           className="markdown"
           renderers={{ code: CodeBlock }}
           source={body}
+        />
+        <Disqus.DiscussionEmbed
+          shortname={disqusShortname}
+          config={disqusConfig}
         />
       </ContentWrap>
     </Fragment>

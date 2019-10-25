@@ -1,11 +1,11 @@
+import styled from "styled-components";
 import { Meta } from "./Meta";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Subheader } from "./Subheader";
 import { withRouter } from "next/router";
-import styled from "styled-components";
 import { Contact } from "./Contact";
-import "./slick-fix.css";
+import "../util/slick-fix.css";
 
 interface Props {
   children: any;

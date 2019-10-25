@@ -1,6 +1,6 @@
+import Head from "next/head";
 import { Fragment } from "react";
 import { NextPage } from "next";
-import Head from "next/head";
 import { Intro } from "../components/home/Intro";
 import { Skills } from "../components/home/Skills";
 import { About } from "../components/home/About";

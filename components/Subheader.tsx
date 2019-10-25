@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { SubheaderHome } from "./Subheader-Home";
-import { SubheaderDefault } from "./Subheader-Default";
 import Particles from "react-particles-js";
 import { Divider } from "./Divider";
+import { SubheaderHome } from "./Subheader-Home";
+import { SubheaderDefault } from "./Subheader-Default";
 interface Props {
   pathName: string;
 }

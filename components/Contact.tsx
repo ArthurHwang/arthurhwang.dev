@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Formik } from "formik";
 import * as Yup from "yup";
+import { Formik } from "formik";
 import { Error } from "./Error";
 import { useState } from "react";
 
