@@ -3,11 +3,7 @@ import Head from "next/head";
 import { NextPage } from "next";
 import { Post } from "../../components/Post";
 import styled from "styled-components";
-
-const client = require("contentful").createClient({
-  space: process.env.SPACE_ID,
-  accessToken: process.env.ACCESS_TOKEN
-});
+import { client } from "../../services/blog";
 
 const readingTime = require("reading-time");
 
@@ -37,33 +33,31 @@ const BlogHome: NextPage<any> = () => {
       setPosts([...allPosts]);
     }
     getPosts();
-  }, []);
+  }, [posts]);
   return (
     // @ts-ignore
-    console.log(posts) || (
-      <Fragment>
-        <Head>
-          <title>Arthur Hwang | Blog</title>
-          <meta name="description" content="Arthur Hwang's Blog" />
-        </Head>
-        <StyledPosts>
-          {posts.length > 0
-            ? posts.map((p: any) => (
-                <Post
-                  title={p.fields.title}
-                  description={p.fields.description}
-                  alt={p.fields.featureImage.fields.description}
-                  date={p.sys.createdAt}
-                  key={p.fields.title}
-                  image={p.fields.featureImage.fields.file.url}
-                  url={p.fields.title}
-                  readingTime={readingTime(p.fields.body).text}
-                />
-              ))
-            : null}
-        </StyledPosts>
-      </Fragment>
-    )
+    <Fragment>
+      <Head>
+        <title>Arthur Hwang | Blog</title>
+        <meta name="description" content="Arthur Hwang's Blog" />
+      </Head>
+      <StyledPosts>
+        {posts.length > 0
+          ? posts.map((p: any) => (
+              <Post
+                title={p.fields.title}
+                description={p.fields.description}
+                alt={p.fields.featureImage.fields.description}
+                date={p.sys.createdAt}
+                key={p.fields.title}
+                image={p.fields.featureImage.fields.file.url}
+                url={p.fields.title}
+                readingTime={readingTime(p.fields.body).text}
+              />
+            ))
+          : null}
+      </StyledPosts>
+    </Fragment>
   );
 };
 

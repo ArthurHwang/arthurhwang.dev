@@ -4,6 +4,7 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import CodeBlock from "../../components/CodeBlock";
+import { client } from "../../services/blog";
 
 interface Props {
   query: any;
@@ -60,10 +61,6 @@ const Post: NextPage<any> = props => {
 };
 
 Post.getInitialProps = async ({ query }: Props) => {
-  const client = require("contentful").createClient({
-    space: process.env.SPACE_ID,
-    accessToken: process.env.ACCESS_TOKEN
-  });
   const getEntries = await client.getEntries();
 
   let payload: any = [];
