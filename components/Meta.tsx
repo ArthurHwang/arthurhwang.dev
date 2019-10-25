@@ -9,6 +9,7 @@ export const Meta: React.FC<Props> = ({ pathName }) => (
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, no follow" />
     <meta charSet="utf-8" />
+    <html lang="en"></html>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
