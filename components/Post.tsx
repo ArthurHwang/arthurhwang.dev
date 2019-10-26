@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 import styled from "styled-components";
 interface Props {
   alt: string;
@@ -25,34 +25,32 @@ export const Post: React.FC<Props> = ({
 
   return (
     <StyledPost>
-      <Link
+      <a
         href={`blog/${url
           .toLowerCase()
           .split(" ")
           .join("-")}`}
       >
-        <a>
-          <div className="container">
-            <div className="author-block">
-              <img className="me" src="/static/me.jpg" />
-              <div className="author-date">
-                <p>Arthur Hwang</p>
-                <p>
-                  {transformedDate} - {readingTime}
-                </p>
-              </div>
-            </div>
-
-            <div className="image-block">
-              <img className="image" alt={alt} src={image} />
-            </div>
-            <div className="text-block">
-              <h2>{title}</h2>
-              <p>{description}</p>
+        <div className="container">
+          <div className="author-block">
+            <img className="me" src="/static/me.jpg" />
+            <div className="author-date">
+              <p>Arthur Hwang</p>
+              <p>
+                {transformedDate} - {readingTime}
+              </p>
             </div>
           </div>
-        </a>
-      </Link>
+
+          <div className="image-block">
+            <img className="image" alt={alt} src={image} />
+          </div>
+          <div className="text-block">
+            <h2>{title}</h2>
+            <p>{description}</p>
+          </div>
+        </div>
+      </a>
     </StyledPost>
   );
 };
