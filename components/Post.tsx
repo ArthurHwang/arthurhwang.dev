@@ -37,7 +37,8 @@ export const Post: React.FC<Props> = ({
             <div className="author-date">
               <p>Arthur Hwang</p>
               <p>
-                {transformedDate} - {readingTime}
+                {transformedDate} -{" "}
+                <span style={{ color: "#FE4A49" }}>{readingTime}</span>
               </p>
             </div>
           </div>

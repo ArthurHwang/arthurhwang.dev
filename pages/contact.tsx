@@ -1,76 +1,340 @@
 import Head from "next/head";
+import styled from "styled-components";
+import * as Yup from "yup";
 import { Fragment } from "react";
 import { NextPage } from "next";
+import { Formik } from "formik";
+import { Error } from "../components/Error";
+import { useState } from "react";
+import { Button } from "../components/Button";
+import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+const validationSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .min(2, "Must have a character")
+    .max(255, "Must be shorter than 255")
+    .required("Must enter a first name"),
+  lastName: Yup.string()
+    .min(2, "Must have a character")
+    .max(255, "Must be shorter than 255")
+    .required("Must enter a last name"),
+  email: Yup.string()
+    .email("Must be a valid email address")
+    .max(255, "Must be shorter than 255")
+    .required("Must enter an email"),
+  message: Yup.string()
+    .min(2, "Must have a character")
+    .required("Must enter a message")
+});
 
 const Contact: NextPage<any> = () => {
+  const [alert, setAlert] = useState("");
   return (
     <Fragment>
       <Head>
         <title>Arthur Hwang | Contact</title>
         <meta name="description" content="Contact Arthur Hwang" />
       </Head>
-      <div>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea magnam cum
-        a aut quasi nulla! Commodi, expedita! Doloremque sed cum placeat
-        voluptatibus unde tempora, facere sapiente illum consequuntur assumenda
-        sunt quae facilis aperiam sequi, accusantium quo officiis temporibus
-        odio ut maxime! Eveniet labore excepturi accusantium molestiae iure
-        maiores odit dolores id, nemo aliquam repellendus et laborum adipisci
-        ullam voluptatum sint voluptate ut consequatur quibusdam explicabo quasi
-        reprehenderit veritatis temporibus quas. Similique temporibus porro
-        suscipit dolorem ullam veniam voluptatum magnam, debitis rerum
-        doloribus. Ipsam dolorem dolores sunt quia itaque recusandae
-        reprehenderit id est explicabo suscipit deserunt, corrupti aut numquam
-        aspernatur, laborum a non quidem maxime! Modi incidunt sint reiciendis
-        ex quisquam alias, maxime deserunt vero architecto sapiente quia nihil
-        soluta obcaecati itaque aliquam libero. Repellat similique velit
-        provident nulla illo consectetur eos ullam magnam repudiandae tenetur
-        excepturi quisquam dolores, necessitatibus, ratione vero? Qui, quaerat
-        esse perferendis harum vel excepturi vero totam doloremque laboriosam
-        possimus magnam tempore obcaecati quia quas dolorem fuga cupiditate
-        soluta dicta, iste et eligendi suscipit! Minus beatae unde excepturi non
-        maiores commodi fugit officia nihil, obcaecati sequi quibusdam dolore,
-        illum, alias rem deserunt cumque tempore! Obcaecati inventore excepturi
-        corporis fugiat dolore voluptatum nisi autem, nostrum distinctio, veniam
-        qui.
-      </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
-        architecto! Dolorum, maiores. Culpa perferendis ipsa repellat officia
-        laboriosam, aliquam earum quis tenetur dolores reprehenderit recusandae,
-        molestiae sit odit error. Ducimus, veritatis exercitationem dicta
-        quaerat delectus omnis necessitatibus facilis obcaecati nemo tempore
-        esse autem quod quia illum aliquid ullam et cupiditate. Molestias dicta
-        veniam nemo, suscipit incidunt maiores nostrum labore accusamus!
-        Voluptatum nostrum impedit quae esse voluptate eius asperiores
-        doloribus, officia ipsa eveniet cupiditate incidunt possimus laudantium
-        ratione in. Quasi, molestiae, corrupti deserunt cum minus veniam
-        laudantium doloribus quaerat recusandae ex molestias dolor. Facere ipsa
-        aperiam quam a animi maxime alias, quibusdam, voluptatibus optio illum
-        vero ullam fugiat, saepe mollitia delectus tenetur laborum quasi autem
-        commodi? Tenetur, ipsa nisi. Possimus illo nemo in odio veniam. Deleniti
-        asperiores harum quae suscipit at fugit. Aliquid optio a suscipit.
-        Neque, error obcaecati, ab minima molestias labore provident quis
-        voluptatem dolores cum sunt repudiandae eius enim in cumque quisquam
-        unde dolorem impedit tempore vero libero autem iure commodi. Enim
-        dolorum nisi a magni similique quaerat consequatur officia vel
-        cupiditate earum eum eius incidunt excepturi, cum quas voluptatum
-        molestiae quam atque est provident consectetur unde labore sapiente. Rem
-        amet adipisci vero beatae ea voluptatibus eum expedita, qui nobis. Odio
-        mollitia architecto nisi temporibus, accusamus, fuga laborum ea eos nam
-        quae iusto eum atque laboriosam! Ipsum fugiat consectetur beatae
-        recusandae itaque officia repellendus doloribus praesentium natus rerum
-        obcaecati necessitatibus provident qui deleniti quos assumenda, possimus
-        porro? Esse enim voluptatem, blanditiis numquam voluptatibus atque
-        corporis architecto quos quis earum nostrum, molestiae ipsam ratione ab
-        distinctio fugiat ex maxime est in. Reiciendis iusto consequuntur soluta
-        quisquam cupiditate explicabo adipisci ducimus nam inventore iste eius
-        quos libero placeat, perspiciatis quod enim, eos in expedita dolore qui
-        ipsam quis odio eaque molestias. Magni quo aliquam mollitia maiores
-        repudiandae minima, hic facilis.
-      </p>
+      <ContentWrap>
+        <StyledContact>
+          <h2>
+            Let's Chat!<span>_</span>
+          </h2>
+          <p style={{ textAlign: "left" }}>
+            Feel free to use this form or directly email me at{" "}
+            <a className="link" href="mailto:mail@arthurhwang.dev">
+              mail@arthurhwang.dev
+            </a>
+          </p>
+          <Formik
+            initialValues={{
+              firstName: "",
+              lastName: "",
+              email: "",
+              message: ""
+            }}
+            validationSchema={validationSchema}
+            onSubmit={async (
+              values,
+              { setSubmitting, resetForm, setStatus }
+            ) => {
+              setSubmitting(true);
+              setStatus(undefined);
+              const response = await fetch("/api/contact", {
+                method: "POST",
+                body: JSON.stringify(values),
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json"
+                }
+              });
+
+              const json = await response.json();
+
+              if (response.status === 200) {
+                setStatus(json);
+                setAlert("Message sent, thank you");
+                resetForm();
+                setSubmitting(false);
+              } else {
+                setStatus(json);
+                setAlert("Message failed to send, please try again");
+                console.log("serverError");
+              }
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              isSubmitting
+            }) => (
+              <form onSubmit={handleSubmit}>
+                <div className="input-grid">
+                  <div>
+                    <div className="input-row">
+                      <input
+                        type="text"
+                        name="firstName"
+                        id="firstName"
+                        placeholder="Enter your first name"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.firstName}
+                        // @ts-ignore
+                        className={
+                          touched.firstName && errors.firstName
+                            ? "has-error"
+                            : null
+                        }
+                      />
+                      <Error
+                        touched={touched.firstName}
+                        message={errors.firstName}
+                      />
+                    </div>
+                    <div className="input-row">
+                      <input
+                        type="text"
+                        name="lastName"
+                        id="lastNname"
+                        placeholder="Enter your last name"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.lastName}
+                        // @ts-ignore
+                        className={
+                          touched.lastName && errors.lastName
+                            ? "has-error"
+                            : null
+                        }
+                      />
+                      <Error
+                        touched={touched.lastName}
+                        message={errors.lastName}
+                      />
+                    </div>
+                    <div className="input-row">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.email}
+                        // @ts-ignore
+                        className={
+                          touched.email && errors.email ? "has-error" : null
+                        }
+                      />
+                      <Error touched={touched.email} message={errors.email} />
+                    </div>
+                  </div>
+                  <div className="input-row">
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="Enter your message"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.message}
+                      // @ts-ignore
+                      className={
+                        touched.message && errors.message ? "has-error" : null
+                      }
+                    />
+                    <div className="textarea-fix">
+                      <Error
+                        touched={touched.message}
+                        message={errors.message}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="submit">
+                  <Button color="green" disabled={isSubmitting} type="submit">
+                    Submit
+                  </Button>
+                  {alert && (
+                    <div className="alert">Message Sent! Thank you</div>
+                  )}
+                </div>
+              </form>
+            )}
+          </Formik>
+
+          <h2
+            style={{
+              borderTop: "1px solid #ebeaeb",
+              marginTop: "4rem",
+              paddingTop: "2rem"
+            }}
+          >
+            Let's Get Social<span>_</span>
+          </h2>
+
+          <p>Connect with me on GitHub, LinkedIn, Facebook, or Twitter</p>
+          <div className="button-wrap">
+            <a
+              href="https://github.com/ArthurHwang"
+              target="_blank"
+              rel="noopener"
+            >
+              <Button color="blue">
+                GitHub <FaGithub />
+              </Button>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/arthur-hwang"
+              target="_blank"
+              rel="noopener"
+            >
+              <Button>
+                LinkedIn <FaLinkedin />
+              </Button>
+            </a>
+
+            <a
+              href="https://www.facebook.com/arthur.hwang.9"
+              target="_blank"
+              rel="noopener"
+            >
+              <Button color="yellow">
+                FaceBook <FaFacebook />
+              </Button>
+            </a>
+
+            <a
+              href="https://twitter.com/ArthurHwang"
+              target="_blank"
+              rel="noopener"
+            >
+              <Button color="red">
+                Twitter <FaTwitter />
+              </Button>
+            </a>
+          </div>
+        </StyledContact>
+      </ContentWrap>
     </Fragment>
   );
 };
 
 export default Contact;
+
+const StyledContact = styled("div")`
+  max-width: 800px;
+  margin: 0 auto;
+
+  .button-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 490px) {
+      justify-content: center;
+    }
+  }
+
+  .textarea-fix {
+    position: relative;
+    bottom: 7px;
+    padding-right: 0.5rem;
+
+    @media (max-width: 650px) {
+      bottom: 16px;
+      padding-right: 0;
+    }
+  }
+
+  .input-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding-left: 2rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 206px;
+      resize: none;
+      padding: 1.5rem;
+
+      @media (max-width: 650px) {
+        position: relative;
+        bottom: 8px;
+      }
+    }
+  }
+
+  .submit {
+    text-align: center;
+  }
+`;
+
+const ContentWrap = styled("div")`
+  padding: 4rem 2rem;
+  background-color: ${({ theme }) => theme.lightgrey};
+
+  .valid {
+    color: green;
+    text-align: right;
+    font-size: 1.2rem;
+    height: 28px;
+  }
+
+  .invalid {
+    color: red;
+    text-align: right;
+    font-size: 1.2rem;
+    height: 28px;
+  }
+
+  .has-error {
+    border: 1px solid red;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  span {
+    color: ${({ theme }) => theme.accent};
+    font-weight: 800;
+  }
+`;

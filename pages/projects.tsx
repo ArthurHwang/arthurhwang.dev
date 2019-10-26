@@ -7,6 +7,7 @@ import { CommitList } from "../components/CommitList";
 import { Fragment } from "react";
 import { FaGithub, FaPlay } from "react-icons/fa";
 import { withApollo } from "../lib/apollo";
+import { Button } from "../components/Button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -189,18 +190,18 @@ const Projects: NextPage<any> = () => {
               rel="noopener"
               href="https://www.github.com/ArthurHwang"
             >
-              <ProjectButton color="blue">
+              <Button color="blue">
                 Source <FaGithub />
-              </ProjectButton>
+              </Button>
             </a>
             <a
               target="_blank"
               rel="noopener"
               href="https://bestattorney.netlify.com"
             >
-              <ProjectButton color="green">
+              <Button color="green">
                 Launch <FaPlay />
-              </ProjectButton>
+              </Button>
             </a>
           </div>
         </ContentWrap>
@@ -330,18 +331,18 @@ const Projects: NextPage<any> = () => {
               rel="noopener"
               href="https://www.github.com/ArthurHwang"
             >
-              <ProjectButton color="blue">
+              <Button color="blue">
                 Source <FaGithub />
-              </ProjectButton>
+              </Button>
             </a>
             <a
               target="_blank"
               rel="noopener"
               href="https://bestattorney.netlify.com"
             >
-              <ProjectButton color="green">
+              <Button color="green">
                 Launch <FaPlay />
-              </ProjectButton>
+              </Button>
             </a>
           </div>
         </ContentWrap>
@@ -439,18 +440,18 @@ const Projects: NextPage<any> = () => {
               rel="noopener"
               href="https://www.github.com/ArthurHwang"
             >
-              <ProjectButton color="blue">
+              <Button color="blue">
                 Source <FaGithub />
-              </ProjectButton>
+              </Button>
             </a>
             <a
               target="_blank"
               rel="noopener"
               href="https://bestattorney.netlify.com"
             >
-              <ProjectButton color="green">
+              <Button color="green">
                 Launch <FaPlay />
-              </ProjectButton>
+              </Button>
             </a>
           </div>
         </ContentWrap>
@@ -590,14 +591,14 @@ const Projects: NextPage<any> = () => {
               rel="noopener"
               href="https://www.github.com/ArthurHwang"
             >
-              <ProjectButton color="blue">
+              <Button color="blue">
                 Source <FaGithub />
-              </ProjectButton>
+              </Button>
             </a>
             <a target="_blank" rel="noopener" href="https://bestattorney.com">
-              <ProjectButton color="green">
+              <Button color="green">
                 Launch <FaPlay />
-              </ProjectButton>
+              </Button>
             </a>
           </div>
         </ContentWrap>
@@ -734,18 +735,18 @@ const Projects: NextPage<any> = () => {
               rel="noopener"
               href="https://github.com/ArthurHwang/toneify"
             >
-              <ProjectButton color="blue">
+              <Button color="blue">
                 Source <FaGithub />
-              </ProjectButton>
+              </Button>
             </a>
             <a
               target="_blank"
               rel="noopener"
               href="https://toneify-arthurhwang.herokuapp.com/"
             >
-              <ProjectButton color="green">
+              <Button color="green">
                 Launch <FaPlay />
-              </ProjectButton>
+              </Button>
             </a>
           </div>
         </ContentWrap>
@@ -755,33 +756,7 @@ const Projects: NextPage<any> = () => {
 };
 
 export default withApollo(Projects);
-
-const ProjectButton = styled("button")<{ color: string }>`
-  background-color: ${props =>
-    props.color === "blue" ? props.theme.secondary : props.theme.accent};
-  color: ${({ theme }) => theme.primary};
-  text-shadow: black 0px 0px 3px;
-  font-weight: 600;
-  padding: 1rem 5rem;
-  cursor: pointer;
-  border-radius: 4px;
-  border: none;
-  transition: transform 0.1s linear;
-  display: flex;
-  align-items: center;
-
-  svg {
-    margin-left: 1rem;
-  }
-
-  &:disabled {
-    opacity: 0.6;
-  }
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
+``;
 
 const ContentWrap = styled("div")`
   max-width: 1300px;
