@@ -31,25 +31,27 @@ export const Post: React.FC<Props> = ({
           .split(" ")
           .join("-")}`}
       >
-        <div className="container">
-          <div className="author-block">
-            <img className="me" src="/static/me.jpg" />
-            <div className="author-date">
-              <p>Arthur Hwang</p>
-              <p>
-                {transformedDate} - {readingTime}
-              </p>
+        <a>
+          <div className="container">
+            <div className="author-block">
+              <img className="me" src="/static/me.jpg" />
+              <div className="author-date">
+                <p>Arthur Hwang</p>
+                <p>
+                  {transformedDate} - {readingTime}
+                </p>
+              </div>
+            </div>
+
+            <div className="image-block">
+              <img className="image" alt={alt} src={image} />
+            </div>
+            <div className="text-block">
+              <h2>{title}</h2>
+              <p>{description}</p>
             </div>
           </div>
-
-          <div className="image-block">
-            <img className="image" alt={alt} src={image} />
-          </div>
-          <div className="text-block">
-            <h2>{title}</h2>
-            <p>{description}</p>
-          </div>
-        </div>
+        </a>
       </Link>
     </StyledPost>
   );

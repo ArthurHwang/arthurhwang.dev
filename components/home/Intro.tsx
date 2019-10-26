@@ -17,7 +17,6 @@ export const Intro: React.FC<any> = () => {
           <h2>
             I like coding<span>_</span>
           </h2>
-          <p></p>
           <p>
             As a natural tinkerer, I love to dig out the "why" of things. Being
             a self taught developer has taught me to not fear what I don't know,

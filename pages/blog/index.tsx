@@ -33,7 +33,7 @@ const BlogHome: NextPage<any> = () => {
       setPosts([...allPosts]);
     }
     getPosts();
-  }, [posts]);
+  }, []);
   return (
     // @ts-ignore
     <Fragment>
