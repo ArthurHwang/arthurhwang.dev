@@ -35,7 +35,7 @@ const Post: NextPage<any> = props => {
   return (
     <Fragment>
       <Head>
-        <title>{`Arthur Hwang | ${title}`}</title> */}
+        <title>{`Arthur Hwang's Blog | ${title}`}</title> */}
         <meta name="description" content={description} />
         <link rel="canonical" href={canonicalURL} />
       </Head>
@@ -49,7 +49,10 @@ const Post: NextPage<any> = props => {
               <span>by</span> Arthur Hwang
             </p>
             <p>
-              {transformedDate} - {readTime}
+              {transformedDate} -{" "}
+              <span style={{ color: "#FE4A49", fontWeight: 600 }}>
+                {readTime}
+              </span>
             </p>
           </div>
         </div>
@@ -96,8 +99,7 @@ Post.getInitialProps = async ({ query }: Props) => {
   });
 
   return {
-    post,
-    query
+    post
   };
 };
 

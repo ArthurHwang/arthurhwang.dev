@@ -47,26 +47,54 @@ export const Intro: React.FC<any> = () => {
           </h2>
 
           <div className="badges-2">
-            <a href="https://github.com/ArthurHwang" className="link">
+            <a
+              href="https://github.com/ArthurHwang"
+              target="_blank"
+              rel="noopener"
+              className="link"
+            >
               <FaGithub className="icon" /> <span>Github</span>
             </a>
 
-            <a href="https://www.linkedin.com/in/arthur-hwang" className="link">
+            <a
+              href="https://www.linkedin.com/in/arthur-hwang"
+              target="_blank"
+              rel="noopener"
+              className="link"
+            >
               <FaLinkedin className="icon" /> <span>LinkedIn</span>
             </a>
-            <a href="https://www.facebook.com/arthur.hwang.9" className="link">
+            <a
+              href="https://www.facebook.com/arthur.hwang.9"
+              target="_blank"
+              rel="noopener"
+              className="link"
+            >
               <FaFacebook className="icon" /> <span>Facebook</span>
             </a>
-            <a title="" href="https://www.twitter.com/" className="link">
+            <a
+              title=""
+              href="https://twitter.com/ArthurHwang"
+              target="_blank"
+              rel="noopener"
+              className="link"
+            >
               <FaTwitter className="icon" /> <span>Twitter</span>
             </a>
-            <a href="mailto:mail@arthurhwang.dev" className="link">
+            <a
+              href="mailto:mail@arthurhwang.dev"
+              target="_blank"
+              rel="noopener"
+              className="link"
+            >
               <IoMdMail className="icon" /> <span>Email</span>
             </a>
             <a
               href="mailto:mail@
               .dev"
               className="link"
+              target="_blank"
+              rel="noopener"
             >
               <FaClipboardList className="icon" /> <span>CV</span>
             </a>

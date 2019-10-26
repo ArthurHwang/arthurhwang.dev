@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import { Error } from "./Error";
 import { useState } from "react";
+import { Button } from "./Button";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -28,7 +29,7 @@ export const Contact: React.FC<any> = () => {
     <ContentWrap>
       <StyledContact>
         <h2>
-          Lets Chat!<span>_</span>
+          Let's Chat!<span>_</span>
         </h2>
         <p style={{ textAlign: "left" }}>
           Feel free to use this form or directly email me at{" "}
@@ -158,9 +159,9 @@ export const Contact: React.FC<any> = () => {
                 </div>
               </div>
               <div className="submit">
-                <button disabled={isSubmitting} type="submit">
+                <Button color="green" disabled={isSubmitting} type="submit">
                   Submit
-                </button>
+                </Button>
                 {alert && <div className="alert">Message Sent! Thank you</div>}
               </div>
             </form>
@@ -174,26 +175,6 @@ export const Contact: React.FC<any> = () => {
 const StyledContact = styled("div")`
   max-width: 800px;
   margin: 0 auto;
-
-  button {
-    background-color: ${({ theme }) => theme.accent};
-    color: ${({ theme }) => theme.primary};
-    text-shadow: black 0px 0px 3px;
-    font-weight: 600;
-    padding: 1rem 6rem;
-    cursor: pointer;
-    border-radius: 4px;
-    border: none;
-    transition: transform 0.1s linear;
-
-    &:disabled {
-      opacity: 0.6;
-    }
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
 
   .textarea-fix {
     position: relative;

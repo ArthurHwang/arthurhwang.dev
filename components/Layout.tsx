@@ -22,7 +22,7 @@ const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
       <Header />
       {pathname !== "/_error" && <Subheader pathName={pathname} />}
       <Inner pathName={pathname}>{children}</Inner>
-      <Contact />
+      {pathname !== "/contact" && <Contact />}
       <Footer />
     </StyledLayout>
   );
@@ -59,6 +59,8 @@ const Inner = styled("section")<{ pathName: string }>`
         return "100%";
       case "/_error":
         return "100%";
+      case "/contact":
+        return "100%";
       default:
         return props.theme.maxWidth;
     }
@@ -70,6 +72,8 @@ const Inner = styled("section")<{ pathName: string }>`
       case "/projects":
         return "";
       case "/_error":
+        return "";
+      case "/contact":
         return "";
       default:
         return "2rem";

@@ -5,8 +5,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloClient } from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { HttpLink } from "apollo-link-http";
-// @ts-ignore
-let apolloClient = null;
+let apolloClient: any = null;
 
 /**
  * Creates and provides the apolloContext
@@ -17,10 +16,8 @@ let apolloClient = null;
  * @param {Boolean} [config.ssr=true]
  */
 
-// @ts-ignore
-export function withApollo(PageComponent, { ssr = true } = {}) {
-  // @ts-ignore
-  const WithApollo = ({ apolloClient, apolloState, ...pageProps }) => {
+export function withApollo(PageComponent: any, { ssr = true } = {}) {
+  const WithApollo = ({ apolloClient, apolloState, ...pageProps }: any) => {
     const client = useMemo(
       () => apolloClient || initApolloClient(apolloState),
       []
@@ -45,8 +42,7 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
   }
 
   if (ssr || PageComponent.getInitialProps) {
-    // @ts-ignore
-    WithApollo.getInitialProps = async ctx => {
+    WithApollo.getInitialProps = async (ctx: any) => {
       const { AppTree } = ctx;
 
       // Initialize ApolloClient, add it to the ctx object so

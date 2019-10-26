@@ -1,5 +1,5 @@
 /* 
     There are SSR issues with react-slick
     This empty file needs to be here for react-slick to work with css modules and code splitting
+    File must be loaded in layout component
 */
-/*  */
