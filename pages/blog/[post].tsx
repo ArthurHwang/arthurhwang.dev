@@ -99,8 +99,7 @@ Post.getInitialProps = async ({ query }: Props) => {
   });
 
   return {
-    post,
-    query
+    post
   };
 };
 

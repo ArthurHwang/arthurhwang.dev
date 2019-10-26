@@ -147,18 +147,6 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
             </h2>
           </SubheaderDefault>
         );
-      case "/blog/[post]":
-        return null;
-      // (
-      // <SubheaderDefault>
-      //   <h1>Blog</h1>
-      //   <Divider invert={true} color="green" />
-      //   <h2>
-      //     This blog is powered by Contentful Delivery API and a lot of
-      //     markdown parsing.
-      //   </h2>
-      // </SubheaderDefault>
-      // );
       case "/contact":
         return (
           <SubheaderDefault>
@@ -170,6 +158,8 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
             </h2>
           </SubheaderDefault>
         );
+      case "/blog/[post]":
+        return null;
       default:
         return <SubheaderHome />;
     }

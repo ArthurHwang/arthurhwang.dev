@@ -3,8 +3,6 @@ import App from "next/app";
 import Layout from "../components/Layout";
 import NextNProgress from "nextjs-progressbar";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-// import withApolloClient from "../lib/with-apollo-client";
-// import { ApolloProvider } from "react-apollo";
 
 const theme = {
   primary: "#fff",
@@ -25,7 +23,6 @@ class MyApp extends App<any> {
     return (
       //@ts-ignore
       <ThemeProvider theme={theme}>
-        {/* <ApolloProvider client={apolloClient}> */}
         <GlobalStyle />
         <Layout>
           <NextNProgress
@@ -36,13 +33,11 @@ class MyApp extends App<any> {
           />
           <Component {...pageProps} />
         </Layout>
-        {/* </ApolloProvider> */}
       </ThemeProvider>
     );
   }
 }
 
-// export default withApolloClient(MyApp);
 export default MyApp;
 
 const GlobalStyle = createGlobalStyle`
