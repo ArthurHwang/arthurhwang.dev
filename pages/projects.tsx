@@ -833,6 +833,10 @@ const ProjectWrap = styled("div")`
     grid-area: carousel;
     min-height: 399px;
 
+    @media (max-width: 1000px) {
+      min-height: initial;
+    }
+
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
