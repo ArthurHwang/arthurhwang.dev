@@ -9,9 +9,9 @@
   },
   "routes": [
     {
-      "src": "^/robots.txt",
+      "src": "/robots.txt",
       "dest": "/static/robots.txt"
-    }
+    },
     {
       "src": "/sitemap",
       "dest": "/sitemap.xml"
