@@ -86,6 +86,12 @@ const StyledPost = styled("div")`
     p {
       margin: 0;
     }
+
+    @media (max-width: 490px) {
+      h2 {
+        line-height: 3.5rem;
+      }
+    }
   }
 
   .image-block {

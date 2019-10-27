@@ -62,6 +62,5 @@ const StyledButton = styled("button")<{ color: string | undefined }>`
 
   @media (max-width: 490px) {
     width: 196px;
-    /* justify-content: center; */
   }
 `;
