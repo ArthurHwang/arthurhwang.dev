@@ -216,24 +216,24 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-right">
-            <LazyLoad>
-              {/* 
+            {/* <LazyLoad> */}
+            {/* 
             //@ts-ignore */}
-              <Slider className="inner-slider" {...settings}>
-                <img
-                  src="/static/projects/arthurhwang.dev/screenshot-1.png"
-                  alt="screenshot 1"
-                />
-                <img
-                  src="/static/projects/arthurhwang.dev/screenshot-2.png"
-                  alt="screenshot 2"
-                />
-                <img
-                  src="/static/projects/arthurhwang.dev/screenshot-3.png"
-                  alt="screenshot 3"
-                />
-              </Slider>
-            </LazyLoad>
+            <Slider className="inner-slider" {...settings}>
+              <img
+                src="/static/projects/arthurhwang.dev/screenshot-1.png"
+                alt="screenshot 1"
+              />
+              <img
+                src="/static/projects/arthurhwang.dev/screenshot-2.png"
+                alt="screenshot 2"
+              />
+              <img
+                src="/static/projects/arthurhwang.dev/screenshot-3.png"
+                alt="screenshot 3"
+              />
+            </Slider>
+            {/* </LazyLoad> */}
             <div className="commits">
               <LazyLoad height={344}>
                 <CommitList
@@ -362,28 +362,28 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-left">
-            <LazyLoad>
-              {/* 
+            {/* <LazyLoad> */}
+            {/* 
             //@ts-ignore */}
-              <Slider className="inner-slider" {...settings}>
-                <img
-                  src="/static/projects/bestattorney-admin/screenshot-1.png"
-                  alt="screenshot 1"
-                />
-                <img
-                  src="/static/projects/bestattorney-admin/screenshot-2.png"
-                  alt="screenshot 2"
-                />
-                <img
-                  src="/static/projects/bestattorney-admin/screenshot-3.png"
-                  alt="screenshot 3"
-                />
-                <img
-                  src="/static/projects/bestattorney-admin/screenshot-4.png"
-                  alt="screenshot 4"
-                />
-              </Slider>
-            </LazyLoad>
+            <Slider className="inner-slider" {...settings}>
+              <img
+                src="/static/projects/bestattorney-admin/screenshot-1.png"
+                alt="screenshot 1"
+              />
+              <img
+                src="/static/projects/bestattorney-admin/screenshot-2.png"
+                alt="screenshot 2"
+              />
+              <img
+                src="/static/projects/bestattorney-admin/screenshot-3.png"
+                alt="screenshot 3"
+              />
+              <img
+                src="/static/projects/bestattorney-admin/screenshot-4.png"
+                alt="screenshot 4"
+              />
+            </Slider>
+            {/* </LazyLoad> */}
             <div className="commits">
               <LazyLoad height={344}>
                 <CommitList
@@ -471,38 +471,38 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-right">
-            <LazyLoad>
-              {/* 
+            {/* <LazyLoad> */}
+            {/* 
             //@ts-ignore */}
-              <Slider className="inner-slider" {...settings}>
-                <img
-                  src="/static/projects/bestattorney.com/screenshot-1.png"
-                  alt="screenshot 1"
-                />
+            <Slider className="inner-slider" {...settings}>
+              <img
+                src="/static/projects/bestattorney.com/screenshot-1.png"
+                alt="screenshot 1"
+              />
 
-                <div className="vertical-wrapper">
-                  <img
-                    className="vertical"
-                    src="/static/projects/bestattorney.com/screenshot-3.png"
-                    alt="screenshot 3"
-                  />
-                  <img
-                    className="vertical"
-                    src="/static/projects/bestattorney.com/screenshot-2.png"
-                    alt="screenshot 2"
-                  />
-                </div>
+              <div className="vertical-wrapper">
                 <img
-                  src="/static/projects/bestattorney.com/screenshot-4.png"
-                  alt="screenshot 4"
+                  className="vertical"
+                  src="/static/projects/bestattorney.com/screenshot-3.png"
+                  alt="screenshot 3"
                 />
                 <img
-                  src="/static/projects/bestattorney.com/screenshot-5.png"
-                  alt="screenshot 5"
+                  className="vertical"
+                  src="/static/projects/bestattorney.com/screenshot-2.png"
+                  alt="screenshot 2"
                 />
-                {/* <img src="/static/projects/bestattorney.com/screenshot-1.png" /> */}
-              </Slider>
-            </LazyLoad>
+              </div>
+              <img
+                src="/static/projects/bestattorney.com/screenshot-4.png"
+                alt="screenshot 4"
+              />
+              <img
+                src="/static/projects/bestattorney.com/screenshot-5.png"
+                alt="screenshot 5"
+              />
+              {/* <img src="/static/projects/bestattorney.com/screenshot-1.png" /> */}
+            </Slider>
+            {/* </LazyLoad> */}
             <div className="commits">
               <LazyLoad height={344}>
                 <CommitList owner="bestattorney" name="bestattorney.com" />
