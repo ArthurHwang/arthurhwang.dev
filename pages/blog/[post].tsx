@@ -5,7 +5,7 @@ import styled from "styled-components";
 import CodeBlock from "../../components/CodeBlock";
 import { Fragment } from "react";
 import { NextPage } from "next";
-import { client } from "../../services/blog";
+import { createClient } from "../../services/blog";
 
 interface Props {
   query: any;
@@ -76,7 +76,7 @@ const Post: NextPage<any> = props => {
 };
 
 Post.getInitialProps = async ({ query }: Props) => {
-  const getEntries = await client.getEntries();
+  const getEntries = await createClient.getEntries();
 
   let payload: any = [];
   let post: any = [];

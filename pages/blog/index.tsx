@@ -3,19 +3,19 @@ import Head from "next/head";
 import { useEffect, useState, Fragment } from "react";
 import { NextPage } from "next";
 import { Post } from "../../components/Post";
-import { client } from "../../services/blog";
+import { createClient } from "../../services/blog";
 
 const readingTime = require("reading-time");
 
 const BlogHome: NextPage<any> = () => {
   async function fetchContentTypes() {
-    const types = await client.getContentTypes();
+    const types = await createClient.getContentTypes();
     if (types.items) return types.items;
     console.log("Error getting Content Types.");
   }
 
   async function fetchEntriesForContentType(contentType: any) {
-    const entries = await client.getEntries({
+    const entries = await createClient.getEntries({
       content_type: contentType.sys,
       order: "-sys.createdAt"
     });
