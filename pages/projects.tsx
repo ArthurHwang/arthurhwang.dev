@@ -22,8 +22,8 @@ const Projects: NextPage<any> = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: false,
-    speed: 700,
-    // fade: true,
+    speed: 600,
+    fade: true,
     // lazyLoad: "progressive",
     adaptiveHeight: true
   };
@@ -52,8 +52,13 @@ const Projects: NextPage<any> = () => {
             //@ts-ignore */}
               <Slider className="inner-slider" {...settings}>
                 <img
-                  src="/static/projects/bestattorney-gatsby/screenshot-1.png"
+                  src="/static/projects/bestattorney-gatsby/screenshot-1.webp"
                   alt="screenshot 1"
+                  onError={(e: any) => {
+                    e.target.onerror = null;
+                    e.target.src =
+                      "/static/projects/bestattorney-gatsby/screenshot-1.png";
+                  }}
                 />
                 <div className="vertical-wrapper">
                   <img
