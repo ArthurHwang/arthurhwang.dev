@@ -23,8 +23,8 @@ const Projects: NextPage<any> = () => {
     autoplaySpeed: 4000,
     pauseOnHover: false,
     speed: 700,
-    // fade: true,
-    // lazyLoad: "progressive",
+    fade: true,
+    lazyLoad: "progressive",
     adaptiveHeight: true
   };
   return (
@@ -831,6 +831,7 @@ const ProjectWrap = styled("div")`
 
   .inner-slider {
     grid-area: carousel;
+    min-height: 399px;
 
     .vertical-wrapper {
       display: flex !important;
