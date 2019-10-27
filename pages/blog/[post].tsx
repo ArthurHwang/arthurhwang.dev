@@ -123,7 +123,6 @@ const ContentWrap = styled("div")`
     grid-template-rows: 50px;
     padding: 0 0 2rem 0;
     grid-gap: 1rem;
-
     align-items: center;
 
     @media (max-width: 490px) {
