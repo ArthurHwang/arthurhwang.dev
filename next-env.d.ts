@@ -3,6 +3,5 @@
 declare module "react-ionicons/*";
 declare module "nextjs-progressbar";
 declare module "react-icons/*";
-// declare module "react-lazyload";
-// declare module "react-slick";
 declare module "yup";
+declare module "next-ga";

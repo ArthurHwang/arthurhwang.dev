@@ -2,6 +2,8 @@ import React from "react";
 import App from "next/app";
 import Layout from "../components/Layout";
 import NextNProgress from "nextjs-progressbar";
+import Router from "next/router";
+import withGA from "next-ga";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 const theme = {
@@ -38,7 +40,7 @@ class MyApp extends App<any> {
   }
 }
 
-export default MyApp;
+export default withGA("UA-150992172-1", Router)(MyApp);
 
 const GlobalStyle = createGlobalStyle`
 /* NormalizeCSS Start*/
