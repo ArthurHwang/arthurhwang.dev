@@ -180,11 +180,13 @@ const ContentWrap = styled("div")`
 
   h1 {
     margin-bottom: 0;
-    font-size: 3.6rem;
-    line-height: 4rem;
+    margin-top: 0;
+    font-size: 4rem;
+    line-height: 5rem;
 
     @media (max-width: 490px) {
       font-size: 3rem;
+      line-height: 4rem;
     }
   }
   pre {
