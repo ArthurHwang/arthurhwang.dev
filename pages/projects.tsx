@@ -24,7 +24,6 @@ const Projects: NextPage<any> = () => {
     pauseOnHover: false,
     speed: 600,
     fade: true,
-    // lazyLoad: "progressive",
     adaptiveHeight: true
   };
   return (
@@ -217,7 +216,12 @@ const Projects: NextPage<any> = () => {
       {/***************************************************************************************************/}
       <ProjectWrap className="bg-grey">
         <ContentWrap>
-          <a href="/" className="link project-title">
+          <a
+            href="/"
+            className="link project-title"
+            target="_blank"
+            rel="noopener"
+          >
             arthurhwang.dev
           </a>
 
@@ -239,14 +243,9 @@ const Projects: NextPage<any> = () => {
                 alt="screenshot 3"
               />
             </Slider>
-            {/* </LazyLoad> */}
             <div className="commits">
               <LazyLoad once height={344}>
-                <CommitList
-                  // className="commits"
-                  owner="ArthurHwang"
-                  name="arthurhwang.dev"
-                />
+                <CommitList owner="ArthurHwang" name="arthurhwang.dev" />
               </LazyLoad>
             </div>
 
@@ -334,17 +333,13 @@ const Projects: NextPage<any> = () => {
             <a
               target="_blank"
               rel="noopener"
-              href="https://www.github.com/ArthurHwang"
+              href="https://github.com/ArthurHwang/arthurhwang.dev"
             >
               <Button color="blue">
                 Source <FaGithub />
               </Button>
             </a>
-            <a
-              target="_blank"
-              rel="noopener"
-              href="https://bestattorney.netlify.com"
-            >
+            <a target="_blank" rel="noopener" href="/">
               <Button color="green">
                 Launch <FaPlay />
               </Button>
@@ -389,7 +384,6 @@ const Projects: NextPage<any> = () => {
                 alt="screenshot 4"
               />
             </Slider>
-            {/* </LazyLoad> */}
             <div className="commits">
               <LazyLoad once height={344}>
                 <CommitList
@@ -477,7 +471,6 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-right">
-            {/* <LazyLoad height={390.97} once> */}
             {/* 
             //@ts-ignore */}
             <Slider className="inner-slider" {...settings}>
@@ -507,7 +500,6 @@ const Projects: NextPage<any> = () => {
                 alt="screenshot 5"
               />
             </Slider>
-            {/* </LazyLoad> */}
             <div className="commits">
               <LazyLoad once height={344}>
                 <CommitList owner="bestattorney" name="bestattorney.com" />
@@ -622,7 +614,6 @@ const Projects: NextPage<any> = () => {
           </a>
 
           <div className="project split-grid-left">
-            {/* <LazyLoad height={390.97} once> */}
             {/* 
             //@ts-ignore */}
             <Slider className="inner-slider" {...settings}>
@@ -655,13 +646,11 @@ const Projects: NextPage<any> = () => {
                 alt="screenshot 8"
               />
             </Slider>
-            {/* </LazyLoad> */}
             <div className="commits">
               <LazyLoad once height={344}>
                 <CommitList owner="ArthurHwang" name="toneify" />
               </LazyLoad>
             </div>
-
             <div className="accomplishments">
               <h3>Accomplishments:</h3>
               <ul>
