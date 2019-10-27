@@ -818,12 +818,12 @@ const ProjectWrap = styled("div")`
 
   .project-title {
     display: inline-block;
-    font-size: 2.6rem;
+    font-size: 3rem;
     text-transform: uppercase;
     padding: 1rem 0;
 
     @media (max-width: 490px) {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
     }
   }
 

@@ -40,7 +40,7 @@ const ContentWrap = styled("div")`
 
     @media (max-width: 490px) {
       white-space: nowrap;
-      font-size: 2.4rem;
+      font-size: 3rem;
     }
   }
 
