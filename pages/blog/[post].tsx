@@ -123,7 +123,6 @@ const ContentWrap = styled("div")`
     grid-template-rows: 50px;
     padding: 0 0 2rem 0;
     grid-gap: 1rem;
-
     align-items: center;
 
     @media (max-width: 490px) {
@@ -180,11 +179,13 @@ const ContentWrap = styled("div")`
 
   h1 {
     margin-bottom: 0;
-    font-size: 3.6rem;
-    line-height: 4rem;
+    margin-top: 0;
+    font-size: 4rem;
+    line-height: 5rem;
 
     @media (max-width: 490px) {
       font-size: 3rem;
+      line-height: 4rem;
     }
   }
   pre {

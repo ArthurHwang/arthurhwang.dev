@@ -21,10 +21,8 @@ const Projects: NextPage<any> = () => {
     draggable: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    lazyLoad: "progressive",
     pauseOnHover: false,
-    fade: true,
-    speed: 1200,
+    speed: 700,
     adaptiveHeight: true
   };
   return (
@@ -807,8 +805,6 @@ const ProjectWrap = styled("div")`
 
     @media (max-width: 768px) {
       padding: 1rem 0;
-      /* margin-left: -2rem; */
-      /* margin-right: -2rem; */
 
       img {
         margin: 1rem;
@@ -818,12 +814,12 @@ const ProjectWrap = styled("div")`
 
   .project-title {
     display: inline-block;
-    font-size: 2.6rem;
+    font-size: 3rem;
     text-transform: uppercase;
     padding: 1rem 0;
 
     @media (max-width: 490px) {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
     }
   }
 
@@ -859,7 +855,7 @@ const ProjectWrap = styled("div")`
       bottom: -39px;
 
       &:after {
-        content: "<swipe or drag images to scroll>";
+        content: "-swipe or drag images to scroll-";
         display: block;
         position: relative;
         bottom: 5px;
@@ -926,7 +922,7 @@ const ProjectWrap = styled("div")`
 
       li {
         font-size: 1.4rem;
-        text-indent: -16px;
+        text-indent: -15px;
 
         &:before {
           content: "-";

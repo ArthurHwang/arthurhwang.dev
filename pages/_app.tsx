@@ -218,9 +218,13 @@ h1,h2,h3 {
   color: ${theme.black};
 }
 
+h2 {
+  font-size: 3rem;
+}
+
 @media(max-width:490px) {
   h2 {
-    font-size: 2rem; 
+    font-size: 2.4rem; 
   }
   p {
     font-size: 1.4rem;

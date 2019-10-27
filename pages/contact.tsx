@@ -256,6 +256,13 @@ const StyledContact = styled("div")`
     flex-wrap: wrap;
     justify-content: space-between;
 
+    button {
+      width: 190px;
+      padding: 1rem 3rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+
     @media (max-width: 490px) {
       justify-content: center;
     }
@@ -310,6 +317,10 @@ const StyledContact = styled("div")`
 const ContentWrap = styled("div")`
   padding: 4rem 2rem;
   background-color: ${({ theme }) => theme.lightgrey};
+
+  @media (max-width: 490px) {
+    padding: 2rem 2rem;
+  }
 
   .valid {
     color: green;

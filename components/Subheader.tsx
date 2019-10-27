@@ -117,14 +117,6 @@ const particlesOptions = {
 export const Subheader: React.FC<Props> = ({ pathName }) => {
   function contentSwitch(path: string) {
     switch (path) {
-      case "/about":
-        return (
-          <SubheaderDefault>
-            <h1>About</h1>
-            <Divider invert={true} color="green" />
-            <h2>Some things about me.</h2>
-          </SubheaderDefault>
-        );
       case "/projects":
         return (
           <SubheaderDefault>
@@ -141,10 +133,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
           <SubheaderDefault>
             <h1>Blog</h1>
             <Divider invert={true} />
-            <h2>
-              This blog is powered by Contentful Delivery API and a lot of
-              markdown parsing.
-            </h2>
+            <h2>Thoughts on life, work and everything in between.</h2>
           </SubheaderDefault>
         );
       case "/contact":

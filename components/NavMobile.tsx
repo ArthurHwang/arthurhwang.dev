@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import LogoNodejs from "react-ionicons/lib/LogoNodejs";
 import Link from "next/link";
 import { IoIosKeypad } from "react-icons/io";
 import { useState, useEffect } from "react";
@@ -35,33 +34,73 @@ export const NavMobile: React.FC<any> = () => {
             onScroll={handleScroll}
             className={menuOpen ? "fade" : "fadeOut"}
           >
-            <LogoNodejs
-              onClick={() => alert("Hi!")}
-              fontSize="60px"
-              beat={true}
-              color="#43853d"
-            />
-            <Link href="/projects">
-              <a className="link-wrap link" onClick={handleLink}>
-                Projects
+            <LinkWrapper>
+              <Link href="/">
+                <a className="link-wrap link" onClick={handleLink}>
+                  Home<span className="underscore">_</span>
+                </a>
+              </Link>
+              <Link href="/projects">
+                <a className="link-wrap link" onClick={handleLink}>
+                  Projects<span className="underscore">_</span>
+                </a>
+              </Link>
+              <Link href="/blog">
+                <a className="link-wrap link" onClick={handleLink}>
+                  Blog<span className="underscore">_</span>
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a className="link-wrap link" onClick={handleLink}>
+                  Contact<span className="underscore">_</span>
+                </a>
+              </Link>
+            </LinkWrapper>
+            <MiscWrapper>
+              <a
+                href="mailto:mail@arthurhwang.dev"
+                className="link-wrap link"
+                onClick={handleLink}
+              >
+                mail@arthurhwang.dev
               </a>
-            </Link>
-            <Link href="/blog">
-              <a className="link-wrap link" onClick={handleLink}>
-                Blog
-              </a>
-            </Link>
-            <Link href="/contact">
-              <a className="link-wrap link" onClick={handleLink}>
-                Contact
-              </a>
-            </Link>
+              <p className="copyright">&copy; - 2019 Arthur Hwang </p>
+            </MiscWrapper>
           </StyledNavMenu>
         )}
       </StyledNavMobile>
     </NavMobileWrapper>
   );
 };
+
+const LinkWrapper = styled("div")`
+  display: flex;
+  flex-direction: column;
+
+  .link-wrap {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+  }
+  .underscore {
+    color: ${({ theme }) => theme.accent};
+    font-weight: 800;
+    -webkit-text-fill-color: initial;
+  }
+`;
+
+const MiscWrapper = styled("div")`
+  border-top: 1px solid #ebeaeb;
+  padding-top: 1rem;
+
+  .link-wrap {
+    font-size: 1.4rem;
+  }
+
+  .copyright {
+    margin: 0;
+  }
+`;
 
 const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
   height: 100%;
@@ -96,16 +135,12 @@ const StyledNavMenu = styled("div")`
   left: 0;
   top: 61px;
   width: 100vw;
-  padding: 2rem;
+  padding: 2rem 2rem 1rem;
   background-color: ${({ theme }) => theme.lightgrey};
   height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
-
-  .link-wrap {
-    cursor: pointer;
-    text-transform: uppercase;
-  }
+  justify-content: space-between;
 `;
 
 const NavMobileWrapper = styled.div`
