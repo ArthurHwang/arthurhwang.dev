@@ -137,7 +137,7 @@ const StyledNavMenu = styled("div")`
   width: 100vw;
   padding: 2rem 2rem 1rem;
   background-color: ${({ theme }) => theme.lightgrey};
-  height: calc(100vh - 60px);
+  height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

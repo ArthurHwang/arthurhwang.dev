@@ -23,7 +23,7 @@ const Projects: NextPage<any> = () => {
     autoplaySpeed: 4000,
     pauseOnHover: false,
     speed: 700,
-    lazyload: "ondemand",
+    // lazyLoad: "progressive",
     adaptiveHeight: true
   };
   return (
