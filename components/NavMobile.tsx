@@ -99,6 +99,7 @@ const MiscWrapper = styled("div")`
 
   .copyright {
     margin: 0;
+    font-size: 1.4rem;
   }
 `;
 
