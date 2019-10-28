@@ -969,7 +969,7 @@ const ProjectWrap = styled("div")`
         min-height: initial;
       }
       @media (max-width: 490px) {
-        min-height: 160px;
+        min-height: 176px;
       }
     }
 
@@ -982,14 +982,19 @@ const ProjectWrap = styled("div")`
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
-      max-height: 406.97px;
+      /* max-height: 350px; */
 
       .vertical {
-        max-width: 200.5px;
+        max-width: 200px;
+
+        @media (max-width: 490px) {
+          max-width: 50%;
+        }
       }
 
       @media (max-width: 490px) {
         padding: 0 1rem;
+        /* max-height: 360px; */
       }
     }
 
