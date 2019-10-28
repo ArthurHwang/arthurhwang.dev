@@ -20,9 +20,9 @@ const Projects: NextPage<any> = () => {
     slidesToScroll: 1,
     draggable: true,
     autoplay: true,
-    // autoplaySpeed: 4000,
-    // pauseOnHover: false,
-    speed: 300,
+    autoplaySpeed: 4000,
+    pauseOnHover: false,
+    speed: 600,
     // fade: true,
     adaptiveHeight: true
   };
