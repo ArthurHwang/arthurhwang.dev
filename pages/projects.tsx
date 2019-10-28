@@ -825,11 +825,19 @@ const ProjectWrap = styled("div")`
 
   .inner-slider {
     grid-area: carousel;
-    min-height: 399px;
+    /* min-height: 399px; */
 
-    @media (max-width: 1000px) {
+    /* .slick-slide {
+      min-height: 399px;
+
+      @media(max-width: 490px) {
+        min-height: initial;
+      }
+    } */
+
+    /* @media (max-width: 1000px) {
       min-height: initial;
-    }
+    } */
 
     .vertical-wrapper {
       display: flex !important;
