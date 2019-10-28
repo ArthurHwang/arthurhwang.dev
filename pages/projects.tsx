@@ -23,7 +23,7 @@ const Projects: NextPage<any> = () => {
     autoplaySpeed: 4000,
     pauseOnHover: false,
     speed: 600,
-    fade: true,
+    // fade: true,
     adaptiveHeight: true
   };
   return (
