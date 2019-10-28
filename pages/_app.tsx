@@ -238,6 +238,10 @@ p, span {
   text-align: justify;
 }
 
+p {
+    max-height: 999999px;
+}
+
 a {
   text-decoration: none;
   color: ${theme.blue};

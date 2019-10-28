@@ -40,10 +40,10 @@ const ContentWrap = styled("div")`
 const StyledAbout = styled("div")`
   max-width: 800px;
   margin: 0 auto;
-
+  /* 
   p {
     max-height: 999999px;
-  }
+  } */
 
   .flex-wrap {
     display: flex;
