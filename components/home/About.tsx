@@ -1,24 +1,54 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export const About: React.FC<any> = () => {
   return (
     <ContentWrap>
       <StyledAbout>
         <h2>
-          About me<span>_</span>
+          WHOAMI<span>_</span>
         </h2>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-          nam ducimus sit maiores a quo ea natus fugiat cupiditate porro neque
-          iste, temporibus iusto nobis expedita iure officia reiciendis optio.
-          why I’m excited to make a big impact at a high growth company.
+          I'm Arthur, a fullstack web developer born and raised in Southern
+          California where I currently reside. I'm a passionate and professional
+          web developer that likes to visualize, plan and deliver technically
+          perfect, responsive and user friendly software solutions.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-          corrupti laborum impedit iste consequuntur eius odit odio adipisci
-          omnis, cupiditate maiores culpa suscipit perferendis explicabo beatae
-          eveniet! Asperiores, est sapiente.
+          I have always had an interest in anything technology related. However,
+          ever since I found coding I have felt blessed to find something in my
+          life that interests me every day. From creating user interfaces to
+          more computer science topics like data structures and algorithms, I
+          constantly put the work and the time in to learn more and more. It is
+          my life long ambition to become the best software developer I can
+          possibly be.
         </p>
+        <p>
+          I have recently gotten into blogging to try to give back to the
+          community by trying teach and explain to readers that may come across
+          me about code and technology topics. My main focus for my blog is to
+          explain topics that I have learned in a way that readers can
+          comprehend easily. I hope to give readers an "ah-ha" moment about the
+          topic.{" "}
+          <Link href="/blog">
+            <a className="link">Visit my blog!</a>
+          </Link>
+        </p>
+        <h3>
+          Random Facts About Me<span>_</span>
+        </h3>
+        <ul>
+          <li>I have been playing the guitar for more than 15 years.</li>
+          <li>My favorite guitarist is Stevie Ray Vaughan</li>
+          <li>
+            I have a dog and a cat that depending on the hour either love or
+            hate each other.
+          </li>
+          <li>I REALLY like coffee and tea.</li>
+          <li>I meetup with a few close friends every week to play mahjong.</li>
+          <li>I love playing golf.</li>
+          <li>I speak Chinese.</li>
+        </ul>
       </StyledAbout>
     </ContentWrap>
   );

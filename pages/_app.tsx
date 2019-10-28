@@ -222,6 +222,7 @@ h1,h2,h3 {
 
 h2 {
   font-size: 3rem;
+  /* text-transform: uppercase; */
 }
 
 @media(max-width:490px) {
@@ -233,13 +234,18 @@ h2 {
   }
 }
 
-p, span {
+p, span, li {
   color: ${theme.grey};
   text-align: justify;
 }
 
 p {
     max-height: 999999px;
+}
+
+strong {
+  font-weight: 800;
+  color: ${theme.black};
 }
 
 a {
