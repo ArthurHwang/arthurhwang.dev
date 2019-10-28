@@ -3,6 +3,7 @@ import Disqus from "disqus-react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import CodeBlock from "../../components/CodeBlock";
+import LazyLoad from "react-lazyload";
 import { Fragment } from "react";
 import { NextPage } from "next";
 import { client } from "../../services/blog";
@@ -58,7 +59,7 @@ const Post: NextPage<any> = props => {
         </div>
         <img
           width="100%"
-          src={featureImage.fields.file.url}
+          src={featureImage.fields.file.url + "?fm=webp"}
           alt={featureImage.fields.description}
         />
         <ReactMarkdown
@@ -66,10 +67,12 @@ const Post: NextPage<any> = props => {
           renderers={{ code: CodeBlock }}
           source={body}
         />
-        <Disqus.DiscussionEmbed
-          shortname={disqusShortname}
-          config={disqusConfig}
-        />
+        <LazyLoad>
+          <Disqus.DiscussionEmbed
+            shortname={disqusShortname}
+            config={disqusConfig}
+          />
+        </LazyLoad>
       </ContentWrap>
     </Fragment>
   );

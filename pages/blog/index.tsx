@@ -29,6 +29,7 @@ const BlogHome: NextPage<any> = () => {
     async function getPosts() {
       const contentTypes = await fetchContentTypes();
       const allPosts = await fetchEntriesForContentType(contentTypes);
+      console.log(allPosts);
       //@ts-ignore
       setPosts([...allPosts]);
     }
@@ -50,7 +51,7 @@ const BlogHome: NextPage<any> = () => {
                 alt={p.fields.featureImage.fields.description}
                 date={p.sys.createdAt}
                 key={p.fields.title}
-                image={p.fields.featureImage.fields.file.url}
+                image={p.fields.featureImage.fields.file.url + "?fm=webp"}
                 url={p.fields.title}
                 readingTime={readingTime(p.fields.body).text}
               />
