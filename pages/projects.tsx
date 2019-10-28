@@ -847,10 +847,10 @@ const ProjectWrap = styled("div")`
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
-      max-height: 398.84px;
+      /* max-height: 50%; */
 
       .vertical {
-        width: 196.5px;
+        width: 200px;
       }
 
       @media (max-width: 490px) {
