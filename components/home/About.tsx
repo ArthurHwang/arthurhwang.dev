@@ -53,7 +53,7 @@ const StyledAbout = styled("div")`
   p {
     font-size: 1.6rem;
     @media (max-width: 490px) {
-      font-size: 1.4rem;
+      font-size: 14px;
     }
   }
 
