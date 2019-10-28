@@ -844,10 +844,6 @@ const ProjectWrap = styled("div")`
       }
     }
 
-    /* @media (max-width: 1000px) {
-      min-height: initial;
-    } */
-
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
