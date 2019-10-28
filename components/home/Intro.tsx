@@ -20,24 +20,20 @@ export const Intro: React.FC<any> = () => {
           <p>
             As a natural tinkerer, I love to dig out the "why" of things. Being
             a self taught developer has taught me to not fear what I don't know,
-            instead tackle it with sheer determination and an unwavering will.
-            Having the privilege everyday to produce elegant and performant
-            software solutions makes me happy.
+            inste
           </p>
           <p>
             I am drawn to creating performance driven websites that are fully
-            responsive using best practices that work on a wide range of
-            devices. I take tremendous care to ensure that the project I am
-            working on is not only scalable but also maintainable. Please visit
-            my{" "}
+            responsiv my{" "}
             <Link href="/blog">
               <a className="link">Blog</a>
             </Link>
           </p>
           <p>
-            I am usually learning about new things such as data structures and
-            algorithms to further improve my skills. Or testing out new hot
-            frameworks such as apollo / graphql
+            I am Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Beatae eum, sequi excepturi commodi et, nostrum quibusdam aliquam
+            fugit consequuntur voluptatibus non alias, numquam dolores atque
+            eius esse molestiae modi natus!
           </p>
         </InnerLeft>
 
