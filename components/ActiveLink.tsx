@@ -7,13 +7,15 @@ interface Props {
   activeClassName?: string;
   children: any;
   partiallyActive?: boolean;
+  as: string;
 }
 
 export const ActiveLink: React.FC<Props> = ({
   href,
   activeClassName,
   partiallyActive,
-  children
+  children,
+  as
 }) => {
   const router = useRouter();
   const child = React.Children.only(children);
@@ -27,5 +29,9 @@ export const ActiveLink: React.FC<Props> = ({
     className = `${className} ${activeClassName}`.trim();
   }
 
-  return <Link href={href}>{React.cloneElement(child, { className })}</Link>;
+  return (
+    <Link href={href} as={as}>
+      {React.cloneElement(child, { className })}
+    </Link>
+  );
 };

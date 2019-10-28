@@ -4,22 +4,27 @@ import { ActiveLink as Link } from "./ActiveLink";
 export const Nav: React.FC<any> = () => {
   return (
     <StyledNav>
-      <Link activeClassName="active" href="/">
+      <Link activeClassName="active" href="/" as="/">
         <div className="link-box">
           <a>Home</a>
         </div>
       </Link>
-      <Link activeClassName="active" href="/projects">
+      <Link activeClassName="active" href="/projects" as="/projets">
         <div className="link-box">
           <a href="/projects">Projects</a>
         </div>
       </Link>
-      <Link activeClassName="active" partiallyActive={true} href="/blog">
+      <Link
+        activeClassName="active"
+        partiallyActive={true}
+        href="/blog"
+        as="/blog"
+      >
         <div className="link-box">
           <a>Blog</a>
         </div>
       </Link>
-      <Link activeClassName="active" href="/contact">
+      <Link activeClassName="active" href="/contact" as="/contact">
         <div className="link-box">
           <a>Contact</a>
         </div>
