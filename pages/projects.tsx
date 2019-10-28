@@ -970,6 +970,7 @@ const ProjectWrap = styled("div")`
       }
       @media (max-width: 490px) {
         min-height: 176px;
+        max-height: 399px;
       }
     }
 
