@@ -29,7 +29,6 @@ const BlogHome: NextPage<any> = () => {
     async function getPosts() {
       const contentTypes = await fetchContentTypes();
       const allPosts = await fetchEntriesForContentType(contentTypes);
-      console.log(allPosts);
       //@ts-ignore
       setPosts([...allPosts]);
     }

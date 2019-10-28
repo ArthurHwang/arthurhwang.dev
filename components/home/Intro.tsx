@@ -19,7 +19,7 @@ export const Intro: React.FC<any> = () => {
           </h2>
           <p>
             I like to <strong>get things done</strong>. Architecting and
-            building highly-performant, high-quality, maintainable websites and
+            building highly performant, high quality, maintainable websites and
             web applications is something that I love doing everyday. In order
             for said websites and applications to come to life, going from idea
             to reality is not only technically challenging but also emotionally

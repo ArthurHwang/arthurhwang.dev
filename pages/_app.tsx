@@ -205,8 +205,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
-  line-height: 2;
-  font-family:  "-apple-system", "BlinkMacSystemFont", "lato", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
+  font-family:  "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", "Segoe UI", "lato", "Arial", "Open Sans", "sans-serif";
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.8;
@@ -214,6 +213,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+  /* text-rendering: optimizeLegibility; */
 }
 
 h1,h2,h3 {
@@ -222,8 +222,11 @@ h1,h2,h3 {
 
 h2 {
   font-size: 3rem;
-  /* text-transform: uppercase; */
 }
+
+ ul, ol{
+    padding-left: 2rem;
+  }
 
 @media(max-width:490px) {
   h2 {
@@ -234,6 +237,7 @@ h2 {
   }
 }
 
+
 p, span, li {
   color: ${theme.grey};
   text-align: justify;
@@ -241,10 +245,11 @@ p, span, li {
 
 p {
     max-height: 999999px;
+    word-break: break-word;
 }
 
 strong {
-  font-weight: 800;
+  font-weight: 700;
   color: ${theme.black};
 }
 
@@ -266,7 +271,7 @@ a.link {
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-    transition: all .4s;
+  transition: all .4s;
 
   &:hover {
     background-position: 0%;

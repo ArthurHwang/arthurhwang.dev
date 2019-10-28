@@ -12,7 +12,11 @@ export const SubheaderDefault: React.FC<Props> = ({ children }) => {
   );
 };
 
-const TextWrap = styled("div")``;
+const TextWrap = styled("div")`
+  strong {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
 
 const ContentWrap = styled("div")`
   display: flex;
