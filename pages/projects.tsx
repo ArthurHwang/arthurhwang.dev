@@ -827,6 +827,13 @@ const ProjectWrap = styled("div")`
     grid-area: carousel;
     /* min-height: 399px; */
 
+    img {
+      min-height: 399px;
+      @media (max-width: 490px) {
+        min-height: 160px;
+      }
+    }
+
     /* .slick-slide {
       min-height: 399px;
 
