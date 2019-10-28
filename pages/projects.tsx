@@ -151,11 +151,34 @@ const Projects: NextPage<any> = () => {
               <h3>Accomplishments:</h3>
               <ul>
                 <li>
-                  Single handedly rewrote entire old application to use modern
-                  technolgies with React using GatsbyJS for code splitting,
-                  performance, SEO benefits.
+                  Rewrote and rebuilt a production ready 6000+ static page
+                  application with GatsbyJS for code splitting, performance, and
+                  SEO benefits. This project was initiated by myself and
+                  approved by my superiors in order to future proof their tech
+                  stack at the company.
                 </li>
-                <li>Integrated Blog powered by custom headless wordpress</li>
+                <li>
+                  Created custom serverless build workflow pipeline using
+                  CircleCI, Cypress, Jest, Zapier, Netlify.
+                </li>
+                <li>
+                  Wrote E2E (End-to-End) tests / smoke test with Cypress testing
+                  framework.
+                </li>
+                <li>
+                  Wrote unit tests / snapshot tests with Jest testing framework.
+                </li>
+                <li>
+                  Architected a custom file / folder structure in which values
+                  are inherited from a single source in order to empower
+                  non-developers to be able to easily add, remove and update
+                  items on the website.
+                </li>
+                <li>
+                  Implemented 16 years of Wordpress blog data by leveraging a
+                  headless CMS with custom hosting solution.
+                </li>
+
                 <li>
                   Integrated custom Google AMP (Accelerated Mobile Pages) for
                   blog
@@ -167,10 +190,7 @@ const Projects: NextPage<any> = () => {
                   Created a design and typography system to easily empower
                   non-developers to be able to change application look
                 </li>
-                <li>
-                  Created proprietary folder structure to empower non-developers
-                  to be able to change things on the application
-                </li>
+
                 <li>Implemented custom CI / CD workflows with CircleCI</li>
 
                 <li>Entire application is responsive web ready</li>
