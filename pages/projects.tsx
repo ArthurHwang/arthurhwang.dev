@@ -985,7 +985,7 @@ const ProjectWrap = styled("div")`
       max-height: 406.97px;
 
       .vertical {
-        width: 200.5px;
+        max-width: 200.5px;
       }
 
       @media (max-width: 490px) {
