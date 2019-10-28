@@ -32,7 +32,7 @@ export const Post: React.FC<Props> = ({
       >
         <div className="container">
           <div className="author-block">
-            <img className="me" src="/static/me.jpg" />
+            <img className="me" src="/static/me.jpg" alt="Arthur Hwang" />
             <div className="author-date">
               <p>Arthur Hwang</p>
               <p>

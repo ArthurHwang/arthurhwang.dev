@@ -44,7 +44,7 @@ const Post: NextPage<any> = props => {
         <h1>{title}</h1>
         <p className="post-description">{description}</p>
         <div className="author-block">
-          <img className="me" src="/static/me.jpg" />
+          <img className="me" src="/static/me.jpg" alt="Arthur Hwang" />
           <div className="author-date">
             <p>
               <span>by</span> Arthur Hwang
