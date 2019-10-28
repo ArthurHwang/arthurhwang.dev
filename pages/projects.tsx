@@ -829,18 +829,20 @@ const ProjectWrap = styled("div")`
 
     img {
       min-height: 399px;
+
+      @media (max-width: 1000px) {
+        min-height: initial;
+      }
       @media (max-width: 490px) {
         min-height: 160px;
       }
     }
 
-    /* .slick-slide {
-      min-height: 399px;
-
-      @media(max-width: 490px) {
+    .slick-slide {
+      @media (max-width: 1000px) {
         min-height: initial;
       }
-    } */
+    }
 
     /* @media (max-width: 1000px) {
       min-height: initial;
