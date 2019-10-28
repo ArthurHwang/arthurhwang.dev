@@ -50,12 +50,12 @@ const StyledAbout = styled("div")`
   max-width: 800px;
   margin: 0 auto;
 
-  p {
+  /* p {
     font-size: 1.6rem;
     @media (max-width: 490px) {
       font-size: 14px;
     }
-  }
+  } */
 
   .flex-wrap {
     display: flex;

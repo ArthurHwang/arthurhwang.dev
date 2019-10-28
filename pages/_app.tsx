@@ -229,7 +229,7 @@ h2 {
     font-size: 2.4rem; 
   }
   p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
