@@ -51,7 +51,7 @@ const BlogHome: NextPage<any> = () => {
                 alt={p.fields.featureImage.fields.description}
                 date={p.sys.createdAt}
                 key={p.fields.title}
-                image={p.fields.featureImage.fields.file.url + "?fm=webp"}
+                image={p.fields.featureImage.fields.file.url}
                 url={p.fields.title}
                 readingTime={readingTime(p.fields.body).text}
               />

@@ -61,6 +61,10 @@ const Post: NextPage<any> = props => {
           width="100%"
           src={featureImage.fields.file.url + "?fm=webp"}
           alt={featureImage.fields.description}
+          onError={(e: any) => {
+            e.target.onerror = null;
+            e.target.src = featureImage.fields.file.url;
+          }}
         />
         <ReactMarkdown
           className="markdown"

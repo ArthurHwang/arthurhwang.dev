@@ -43,7 +43,15 @@ export const Post: React.FC<Props> = ({
           </div>
 
           <div className="image-block">
-            <img className="image" alt={alt} src={image} />
+            <img
+              className="image"
+              alt={alt}
+              src={image + "?fm=webp"}
+              onError={(e: any) => {
+                e.target.onerror = null;
+                e.target.src = image;
+              }}
+            />
           </div>
           <div className="text-block">
             <h2>{title}</h2>
