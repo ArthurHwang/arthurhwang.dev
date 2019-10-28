@@ -235,7 +235,7 @@ h2 {
 
 p, span {
   color: ${theme.grey};
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 a {

@@ -29,12 +29,6 @@ export const Intro: React.FC<any> = () => {
               <a className="link">Blog</a>
             </Link>
           </p>
-          <p>
-            I am Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Beatae eum, sequi excepturi commodi et, nostrum quibusdam aliquam
-            fugit consequuntur voluptatibus non alias, numquam dolores atque
-            eius esse molestiae modi natus!
-          </p>
         </InnerLeft>
 
         <InnerRight>
