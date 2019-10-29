@@ -31,7 +31,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="stylesheet" href="/static/normalize.css" />
+        </Head>
         <body>
           <Main />
           <NextScript />

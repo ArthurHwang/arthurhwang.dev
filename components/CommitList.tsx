@@ -237,6 +237,7 @@ const StyledStatus = styled("div")`
 
 const StyledCommits = styled("ul")`
   padding: 0;
+  min-height: 314px;
 
   a.link {
     margin: 0;

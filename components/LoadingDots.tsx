@@ -12,7 +12,7 @@ export const LoadingDots: React.FC<any> = () => {
 
 const DotWrapper = styled("div")`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
