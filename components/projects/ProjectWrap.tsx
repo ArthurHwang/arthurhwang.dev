@@ -14,22 +14,6 @@ export const ProjectWrap: React.FC<Props> = ({ children }) => {
   );
 };
 
-const ContentWrapper = styled("div")`
-  max-width: 1300px;
-  max-height: 1090.28px;
-  min-height: 1090.28px;
-  height: 1090.28px;
-  margin: 0 auto;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
-  padding: 1rem 2rem 2rem;
-
-  @media (max-width: 1400px) {
-    max-height: initial;
-    min-height: initial;
-    height: initial;
-  }
-`;
-
 const ProjectWrapper = styled("div")`
   height: auto;
   padding: 4rem 2rem;
@@ -218,7 +202,7 @@ const ProjectWrapper = styled("div")`
           content: "-";
           text-indent: -10px;
           font-weight: 800;
-          font-size: 1.6rem;
+          font-size: 1.8rem;
           color: ${({ theme }) => theme.secondaryAccent};
           margin-right: 1rem;
         }
@@ -268,5 +252,21 @@ const ProjectWrapper = styled("div")`
         "accomplishments"
         "commits";
     }
+  }
+`;
+
+const ContentWrapper = styled("div")`
+  max-width: 1300px;
+  max-height: 1090.28px;
+  min-height: 1090.28px;
+  height: 1090.28px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem 2rem;
+
+  @media (max-width: 1400px) {
+    max-height: initial;
+    min-height: initial;
+    height: initial;
   }
 `;

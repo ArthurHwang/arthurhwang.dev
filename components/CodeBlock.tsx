@@ -1,8 +1,6 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-//@ts-ignore
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-//@ts-ignore
 import { prism } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 class CodeBlock extends PureComponent {
@@ -16,7 +14,7 @@ class CodeBlock extends PureComponent {
   };
 
   render() {
-    //@ts-ignore
+    // @ts-ignore
     const { language, value } = this.props;
     return (
       <SyntaxHighlighter language="javascript" style={prism}>

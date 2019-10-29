@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { FaReact, FaNodeJs, FaCode, FaJs } from "react-icons/fa";
 import { Divider } from "./Divider";
 
@@ -52,6 +52,40 @@ export const SubheaderHome: React.FC<any> = () => {
   );
 };
 
+const showup = keyframes`
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { margin-bottom: 1; }
+  100% { margin-bottom: 1; }
+`;
+const slidein = keyframes`
+  0% { margin-left: -800px; }
+  20% { margin-left: -800px; }
+  35% { margin-left: 0px; }
+  100% { margin-left: 0px; }
+`;
+const revealTablet = keyframes`
+  0% { opacity: 0; width: 0px; }
+  20% { opacity: 1; width: 0px; }
+  30% { width: 260px; }
+  80% { opacity: 1; }
+  100% { opacity: 1; width: 260px; }
+`;
+const revealMobile = keyframes`
+  0% { opacity: 0; width: 0px; }
+  20% { opacity: 1; width: 0px; }
+  30% { width: 210px; }
+  80% { opacity: 1; }
+  100% { opacity: 1; width: 210px; }
+`;
+const reveal = keyframes`
+  0% { opacity: 0; width: 0px; }
+  20% { opacity: 1; width: 0px; }
+  30% { width: 355px; }
+  80% { opacity: 1; }
+  100% { opacity: 1; width: 355px; }
+`;
+
 const TextWrap = styled("div")`
   margin: 0 auto;
 
@@ -63,118 +97,25 @@ const TextWrap = styled("div")`
   }
 
   .first-of-type {
-    animation: showup 7s normal forwards;
+    animation: ${showup} 7s normal forwards;
   }
 
   .second-of-type {
     width: 0px;
-    animation: reveal 7s normal forwards;
+    animation: ${reveal} 7s normal forwards;
 
     @media (max-width: 650px) {
-      animation: revealTablet 7s normal forwards;
+      animation: ${revealTablet} 7s normal forwards;
     }
 
     @media (max-width: 490px) {
-      animation: revealMobile 7s normal forwards;
+      animation: ${revealMobile} 7s normal forwards;
     }
 
     span {
       margin-left: -355px;
-      animation: slidein 7s normal forwards;
+      animation: ${slidein} 7s normal forwards;
       color: white;
-    }
-  }
-
-  @keyframes showup {
-    0% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes slidein {
-    0% {
-      margin-left: -800px;
-    }
-    20% {
-      margin-left: -800px;
-    }
-    35% {
-      margin-left: 0px;
-    }
-    100% {
-      margin-left: 0px;
-    }
-  }
-
-  @keyframes revealTablet {
-    0% {
-      opacity: 0;
-      width: 0px;
-    }
-    20% {
-      opacity: 1;
-      width: 0px;
-    }
-    30% {
-      width: 260px;
-    }
-    80% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-      width: 260px;
-    }
-  }
-
-  @keyframes revealMobile {
-    0% {
-      opacity: 0;
-      width: 0px;
-    }
-    20% {
-      opacity: 1;
-      width: 0px;
-    }
-    30% {
-      width: 210px;
-    }
-    80% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-      width: 210px;
-    }
-  }
-
-  @keyframes reveal {
-    0% {
-      opacity: 0;
-      width: 0px;
-    }
-    20% {
-      opacity: 1;
-      width: 0px;
-    }
-    30% {
-      width: 355px;
-    }
-    80% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-      width: 355px;
     }
   }
 

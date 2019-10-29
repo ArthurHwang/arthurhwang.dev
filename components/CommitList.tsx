@@ -3,7 +3,6 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { LoadingDots } from "./LoadingDots";
 import { GoGitCommit } from "react-icons/go";
-// import { GoGitCommit, GoServer } from "react-icons/go";
 
 interface Props {
   owner: string;

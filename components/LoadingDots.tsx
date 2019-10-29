@@ -20,8 +20,8 @@ const DotWrapper = styled("div")`
 
 const BounceAnimation = keyframes`
   0% { margin-bottom: 0; }
-  50% { margin-bottom: 15px }
-  100% { margin-bottom: 0 }
+  50% { margin-bottom: 15px; }
+  100% { margin-bottom: 0; }
 `;
 
 const Dot = styled("div")<{ delay: string }>`
