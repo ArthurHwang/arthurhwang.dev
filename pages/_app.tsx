@@ -31,7 +31,7 @@ class MyApp extends App<any> {
             color={theme.secondaryAccent}
             startPosition={0}
             stopDelayMs={0}
-            height="4"
+            height="3"
           />
           <Component {...pageProps} />
         </Layout>
