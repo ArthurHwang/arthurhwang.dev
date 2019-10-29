@@ -143,8 +143,10 @@ const ErrorPage: NextPage<any> = () => {
 };
 
 const ContentWrap = styled("div")`
+  /* height: calc(100vh-60px); */
   .container {
     width: 100%;
+    /* height: calc(100vh - 105px); */
     height: 96vh;
     overflow: hidden !important;
   }

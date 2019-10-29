@@ -6,6 +6,7 @@ import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
 
+// arthurhwang.dev
 export const Project2: React.FC<any> = () => {
   return (
     <ProjectWrap>

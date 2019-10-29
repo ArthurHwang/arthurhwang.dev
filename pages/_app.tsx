@@ -98,9 +98,20 @@ p {
   word-break: break-word;
 }
 
+li, p , span {
+  font-weight: 500;
+}
+
 strong {
-  font-weight: 700;
+  font-weight: 800;
   color: ${theme.black};
+}
+
+code {
+  color: ${theme.secondaryAccent};
+  background: 1px solid #ebeaeb;
+  padding: 0 6px;
+
 }
 
 a {

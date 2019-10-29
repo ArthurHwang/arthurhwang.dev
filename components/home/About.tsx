@@ -39,7 +39,7 @@ export const About: React.FC<any> = () => {
         </h3>
         <ul>
           <li>I have been playing the guitar for more than 15 years.</li>
-          <li>My favorite guitarist is Stevie Ray Vaughan</li>
+          <li>My favorite guitarist is Stevie Ray Vaughan.</li>
           <li>
             I have a dog and a cat that depending on the hour either love or
             hate each other.
@@ -70,10 +70,6 @@ const ContentWrap = styled("div")`
 const StyledAbout = styled("div")`
   max-width: 800px;
   margin: 0 auto;
-  /* 
-  p {
-    max-height: 999999px;
-  } */
 
   .flex-wrap {
     display: flex;

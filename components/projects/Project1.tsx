@@ -6,6 +6,7 @@ import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
 
+// bestattorney.com-gatsby
 export const Project1: React.FC<any> = () => {
   return (
     <ProjectWrap>
@@ -120,22 +121,17 @@ export const Project1: React.FC<any> = () => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Rewrote and rebuilt a production ready 6000+ static page
-              application with GatsbyJS for code splitting, performance, and SEO
-              benefits. This project was initiated by myself and approved by my
-              superiors in order to future proof their tech stack at the
-              company.
+              Rebuilt and rewrote production ready <strong>7000+</strong> page
+              statically generated application with GatsbyJS and TypeScript for
+              code splitting, performance, and SEO benefits.
             </li>
             <li>
-              Created custom serverless build workflow pipeline using CircleCI,
-              Cypress, Jest, Zapier, Netlify.
+              Created custom serverless automated build workflow pipeline using
+              CircleCI, Cypress, Jest, and Netlify.
             </li>
             <li>
-              Wrote E2E (End-to-End) tests / smoke test with Cypress testing
-              framework.
-            </li>
-            <li>
-              Wrote unit tests / snapshot tests with Jest testing framework.
+              Wrote E2E (End-to-End) / smoke tests with Cypress as well as unit
+              / snapshot tests with Jest.
             </li>
             <li>
               Architected a custom file / folder structure in which values are
@@ -143,49 +139,50 @@ export const Project1: React.FC<any> = () => {
               to be able to easily add, remove and update items on the website.
             </li>
             <li>
-              Implemented 16 years of Wordpress blog data by leveraging a
-              headless CMS with custom hosting solution.
+              Implemented paginated{" "}
+              <a
+                className="link"
+                target="_blank"
+                rel="noopener"
+                href="https://bestattorney.netlify.com/blog"
+              >
+                blog
+              </a>{" "}
+              with 16 years of Wordpress data by leveraging a headless CMS with
+              custom hosting solution that is decoupled from the main
+              application.
             </li>
-
             <li>
-              Integrated custom Google AMP (Accelerated Mobile Pages) for blog
+              Used modern CSS-in-JS solution styled-components to design and
+              create application front-end with custom reusable React
+              components.
             </li>
-            {/* <li>
-                  Integrated E2E (cypress) / Unit Tests (jest) into project
-                </li>
-                <li>
-                  Created a design and typography system to easily empower
-                  non-developers to be able to change application look
-                </li>
-
-                <li>Implemented custom CI / CD workflows with CircleCI</li>
-
-                <li>Entire application is responsive web ready</li>
-                <li>Integrated project with Google marketing suite</li>
-                <li>Integrated SEO for entire site complete with JSON-LD</li>
-                <li>Cross Browser Compatibility</li>
-                <li>
-                  Used styled components library to create reuseable components
-                  and scoped CSS to avoid global conflicts
-                </li> */}
-            {/* <li>
-                  Written with typescript for reduced bugs and better
-                  development tools
-                </li>
-                <li>
-                  Implemented automation webhooks to alert company of contact
-                  form submissions and scholarship submission
-                </li>
-                <li>
-                  Correctly server rendered lazy loaded images for maximum SEO
-                  benefit
-                </li>
-                <li>
-                  Created Custom google maps component to display all of
-                  companies locations
-                </li>
-                <li>Created entire spanish equivalent of website</li>
-                <li>7000 page statically generated website</li> */}
+            <li>
+              Built custom{" "}
+              <a
+                className="link"
+                target="_blank"
+                rel="noopener"
+                href="https://bestattorney.netlify.com/locations"
+              >
+                Google Maps component
+              </a>{" "}
+              that shows all company service area locations with filtering based
+              on region.
+            </li>
+            <li>
+              Created custom Google AMP (Accelerated Mobile Pages) for blog
+              according to Googles specifications.
+            </li>
+            <li>
+              Developed custom SEO component to automatically generate full SEO
+              meta requirements including facebook, twitter, AMP, canonical
+              URL's and JSON-LD structured data.
+            </li>
+            <li>
+              Integrated Google Analytics and Google Marketing Suite for user
+              insights and goal tracking.
+            </li>
           </ul>
         </div>
       </div>
