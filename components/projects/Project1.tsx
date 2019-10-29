@@ -121,12 +121,12 @@ export const Project1: React.FC<any> = () => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Rebuilt and rewrote production ready <strong>7000+</strong> page
-              statically generated application with GatsbyJS and TypeScript for
-              code splitting, performance, and SEO benefits.
+              Built production ready <strong>7000+</strong> page statically
+              generated application with GatsbyJS and TypeScript for code
+              splitting, performance, and SEO benefits.
             </li>
             <li>
-              Created custom serverless automated build workflow pipeline using
+              Created custom serverless automated build pipeline workflow using
               CircleCI, Cypress, Jest, and Netlify.
             </li>
             <li>

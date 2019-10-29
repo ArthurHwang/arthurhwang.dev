@@ -57,7 +57,7 @@ export const Project2: React.FC<any> = () => {
           <ul>
             <li>
               Used NextJS and TypeScript to build server-rendered isomorphic
-              application.
+              React application.
             </li>
             <li>
               Implemented Apollo and GraphQL to programmatically load data
@@ -69,7 +69,7 @@ export const Project2: React.FC<any> = () => {
               continuous integration / continuous development status links.
             </li>
             <li>
-              Used Formik, Yup and express to handle form validation and backend
+              Used Formik, Yup and Express to handle form validation and backend
               form submission logic.
             </li>
             <li>

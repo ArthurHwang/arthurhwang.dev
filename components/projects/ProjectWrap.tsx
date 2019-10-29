@@ -107,6 +107,7 @@ const ProjectWrapper = styled("div")`
 
       .vertical {
         max-width: 200.3px;
+        height: auto;
 
         @media (max-width: 490px) {
           max-width: 50%;
@@ -185,15 +186,21 @@ const ProjectWrapper = styled("div")`
       list-style-type: none;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
-      height: 91%;
+      justify-content: space-between;
+      height: 92%;
+      /* margin: 0; */
+      margin-top: 1rem;
+      margin-bottom: 1rem;
 
       li {
         font-size: 1.4rem;
         text-indent: -15px;
         text-align: left;
-        font-weight: 500;
+        /* font-weight: 500; */
 
+        /* &:nth-child(even) {
+          background: ${({ theme }) => theme.lightgrey};
+        } */
         @media (max-width: 490px) {
           text-align: justify;
         }

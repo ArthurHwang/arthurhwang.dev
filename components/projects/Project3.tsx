@@ -75,24 +75,38 @@ export const Project3: React.FC<any> = () => {
           <ul>
             <li>
               Created live production ready user authentication / user login
-              system for people in the company to log in and see documentation
-            </li>
-            <li>Used Angular for front end application development</li>
-            <li>Used Express to handle back end logic</li>
-            <li>Ensured data privacy using bCrypt to hash passwords</li>
-            <li>Stored sessions with JWT tokens</li>
-            <li>
-              Used Sequelize ORM in conjunction with mysql node driver as
-              backend database
-            </li>
-
-            <li>
-              Complete authentication flow implemented with signup, signin,
-              logout and account credential editing
+              system for company and team documentation. Users are able to
+              sign-up, sign-in, logout, and update their credentials.
             </li>
             <li>
-              Used reverse proxy to get application running under existing
-              apache server.
+              Utilized Angular Framework with TypeScript and bootstrap to build
+              client-side application.
+            </li>
+            <li>
+              Used NodeJS and Express to handle back-end logic and custom
+              dynamic routing while correctly hashing and salting sensitive
+              password information with bcrypt.
+            </li>
+            <li>
+              Stored user account information into MySQL database using
+              Sequelize ORM and nodejs.
+            </li>
+            <li>
+              Used JSON Web Tokens to pass authentication data to client side
+              local storage for user sessions.
+            </li>
+            <li>
+              Created authentication guard and interceptor to validate user
+              authentication based on if the user has a valid JWT token.
+            </li>
+            <li>
+              Wrote easy to understand technical documentation for
+              non-developers to help them understand certain technologies and
+              basic common tasks relative to the company.
+            </li>
+            <li>
+              Used apache server ProxyPass and ProxyPassReverse to get NodeJS /
+              Express application running under existing server.
             </li>
           </ul>
         </div>
