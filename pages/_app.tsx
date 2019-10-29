@@ -98,9 +98,9 @@ p {
   word-break: break-word;
 }
 
-li, p , span {
+/* li, p , span {
   font-weight: 500;
-}
+} */
 
 strong {
   font-weight: 800;

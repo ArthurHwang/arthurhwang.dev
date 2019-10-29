@@ -55,61 +55,56 @@ export const Project2: React.FC<any> = () => {
         <div className="accomplishments">
           <h3>Accomplishments:</h3>
           <ul>
-            <li>Used NextJS to write server rendered isomorphic application</li>
             <li>
-              Used Formik and express to handle backend logic handling form
-              submissions
+              Used NextJS and TypeScript to build server-rendered isomorphic
+              application.
             </li>
             <li>
-              Use Apollo and GraphQL to programatically load data fetched from
-              Github API
+              Implemented Apollo and GraphQL to programmatically load data
+              fetched from Github API. Used loading states from Apollo to show
+              loading animations.
             </li>
             <li>
-              Implemented and Used Contentful Delivery API to source data from
-              CMS.{" "}
+              Create custom real-time github commit list component with relevant
+              continuous integration / continuous development status links.
             </li>
-            {/* <li>Parse markdown data into blog template</li>
-                <li>
-                  Setup custom hosting solution with cloudflare and zeit NOW
-                </li>
-
-                <li>Fully responsive application</li>
-                <li>Implemented custom form validation using Formik and Yup</li>
-                <li>Used styled components to create reusable components</li>
-                <li>Use Particlejs to render custom header background</li>
-                <li>
-                  Integrated custom Google AMP (Accelerated Mobile Pages) for
-                  blog
-                </li>
-                <li>
-                  Integrated E2E (cypress) / Unit Tests (jest) into project
-                </li>
-                <li>
-                  Created a design and typography system to easily empower
-                  non-developers to be able to change application look
-                </li>
-
-                <li>Implemented custom CI / CD workflows with CircleCI</li>
-
-                <li>Entire application is responsive web ready</li>
-                <li>Integrated project with Google marketing suite</li>
-                <li>Integrated SEO for entire site complete with JSON-LD</li>
-                <li>Cross Browser Compatibility</li>
-                <li>
-                  Used styled components library to create reuseable components
-                  and scoped CSS to avoid global conflicts
-                </li>
-                      <li>
-                  Integrated custom Google AMP (Accelerated Mobile Pages) for
-                  blog
-                </li>
-                <li>
-                  Integrated E2E (cypress) / Unit Tests (jest) into project
-                </li>
-                <li>
-                  Created a design and typography system to easily empower
-                  non-developers to be able to change application look
-                </li> */}
+            <li>
+              Used Formik, Yup and express to handle form validation and backend
+              form submission logic.
+            </li>
+            <li>
+              Custom serverless hosting with Cloudflare DNS and Zeit Now. Setup
+              DNS records and nameservers.
+            </li>
+            <li>
+              Setup custom email forwarding with mailgun by proxying requests
+              through Cloudflare into personal gmail account.
+            </li>
+            <li>
+              Built personal blog with Contentful CMS. Sourced data with
+              Contentful Delivery API.
+            </li>
+            <li>
+              Parsed Contentful markdown data into blog template using
+              react-markdown and implemented Disqus comment component.
+            </li>
+            <li>
+              Created fully responsive front-end application using modern
+              CSS-in-JS solution styled-components to build reusable React
+              components.
+            </li>
+            <li>
+              Created dynamic sitemap that automatically pulls data from
+              Contentful and create new sitemap entries.
+            </li>
+            <li>
+              Implemented Prism for code block syntax highlighting in markdown
+              files.
+            </li>
+            <li>
+              Used ParticleJS to implement custom animated heading background
+              and animated error page.
+            </li>
           </ul>
         </div>
       </div>

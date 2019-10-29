@@ -208,7 +208,7 @@ const ProjectWrapper = styled("div")`
         font-size: 1.4rem;
         text-indent: -15px;
         text-align: left;
-        /* font-weight: 500; */
+        font-weight: 500;
 
         @media (max-width: 490px) {
           text-align: justify;

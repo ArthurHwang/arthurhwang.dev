@@ -154,8 +154,8 @@ export const Project1: React.FC<any> = () => {
             </li>
             <li>
               Used modern CSS-in-JS solution styled-components to design and
-              create application front-end with custom reusable React
-              components.
+              create fully responsive application front-end with custom reusable
+              React components.
             </li>
             <li>
               Built custom{" "}
@@ -171,8 +171,8 @@ export const Project1: React.FC<any> = () => {
               on region.
             </li>
             <li>
-              Created custom Google AMP (Accelerated Mobile Pages) for blog
-              according to Googles specifications.
+              Created custom validated Google AMP (Accelerated Mobile Pages) for
+              blog according to Google specifications.
             </li>
             <li>
               Developed custom SEO component to automatically generate full SEO
