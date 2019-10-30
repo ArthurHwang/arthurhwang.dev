@@ -89,7 +89,7 @@ export const Project3: React.FC<any> = () => {
             </li>
             <li>
               Stored user account information into MySQL database using
-              Sequelize ORM and nodejs.
+              Sequelize ORM and Nodejs.
             </li>
             <li>
               Used JSON Web Tokens to pass authentication data to client side

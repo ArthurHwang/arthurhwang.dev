@@ -32,6 +32,15 @@ export const Project1: React.FC<any> = () => {
                   "/static/projects/bestattorney-gatsby/screenshot-1.png";
               }}
             />
+            {/* <img
+              src="/static/projects/bestattorney-gatsby/test.png"
+              alt="screenshot 1"
+              onError={(e: any) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "/static/projects/bestattorney-gatsby/screenshot-1.png";
+              }}
+            /> */}
             <div className="vertical-wrapper">
               <img
                 className="vertical"
@@ -121,9 +130,10 @@ export const Project1: React.FC<any> = () => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Built production ready <strong>7000+</strong> page statically
-              generated application with GatsbyJS and TypeScript for code
-              splitting, performance, and SEO benefits.
+              Single-handedly built production ready statically generated{" "}
+              <strong>7000+</strong> page application with GatsbyJS and
+              TypeScript for code splitting, performance, SEO benefits, and
+              future proofing tech stack for the company.
             </li>
             <li>
               Created custom serverless automated build pipeline workflow using

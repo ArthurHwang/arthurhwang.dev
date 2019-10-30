@@ -84,54 +84,53 @@ export const Project4: React.FC<any> = () => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              server administration. Used web domain hosts to manage a fully
-              fledged application website and managed a wordpress suite for the
-              marketing team to easily create new content. Used apache / linux /
-              ssh / to adminster server.
+              Administered and managed LAMP stack application for internal
+              marketing team.
+            </li>
+            <li>Managed and optimized Wordpress blog for marketing team.</li>
+            <li>
+              Fixed fires caused by marketing team, debugged errors caused by
+              marketing team.
             </li>
             <li>
-              performed SEO optimization to help reduce bounce rate of website
+              Created new desktop and mobile homepages approved by superiors.
+            </li>
+            <li>Ensured application was mobile and tablet ready.</li>
+            <li>
+              Restyled entire application with new color theme to be more
+              visually appealing.
+            </li>
+            <li>Improved page load speeds by implementing MaxCDN.</li>
+            <li>
+              Improved overall business by decreasing bounce rates and
+              increasing site traffic by implementing new SEO features.
             </li>
             <li>
-              Worked in tandem with graphic designer to bring new life to
-              website. Worked and planned new site layouts / graphics and
-              landing pages to improve site look , feel and content.
+              Implemented custom google tag manager events to let marketing team
+              be knowledgeable what to focus their efforts on in order to
+              improve conversion rates.
+            </li>
+            <li>
+              Used tools like semrush and screaming frog to diagnose problems
+              with application and server.
             </li>
             <li>
               Ensured cross browser compatibility both desktop and mobile. IOS /
-              android / firefox.
+              chrome / android / firefox.
             </li>
             <li>
-              Implemented new security features that logged user information to
-              intake teams.
+              Administered and maintained GitHub repo for entire marketing team.
             </li>
             <li>
-              Increased site traffic and overall business. Directly impacted
-              intake team recieving more customers through site performance and
-              google analytics.
+              Created a solution for users to text message the business through
+              the website by using SMS links from the website and Google Voice.
+            </li>
+            <li>
+              Setup cron jobs on Linux server to automate backups of important
+              server configuration files every week.
             </li>
 
-            <li>Administered entire Github repo for 6 people.</li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
-            </li>
+            <li>Administered and maintained Github repo for marketing team.</li>
           </ul>
         </div>
       </div>
