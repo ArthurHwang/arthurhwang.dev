@@ -80,7 +80,7 @@ export const Project3: React.FC<any> = () => {
             </li>
             <li>
               Utilized Angular Framework with TypeScript and bootstrap to build
-              client-side application.
+              client-side dashboard application.
             </li>
             <li>
               Used NodeJS and Express to handle back-end logic and custom
