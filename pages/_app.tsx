@@ -90,7 +90,6 @@ ul, ol {
   }
 }
 
-
 p {
   color: ${theme.grey};
   text-align: justify;
@@ -115,8 +114,9 @@ code {
   color: ${theme.secondaryAccent};
   background: 1px solid #ebeaeb;
   padding: 0 6px;
-
 }
+
+
 
 a {
   text-decoration: none;
