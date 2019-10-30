@@ -106,8 +106,8 @@ const ProjectWrapper = styled("div")`
       justify-content: space-evenly;
 
       .vertical {
-        /* max-width: 200.3px; */
-        max-width: 26.95%;
+        max-width: 200.3px;
+        /* max-width: 26.95%; */
         height: auto;
 
         @media (max-width: 490px) {
