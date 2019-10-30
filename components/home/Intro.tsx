@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Link from "next/link";
+// import Link from "next/link";
 import {
   FaGithub,
   FaFacebook,
@@ -15,29 +15,26 @@ export const Intro: React.FC<any> = () => {
       <StyledIntro>
         <InnerLeft>
           <h2>
-            I like coding<span>_</span>
+            Brute Force Determination<span>_</span>
           </h2>
           <p>
-            As a natural tinkerer, I love to dig out the "why" of things. Being
-            a self taught developer has taught me to not fear what I don't know,
-            instead tackle it with sheer determination and an unwavering will.
-            Having the privilege everyday to produce elegant and performant
-            software solutions makes me happy.
+            I like to <strong>get things done</strong>. Architecting and
+            building highly performant, high quality, maintainable websites and
+            web applications is something that I love doing everyday. In order
+            for said websites and applications to come to life, going from idea
+            to reality is not only technically challenging but also emotionally
+            challenging. Regardless of the ups-and-downs of software
+            development, getting to the finish line and instilling a{" "}
+            <strong>never give up</strong> attitude, no matter the task at hand
+            is my ethos.
           </p>
           <p>
-            I am drawn to creating performance driven websites that are fully
-            responsive using best practices that work on a wide range of
-            devices. I take tremendous care to ensure that the project I am
-            working on is not only scalable but also maintainable. Please visit
-            my{" "}
-            <Link href="/blog">
-              <a className="link">Blog</a>
-            </Link>
-          </p>
-          <p>
-            I am usually learning about new things such as data structures and
-            algorithms to further improve my skills. Or testing out new hot
-            frameworks such as apollo / graphql
+            I am a <strong>hyper-motivated</strong> self starter who is
+            passionate about writing clean, efficient code while maintaining
+            modern standards and security. I am not adverse to learning new
+            technologies, in fact I embrace it wholeheartedly. Being able to
+            build something of value and solve real world problems with code is
+            extremely satisfying for me.
           </p>
         </InnerLeft>
 

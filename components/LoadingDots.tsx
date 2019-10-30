@@ -12,7 +12,7 @@ export const LoadingDots: React.FC<any> = () => {
 
 const DotWrapper = styled("div")`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -20,8 +20,8 @@ const DotWrapper = styled("div")`
 
 const BounceAnimation = keyframes`
   0% { margin-bottom: 0; }
-  50% { margin-bottom: 15px }
-  100% { margin-bottom: 0 }
+  50% { margin-bottom: 15px; }
+  100% { margin-bottom: 0; }
 `;
 
 const Dot = styled("div")<{ delay: string }>`

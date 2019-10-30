@@ -175,6 +175,7 @@ const StyledSubheader = styled("section")<{ pathname: string }>`
   @media (max-width: 490px) {
     height: ${props => (props.pathname === "/" ? "250px" : "200px")};
   }
+
   .particles {
     position: absolute;
     height: 100%;

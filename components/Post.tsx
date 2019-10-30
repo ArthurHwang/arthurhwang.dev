@@ -99,6 +99,9 @@ const StyledPost = styled("div")`
       h2 {
         line-height: 3.5rem;
       }
+      p {
+        line-height: 2.5rem;
+      }
     }
   }
 

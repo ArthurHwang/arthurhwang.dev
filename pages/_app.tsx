@@ -31,7 +31,7 @@ class MyApp extends App<any> {
             color={theme.secondaryAccent}
             startPosition={0}
             stopDelayMs={0}
-            height="4"
+            height="3"
           />
           <Component {...pageProps} />
         </Layout>
@@ -40,156 +40,9 @@ class MyApp extends App<any> {
   }
 }
 
-export default withGA("UA-150992172-1", Router)(MyApp);
+export default withGA(process.env.GA_TRACKING_ID, Router)(MyApp);
 
 const GlobalStyle = createGlobalStyle`
-/* NormalizeCSS Start*/
-html {
-  line-height: 1.15; 
-  -webkit-text-size-adjust: 100%; 
-}
-
-main {
-  display: block;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-hr {
-  box-sizing: content-box; 
-  height: 0; 
-  overflow: visible; 
-}
-pre {
-  font-family: monospace, monospace; 
-  font-size: 1em; 
-}
-a {
-  background-color: transparent;
-}
-abbr[title] {
-  border-bottom: none; 
-  text-decoration: underline; 
-  text-decoration: underline dotted; 
-}
-b,
-strong {
-  font-weight: bolder;
-}
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; 
-  font-size: 1em; 
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-img {
-  border-style: none;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; 
-  font-size: 100%; 
-  line-height: 1.15; 
-  margin: 0; 
-}
-button,
-input { 
-  overflow: visible;
-}
-button,
-select { 
-  text-transform: none;
-}
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-legend {
-  box-sizing: border-box; 
-  color: inherit; 
-  display: table; 
-  max-width: 100%; 
-  padding: 0; 
-  white-space: normal; 
-}
-progress {
-  vertical-align: baseline;
-}
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; 
-  padding: 0; 
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield; 
-  outline-offset: -2px; 
-}
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button; 
-  font: inherit; 
-}
-details {
-  display: block;
-}
-summary {
-  display: list-item;
-}
-template {
-  display: none;
-}
-[hidden] {
-  display: none;
-}
-/* NormalizeCSS End*/
-
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -205,15 +58,15 @@ body {
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
-  line-height: 2;
-  font-family:  "-apple-system", "BlinkMacSystemFont", "lato", "Segoe UI", "Helvetica", "Arial", "Open Sans", "sans-serif";
+  font-family:  "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", "Segoe UI", "lato", "Arial", "Open Sans", "sans-serif";
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.8;
   letter-spacing: 0.1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
+  /* text-rendering: geometricPrecision; */
+  text-rendering: optimizeLegibility;
 }
 
 h1,h2,h3 {
@@ -224,19 +77,46 @@ h2 {
   font-size: 3rem;
 }
 
+ul, ol {
+  padding-left: 2rem;
+}
+
 @media(max-width:490px) {
   h2 {
     font-size: 2.4rem; 
   }
   p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
-p, span {
+p {
   color: ${theme.grey};
   text-align: justify;
+  max-height: 999999px;
+  word-break: break-word;
 }
+
+li {
+  color: ${theme.grey};
+}
+
+/* li, p , span {
+  font-weight: 500;
+} */
+
+strong {
+  font-weight: 800;
+  color: ${theme.black};
+}
+
+code {
+  color: ${theme.secondaryAccent};
+  background: 1px solid #ebeaeb;
+  padding: 0 6px;
+}
+
+
 
 a {
   text-decoration: none;
@@ -256,7 +136,7 @@ a.link {
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-    transition: all .4s;
+  transition: all .4s;
 
   &:hover {
     background-position: 0%;

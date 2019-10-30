@@ -158,6 +158,17 @@ const ContentWrap = styled("div")`
   }
 
   .markdown {
+    blockquote {
+      margin-top: 0;
+      /* background: ${({ theme }) => theme.lightgrey}; */
+      p {
+        text-align: center;
+        font-style: italic;
+        color: ${({ theme }) => theme.black};
+        margin-top: 0;
+        font-weight: 800;
+      }
+    }
     a {
       text-decoration: none;
       font-weight: 600;

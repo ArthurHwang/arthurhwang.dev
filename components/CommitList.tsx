@@ -2,6 +2,7 @@ import styled from "styled-components";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { LoadingDots } from "./LoadingDots";
+import { GoGitCommit } from "react-icons/go";
 
 interface Props {
   owner: string;
@@ -116,7 +117,11 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
 
         return (
           <ContentWrapper>
-            <h3>Real-Time Project Commits || CI/CD Status Links</h3>
+            <h3>
+              Real-Time Project Commits{" "}
+              <span style={{ color: "black", fontWeight: 800 }}>||</span> CI/CD
+              Status Links{" "}
+            </h3>
             <StyledCommits>
               {commitHistory.map((commit: any) => (
                 <li key={commit.node.oid}>
@@ -133,7 +138,14 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
                           className="link"
                           href={commit.node.commitUrl}
                         >
-                          <span>-</span> {commit.node.messageHeadline}
+                          <GoGitCommit
+                            style={{
+                              position: "relative",
+                              top: "2px",
+                              color: "#1e1e1e"
+                            }}
+                          />{" "}
+                          {commit.node.messageHeadline}
                         </a>
                       </div>
                     </div>
@@ -237,6 +249,7 @@ const StyledStatus = styled("div")`
 
 const StyledCommits = styled("ul")`
   padding: 0;
+  min-height: 314px;
 
   a.link {
     margin: 0;
@@ -290,8 +303,8 @@ const StyledCommits = styled("ul")`
       @media (max-width: 490px) {
         margin-bottom: 1rem;
         line-height: 20px;
-        text-indent: -0.5em;
-        padding-left: 0.5em;
+        text-indent: -0.9em;
+        padding-left: 0.9em;
       }
     }
   }
@@ -306,4 +319,9 @@ const StyledCommits = styled("ul")`
   }
 `;
 
-const ContentWrapper = styled("div")``;
+const ContentWrapper = styled("div")`
+  /* h3 {
+    display: flex;
+    justify-content: space-between;
+  } */
+`;
