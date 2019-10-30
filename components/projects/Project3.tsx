@@ -83,9 +83,9 @@ export const Project3: React.FC<any> = () => {
               client-side dashboard application.
             </li>
             <li>
-              Used NodeJS and Express to handle back-end logic and custom
-              dynamic routing while correctly hashing and salting sensitive
-              password information with bcrypt.
+              Used NodeJS and Express to handle back-end logic and custom API
+              routing while correctly hashing and salting sensitive password
+              information with bcrypt.
             </li>
             <li>
               Stored user account information into MySQL database using

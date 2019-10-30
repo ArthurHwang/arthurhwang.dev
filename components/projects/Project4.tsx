@@ -84,18 +84,23 @@ export const Project4: React.FC<any> = () => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Administered and managed LAMP stack application for internal
-              marketing team.
+              Administered and managed LAMP (Linux-Apache-MySQL-PHP) stack
+              application for internal marketing team.
             </li>
             <li>Managed and optimized Wordpress blog for marketing team.</li>
             <li>
-              Fixed fires caused by marketing team, debugged errors caused by
+              Put out fires caused by marketing team, debugged errors caused by
               marketing team.
             </li>
             <li>
-              Created new desktop and mobile homepages approved by superiors.
+              Created and designed new desktop and mobile homepages approved by
+              superiors.
             </li>
-            <li>Ensured application was mobile and tablet ready.</li>
+            <li>
+              Ensured application is mobile and tablet ready. Ensured cross
+              browser compatibility both desktop and mobile. IOS / chrome /
+              android / firefox.
+            </li>
             <li>
               Restyled entire application with new color theme to be more
               visually appealing.
@@ -115,10 +120,6 @@ export const Project4: React.FC<any> = () => {
               with application and server.
             </li>
             <li>
-              Ensured cross browser compatibility both desktop and mobile. IOS /
-              chrome / android / firefox.
-            </li>
-            <li>
               Administered and maintained GitHub repo for entire marketing team.
             </li>
             <li>
@@ -129,8 +130,6 @@ export const Project4: React.FC<any> = () => {
               Setup cron jobs on Linux server to automate backups of important
               server configuration files every week.
             </li>
-
-            <li>Administered and maintained Github repo for marketing team.</li>
           </ul>
         </div>
       </div>

@@ -77,7 +77,7 @@ export const Project5: React.FC<any> = () => {
                 "/static/projects/bestattorney-gatsby/screenshot-6.png";
             }}
           />
-          <img
+          {/* <img
             src="/static/projects/toneify/screenshot-8.webp"
             alt="screenshot 8"
             onError={(e: any) => {
@@ -85,7 +85,7 @@ export const Project5: React.FC<any> = () => {
               e.target.src =
                 "/static/projects/bestattorney-gatsby/screenshot-8.png";
             }}
-          />
+          /> */}
         </Slider>
         <div className="commits">
           <LazyLoad once height={344}>
@@ -96,53 +96,39 @@ export const Project5: React.FC<any> = () => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              server administration. Used web domain hosts to manage a fully
-              fledged application website and managed a wordpress suite for the
-              marketing team to easily create new content. Used apache / linux /
-              ssh / to adminster server.
+              Created interactive guitar pedalboard builder to help guitarists
+              create unique pedalboard configurations. Users can create, read,
+              update and delete their builds.
             </li>
             <li>
-              performed SEO optimization to help reduce bounce rate of website
+              Used ReactJS and Semantic-UI component library to create front-end
+              application.
+            </li>
+            <li>Implemented React-Router for client-side routing.</li>
+            <li>
+              Implemented Redux for centralized application state and state
+              persistence. Wrote actions and reducers to allow predictable state
+              management.
             </li>
             <li>
-              Worked in tandem with graphic designer to bring new life to
-              website. Worked and planned new site layouts / graphics and
-              landing pages to improve site look , feel and content.
+              Utilized Redux-Thunk middleware to perform asynchronous logic /
+              AJAX requests with Redux.
             </li>
             <li>
-              Ensured cross browser compatibility both desktop and mobile. IOS /
-              android / firefox.
+              Implemented MongoDB database to seed application and store user
+              data and history.
             </li>
             <li>
-              Implemented new security features that logged user information to
-              intake teams.
+              Used Express and NodeJS to handle back-end API requests such as
+              fetching user builds and purchase history.
             </li>
             <li>
-              Increased site traffic and overall business. Directly impacted
-              intake team recieving more customers through site performance and
-              google analytics.
-            </li>
-
-            <li>Administered entire Github repo for 6 people.</li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
+              Used Stripe API to allow users to checkout and purchase cart
+              items.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-              aliquid?
+              Used PassportJS to implement Google and Facebook Oauth login
+              systems.
             </li>
           </ul>
         </div>

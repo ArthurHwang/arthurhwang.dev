@@ -195,7 +195,7 @@ const ProjectWrapper = styled("div")`
 
       li {
         font-size: 1.4rem;
-        text-indent: -15px;
+        text-indent: -19px;
         text-align: left;
         /* font-weight: 500; */
 
