@@ -77,6 +77,14 @@ h2 {
   font-size: 3rem;
 }
 
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
 ul, ol {
   padding-left: 2rem;
 }
@@ -84,6 +92,12 @@ ul, ol {
 @media(max-width:490px) {
   h2 {
     font-size: 2.4rem; 
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.6rem;
   }
   p, li {
     font-size: 1.4rem;
