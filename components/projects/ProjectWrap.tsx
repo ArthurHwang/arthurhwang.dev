@@ -106,7 +106,7 @@ const ProjectWrapper = styled("div")`
       justify-content: space-evenly;
 
       .vertical {
-        max-width: 200.9px;
+        max-width: 200.7px;
         /* max-width: 26.95%; */
         height: auto;
 
@@ -195,7 +195,7 @@ const ProjectWrapper = styled("div")`
 
       li {
         font-size: 1.4rem;
-        text-indent: -19px;
+        text-indent: -18px;
         text-align: left;
         /* font-weight: 500; */
 
@@ -204,6 +204,7 @@ const ProjectWrapper = styled("div")`
         } */
         @media (max-width: 490px) {
           text-align: justify;
+          text-indent: -18px;
         }
 
         &:before {

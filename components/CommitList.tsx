@@ -303,8 +303,9 @@ const StyledCommits = styled("ul")`
       @media (max-width: 490px) {
         margin-bottom: 1rem;
         line-height: 20px;
-        text-indent: -0.9em;
-        padding-left: 0.9em;
+        text-indent: -1.1em;
+        padding-left: 1em;
+        margin-left: 2px;
       }
     }
   }
