@@ -72,10 +72,12 @@ const Post: NextPage<any> = props => {
           source={body}
         />
         <LazyLoad>
-          <Disqus.DiscussionEmbed
-            shortname={disqusShortname}
-            config={disqusConfig}
-          />
+          <div style={{ marginTop: "4rem" }}>
+            <Disqus.DiscussionEmbed
+              shortname={disqusShortname}
+              config={disqusConfig}
+            />
+          </div>
         </LazyLoad>
       </ContentWrap>
     </Fragment>
@@ -191,6 +193,7 @@ const ContentWrap = styled("div")`
   }
 
   code {
+    padding: 0;
     background-color: rgb(245, 242, 240);
     color: ${({ theme }) => theme.secondaryAccent};
   }
