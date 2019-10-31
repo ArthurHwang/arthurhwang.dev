@@ -86,7 +86,7 @@ ul, ol {
     font-size: 2.4rem; 
   }
   p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
