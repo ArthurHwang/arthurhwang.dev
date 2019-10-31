@@ -38,6 +38,13 @@ export const About: React.FC<any> = () => {
           Random Facts About Me<span>_</span>
         </h3>
         <ul>
+          <li>
+            I listen to{" "}
+            <a className="link" href="https://www.syntax.fm">
+              Syntax.fm
+            </a>{" "}
+            everyday
+          </li>
           <li>I have been playing the guitar for more than 15 years.</li>
           <li>My favorite guitarist is Stevie Ray Vaughan.</li>
           <li>
