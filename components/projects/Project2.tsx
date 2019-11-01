@@ -45,6 +45,33 @@ export const Project2: React.FC<any> = () => {
                 "/static/projects/bestattorney-gatsby/screenshot-3.png";
             }}
           />
+          <img
+            src="/static/projects/arthurhwang.dev/screenshot-4.webp"
+            alt="screenshot 4"
+            onError={(e: any) => {
+              e.target.onerror = null;
+              e.target.src =
+                "/static/projects/bestattorney-gatsby/screenshot-4.png";
+            }}
+          />
+          <img
+            src="/static/projects/arthurhwang.dev/screenshot-5.webp"
+            alt="screenshot 5"
+            onError={(e: any) => {
+              e.target.onerror = null;
+              e.target.src =
+                "/static/projects/bestattorney-gatsby/screenshot-5.png";
+            }}
+          />
+          <img
+            src="/static/projects/arthurhwang.dev/screenshot-6.webp"
+            alt="screenshot 6"
+            onError={(e: any) => {
+              e.target.onerror = null;
+              e.target.src =
+                "/static/projects/bestattorney-gatsby/screenshot-6.png";
+            }}
+          />
         </Slider>
         <div className="commits">
           <LazyLoad once height={344}>
