@@ -97,6 +97,7 @@ const Contact: NextPage<any> = () => {
                   <div>
                     <div className="input-row">
                       <input
+                        aria-label="First Name"
                         type="text"
                         name="firstName"
                         id="firstName"
@@ -118,6 +119,7 @@ const Contact: NextPage<any> = () => {
                     </div>
                     <div className="input-row">
                       <input
+                        aria-label="Last Name"
                         type="text"
                         name="lastName"
                         id="lastNname"
@@ -139,6 +141,7 @@ const Contact: NextPage<any> = () => {
                     </div>
                     <div className="input-row">
                       <input
+                        aria-label="email"
                         type="email"
                         name="email"
                         id="email"
@@ -156,6 +159,7 @@ const Contact: NextPage<any> = () => {
                   </div>
                   <div className="input-row">
                     <textarea
+                      aria-label="message"
                       name="message"
                       id="message"
                       placeholder="Enter your message"

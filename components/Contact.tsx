@@ -85,6 +85,7 @@ export const Contact: React.FC<any> = () => {
                 <div>
                   <div className="input-row">
                     <input
+                      aria-label="First Name"
                       type="text"
                       name="firstName"
                       id="firstName"
@@ -106,9 +107,10 @@ export const Contact: React.FC<any> = () => {
                   </div>
                   <div className="input-row">
                     <input
+                      aria-label="Last Name"
                       type="text"
                       name="lastName"
-                      id="lastNname"
+                      id="lastName"
                       placeholder="Enter your last name"
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -125,6 +127,7 @@ export const Contact: React.FC<any> = () => {
                   </div>
                   <div className="input-row">
                     <input
+                      aria-label="email"
                       type="email"
                       name="email"
                       id="email"
@@ -142,6 +145,7 @@ export const Contact: React.FC<any> = () => {
                 </div>
                 <div className="input-row">
                   <textarea
+                    aria-label="Message"
                     name="message"
                     id="message"
                     placeholder="Enter your message"
