@@ -38,6 +38,7 @@ export const Footer: React.FC<any> = () => {
 
       <div className="badges">
         <a
+          aria-label="GitHub"
           target="_blank"
           rel="noopener"
           title=""
@@ -47,6 +48,7 @@ export const Footer: React.FC<any> = () => {
           <FaGithub className="icon" />
         </a>
         <a
+          aria-label="LinkedIn"
           title=""
           target="_blank"
           rel="noopener"
@@ -56,6 +58,7 @@ export const Footer: React.FC<any> = () => {
           <FaLinkedin className="icon" />
         </a>
         <a
+          aria-label="facebook"
           title=""
           target="_blank"
           rel="noopener"
@@ -65,6 +68,7 @@ export const Footer: React.FC<any> = () => {
           <FaFacebook className="icon" />
         </a>
         <a
+          aria-label="Twitter"
           target="_blank"
           rel="noopener"
           title=""
@@ -74,6 +78,7 @@ export const Footer: React.FC<any> = () => {
           <FaTwitter className="icon" />
         </a>
         <a
+          aria-label="Resume"
           target="_blank"
           rel="noopener"
           title="CV"
@@ -83,6 +88,7 @@ export const Footer: React.FC<any> = () => {
           <FaClipboardList className="icon" />{" "}
         </a>
         <a
+          aria-label="Email"
           target="_blank"
           rel="noopener"
           title="Email"
