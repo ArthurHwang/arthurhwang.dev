@@ -10,7 +10,7 @@ export const Meta: React.FC<Props> = ({ pathName }) => (
     <meta charSet="utf-8" />
     <meta
       name="google-site-verification"
-      content="cZUJj1-9ETJZArf5t4y83CTR0rznryIcZWz8-vWg0Rg"
+      content="kUMsNfzj7yLDMmFm-WDha-95b5DKsgp32nEnQmxP1wM"
     />
     <link
       rel="apple-touch-icon"
