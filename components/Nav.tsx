@@ -38,6 +38,7 @@ const StyledNav = styled("nav")`
   padding: 0;
   display: flex;
   justify-self: end;
+  position: relative;
 
   .link-box {
     display: flex;
@@ -60,6 +61,8 @@ const StyledNav = styled("nav")`
     background: ${({ theme }) => theme.accent};
     a:after {
       height: 2px;
+      position: absolute;
+      bottom: 15px;
       background: ${({ theme }) => theme.yellow};
       content: "";
       width: calc(100% - 30px);
@@ -88,6 +91,7 @@ const StyledNav = styled("nav")`
       content: "";
       width: 0;
       position: absolute;
+      bottom: 15px;
       transform: translateX(-50%);
       transition: width 0.4s;
       transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
