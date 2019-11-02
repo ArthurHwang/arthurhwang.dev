@@ -40,7 +40,7 @@ class MyApp extends App<any> {
   }
 }
 
-export default withGA(process.env.GA_TRACKING_ID, Router)(MyApp);
+export default withGA("UA-150992172-1", Router)(MyApp);
 
 const GlobalStyle = createGlobalStyle`
 html {
