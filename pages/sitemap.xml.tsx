@@ -50,19 +50,22 @@ SiteMap.getInitialProps = async ({ res }: NextContext): Promise<Props> => {
 
     sitemap = `${SITEMAP_HEADER}
     
-    ${nodes.items.map((node: any) =>
-      mapEntry(
-        {
-          title: node.fields.title
-            .toLowerCase()
-            .split(" ")
-            .join("-"),
-          createdAt: node.sys.createdAt.split("T")[0],
-          updatedAt: node.sys.updatedAt.split("T")[0]
-        },
-        "/blog"
+    ${nodes.items
+      .map((node: any) =>
+        mapEntry(
+          {
+            title: node.fields.title
+              .toLowerCase()
+              .split(" ")
+              .join("-"),
+            createdAt: node.sys.createdAt.split("T")[0],
+            updatedAt: node.sys.updatedAt.split("T")[0]
+          },
+          "/blog"
+        )
       )
-    )}
+      .join("")}
+
     ${SITEMAP_FOOTER}`;
 
     res.setHeader("Cache-Control", "s-maxage=5, stale-while-revalidate");
@@ -83,10 +86,10 @@ function mapEntry(
   changefreq: string = "always"
 ) {
   return `
-<url>
-   <loc>${HOST}${pathRoot}${pathRoot.length > 1 ? "/" : ""}${node.title}</loc>
-   <lastmod>${node.updatedAt ? node.updatedAt : node.createdAt}</lastmod>
-   <changefreq>${changefreq}</changefreq>
-   <priority>${priority}</priority>
-</url>`;
+  <url>
+    <loc>${HOST}${pathRoot}${pathRoot.length > 1 ? "/" : ""}${node.title}</loc>
+    <lastmod>${node.updatedAt ? node.updatedAt : node.createdAt}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
 }
