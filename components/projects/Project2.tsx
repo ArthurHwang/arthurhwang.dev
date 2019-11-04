@@ -10,7 +10,12 @@ import { settings } from "../../util/slick-config";
 export const Project2: React.FC<any> = () => {
   return (
     <ProjectWrap>
-      <a href="/" className="link project-title" target="_blank" rel="noopener">
+      <a
+        href="/"
+        className="link project-title"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         arthurhwang.dev
       </a>
 
@@ -162,14 +167,14 @@ export const Project2: React.FC<any> = () => {
       <div className="buttons">
         <a
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href="https://github.com/ArthurHwang/arthurhwang.dev"
         >
           <Button color="blue">
             Source <FaGithub />
           </Button>
         </a>
-        <a target="_blank" rel="noopener" href="/">
+        <a target="_blank" rel="noopener noreferrer" href="/">
           <Button color="green">
             Launch <FaPlay />
           </Button>

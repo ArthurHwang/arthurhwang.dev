@@ -134,7 +134,7 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
                       <div className="commit-message">
                         <a
                           target="_blank"
-                          rel="noopener"
+                          rel="noopener noreferrer"
                           className="link"
                           href={commit.node.commitUrl}
                         >
@@ -152,7 +152,7 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
                   </div>
                   <a
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className={`commit-status ${
                       commit.node.status ? "" : "disabled"
                     }`}

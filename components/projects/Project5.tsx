@@ -12,7 +12,7 @@ export const Project5: React.FC<any> = () => {
     <ProjectWrap>
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         href="https://toneify-arthurhwang.herokuapp.com/"
         className="link project-title"
       >
@@ -151,7 +151,7 @@ export const Project5: React.FC<any> = () => {
       <div className="buttons">
         <a
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href="https://github.com/ArthurHwang/toneify"
         >
           <Button color="blue">
@@ -160,7 +160,7 @@ export const Project5: React.FC<any> = () => {
         </a>
         <a
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href="https://toneify-arthurhwang.herokuapp.com/"
         >
           <Button color="green">

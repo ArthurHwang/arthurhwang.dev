@@ -17,7 +17,7 @@ export const Footer: React.FC<any> = () => {
           Made with{" "}
           <a
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             style={{ height: "29.94px" }}
             href="https://nextjs.org/"
           >
@@ -40,7 +40,7 @@ export const Footer: React.FC<any> = () => {
         <a
           aria-label="GitHub"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           title=""
           href="https://github.com/ArthurHwang"
           className="link"
@@ -51,7 +51,7 @@ export const Footer: React.FC<any> = () => {
           aria-label="LinkedIn"
           title=""
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href="https://www.linkedin.com/in/arthur-hwang"
           className="link"
         >
@@ -61,7 +61,7 @@ export const Footer: React.FC<any> = () => {
           aria-label="facebook"
           title=""
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href="https://www.facebook.com/arthur.hwang.9"
           className="link"
         >
@@ -70,7 +70,7 @@ export const Footer: React.FC<any> = () => {
         <a
           aria-label="Twitter"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           title=""
           href="https://twitter.com/ArthurHwang"
           className="link"
@@ -80,7 +80,7 @@ export const Footer: React.FC<any> = () => {
         <a
           aria-label="Resume"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           title="CV"
           href="mailto:mail@arthurhwang.dev"
           className="link"
@@ -90,7 +90,7 @@ export const Footer: React.FC<any> = () => {
         <a
           aria-label="Email"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           title="Email"
           href="mailto:mail@arthurhwang.dev"
           className="link"

@@ -12,7 +12,7 @@ export const Project4: React.FC<any> = () => {
     <ProjectWrap>
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         href="https://www.bestattorney.com"
         className="link project-title"
       >
@@ -155,14 +155,18 @@ export const Project4: React.FC<any> = () => {
       <div className="buttons">
         <a
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href="https://www.github.com/ArthurHwang"
         >
           <Button color="blue">
             Source <FaGithub />
           </Button>
         </a>
-        <a target="_blank" rel="noopener" href="https://bestattorney.com">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://bestattorney.com"
+        >
           <Button color="green">
             Launch <FaPlay />
           </Button>

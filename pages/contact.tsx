@@ -209,7 +209,7 @@ const Contact: NextPage<any> = () => {
             <a
               href="https://github.com/ArthurHwang"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <Button color="blue">
                 GitHub <FaGithub />
@@ -219,7 +219,7 @@ const Contact: NextPage<any> = () => {
             <a
               href="https://www.linkedin.com/in/arthur-hwang"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <Button>
                 LinkedIn <FaLinkedin />
@@ -229,7 +229,7 @@ const Contact: NextPage<any> = () => {
             <a
               href="https://www.facebook.com/arthur.hwang.9"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <Button color="yellow">
                 FaceBook <FaFacebook />
@@ -239,7 +239,7 @@ const Contact: NextPage<any> = () => {
             <a
               href="https://twitter.com/ArthurHwang"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <Button color="red">
                 Twitter <FaTwitter />

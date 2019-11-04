@@ -47,7 +47,7 @@ export const Intro: React.FC<any> = () => {
             <a
               href="https://github.com/ArthurHwang"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="link"
             >
               <FaGithub className="icon" /> <span>Github</span>
@@ -56,7 +56,7 @@ export const Intro: React.FC<any> = () => {
             <a
               href="https://www.linkedin.com/in/arthur-hwang"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="link"
             >
               <FaLinkedin className="icon" /> <span>LinkedIn</span>
@@ -64,7 +64,7 @@ export const Intro: React.FC<any> = () => {
             <a
               href="https://www.facebook.com/arthur.hwang.9"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="link"
             >
               <FaFacebook className="icon" /> <span>Facebook</span>
@@ -73,7 +73,7 @@ export const Intro: React.FC<any> = () => {
               title=""
               href="https://twitter.com/ArthurHwang"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="link"
             >
               <FaTwitter className="icon" /> <span>Twitter</span>
@@ -81,7 +81,7 @@ export const Intro: React.FC<any> = () => {
             <a
               href="mailto:mail@arthurhwang.dev"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="link"
             >
               <IoMdMail className="icon" /> <span>Email</span>
@@ -91,7 +91,7 @@ export const Intro: React.FC<any> = () => {
               .dev"
               className="link"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <FaClipboardList className="icon" /> <span>CV</span>
             </a>

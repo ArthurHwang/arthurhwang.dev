@@ -12,7 +12,7 @@ export const Project3: React.FC<any> = () => {
     <ProjectWrap>
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         href="https://www.bestattorney.com/admin"
         className="link project-title"
       >
@@ -125,7 +125,7 @@ export const Project3: React.FC<any> = () => {
       <div className="buttons">
         <a
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href="https://www.github.com/ArthurHwang"
         >
           <Button color="blue">
@@ -134,7 +134,7 @@ export const Project3: React.FC<any> = () => {
         </a>
         <a
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href="https://bestattorney.netlify.com"
         >
           <Button color="green">
