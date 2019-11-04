@@ -39,7 +39,10 @@ const BlogHome: NextPage<any> = () => {
     <Fragment>
       <Head>
         <title>Arthur Hwang | Blog</title>
-        <meta name="description" content="Arthur Hwang's Blog" />
+        <meta
+          name="description"
+          content="Personal blog containing articles on web development, JavaScript, CSS, front-end / back-end technologies and personal work / life related topics."
+        />
       </Head>
       <StyledPosts>
         {posts.length > 0

@@ -33,7 +33,10 @@ const Contact: NextPage<any> = () => {
     <Fragment>
       <Head>
         <title>Arthur Hwang | Contact</title>
-        <meta name="description" content="Contact Arthur Hwang" />
+        <meta
+          name="description"
+          content="If you would like to contact me regarding a job or project or even if you just want to say hi, fill out the contact form and I'll get back to you ASAP"
+        />
       </Head>
       <ContentWrap>
         <StyledContact>

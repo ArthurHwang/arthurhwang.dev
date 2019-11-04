@@ -13,7 +13,10 @@ const Projects: NextPage<any> = () => {
     <Fragment>
       <Head>
         <title>Arthur Hwang | Projects</title>
-        <meta name="description" content="Arthur Hwang's Projects" />
+        <meta
+          name="description"
+          content="Built with custom NextJS, Apollo, and GraphQL, this website is a showcase of my recent projects as a Fullstack Web Developer."
+        />
       </Head>
 
       {/* PROJECT 1 - bestattorney.com-gatsby */}

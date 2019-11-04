@@ -12,7 +12,7 @@ const Home: NextPage<any> = () => {
         <title>Arthur Hwang | Fullstack Web Developer</title>
         <meta
           name="description"
-          content="Arthur Hwang | Fullstack Web Developer"
+          content="Personal Fullstack Web Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
         />
       </Head>
       <Intro />
