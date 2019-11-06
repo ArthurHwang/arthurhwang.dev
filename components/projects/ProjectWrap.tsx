@@ -118,7 +118,30 @@ const ProjectWrapper = styled("div")`
       @media (max-width: 490px) {
         padding: 0 1rem;
       }
+
+      
     }
+
+
+        /* .vertical-wrapper {
+      display: flex !important;
+      justify-content: space-evenly;
+      width: 100%;
+
+      .vertical {
+        width: 27%;
+        height: 100%;
+
+        @media (max-width: 490px) {
+          width: 50%;
+        }
+      }
+
+      @media (max-width: 490px) {
+        padding: 0 1rem;
+      }} */
+
+    
 
     @media (max-width: 490px) {
       margin-right: -2rem;

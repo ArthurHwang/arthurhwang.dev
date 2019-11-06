@@ -24,66 +24,60 @@ export const Project5: React.FC<any> = () => {
             //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
           <img
-            src="/static/projects/toneify/screenshot-1.webp"
+            src="/static/projects/toneify/screenshot-1.png"
             alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src =
-                "/static/projects/bestattorney-gatsby/screenshot-1.png";
+              e.target.src = "/static/projects/toneify/screenshot-1.webp";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-2.webp"
+            src="/static/projects/toneify/screenshot-2.png"
             alt="screenshot 2"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src =
-                "/static/projects/bestattorney-gatsby/screenshot-2.png";
+              e.target.src = "/static/projects/toneify/screenshot-2.webp";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-4.webp"
+            src="/static/projects/toneify/screenshot-4.png"
             alt="screenshot 4"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src =
-                "/static/projects/bestattorney-gatsby/screenshot-4.png";
+              e.target.src = "/static/projects/toneify/screenshot-4.webp";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-7.webp"
+            src="/static/projects/toneify/screenshot-7.png"
             alt="screenshot 7"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src =
-                "/static/projects/bestattorney-gatsby/screenshot-7.png";
+              e.target.src = "/static/projects/toneify/screenshot-7.webp";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-5.webp"
+            src="/static/projects/toneify/screenshot-5.png"
             alt="screenshot 5"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src =
-                "/static/projects/bestattorney-gatsby/screenshot-5.png";
+              e.target.src = "/static/projects/toneify/screenshot-5.webp";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-6.webp"
+            src="/static/projects/toneify/screenshot-6.png"
             alt="screenshot 6"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src =
-                "/static/projects/bestattorney-gatsby/screenshot-6.png";
+              e.target.src = "/static/projects/toneify/screenshot-6.webp";
             }}
           />
           {/* <img
-            src="/static/projects/toneify/screenshot-8.webp"
+            src="/static/projects/toneify/screenshot-8.png"
             alt="screenshot 8"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/bestattorney-gatsby/screenshot-8.png";
+                "/static/projects/toneify/screenshot-8.png";
             }}
           /> */}
         </Slider>
