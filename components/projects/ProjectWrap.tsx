@@ -101,29 +101,9 @@ const ProjectWrapper = styled("div")`
       }
     }
 
-    .vertical-wrapper {
-      display: flex !important;
-      justify-content: space-evenly;
-
-      .vertical {
-        max-width: 200.9px;
-        /* max-width: 26.95%; */
-        height: auto;
-
-        @media (max-width: 490px) {
-          max-width: 50%;
-        }
-      }
-
-      @media (max-width: 490px) {
-        padding: 0 1rem;
-      }
-
-      
-    }
 
 
-        /* .vertical-wrapper {
+      .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
       width: 100%;
@@ -139,7 +119,7 @@ const ProjectWrapper = styled("div")`
 
       @media (max-width: 490px) {
         padding: 0 1rem;
-      }} */
+      }} 
 
     
 
