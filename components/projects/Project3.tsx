@@ -24,39 +24,39 @@ export const Project3: React.FC<any> = () => {
         //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
           <img
-            src="/static/projects/bestattorney-admin/screenshot-1.png"
+            src="/static/projects/bestattorney-admin/screenshot-1.webp"
             alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/bestattorney-admin/screenshot-1.webp";
+                "/static/projects/bestattorney-admin/screenshot-1.png";
             }}
           />
           <img
-            src="/static/projects/bestattorney-admin/screenshot-2.png"
+            src="/static/projects/bestattorney-admin/screenshot-2.webp"
             alt="screenshot 2"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/bestattorney-admin/screenshot-2.webp";
+                "/static/projects/bestattorney-admin/screenshot-2.png";
             }}
           />
           <img
-            src="/static/projects/bestattorney-admin/screenshot-3.png"
+            src="/static/projects/bestattorney-admin/screenshot-3.webp"
             alt="screenshot 3"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/bestattorney-admin/screenshot-3.webp";
+                "/static/projects/bestattorney-admin/screenshot-3.png";
             }}
           />
           <img
-            src="/static/projects/bestattorney-admin/screenshot-4.png"
+            src="/static/projects/bestattorney-admin/screenshot-4.webp"
             alt="screenshot 4"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/bestattorney-admin/screenshot-4.webp";
+                "/static/projects/bestattorney-admin/screenshot-4.png";
             }}
           />
         </Slider>

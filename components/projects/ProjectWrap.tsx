@@ -83,6 +83,11 @@ const ProjectWrapper = styled("div")`
   .inner-slider {
     grid-area: carousel;
 
+    @media (max-width: 490px) {
+      margin-right: -2rem;
+      margin-left: -2rem;
+    }
+
     img {
       min-height: 399px;
 
@@ -101,9 +106,7 @@ const ProjectWrapper = styled("div")`
       }
     }
 
-
-
-      .vertical-wrapper {
+    .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
       width: 100%;
@@ -119,13 +122,7 @@ const ProjectWrapper = styled("div")`
 
       @media (max-width: 490px) {
         padding: 0 1rem;
-      }} 
-
-    
-
-    @media (max-width: 490px) {
-      margin-right: -2rem;
-      margin-left: -2rem;
+      }
     }
 
     .slick-dots {
@@ -192,7 +189,6 @@ const ProjectWrapper = styled("div")`
       flex-direction: column;
       justify-content: space-between;
       height: 92%;
-      /* margin: 0; */
       margin-top: 1rem;
       margin-bottom: 1rem;
 
@@ -200,11 +196,7 @@ const ProjectWrapper = styled("div")`
         font-size: 1.4rem;
         text-indent: -18px;
         text-align: left;
-        /* font-weight: 500; */
 
-        /* &:nth-child(even) {
-          background: ${({ theme }) => theme.lightgrey};
-        } */
         @media (max-width: 490px) {
           text-align: justify;
           text-indent: -18px;

@@ -24,62 +24,53 @@ export const Project5: React.FC<any> = () => {
             //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
           <img
-            src="/static/projects/toneify/screenshot-1.png"
+            src="/static/projects/toneify/screenshot-1.webp"
             alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-1.webp";
+              e.target.src = "/static/projects/toneify/screenshot-1.png";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-2.png"
+            src="/static/projects/toneify/screenshot-2.webp"
             alt="screenshot 2"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-2.webp";
+              e.target.src = "/static/projects/toneify/screenshot-2.png";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-4.png"
+            src="/static/projects/toneify/screenshot-4.webp"
             alt="screenshot 4"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-4.webp";
+              e.target.src = "/static/projects/toneify/screenshot-4.png";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-7.png"
+            src="/static/projects/toneify/screenshot-7.webp"
             alt="screenshot 7"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-7.webp";
+              e.target.src = "/static/projects/toneify/screenshot-7.png";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-5.png"
+            src="/static/projects/toneify/screenshot-5.webp"
             alt="screenshot 5"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-5.webp";
+              e.target.src = "/static/projects/toneify/screenshot-5.png";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-6.png"
+            src="/static/projects/toneify/screenshot-6.webp"
             alt="screenshot 6"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-6.webp";
+              e.target.src = "/static/projects/toneify/screenshot-6.png";
             }}
           />
-          {/* <img
-            src="/static/projects/toneify/screenshot-8.png"
-            alt="screenshot 8"
-            onError={(e: any) => {
-              e.target.onerror = null;
-              e.target.src =
-                "/static/projects/toneify/screenshot-8.png";
-            }}
-          /> */}
         </Slider>
         <div className="commits">
           <LazyLoad once height={344}>

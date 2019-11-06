@@ -24,53 +24,53 @@ export const Project4: React.FC<any> = () => {
         //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
           <img
-            src="/static/projects/bestattorney.com/screenshot-1.png"
+            src="/static/projects/bestattorney.com/screenshot-1.webp"
             alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/bestattorney.com/screenshot-1.webp";
+                "/static/projects/bestattorney.com/screenshot-1.png";
             }}
           />
 
           <div className="vertical-wrapper">
             <img
               className="vertical"
-              src="/static/projects/bestattorney.com/screenshot-3.png"
+              src="/static/projects/bestattorney.com/screenshot-3.webp"
               alt="screenshot 3"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
-                  "/static/projects/bestattorney.com/screenshot-3.webp";
+                  "/static/projects/bestattorney.com/screenshot-3.png";
               }}
             />
             <img
               className="vertical"
-              src="/static/projects/bestattorney.com/screenshot-2.png"
+              src="/static/projects/bestattorney.com/screenshot-2.webp"
               alt="screenshot 2"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
-                  "/static/projects/bestattorney.com/screenshot-2.webp";
+                  "/static/projects/bestattorney.com/screenshot-2.png";
               }}
             />
           </div>
           <img
-            src="/static/projects/bestattorney.com/screenshot-4.png"
+            src="/static/projects/bestattorney.com/screenshot-4.webp"
             alt="screenshot 4"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/bestattorney.com/screenshot-4.webp";
+                "/static/projects/bestattorney.com/screenshot-4.png";
             }}
           />
           <img
-            src="/static/projects/bestattorney.com/screenshot-5.png"
+            src="/static/projects/bestattorney.com/screenshot-5.webp"
             alt="screenshot 5"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/bestattorney.com/screenshot-5.webp";
+                "/static/projects/bestattorney.com/screenshot-5.png";
             }}
           />
         </Slider>

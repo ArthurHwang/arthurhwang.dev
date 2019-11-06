@@ -24,98 +24,89 @@ export const Project1: React.FC<any> = () => {
             //@ts-ignore */}
           <Slider className="inner-slider" {...settings}>
             <img
-              src="/static/projects/bestattorney-gatsby/screenshot-1.png"
-              alt="screenshot 1"
-              onError={(e: any) => {
-                e.target.onerror = null;
-                e.target.src =
-                  "/static/projects/bestattorney-gatsby/screenshot-1.webp";
-              }}
-            />
-            {/* <img
-              src="/static/projects/bestattorney-gatsby/test.png"
+              src="/static/projects/bestattorney-gatsby/screenshot-1.webp"
               alt="screenshot 1"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
                   "/static/projects/bestattorney-gatsby/screenshot-1.png";
               }}
-            /> */}
+            />
             <div className="vertical-wrapper">
               <img
                 className="vertical"
-                src="/static/projects/bestattorney-gatsby/screenshot-2.png"
+                src="/static/projects/bestattorney-gatsby/screenshot-2.webp"
                 alt="screenshot 2"
                 onError={(e: any) => {
                   e.target.onerror = null;
                   e.target.src =
-                    "/static/projects/bestattorney-gatsby/screenshot-2.webp";
+                    "/static/projects/bestattorney-gatsby/screenshot-2.png";
                 }}
               />
               <img
                 className="vertical"
-                src="/static/projects/bestattorney-gatsby/screenshot-3.png"
+                src="/static/projects/bestattorney-gatsby/screenshot-3.webp"
                 alt="screenshot 3"
                 onError={(e: any) => {
                   e.target.onerror = null;
                   e.target.src =
-                    "/static/projects/bestattorney-gatsby/screenshot-3.webp";
+                    "/static/projects/bestattorney-gatsby/screenshot-3.png";
                 }}
               />
             </div>
             <img
-              src="/static/projects/bestattorney-gatsby/screenshot-9.png"
+              src="/static/projects/bestattorney-gatsby/screenshot-9.webp"
               alt="screenshot 9"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
-                  "/static/projects/bestattorney-gatsby/screenshot-9.webp";
+                  "/static/projects/bestattorney-gatsby/screenshot-9.png";
               }}
             />
             <img
-              src="/static/projects/bestattorney-gatsby/screenshot-8.png"
+              src="/static/projects/bestattorney-gatsby/screenshot-8.webp"
               alt="screenshot 8"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
-                  "/static/projects/bestattorney-gatsby/screenshot-8.webp";
+                  "/static/projects/bestattorney-gatsby/screenshot-8.png";
               }}
             />
 
             <img
-              src="/static/projects/bestattorney-gatsby/screenshot-4.png"
+              src="/static/projects/bestattorney-gatsby/screenshot-4.webp"
               alt="screenshot 4"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
-                  "/static/projects/bestattorney-gatsby/screenshot-4.webp";
+                  "/static/projects/bestattorney-gatsby/screenshot-4.png";
               }}
             />
             <img
-              src="/static/projects/bestattorney-gatsby/screenshot-5.png"
+              src="/static/projects/bestattorney-gatsby/screenshot-5.webp"
               alt="screenshot 5"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
-                  "/static/projects/bestattorney-gatsby/screenshot-5.webp";
+                  "/static/projects/bestattorney-gatsby/screenshot-5.png";
               }}
             />
             <img
-              src="/static/projects/bestattorney-gatsby/screenshot-6.png"
+              src="/static/projects/bestattorney-gatsby/screenshot-6.webp"
               alt="screenshot 6"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
-                  "/static/projects/bestattorney-gatsby/screenshot-6.webp";
+                  "/static/projects/bestattorney-gatsby/screenshot-6.png";
               }}
             />
             <img
-              src="/static/projects/bestattorney-gatsby/screenshot-7.png"
+              src="/static/projects/bestattorney-gatsby/screenshot-7.webp"
               alt="screenshot 7"
               onError={(e: any) => {
                 e.target.onerror = null;
                 e.target.src =
-                  "/static/projects/bestattorney-gatsby/screenshot-7.webp";
+                  "/static/projects/bestattorney-gatsby/screenshot-7.png";
               }}
             />
           </Slider>
