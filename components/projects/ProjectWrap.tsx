@@ -82,7 +82,7 @@ const ProjectWrapper = styled("div")`
 
   .inner-slider {
     grid-area: carousel;
-    width: 100%;
+    /* width: 100%; */
 
     img {
       min-height: 399px;
@@ -105,6 +105,7 @@ const ProjectWrapper = styled("div")`
     .vertical-wrapper {
       display: flex !important;
       justify-content: space-evenly;
+      width: 100%;
 
       .vertical {
         min-height: initial;
