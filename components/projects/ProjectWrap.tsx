@@ -108,7 +108,7 @@ const ProjectWrapper = styled("div")`
       width: 100%;
 
       .vertical {
-        min-height: initial;
+        /* min-height: initial; */
         width: 27%;
         height: 100%;
 
