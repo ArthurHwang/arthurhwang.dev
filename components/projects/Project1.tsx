@@ -1,13 +1,52 @@
+import { useState, useEffect } from "react";
 import { ProjectWrap } from "./ProjectWrap";
+import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
 import { CommitList } from "../../components/CommitList";
 import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
-import { settings } from "../../util/slick-config";
+import { settings, modalSettings } from "../../util/slick-config";
+// @ts-ignore
+import Modal from "react-modal";
 
 // bestattorney.com-gatsby
 export const Project1: React.FC<any> = () => {
+  const [modal, setModal] = useState(false);
+  useEffect(() => {
+    console.log(modal);
+  }, [modal]);
+
+  const openModal = () => {
+    setModal(true);
+    console.log("hi");
+  };
+
+  const closeModal = () => {
+    setModal(false);
+    console.log("bye");
+  };
+
+  const afterOpenModal = () => {
+    // references are now sync'd and can be accessed.
+    // this.subtitle.style.color = "#f00";
+    console.log("what");
+  };
+
+  Modal.setAppElement("#__next");
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)"
+    }
+  };
+
+  console.log(modal);
   return (
     <ProjectWrap>
       <a
@@ -19,11 +58,120 @@ export const Project1: React.FC<any> = () => {
         Bisnar | Chase - Gatsby
       </a>
       <div className="project split-grid-left">
-        <div>
+        <div onClick={openModal} style={{ cursor: "pointer" }}>
+          <Modal
+            isOpen={modal}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            {/* 
+            //@ts-ignore */}
+            <Slider
+              // @ts-ignore
+              style={{ width: "1100px" }}
+              className="inner-slider"
+              {...modalSettings}
+            >
+              <img
+                // @ts-ignore
+
+                src="/static/projects/bestattorney-gatsby/screenshot-1.webp"
+                alt="screenshot 1"
+                onError={(e: any) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "/static/projects/bestattorney-gatsby/screenshot-1.png";
+                }}
+              />
+              <VerticalImagesWrap>
+                <div className="vertical-wrapper">
+                  <img
+                    className="vertical"
+                    src="/static/projects/bestattorney-gatsby/screenshot-2.webp"
+                    alt="screenshot 2"
+                    onError={(e: any) => {
+                      e.target.onerror = null;
+                      e.target.src =
+                        "/static/projects/bestattorney-gatsby/screenshot-2.png";
+                    }}
+                  />
+                  <img
+                    className="vertical"
+                    src="/static/projects/bestattorney-gatsby/screenshot-3.webp"
+                    alt="screenshot 3"
+                    onError={(e: any) => {
+                      e.target.onerror = null;
+                      e.target.src =
+                        "/static/projects/bestattorney-gatsby/screenshot-3.png";
+                    }}
+                  />
+                </div>
+              </VerticalImagesWrap>
+              <img
+                src="/static/projects/bestattorney-gatsby/screenshot-9.webp"
+                alt="screenshot 9"
+                onError={(e: any) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "/static/projects/bestattorney-gatsby/screenshot-9.png";
+                }}
+              />
+              <img
+                src="/static/projects/bestattorney-gatsby/screenshot-8.webp"
+                alt="screenshot 8"
+                onError={(e: any) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "/static/projects/bestattorney-gatsby/screenshot-8.png";
+                }}
+              />
+
+              <img
+                src="/static/projects/bestattorney-gatsby/screenshot-4.webp"
+                alt="screenshot 4"
+                onError={(e: any) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "/static/projects/bestattorney-gatsby/screenshot-4.png";
+                }}
+              />
+              <img
+                src="/static/projects/bestattorney-gatsby/screenshot-5.webp"
+                alt="screenshot 5"
+                onError={(e: any) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "/static/projects/bestattorney-gatsby/screenshot-5.png";
+                }}
+              />
+              <img
+                src="/static/projects/bestattorney-gatsby/screenshot-6.webp"
+                alt="screenshot 6"
+                onError={(e: any) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "/static/projects/bestattorney-gatsby/screenshot-6.png";
+                }}
+              />
+              <img
+                src="/static/projects/bestattorney-gatsby/screenshot-7.webp"
+                alt="screenshot 7"
+                onError={(e: any) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "/static/projects/bestattorney-gatsby/screenshot-7.png";
+                }}
+              />
+            </Slider>
+          </Modal>
           {/* 
             //@ts-ignore */}
           <Slider className="inner-slider" {...settings}>
             <img
+              // @ts-ignore
+              onClick={openModal}
               src="/static/projects/bestattorney-gatsby/screenshot-1.webp"
               alt="screenshot 1"
               onError={(e: any) => {
@@ -32,7 +180,7 @@ export const Project1: React.FC<any> = () => {
                   "/static/projects/bestattorney-gatsby/screenshot-1.png";
               }}
             />
-            <div className="vertical-wrapper">
+            <div onClick={closeModal} className="vertical-wrapper">
               <img
                 className="vertical"
                 src="/static/projects/bestattorney-gatsby/screenshot-2.webp"
@@ -233,3 +381,26 @@ export const Project1: React.FC<any> = () => {
     </ProjectWrap>
   );
 };
+
+const VerticalImagesWrap = styled("div")`
+  .vertical-wrapper {
+    display: flex !important;
+    justify-content: space-evenly;
+    width: 100%;
+
+    .vertical {
+      width: 25.8%;
+      height: 100%;
+
+      @media (max-width: 490px) {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 490px) {
+      padding: 0 1rem;
+    }
+  }
+`;
+
+// const MobileCheck = styled("div")``;
