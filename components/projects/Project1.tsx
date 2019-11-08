@@ -76,7 +76,6 @@ export const Project1: React.FC<any> = () => {
             >
               <img
                 // @ts-ignore
-
                 src="/static/projects/bestattorney-gatsby/screenshot-1.webp"
                 alt="screenshot 1"
                 onError={(e: any) => {
@@ -402,5 +401,3 @@ const VerticalImagesWrap = styled("div")`
     }
   }
 `;
-
-// const MobileCheck = styled("div")``;
