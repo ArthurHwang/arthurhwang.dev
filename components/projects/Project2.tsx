@@ -140,30 +140,28 @@ export const Project2: React.FC<any> = () => {
           </ul>
         </div>
       </div>
-      <LazyLoad once height={101.28}>
-        <div className="badges">
-          <img src="/static/projects/logos/nextjs.png" alt="nextjs" />
-          <img src="/static/projects/logos/React.png" alt="reactjs" />
-          <img src="/static/projects/logos/ts.png" alt="typescript" />
-          <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
-          <img src="/static/projects/logos/apollo.png" alt="apollo" />
-          <img src="/static/projects/logos/gql.png" alt="graphql" />
-          <img
-            style={{ width: "60px" }}
-            src="/static/projects/logos/styled-components.png"
-            alt="styled components"
-          />
-          <img src="/static/projects/logos/contentful.png" alt="contentful" />
-          <img
-            src="/static/projects/logos/formik.png"
-            style={{ width: "60px" }}
-            alt="formik"
-          />
-          <img src="/static/projects/logos/cloudflare.png" alt="cloudflare" />
-          <img src="/static/projects/logos/mailgun.png" alt="mailgun" />
-          <img src="/static/projects/logos/now.png" alt="now" />
-        </div>
-      </LazyLoad>
+      <div className="badges">
+        <img src="/static/projects/logos/nextjs.png" alt="nextjs" />
+        <img src="/static/projects/logos/React.png" alt="reactjs" />
+        <img src="/static/projects/logos/ts.png" alt="typescript" />
+        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+        <img src="/static/projects/logos/apollo.png" alt="apollo" />
+        <img src="/static/projects/logos/gql.png" alt="graphql" />
+        <img
+          style={{ width: "60px" }}
+          src="/static/projects/logos/styled-components.png"
+          alt="styled components"
+        />
+        <img src="/static/projects/logos/contentful.png" alt="contentful" />
+        <img
+          src="/static/projects/logos/formik.png"
+          style={{ width: "60px" }}
+          alt="formik"
+        />
+        <img src="/static/projects/logos/cloudflare.png" alt="cloudflare" />
+        <img src="/static/projects/logos/mailgun.png" alt="mailgun" />
+        <img src="/static/projects/logos/now.png" alt="now" />
+      </div>
       <div className="buttons">
         <a
           target="_blank"

@@ -133,25 +133,20 @@ export const Project4: React.FC<any> = () => {
           </ul>
         </div>
       </div>
-      <LazyLoad once height={101.28}>
-        <div className="badges">
-          <img src="/static/projects/logos/ga.png" alt="google analytics" />
-          <img
-            src="/static/projects/logos/gmp.png"
-            alt="google marketing platform"
-          />
-          <img
-            src="/static/projects/logos/gsc.png"
-            alt="google search console"
-          />
-          <img src="/static/projects/logos/lamp.png" alt="lamp" />
-          <img src="/static/projects/logos/circleci.png" alt="circleci" />
-          <img src="/static/projects/logos/wordpress.png" alt="wordpress" />
-          <img src="/static/projects/logos/whm.png" alt="whm" />
-          <img src="/static/projects/logos/cpanel.png" alt="cpanel" />
-          <img src="/static/projects/logos/semrush.png" alt="semrush" />
-        </div>
-      </LazyLoad>
+      <div className="badges">
+        <img src="/static/projects/logos/ga.png" alt="google analytics" />
+        <img
+          src="/static/projects/logos/gmp.png"
+          alt="google marketing platform"
+        />
+        <img src="/static/projects/logos/gsc.png" alt="google search console" />
+        <img src="/static/projects/logos/lamp.png" alt="lamp" />
+        <img src="/static/projects/logos/circleci.png" alt="circleci" />
+        <img src="/static/projects/logos/wordpress.png" alt="wordpress" />
+        <img src="/static/projects/logos/whm.png" alt="whm" />
+        <img src="/static/projects/logos/cpanel.png" alt="cpanel" />
+        <img src="/static/projects/logos/semrush.png" alt="semrush" />
+      </div>
       <div className="buttons">
         <a
           target="_blank"
