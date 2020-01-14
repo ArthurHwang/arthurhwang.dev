@@ -2,10 +2,10 @@ import styled from "styled-components";
 // import Link from "next/link";
 import {
   FaGithub,
-  FaFacebook,
+  // FaFacebook,
   FaLinkedin,
-  FaClipboardList,
-  FaTwitter
+  FaClipboardList
+  // FaTwitter
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
@@ -61,7 +61,7 @@ export const Intro: React.FC<any> = () => {
             >
               <FaLinkedin className="icon" /> <span>LinkedIn</span>
             </a>
-            <a
+            {/* <a
               href="https://www.facebook.com/arthur.hwang.9"
               target="_blank"
               rel="noopener noreferrer"
@@ -77,7 +77,7 @@ export const Intro: React.FC<any> = () => {
               className="link"
             >
               <FaTwitter className="icon" /> <span>Twitter</span>
-            </a>
+            </a> */}
             <a
               href="mailto:mail@arthurhwang.dev"
               target="_blank"
@@ -121,16 +121,19 @@ const InnerRight = styled("div")`
   .badges-2 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: calc(100% - 63px - 19.92px);
 
     a.link {
       position: relative;
       bottom: 9px;
+      /* margin-bottom: 1rem; */
+      /* margin: 1rem; */
+      /* padding: 1rem; */
 
       @media (max-width: 490px) {
         &:nth-child(even) {
-          padding-left: calc(100% - 63%);
+          padding-left: calc(100% - 68%);
         }
       }
     }

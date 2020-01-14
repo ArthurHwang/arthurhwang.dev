@@ -7,6 +7,7 @@ import { GoGitCommit } from "react-icons/go";
 interface Props {
   owner: string;
   name: string;
+  source?: string;
   path?: string;
 }
 
@@ -92,8 +93,13 @@ const StatusButton: any = (status: string | null) => {
   }
 };
 
-export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
-  const fixUsername = (username: string) => {
+export const CommitList: React.FC<Props> = ({
+  owner,
+  name,
+  source,
+  path = null
+}) => {
+  const fixUsername = (username: string): string => {
     if (username === "Arthur Hwang") {
       return username.split(" ").join("");
     } else {
@@ -123,55 +129,70 @@ export const CommitList: React.FC<Props> = ({ owner, name, path = null }) => {
               Status Links{" "}
             </h3>
             <StyledCommits>
-              {commitHistory.map((commit: any) => (
-                <li key={commit.node.oid}>
-                  <div className="commit-wrap">
-                    <div className="author-wrap">
-                      <img src={commit.node.author.avatarUrl} /> {/* </div> */}
-                    </div>
-                    <div>
-                      <div> {fixUsername(commit.node.author.name)}</div>
-                      <div className="commit-message">
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="link"
-                          href={commit.node.commitUrl}
-                        >
-                          <GoGitCommit
-                            style={{
-                              position: "relative",
-                              top: "2px",
-                              color: "#1e1e1e"
-                            }}
-                          />{" "}
-                          {commit.node.messageHeadline}
-                        </a>
+              {commitHistory.map((commit: any) => {
+                let commitUrl = commit.node.commitUrl;
+                if (source === "gitlab") {
+                  const gitlabUrl = `https://www.gitlab.com/ArthurHwang${
+                    commitUrl.split("https://github.com/bestattorney")[1]
+                  }`
+                    .replace(
+                      /bestattorney.com-gatsby/gi,
+                      "bestattorney-com-gatsby"
+                    )
+                    .replace(/bestattorney.com/gi, "bestattorney-com");
+
+                  commitUrl = gitlabUrl;
+                }
+                return (
+                  <li key={commit.node.oid}>
+                    <div className="commit-wrap">
+                      <div className="author-wrap">
+                        <img src={commit.node.author.avatarUrl} />{" "}
+                      </div>
+                      <div>
+                        <div> {fixUsername(commit.node.author.name)}</div>
+                        <div className="commit-message">
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link"
+                            href={commitUrl}
+                          >
+                            <GoGitCommit
+                              style={{
+                                position: "relative",
+                                top: "2px",
+                                color: "#1e1e1e"
+                              }}
+                            />{" "}
+                            {commit.node.messageHeadline}
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`commit-status ${
-                      commit.node.status ? "" : "disabled"
-                    }`}
-                    href={
-                      commit.node.status
-                        ? commit.node.status.contexts[0].targetUrl
-                        : null
-                    }
-                  >
-                    <StyledStatus>
-                      {StatusButton(
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`commit-status ${
+                        commit.node.status ? "" : "disabled"
+                      }`}
+                      href={
                         commit.node.status
-                          ? commit.node.status.contexts[0].state
+                          ? commit.node.status.contexts[0].targetUrl
                           : null
-                      )}
-                    </StyledStatus>
-                  </a>
-                </li>
-              ))}
+                      }
+                    >
+                      <StyledStatus>
+                        {StatusButton(
+                          commit.node.status
+                            ? commit.node.status.contexts[0].state
+                            : null
+                        )}
+                      </StyledStatus>
+                    </a>
+                  </li>
+                );
+              })}
             </StyledCommits>
           </ContentWrapper>
         );

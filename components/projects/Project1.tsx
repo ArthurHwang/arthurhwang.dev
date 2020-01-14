@@ -18,6 +18,7 @@ export const Project1: React.FC<any> = () => {
       >
         Bisnar | Chase - Gatsby
       </a>
+
       <div className="project split-grid-left">
         <div>
           {/* 
@@ -113,18 +114,34 @@ export const Project1: React.FC<any> = () => {
         </div>
         <div className="commits">
           <LazyLoad once height={344}>
-            <CommitList owner="bestattorney" name="bestattorney.com-gatsby" />
+            <CommitList
+              owner="bestattorney"
+              name="bestattorney.com-gatsby"
+              source="gitlab"
+            />
           </LazyLoad>
         </div>
 
         <div className="accomplishments">
-          <h3>Accomplishments:</h3>
+          <div>
+            <h3>Accomplishments:</h3>
+          </div>
           <ul>
             <li>
-              Single-handedly built production ready statically generated{" "}
-              <strong>7000+</strong> page application with GatsbyJS and
-              TypeScript for code splitting, performance, SEO benefits, and
-              future proofing tech stack for the company.
+              <span
+                style={{
+                  color: "red",
+                  fontWeight: "bold"
+                }}
+              >
+                **NOTE** Project approved by company to go live early 2020
+              </span>
+            </li>
+            <li>
+              Built production ready statically generated <strong>7000+</strong>{" "}
+              page application with GatsbyJS and TypeScript for code splitting,
+              performance, SEO benefits, and future proofing tech stack for the
+              company.
             </li>
             <li>
               Created custom serverless automated build pipeline workflow using
@@ -135,7 +152,7 @@ export const Project1: React.FC<any> = () => {
               / snapshot tests with Jest.
             </li>
             <li>
-              Architected a custom file / folder structure in which values are
+              Architected custom file / folder structure in which values are
               inherited from a single source in order to empower non-developers
               to be able to easily add, remove and update items on the website.
             </li>
@@ -214,7 +231,7 @@ export const Project1: React.FC<any> = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.github.com/ArthurHwang"
+          href="https://gitlab.com/ArthurHwang/bestattorney-com-gatsby"
         >
           <Button color="blue">
             Source <FaGithub />

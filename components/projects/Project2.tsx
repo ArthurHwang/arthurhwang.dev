@@ -97,8 +97,9 @@ export const Project2: React.FC<any> = () => {
               loading animations.
             </li>
             <li>
-              Create custom real-time github commit list component with relevant
-              continuous integration / continuous development status links.
+              Created custom real-time GitHub commit list component with
+              relevant continuous integration / continuous development status
+              links.
             </li>
             <li>
               Used Formik, Yup and Express to handle form validation and backend
@@ -109,8 +110,8 @@ export const Project2: React.FC<any> = () => {
               DNS records and nameservers.
             </li>
             <li>
-              Setup custom email forwarding with mailgun by proxying requests
-              through Cloudflare into personal gmail account.
+              Setup custom email forwarding with Mailgun by proxying requests
+              through Cloudflare into personal Gmail account.
             </li>
             <li>
               Built personal blog with Contentful CMS. Sourced data with

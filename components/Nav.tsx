@@ -24,11 +24,11 @@ export const Nav: React.FC<any> = () => {
           <a>Blog</a>
         </div>
       </Link>
-      <Link activeClassName="active" href="/contact" as="/contact">
+      {/* <Link activeClassName="active" href="/contact" as="/contact">
         <div className="link-box">
           <a>Contact</a>
         </div>
-      </Link>
+      </Link> */}
     </StyledNav>
   );
 };

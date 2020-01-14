@@ -76,7 +76,11 @@ export const Project4: React.FC<any> = () => {
         </Slider>
         <div className="commits">
           <LazyLoad once height={344}>
-            <CommitList owner="bestattorney" name="bestattorney.com" />
+            <CommitList
+              owner="bestattorney"
+              name="bestattorney.com"
+              source="gitlab"
+            />
           </LazyLoad>
         </div>
 
@@ -84,8 +88,8 @@ export const Project4: React.FC<any> = () => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Administered and managed LAMP (Linux-Apache-MySQL-PHP) stack
-              application for internal marketing team.
+              Administered and managed LAMP (Linux-Apache-MySQL-PHP) stack web
+              application for company.
             </li>
             <li>Managed and optimized Wordpress blog for marketing team.</li>
             <li>
@@ -97,13 +101,13 @@ export const Project4: React.FC<any> = () => {
               superiors.
             </li>
             <li>
+              Restyled entire application with new color theme to be more
+              visually appealing.
+            </li>
+            <li>
               Ensured application is mobile and tablet ready. Ensured cross
               browser compatibility both desktop and mobile. IOS / chrome /
               android / firefox.
-            </li>
-            <li>
-              Restyled entire application with new color theme to be more
-              visually appealing.
             </li>
             <li>Improved page load speeds by implementing MaxCDN.</li>
             <li>
@@ -156,7 +160,7 @@ export const Project4: React.FC<any> = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.github.com/ArthurHwang"
+          href="https://gitlab.com/ArthurHwang/bestattorney-com"
         >
           <Button color="blue">
             Source <FaGithub />

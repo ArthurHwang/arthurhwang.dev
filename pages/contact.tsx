@@ -7,7 +7,8 @@ import { Formik } from "formik";
 import { Error } from "../components/Error";
 import { useState } from "react";
 import { Button } from "../components/Button";
-import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+// import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -226,7 +227,7 @@ const Contact: NextPage<any> = () => {
               </Button>
             </a>
 
-            <a
+            {/* <a
               href="https://www.facebook.com/arthur.hwang.9"
               target="_blank"
               rel="noopener noreferrer"
@@ -244,7 +245,7 @@ const Contact: NextPage<any> = () => {
               <Button color="red">
                 Twitter <FaTwitter />
               </Button>
-            </a>
+            </a> */}
           </div>
         </StyledContact>
       </ContentWrap>

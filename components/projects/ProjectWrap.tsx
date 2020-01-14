@@ -17,6 +17,7 @@ export const ProjectWrap: React.FC<Props> = ({ children }) => {
 const ProjectWrapper = styled("div")`
   height: auto;
   padding: 4rem 2rem;
+  position: relative;
 
   &.bg-grey {
     background: ${({ theme }) => theme.lightgrey};

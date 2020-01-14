@@ -2,10 +2,10 @@ import styled from "styled-components";
 import MdHeart from "react-ionicons/lib/MdHeart";
 import {
   FaGithub,
-  FaFacebook,
+  // FaFacebook,
   FaLinkedin,
-  FaClipboardList,
-  FaTwitter
+  FaClipboardList
+  // FaTwitter
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
@@ -57,7 +57,7 @@ export const Footer: React.FC<any> = () => {
         >
           <FaLinkedin className="icon" />
         </a>
-        <a
+        {/* <a
           aria-label="facebook"
           title=""
           target="_blank"
@@ -76,7 +76,7 @@ export const Footer: React.FC<any> = () => {
           className="link"
         >
           <FaTwitter className="icon" />
-        </a>
+        </a> */}
         <a
           aria-label="Resume"
           target="_blank"

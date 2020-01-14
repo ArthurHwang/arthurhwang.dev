@@ -66,6 +66,7 @@ export const Project3: React.FC<any> = () => {
               owner="bestattorney"
               name="bestattorney.com"
               path="SPAs"
+              source="gitlab"
             />
           </LazyLoad>
         </div>
@@ -85,7 +86,7 @@ export const Project3: React.FC<any> = () => {
             <li>
               Used NodeJS and Express to handle back-end logic and custom API
               routing while correctly hashing and salting sensitive password
-              information with bcrypt.
+              information with bcrypt library.
             </li>
             <li>
               Stored user account information into MySQL database using
@@ -106,7 +107,7 @@ export const Project3: React.FC<any> = () => {
             </li>
             <li>
               Used apache server ProxyPass and ProxyPassReverse to get NodeJS /
-              Express application running under existing server.
+              Express application running under existing Linux server.
             </li>
           </ul>
         </div>
@@ -126,7 +127,7 @@ export const Project3: React.FC<any> = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.github.com/ArthurHwang"
+          href="https://gitlab.com/ArthurHwang/bestattorney-com/tree/master/SPAs"
         >
           <Button color="blue">
             Source <FaGithub />
