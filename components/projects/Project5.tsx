@@ -118,21 +118,19 @@ export const Project5: React.FC<any> = () => {
           </ul>
         </div>
       </div>
-      <LazyLoad once height={101.28}>
-        <div className="badges">
-          <img src="/static/projects/logos/React.png" alt="react" />
-          <img src="/static/projects/logos/redux.png" alt="redux" />
-          <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
-          <img src="/static/projects/logos/express.svg" alt="express" />
-          <img src="/static/projects/logos/mongodb.svg" alt="mongodb" />
-          <img
-            style={{ width: "60px" }}
-            src="/static/projects/logos/semantic.png"
-            alt="semantic UI"
-          />
-          <img src="/static/projects/logos/stripe.png" alt="stripe" />
-        </div>
-      </LazyLoad>
+      <div className="badges">
+        <img src="/static/projects/logos/React.png" alt="react" />
+        <img src="/static/projects/logos/redux.png" alt="redux" />
+        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+        <img src="/static/projects/logos/express.svg" alt="express" />
+        <img src="/static/projects/logos/mongodb.svg" alt="mongodb" />
+        <img
+          style={{ width: "60px" }}
+          src="/static/projects/logos/semantic.png"
+          alt="semantic UI"
+        />
+        <img src="/static/projects/logos/stripe.png" alt="stripe" />
+      </div>
       <div className="buttons">
         <a
           target="_blank"

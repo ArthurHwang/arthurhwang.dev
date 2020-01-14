@@ -204,29 +204,27 @@ export const Project1: React.FC<any> = () => {
           </ul>
         </div>
       </div>
-      <LazyLoad once height={101.28}>
-        <div className="badges">
-          <img src="/static/projects/logos/Gatsby-Logo.svg" alt="gatsbyjs" />
-          <img src="/static/projects/logos/React.png" alt="reactjs" />
-          <img src="/static/projects/logos/ts.png" alt="typescript" />
-          <img src="/static/projects/logos/gql.png" alt="graphql" />
-          <img src="/static/projects/logos/circleci.png" alt="circleci" />
-          <img src="/static/projects/logos/jest.png" alt="jest" />
-          <img src="/static/projects/logos/cypress.png" alt="cypress" />
-          <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
-          <img
-            style={{ width: "60px" }}
-            src="/static/projects/logos/styled-components.png"
-            alt="styled components"
-          />
-          <img src="/static/projects/logos/netlify.png" alt="netlify" />
-          <img src="/static/projects/logos/ga.png" alt="google analytics" />
-          <img
-            src="/static/projects/logos/gmp.png"
-            alt="google marketing platform"
-          />
-        </div>
-      </LazyLoad>
+      <div className="badges">
+        <img src="/static/projects/logos/Gatsby-Logo.svg" alt="gatsbyjs" />
+        <img src="/static/projects/logos/React.png" alt="reactjs" />
+        <img src="/static/projects/logos/ts.png" alt="typescript" />
+        <img src="/static/projects/logos/gql.png" alt="graphql" />
+        <img src="/static/projects/logos/circleci.png" alt="circleci" />
+        <img src="/static/projects/logos/jest.png" alt="jest" />
+        <img src="/static/projects/logos/cypress.png" alt="cypress" />
+        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+        <img
+          style={{ width: "60px" }}
+          src="/static/projects/logos/styled-components.png"
+          alt="styled components"
+        />
+        <img src="/static/projects/logos/netlify.png" alt="netlify" />
+        <img src="/static/projects/logos/ga.png" alt="google analytics" />
+        <img
+          src="/static/projects/logos/gmp.png"
+          alt="google marketing platform"
+        />
+      </div>
       <div className="buttons">
         <a
           target="_blank"

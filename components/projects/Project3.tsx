@@ -112,17 +112,15 @@ export const Project3: React.FC<any> = () => {
           </ul>
         </div>
       </div>
-      <LazyLoad once height={101.28}>
-        <div className="badges">
-          <img src="/static/projects/logos/angular.svg" alt="angular" />
-          <img src="/static/projects/logos/express.svg" alt="express" />
-          <img src="/static/projects/logos/ts.png" alt="typescript" />
-          <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
-          <img src="/static/projects/logos/jwt.png" alt="json web token" />
-          <img src="/static/projects/logos/sequelize.png" alt="sequelize" />
-          <img src="/static/projects/logos/bootstrap.png" alt="bootstrap" />
-        </div>
-      </LazyLoad>
+      <div className="badges">
+        <img src="/static/projects/logos/angular.svg" alt="angular" />
+        <img src="/static/projects/logos/express.svg" alt="express" />
+        <img src="/static/projects/logos/ts.png" alt="typescript" />
+        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+        <img src="/static/projects/logos/jwt.png" alt="json web token" />
+        <img src="/static/projects/logos/sequelize.png" alt="sequelize" />
+        <img src="/static/projects/logos/bootstrap.png" alt="bootstrap" />
+      </div>
       <div className="buttons">
         <a
           target="_blank"
