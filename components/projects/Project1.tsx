@@ -134,7 +134,8 @@ export const Project1: React.FC<any> = () => {
                   fontWeight: "bold"
                 }}
               >
-                **NOTE** Project approved by company to go live early 2020
+                **NOTE** Project approved by company to go live early 2020 - DNS
+                has not switched yet!
               </span>
             </li>
             <li>
