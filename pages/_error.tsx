@@ -121,11 +121,8 @@ const ErrorPage: NextPage<any> = () => {
         <Particles className="particles" params={particlesOptions} />;
         <div className="container">
           <div className="text">
-            {/* 
-            //@ts-ignore */}
             <h1> ERROR 404 </h1>
-            {/* 
-            //@ts-ignore */}
+
             <h2>
               Go{" "}
               <Link href="/">
@@ -133,7 +130,7 @@ const ErrorPage: NextPage<any> = () => {
                   <span>home</span>
                 </a>
               </Link>
-              &nbsp; You're Drunk{" "}
+              You're Drunk{" "}
             </h2>
           </div>
         </div>
