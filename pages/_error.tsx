@@ -129,7 +129,7 @@ const ErrorPage: NextPage<any> = () => {
                 <a>
                   <span>home</span>
                 </a>
-              </Link>
+              </Link>{" "}
               You're Drunk{" "}
             </h2>
           </div>
