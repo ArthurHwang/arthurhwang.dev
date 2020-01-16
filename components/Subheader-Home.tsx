@@ -15,7 +15,7 @@ export const SubheaderHome: React.FC<any> = () => {
             <span className="green">.</span>
           </div>
           <br />
-          I'm a fullstack web developer
+          I'm a Fullstack Web Developer
           <span className="green">.</span>
         </h1>
       </TextWrap>
@@ -25,7 +25,7 @@ export const SubheaderHome: React.FC<any> = () => {
           <p className="content__container__text">I Specialize in</p>
           <ul className="content__container__list">
             <li className="content__container__list__item green">
-              Javascript{" "}
+              JavaScript{" "}
               <FaJs
                 style={{ color: "#f7df1e", position: "relative", top: "2.3px" }}
               />
