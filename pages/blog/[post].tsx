@@ -36,7 +36,7 @@ const Post: NextPage<any> = props => {
   return (
     <Fragment>
       <Head>
-        <title>{`Arthur Hwang's Blog | ${title}`}</title> */}
+        <title>{`Arthur Hwang's Blog | ${title}`}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={canonicalURL} />
       </Head>
