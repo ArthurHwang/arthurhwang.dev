@@ -198,10 +198,10 @@ export const Project1: React.FC<any> = () => {
               meta requirements including facebook, twitter, AMP, canonical
               URL's and JSON-LD structured data.
             </li>
-            <li>
+            {/* <li>
               Integrated Google Analytics and Google Marketing Suite for user
               insights and goal tracking.
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
