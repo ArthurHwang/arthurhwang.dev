@@ -142,6 +142,10 @@ const ProjectWrapper = styled("div")`
         color: ${({ theme }) => theme.accent};
       }
 
+      li button:before {
+        font-size: 20px;
+      }
+
       @media (max-width: 768px) {
         bottom: -45px;
       }
