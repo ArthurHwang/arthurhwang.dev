@@ -73,7 +73,6 @@ export const CommitList: React.FC<Props> = ({
   return (
     <Query query={COMMIT_LIST_QUERY} variables={{ owner, name, path }}>
       {({ data, loading }: any) => {
-        console.log(data);
         if (loading || !data) {
           return (
             <ContentWrapper>

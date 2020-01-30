@@ -17,7 +17,7 @@ export const Project6: React.FC = (): ReactElement => {
         href="https://toneify-arthurhwang.herokuapp.com/"
         className="link project-title"
       >
-        Toneify
+        Keeb Kraze
       </a>
 
       <div className="project split-grid-left">
