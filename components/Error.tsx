@@ -1,7 +1,12 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { FaCheck } from "react-icons/fa";
 
-export const Error: React.FC<any> = ({ touched, message }) => {
+interface Props {
+  touched: any;
+  message: any;
+}
+
+export const Error: React.FC<Props> = ({ touched, message }): ReactElement => {
   if (!touched) {
     return <div className="form-message invalid">&nbsp;</div>;
   }

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import * as Yup from "yup";
-import { Fragment } from "react";
+import { Fragment, ReactElement } from "react";
 import { NextPage } from "next";
 import { Formik } from "formik";
 import { Error } from "../components/Error";
@@ -28,7 +28,7 @@ const validationSchema = Yup.object().shape({
     .required("Must enter a message")
 });
 
-const Contact: NextPage<any> = () => {
+const Contact: NextPage = (): ReactElement => {
   const [alert, setAlert] = useState("");
   return (
     <Fragment>

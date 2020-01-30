@@ -1,8 +1,9 @@
 import styled, { keyframes } from "styled-components";
 import { FaReact, FaNodeJs, FaCode, FaJs } from "react-icons/fa";
 import { Divider } from "./Divider";
+import { ReactElement } from "react";
 
-export const SubheaderHome: React.FC<any> = () => {
+export const SubheaderHome: React.FC = (): ReactElement => {
   return (
     <ContentWrap>
       <TextWrap>

@@ -1,13 +1,14 @@
-import { ProjectWrap } from "./ProjectWrap";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
+import { ProjectWrap } from "./ProjectWrap";
 import { CommitList } from "../../components/CommitList";
 import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
+import { ReactElement } from "react";
 
 // arthurhwang.dev
-export const Project2: React.FC<any> = () => {
+export const Project2: React.FC = (): ReactElement => {
   return (
     <ProjectWrap>
       <a

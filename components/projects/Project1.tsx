@@ -1,13 +1,14 @@
-import { ProjectWrap } from "./ProjectWrap";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
+import { ProjectWrap } from "./ProjectWrap";
 import { CommitList } from "../../components/CommitList";
 import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
+import { ReactElement } from "react";
 
 // bestattorney.com-gatsby
-export const Project1: React.FC<any> = () => {
+export const Project1: React.FC = (): ReactElement => {
   return (
     <ProjectWrap>
       <a
@@ -115,6 +116,7 @@ export const Project1: React.FC<any> = () => {
         <div className="commits">
           <LazyLoad once height={344}>
             <CommitList
+              idx={1}
               owner="bestattorney"
               name="bestattorney.com-gatsby"
               source="gitlab"

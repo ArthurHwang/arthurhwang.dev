@@ -5,6 +5,7 @@ import { Footer } from "./Footer";
 import { Subheader } from "./Subheader";
 import { withRouter } from "next/router";
 import { Contact } from "./Contact";
+import { ReactElement } from "react";
 import "../util/slick-fix.css";
 
 interface Props {
@@ -14,7 +15,10 @@ interface Props {
   };
 }
 
-const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
+const Layout: React.FC<Props> = ({
+  children,
+  router: { pathname }
+}): ReactElement => {
   return (
     <StyledLayout pathName={pathname}>
       <Meta pathName={pathname} />

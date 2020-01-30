@@ -1,11 +1,11 @@
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, ReactElement } from "react";
 import { NextPage } from "next";
 import { Intro } from "../components/home/Intro";
 import { Skills } from "../components/home/Skills";
 import { About } from "../components/home/About";
 
-const Home: NextPage<any> = () => {
+const Home: NextPage = (): ReactElement => {
   return (
     <Fragment>
       <Head>

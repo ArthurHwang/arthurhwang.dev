@@ -1,10 +1,11 @@
 import Head from "next/head";
+import { ReactElement } from "react";
 
 interface Props {
   pathName: string;
 }
 
-export const Meta: React.FC<Props> = ({ pathName }) => (
+export const Meta: React.FC<Props> = ({ pathName }): ReactElement => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charSet="utf-8" />

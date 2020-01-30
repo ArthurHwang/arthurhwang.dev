@@ -2,8 +2,9 @@ import styled from "styled-components";
 import Link from "next/link";
 import { Nav } from "./Nav";
 import { NavMobile } from "./NavMobile";
+import { ReactElement } from "react";
 
-export const Header: React.FC<any> = () => {
+export const Header: React.FC = (): ReactElement => {
   return (
     <StyledHeader>
       <div className="bar">

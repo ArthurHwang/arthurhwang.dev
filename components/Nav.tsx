@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { ActiveLink as Link } from "./ActiveLink";
+import { ReactElement } from "react";
 
-export const Nav: React.FC<any> = () => {
+export const Nav: React.FC = (): ReactElement => {
   return (
     <StyledNav>
       <Link activeClassName="active" href="/" as="/">
@@ -24,11 +25,6 @@ export const Nav: React.FC<any> = () => {
           <a>Blog</a>
         </div>
       </Link>
-      {/* <Link activeClassName="active" href="/contact" as="/contact">
-        <div className="link-box">
-          <a>Contact</a>
-        </div>
-      </Link> */}
     </StyledNav>
   );
 };

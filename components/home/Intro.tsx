@@ -1,15 +1,9 @@
 import styled from "styled-components";
-// import Link from "next/link";
-import {
-  FaGithub,
-  // FaFacebook,
-  FaLinkedin,
-  FaClipboardList
-  // FaTwitter
-} from "react-icons/fa";
+import { ReactElement } from "react";
+import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
-export const Intro: React.FC<any> = () => {
+export const Intro: React.FC = (): ReactElement => {
   return (
     <ContentWrap>
       <StyledIntro>

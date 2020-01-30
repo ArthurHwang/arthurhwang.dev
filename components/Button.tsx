@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactElement } from "react";
 
 interface Props {
   children: any;
@@ -12,7 +13,7 @@ export const Button: React.FC<Props> = ({
   color,
   disabled,
   type
-}) => {
+}): ReactElement => {
   return (
     <StyledButton color={color} disabled={disabled} type={type}>
       {children}

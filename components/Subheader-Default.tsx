@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import { ReactElement } from "react";
 
 interface Props {
   children: any;
 }
 
-export const SubheaderDefault: React.FC<Props> = ({ children }) => {
+export const SubheaderDefault: React.FC<Props> = ({
+  children
+}): ReactElement => {
   return (
     <ContentWrap>
       <TextWrap> {children}</TextWrap>

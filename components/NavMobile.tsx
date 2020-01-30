@@ -2,8 +2,9 @@ import styled from "styled-components";
 import Link from "next/link";
 import { IoIosKeypad } from "react-icons/io";
 import { useState } from "react";
+import { ReactElement } from "react";
 
-export const NavMobile: React.FC<any> = () => {
+export const NavMobile: React.FC = (): ReactElement => {
   // useEffect(() => {
   //   window.addEventListener("scroll", handleScroll);
   //   return window.addEventListener("scroll", handleScroll);

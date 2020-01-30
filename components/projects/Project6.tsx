@@ -7,8 +7,8 @@ import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
 import { ReactElement } from "react";
 
-// toneify
-export const Project5: React.FC = (): ReactElement => {
+// keeb kraze
+export const Project6: React.FC = (): ReactElement => {
   return (
     <ProjectWrap>
       <a
@@ -75,46 +75,38 @@ export const Project5: React.FC = (): ReactElement => {
         </Slider>
         <div className="commits">
           <LazyLoad once height={344}>
-            <CommitList owner="ArthurHwang" name="toneify" />
+            <CommitList owner="ArthurHwang" name="keeb-kraze" />
           </LazyLoad>
         </div>
         <div className="accomplishments">
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Created interactive guitar pedalboard builder to help guitarists
-              create unique pedalboard configurations. Users can create, read,
-              update and delete their builds.
-            </li>
-            <li>
-              Used ReactJS and Semantic-UI component library to create front-end
-              application.
-            </li>
-            <li>Implemented React-Router for client-side routing.</li>
-            <li>
-              Implemented Redux for centralized application state and state
-              persistence. Wrote actions and reducers to allow predictable state
-              management.
-            </li>
-            <li>
-              Utilized Redux-Thunk middleware to perform asynchronous logic /
-              AJAX requests with Redux.
-            </li>
-            <li>
-              Implemented MongoDB database to seed application and store user
-              data and history.
-            </li>
-            <li>
-              Used Express and NodeJS to handle back-end API requests such as
-              fetching user builds and purchase history.
-            </li>
-            <li>
-              Used Stripe API to allow users to checkout and purchase cart
-              items.
-            </li>
-            <li>
-              Used PassportJS to implement Google and Facebook Oauth login
-              systems.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Provident, voluptates maiores? Laboriosam est laborum amet eaque
+              officiis maiores at odio architecto iure unde! Quia officia
+              exercitationem delectus, corrupti iste earum necessitatibus sed
+              quas quod temporibus nihil vero deleniti illo molestias natus
+              tempore laudantium consequatur iusto soluta quae distinctio!
+              Perferendis voluptatibus laboriosam enim quaerat non corporis
+              quis, cum tempora nisi consequuntur consequatur hic maiores totam.
+              Magni excepturi at consequatur veritatis cum ducimus, sunt vel
+              porro iste aperiam reiciendis in amet repudiandae mollitia earum
+              iure cupiditate rem blanditiis. Optio harum eius ex quibusdam
+              atque quae accusantium veniam suscipit quod laborum molestiae,
+              commodi sapiente deleniti temporibus ipsa, facere labore esse.
+              Minus voluptatem laudantium qui fugiat eveniet a iste ratione
+              neque vero aut alias dolorum, beatae reprehenderit, repellat
+              voluptate, quibusdam tempore voluptates unde doloribus id ea!
+              Dolores eos, voluptates quae tempora quia quos blanditiis
+              asperiores molestias eius aut numquam repellendus explicabo, nam
+              dolorum ipsam eveniet non magni necessitatibus? Accusantium porro
+              ab autem deserunt mollitia cupiditate, dignissimos modi quos
+              inventore at culpa praesentium dolorum in est aspernatur ipsum id
+              illum provident amet quas velit omnis! Animi harum tenetur fugiat,
+              necessitatibus adipisci similique veritatis asperiores
+              perspiciatis deleniti sint neque laborum delectus exercitationem
+              dolorem atque officiis quo.
             </li>
           </ul>
         </div>

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { ReactElement } from "react";
 
-export const About: React.FC<any> = () => {
+export const About: React.FC = (): ReactElement => {
   return (
     <ContentWrap>
       <StyledAbout>

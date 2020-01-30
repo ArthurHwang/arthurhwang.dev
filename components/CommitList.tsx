@@ -3,12 +3,15 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { LoadingDots } from "./LoadingDots";
 import { GoGitCommit } from "react-icons/go";
+import { StatusButton } from "./StatusButton";
+import { ReactElement } from "react";
 
 interface Props {
   owner: string;
   name: string;
   source?: string;
   path?: string;
+  idx?: number;
 }
 
 const COMMIT_LIST_QUERY = gql`
@@ -52,44 +55,11 @@ const COMMIT_LIST_QUERY = gql`
   }
 `;
 
-const StatusButton: any = (status: string | null) => {
-  switch (status) {
-    case "SUCCESS":
-      return (
-        <div className="ci-btn success">
-          <div className="status-icon">
-            <img src="/static/check.svg" />
-          </div>
-          <div className="badge-label success">passed</div>
-        </div>
-      );
-    case "FAILURE":
-      return (
-        <div className="ci-btn failed">
-          <div className="status-icon ">
-            <img src="/static/error.svg" />
-          </div>
-          <div className="badge-label failed">failed</div>
-        </div>
-      );
-    case "PENDING":
-      return (
-        <div className="ci-btn pending">
-          <div className="status-icon ">
-            <img src="/static/pending.svg" />
-          </div>
-          <div className="badge-label pending">pending</div>
-        </div>
-      );
-    default:
-      return (
-        <div className="ci-btn null">
-          <div className="status-icon pending">
-            <img src="/static/null.svg" />
-          </div>
-          <div className="badge-label null">NO DATA</div>
-        </div>
-      );
+const fixUsername = (username: string): string => {
+  if (username === "Arthur Hwang") {
+    return username.split(" ").join("");
+  } else {
+    return username;
   }
 };
 
@@ -97,18 +67,13 @@ export const CommitList: React.FC<Props> = ({
   owner,
   name,
   source,
-  path = null
-}) => {
-  const fixUsername = (username: string): string => {
-    if (username === "Arthur Hwang") {
-      return username.split(" ").join("");
-    } else {
-      return username;
-    }
-  };
+  path = null,
+  idx
+}): ReactElement => {
   return (
     <Query query={COMMIT_LIST_QUERY} variables={{ owner, name, path }}>
       {({ data, loading }: any) => {
+        console.log(data);
         if (loading || !data) {
           return (
             <ContentWrapper>
@@ -178,14 +143,18 @@ export const CommitList: React.FC<Props> = ({
                       }`}
                       href={
                         commit.node.status
-                          ? commit.node.status.contexts[0].targetUrl
+                          ? idx === 1
+                            ? commit.node.status.contexts[1].targetUrl
+                            : commit.node.status.contexts[0].targetUrl
                           : null
                       }
                     >
                       <StyledStatus>
                         {StatusButton(
                           commit.node.status
-                            ? commit.node.status.contexts[0].state
+                            ? idx === 1
+                              ? commit.node.status.contexts[1].state
+                              : commit.node.status.contexts[0].state
                             : null
                         )}
                       </StyledStatus>
@@ -341,9 +310,4 @@ const StyledCommits = styled("ul")`
   }
 `;
 
-const ContentWrapper = styled("div")`
-  /* h3 {
-    display: flex;
-    justify-content: space-between;
-  } */
-`;
+const ContentWrapper = styled("div")``;

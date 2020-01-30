@@ -1,7 +1,7 @@
 import styled from "styled-components";
-// import LazyLoad from "react-lazyload";
+import { ReactElement } from "react";
 
-export const Skills: React.FC<any> = () => {
+export const Skills: React.FC = (): ReactElement => {
   return (
     <ContentWrap>
       <StyledSkills>

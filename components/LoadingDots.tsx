@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
+import { ReactElement } from "react";
 
-export const LoadingDots: React.FC<any> = () => {
+export const LoadingDots: React.FC = (): ReactElement => {
   return (
     <DotWrapper>
       <Dot delay="0s" />

@@ -8,8 +8,9 @@ import {
   // FaTwitter
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { ReactElement } from "react";
 
-export const Footer: React.FC<any> = () => {
+export const Footer: React.FC = (): ReactElement => {
   return (
     <StyledFooter>
       <div className="love">

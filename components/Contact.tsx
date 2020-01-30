@@ -4,6 +4,7 @@ import { Formik } from "formik";
 import { Error } from "./Error";
 import { useState } from "react";
 import { Button } from "./Button";
+import { ReactElement } from "react";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -23,7 +24,7 @@ const validationSchema = Yup.object().shape({
     .required("Must enter a message")
 });
 
-export const Contact: React.FC<any> = () => {
+export const Contact: React.FC = (): ReactElement => {
   const [alert, setAlert] = useState("");
   return (
     <ContentWrap>

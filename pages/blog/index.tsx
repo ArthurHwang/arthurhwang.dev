@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import Head from "next/head";
-import { useEffect, useState, Fragment } from "react";
+import { useEffect, useState, Fragment, ReactElement } from "react";
 import { NextPage } from "next";
 import { Post } from "../../components/Post";
 import { client } from "../../services/blog";
 
 const readingTime = require("reading-time");
 
-const BlogHome: NextPage<any> = () => {
+const BlogHome: NextPage = (): ReactElement => {
   async function fetchContentTypes() {
     const types = await client.getContentTypes();
     if (types.items) return types.items;
@@ -34,6 +34,7 @@ const BlogHome: NextPage<any> = () => {
     }
     getPosts();
   }, []);
+
   return (
     // @ts-ignore
     <Fragment>
