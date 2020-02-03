@@ -87,8 +87,7 @@ export const Intro: React.FC = (): ReactElement => {
               <IoMdMail className="icon" /> <span>Email</span>
             </a>
             <a
-              href="mailto:mail@
-              .dev"
+              href="/static/resume.pdf"
               className="link"
               target="_blank"
               rel="noopener noreferrer"
