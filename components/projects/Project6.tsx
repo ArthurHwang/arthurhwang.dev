@@ -81,33 +81,15 @@ export const Project6: React.FC = (): ReactElement => {
         <div className="accomplishments">
           <h3>Accomplishments:</h3>
           <ul>
-            <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Provident, voluptates maiores? Laboriosam est laborum amet eaque
-              officiis maiores at odio architecto iure unde! Quia officia
-              exercitationem delectus, corrupti iste earum necessitatibus sed
-              quas quod temporibus nihil vero deleniti illo molestias natus
-              tempore laudantium consequatur iusto soluta quae distinctio!
-              Perferendis voluptatibus laboriosam enim quaerat non corporis
-              quis, cum tempora nisi consequuntur consequatur hic maiores totam.
-              Magni excepturi at consequatur veritatis cum ducimus, sunt vel
-              porro iste aperiam reiciendis in amet repudiandae mollitia earum
-              iure cupiditate rem blanditiis. Optio harum eius ex quibusdam
-              atque quae accusantium veniam suscipit quod laborum molestiae,
-              commodi sapiente deleniti temporibus ipsa, facere labore esse.
-              Minus voluptatem laudantium qui fugiat eveniet a iste ratione
-              neque vero aut alias dolorum, beatae reprehenderit, repellat
-              voluptate, quibusdam tempore voluptates unde doloribus id ea!
-              Dolores eos, voluptates quae tempora quia quos blanditiis
-              asperiores molestias eius aut numquam repellendus explicabo, nam
-              dolorum ipsam eveniet non magni necessitatibus? Accusantium porro
-              ab autem deserunt mollitia cupiditate, dignissimos modi quos
-              inventore at culpa praesentium dolorum in est aspernatur ipsum id
-              illum provident amet quas velit omnis! Animi harum tenetur fugiat,
-              necessitatibus adipisci similique veritatis asperiores
-              perspiciatis deleniti sint neque laborum delectus exercitationem
-              dolorem atque officiis quo.
-            </li>
+            <li>Used ReactJS and TypeScript to create SPA</li>
+            <li>Used React Router for client side routing</li>
+            <li>Implemented Redux for global state</li>
+            <li>Implemented Redux Saga middleware for asynchronous actions</li>
+            <li>Implemented Reselect for memoized redux state selectors</li>
+            <li>Implemented CSS-in-JS solution styled components</li>
+            <li>Implemented firebase user authentication and database</li>
+            <li>Used Express server</li>
+            <li>Used StripeAPI to handle payments</li>
           </ul>
         </div>
       </div>

@@ -90,7 +90,7 @@ export const CommitList: React.FC<Props> = ({
             <h3>
               Real-Time Project Commits{" "}
               <span style={{ color: "black", fontWeight: 800 }}>||</span> CI/CD
-              Status Links{" "}
+              Status{" "}
             </h3>
             <StyledCommits>
               {commitHistory.map((commit: any) => {
@@ -114,7 +114,14 @@ export const CommitList: React.FC<Props> = ({
                         <img src={commit.node.author.avatarUrl} />{" "}
                       </div>
                       <div>
-                        <div> {fixUsername(commit.node.author.name)}</div>
+                        <div>
+                          <span>{fixUsername(commit.node.author.name)} </span>
+                          <span>
+                            <strong style={{ color: "grey" }}>
+                              {commit.node.oid.substring(0, 6)}
+                            </strong>
+                          </span>
+                        </div>
                         <div className="commit-message">
                           <a
                             target="_blank"

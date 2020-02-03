@@ -14,25 +14,19 @@ export const Intro: React.FC = (): ReactElement => {
           <p>
             I like to <strong>get things done</strong>. Architecting and
             building highly performant, high quality, maintainable web
-            applications is my passion.
-            {/* In order
-            for said websites and applications to come to life, going from idea
-            to reality is not only technically challenging but also emotionally
-            challenging. Regardless of the ups-and-downs of software
-            development, getting to the finish line and instilling a{" "}
-            <strong>never give up</strong> attitude, no matter the task at hand
-            is my ethos. */}
-            <br />
-            <code>const languages = ['javascript', 'typescr']</code>
+            applications is my passion. As a <strong>hyper-motivated</strong>{" "}
+            self starter who is passionate about writing clean, efficient code -
+            delivering features and pushing through to the finish line is what
+            fuels me. In order to solve tough problems, I instill maximum effort
+            and resilience in anything I touch. Having a never-give-up attitude
+            is my ethos.
           </p>
           <p>
-            I am a <strong>hyper-motivated</strong> self starter who is
-            passionate about writing clean, efficient code while maintaining
-            modern standards and security.
-            {/* I am not adverse to learning new
-            technologies, in fact I embrace it wholeheartedly. Being able to
-            build something of value and solve real world problems with code is
-            extremely satisfying for me. */}
+            I am hungry and driven to do more, build more and learn more. My
+            thirst for knowledge could be classified as borderline obsessive.
+            Ultimately, being able to take part and help businesses reach their
+            goals and get to the next level by developing software brings me joy
+            and satisfaction.
           </p>
         </InnerLeft>
 
@@ -94,7 +88,11 @@ const ContentWrap = styled("div")`
   }
 `;
 
-const InnerLeft = styled("div")``;
+const InnerLeft = styled("div")`
+  /* p {
+    font-size: 1.8rem;
+  } */
+`;
 
 const InnerRight = styled("div")`
   .badges-2 {

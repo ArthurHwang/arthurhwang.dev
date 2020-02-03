@@ -25,10 +25,10 @@ const Projects: NextPage = (): ReactElement => {
       <Project2 />
       {/* PROJECT 4 - bestattorney - LAMP */}
       <Project4 />
-      {/* PROJECT 3 - bestattorney.com-admin*/}
-      <Project3 />
       {/* PROJECT 6 - keeb kraze*/}
       <Project6 />
+      {/* PROJECT 3 - bestattorney.com-admin*/}
+      <Project3 />
       {/* PROJECT 5 - toneify*/}
       <Project5 />
     </Fragment>
