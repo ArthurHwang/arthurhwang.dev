@@ -8,7 +8,6 @@ export const Skills: React.FC = (): ReactElement => {
         <h2>
           Some of my skills<span>_</span>
         </h2>
-        {/* <LazyLoad height={152}> */}
         <div className="skills-wrap">
           <span className="skill-item">
             <img src="/static/home/js.png" alt="javascript" /> JavaScript
@@ -73,7 +72,6 @@ export const Skills: React.FC = (): ReactElement => {
             <img src="/static/home/css.png" alt="css3" /> CSS3
           </span>
         </div>
-        {/* </LazyLoad> */}
         <h3>
           Other<span>_</span>
         </h3>

@@ -12,11 +12,9 @@ export const Intro: React.FC = (): ReactElement => {
             Brute Force Determination<span>_</span>
           </h2>
           <p>
-            I like to <strong>get things done</strong> . Architecting and
+            I like to <strong>get things done</strong>. Architecting and
             building highly performant, high quality, maintainable web
-            applications is my passion. For every problem, there is a solution.
-            tough problem As a <strong>hyper-motivated</strong> self starter
-            that is passionate about writing clean and efficient code
+            applications is my passion.
             {/* In order
             for said websites and applications to come to life, going from idea
             to reality is not only technically challenging but also emotionally
@@ -52,7 +50,6 @@ export const Intro: React.FC = (): ReactElement => {
             >
               <FaGithub className="icon" /> <span>Github</span>
             </a>
-
             <a
               href="https://www.linkedin.com/in/arthur-hwang"
               target="_blank"
@@ -61,23 +58,6 @@ export const Intro: React.FC = (): ReactElement => {
             >
               <FaLinkedin className="icon" /> <span>LinkedIn</span>
             </a>
-            {/* <a
-              href="https://www.facebook.com/arthur.hwang.9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              <FaFacebook className="icon" /> <span>Facebook</span>
-            </a>
-            <a
-              title=""
-              href="https://twitter.com/ArthurHwang"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              <FaTwitter className="icon" /> <span>Twitter</span>
-            </a> */}
             <a
               href="mailto:mail@arthurhwang.dev"
               target="_blank"
@@ -126,9 +106,6 @@ const InnerRight = styled("div")`
     a.link {
       position: relative;
       bottom: 9px;
-      /* margin-bottom: 1rem; */
-      /* margin: 1rem; */
-      /* padding: 1rem; */
 
       @media (max-width: 490px) {
         &:nth-child(even) {

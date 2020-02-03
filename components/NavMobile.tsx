@@ -5,11 +5,6 @@ import { useState } from "react";
 import { ReactElement } from "react";
 
 export const NavMobile: React.FC = (): ReactElement => {
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return window.addEventListener("scroll", handleScroll);
-  // }, []);
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = () => {

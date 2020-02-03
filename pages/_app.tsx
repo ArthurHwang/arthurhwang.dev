@@ -115,10 +115,6 @@ li {
   color: ${theme.grey};
 }
 
-/* li, p , span {
-  font-weight: 500;
-} */
-
 strong {
   font-weight: 800;
   color: ${theme.black};
@@ -129,8 +125,6 @@ code {
   background: 1px solid #ebeaeb;
   padding: 0 6px;
 }
-
-
 
 a {
   text-decoration: none;

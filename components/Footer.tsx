@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import MdHeart from "react-ionicons/lib/MdHeart";
-import {
-  FaGithub,
-  // FaFacebook,
-  FaLinkedin,
-  FaClipboardList
-  // FaTwitter
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { ReactElement } from "react";
 
@@ -58,36 +52,6 @@ export const Footer: React.FC = (): ReactElement => {
         >
           <FaLinkedin className="icon" />
         </a>
-        {/* <a
-          aria-label="facebook"
-          title=""
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.facebook.com/arthur.hwang.9"
-          className="link"
-        >
-          <FaFacebook className="icon" />
-        </a>
-        <a
-          aria-label="Twitter"
-          target="_blank"
-          rel="noopener noreferrer"
-          title=""
-          href="https://twitter.com/ArthurHwang"
-          className="link"
-        >
-          <FaTwitter className="icon" />
-        </a> */}
-        <a
-          aria-label="Resume"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="CV"
-          href="mailto:mail@arthurhwang.dev"
-          className="link"
-        >
-          <FaClipboardList className="icon" />{" "}
-        </a>
         <a
           aria-label="Email"
           target="_blank"
@@ -97,6 +61,16 @@ export const Footer: React.FC = (): ReactElement => {
           className="link"
         >
           <IoMdMail className="icon" />
+        </a>
+        <a
+          aria-label="Resume"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="CV"
+          href="/static/resume.pdf"
+          className="link"
+        >
+          <FaClipboardList className="icon" />{" "}
         </a>
       </div>
     </StyledFooter>
