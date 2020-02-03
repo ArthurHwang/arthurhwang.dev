@@ -12,23 +12,29 @@ export const Intro: React.FC = (): ReactElement => {
             Brute Force Determination<span>_</span>
           </h2>
           <p>
-            I like to <strong>get things done</strong>. Architecting and
-            building highly performant, high quality, maintainable websites and
-            web applications is something that I love doing everyday. In order
+            I like to <strong>get things done</strong> . Architecting and
+            building highly performant, high quality, maintainable web
+            applications is my passion. For every problem, there is a solution.
+            tough problem As a <strong>hyper-motivated</strong> self starter
+            that is passionate about writing clean and efficient code
+            {/* In order
             for said websites and applications to come to life, going from idea
             to reality is not only technically challenging but also emotionally
             challenging. Regardless of the ups-and-downs of software
             development, getting to the finish line and instilling a{" "}
             <strong>never give up</strong> attitude, no matter the task at hand
-            is my ethos.
+            is my ethos. */}
+            <br />
+            <code>const languages = ['javascript', 'typescr']</code>
           </p>
           <p>
             I am a <strong>hyper-motivated</strong> self starter who is
             passionate about writing clean, efficient code while maintaining
-            modern standards and security. I am not adverse to learning new
+            modern standards and security.
+            {/* I am not adverse to learning new
             technologies, in fact I embrace it wholeheartedly. Being able to
             build something of value and solve real world problems with code is
-            extremely satisfying for me.
+            extremely satisfying for me. */}
           </p>
         </InnerLeft>
 

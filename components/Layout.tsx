@@ -25,7 +25,9 @@ const Layout: React.FC<Props> = ({
       <MobilePush />
       <Header />
       {pathname !== "/_error" && <Subheader pathName={pathname} />}
-      <Inner pathName={pathname}>{children}</Inner>
+      <main>
+        <Inner pathName={pathname}>{children}</Inner>
+      </main>
       {pathname !== "/contact" && <Contact />}
       <Footer />
     </StyledLayout>

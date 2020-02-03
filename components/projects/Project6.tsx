@@ -14,7 +14,7 @@ export const Project6: React.FC = (): ReactElement => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://toneify-arthurhwang.herokuapp.com/"
+        href="https://keeb-kraze.herokuapp.com/"
         className="link project-title"
       >
         Keeb Kraze
