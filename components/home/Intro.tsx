@@ -25,8 +25,8 @@ export const Intro: React.FC = (): ReactElement => {
             I am hungry and driven to do more, build more and learn more. My
             thirst for knowledge could be classified as borderline obsessive.
             Ultimately, being able to take part and help businesses reach their
-            goals and get to the next level by developing software brings me joy
-            and satisfaction.
+            goals and get to the next level by developing software brings me
+            immense joy and satisfaction.
           </p>
         </InnerLeft>
 
