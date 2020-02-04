@@ -67,7 +67,7 @@ export const Footer: React.FC = (): ReactElement => {
           target="_blank"
           rel="noopener noreferrer"
           title="CV"
-          href="/static/resume.pdf"
+          href="/static/arthurhwang-resume.pdf"
           className="link"
         >
           <FaClipboardList className="icon" />{" "}

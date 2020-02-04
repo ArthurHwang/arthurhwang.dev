@@ -63,7 +63,7 @@ export const Intro: React.FC = (): ReactElement => {
               <IoMdMail className="icon" /> <span>Email</span>
             </a>
             <a
-              href="/static/resume.pdf"
+              href="/static/arthurhwang-resume.pdf"
               className="link"
               target="_blank"
               rel="noopener noreferrer"
