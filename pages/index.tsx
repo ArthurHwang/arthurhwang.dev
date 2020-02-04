@@ -12,7 +12,7 @@ const Home: NextPage = (): ReactElement => {
         <title>Arthur Hwang | Fullstack Web Developer</title>
         <meta
           name="description"
-          content="Arthur Hwang Fullstack Web Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
+          content="Arthur Hwang's Fullstack Web Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
         />
       </Head>
       <Intro />
