@@ -15,7 +15,11 @@ export default function handle(req: any, res: any) {
   nodemailerMailgun.sendMail(
     {
       from: "mail@arthurhwang.dev",
-      to: "ahwang55@gmail.com",
+      to: [
+        "ahwang55@gmail.com",
+        "kancerstick@gmail.com",
+        "arthur.hwang55@gmail.com"
+      ],
       subject: "New Form Submission",
       html: `<b>From: ${req.body.firstName} ${req.body.lastName}</b>
                <br />    
