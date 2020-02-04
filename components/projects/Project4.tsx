@@ -113,7 +113,8 @@ export const Project4: React.FC = (): ReactElement => {
             <li>Improved page load speeds by implementing MaxCDN.</li>
             <li>
               Improved overall business by decreasing bounce rates and
-              increasing site traffic by implementing new SEO features.
+              increasing site traffic by improving pagespeed and implementing
+              new SEO features.
             </li>
             <li>
               Implemented custom google tag manager events to let marketing team
@@ -122,7 +123,7 @@ export const Project4: React.FC = (): ReactElement => {
             </li>
             <li>
               Used tools like semrush and screaming frog to diagnose problems
-              with application and server.
+              within application and server.
             </li>
             <li>
               Administered and maintained GitHub repo for entire marketing team.

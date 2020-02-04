@@ -86,7 +86,7 @@ export const Project3: React.FC = (): ReactElement => {
             </li>
             <li>
               Used NodeJS and Express to handle back-end logic and custom API
-              routing while correctly hashing and salting sensitive password
+              endpoints while correctly hashing and salting sensitive password
               information with bcrypt library.
             </li>
             <li>
@@ -126,7 +126,7 @@ export const Project3: React.FC = (): ReactElement => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://gitlab.com/ArthurHwang/bestattorney-com/tree/master/SPAs"
+          href="https://gitlab.com/ArthurHwang/bestattorney-com/-/tree/master/SPAs"
         >
           <Button color="blue">
             Source <FaGithub />

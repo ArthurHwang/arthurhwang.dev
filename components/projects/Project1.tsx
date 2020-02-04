@@ -147,7 +147,7 @@ export const Project1: React.FC = (): ReactElement => {
               company.
             </li>
             <li>
-              Created custom serverless automated build pipeline workflow using
+              Created custom CI / CD automated build pipeline workflow using
               CircleCI, Cypress, Jest, and Netlify.
             </li>
             <li>
@@ -169,13 +169,12 @@ export const Project1: React.FC = (): ReactElement => {
               >
                 blog
               </a>{" "}
-              with 16 years of Wordpress data by leveraging a headless CMS with
-              custom hosting solution that is decoupled from the main
-              application.
+              with 16 years of WordPress data by leveraging a headless CMS with
+              custom decoupled hosting solution.
             </li>
             <li>
               Used modern CSS-in-JS solution styled-components to design and
-              create fully responsive application front-end with custom reusable
+              create fully responsive front-end application with custom reusable
               React components.
             </li>
             <li>
@@ -200,10 +199,10 @@ export const Project1: React.FC = (): ReactElement => {
               meta requirements including facebook, twitter, AMP, canonical
               URL's and JSON-LD structured data.
             </li>
-            {/* <li>
+            <li>
               Integrated Google Analytics and Google Marketing Suite for user
-              insights and goal tracking.
-            </li> */}
+              insights and metric tracking.
+            </li>
           </ul>
         </div>
       </div>

@@ -226,26 +226,6 @@ const Contact: NextPage = (): ReactElement => {
                 LinkedIn <FaLinkedin />
               </Button>
             </a>
-
-            {/* <a
-              href="https://www.facebook.com/arthur.hwang.9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button color="yellow">
-                FaceBook <FaFacebook />
-              </Button>
-            </a>
-
-            <a
-              href="https://twitter.com/ArthurHwang"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button color="red">
-                Twitter <FaTwitter />
-              </Button>
-            </a> */}
           </div>
         </StyledContact>
       </ContentWrap>

@@ -90,12 +90,12 @@ export const Project5: React.FC = (): ReactElement => {
               Used ReactJS and Semantic-UI component library to create front-end
               application.
             </li>
-            <li>Implemented React-Router for client-side routing.</li>
             <li>
-              Implemented Redux for centralized application state and state
+              Implemented Redux for centralized application state and
               persistence. Wrote actions and reducers to allow predictable state
               management.
             </li>
+            <li>Implemented React-Router for client-side routing.</li>
             <li>
               Utilized Redux-Thunk middleware to perform asynchronous logic /
               AJAX requests with Redux.

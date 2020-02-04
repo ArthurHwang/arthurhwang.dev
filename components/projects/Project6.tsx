@@ -81,36 +81,74 @@ export const Project6: React.FC = (): ReactElement => {
         <div className="accomplishments">
           <h3>Accomplishments:</h3>
           <ul>
-            <li>Used ReactJS and TypeScript to create SPA</li>
-            <li>Used React Router for client side routing</li>
-            <li>Implemented Redux for global state</li>
-            <li>Implemented Redux Saga middleware for asynchronous actions</li>
-            <li>Implemented Reselect for memoized redux state selectors</li>
-            <li>Implemented CSS-in-JS solution styled components</li>
-            <li>Implemented firebase user authentication and database</li>
-            <li>Used Express server</li>
-            <li>Used StripeAPI to handle payments</li>
+            <li>
+              Created fullstack e-commerce application with full user
+              authentication and authorization flow.
+            </li>
+            <li>
+              Used ReactJS and TypeScript to build and create client-side
+              application.
+            </li>
+            <li>
+              Implemented modern CSS-in-JS solution styled-components to design
+              and create fully responsive front-end application with custom
+              reusable React components.
+            </li>
+            <li>
+              Code-split application into dynamic chunks by using React Lazy and
+              Suspense to improve performance and lower bundle size over network
+              requests.
+            </li>
+            <li>Used React-Router for client-side routing.</li>
+            <li>
+              Implemented Redux for predictable and centralized application
+              state and persistence.
+            </li>
+            <li>
+              Integrated Redux Saga middleware to perform asynchronous logic and
+              reduce overall dispatch calls to Redux reducers to boost
+              performance of application.
+            </li>
+            <li>
+              Wrote custom Redux state selectors with Reselect library for
+              memoization of Redux state to combat unnecessary component
+              re-rendering.
+            </li>
+            <li>
+              Leveraged Firebase cloud database and authentication to perform
+              user authentication and store application data.
+            </li>
+            <li>
+              Used Express and NodeJS to handle back-end API payment requests
+              from front-end application using Stripe API.
+            </li>
+            <li>
+              Setup custom hosting with heroku and custom DNS hosting with
+              Cloudflare to improve performance.
+            </li>
           </ul>
         </div>
       </div>
       <div className="badges">
         <img src="/static/projects/logos/React.png" alt="react" />
+        <img src="/static/projects/logos/ts.png" alt="typescript" />
         <img src="/static/projects/logos/redux.png" alt="redux" />
-        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
-        <img src="/static/projects/logos/express.svg" alt="express" />
-        <img src="/static/projects/logos/mongodb.svg" alt="mongodb" />
         <img
           style={{ width: "60px" }}
-          src="/static/projects/logos/semantic.png"
-          alt="semantic UI"
+          src="/static/projects/logos/styled-components.png"
+          alt="styled components"
         />
+        <img src="/static/projects/logos/firebase.svg" alt="firebase" />
+        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+        <img src="/static/projects/logos/express.svg" alt="express" />
+
         <img src="/static/projects/logos/stripe.png" alt="stripe" />
       </div>
       <div className="buttons">
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/ArthurHwang/toneify"
+          href="https://github.com/ArthurHwang/keeb-kraze"
         >
           <Button color="blue">
             Source <FaGithub />
@@ -119,7 +157,7 @@ export const Project6: React.FC = (): ReactElement => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://toneify-arthurhwang.herokuapp.com/"
+          href="https://keeb-kraze.herokuapp.com/"
         >
           <Button color="green">
             Launch <FaPlay />

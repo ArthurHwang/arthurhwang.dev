@@ -90,7 +90,7 @@ export const Project2: React.FC = (): ReactElement => {
           <ul>
             <li>
               Used NextJS and TypeScript to build server-rendered isomorphic
-              React application.
+              React portfolio application.
             </li>
             <li>
               Implemented Apollo and GraphQL to programmatically load data
@@ -115,8 +115,8 @@ export const Project2: React.FC = (): ReactElement => {
               through Cloudflare into personal Gmail account.
             </li>
             <li>
-              Built personal blog with Contentful CMS. Sourced data with
-              Contentful Delivery API.
+              Built personal blog with headless Contentful CMS. Sourced data
+              with Contentful Delivery API.
             </li>
             <li>
               Parsed Contentful markdown data into blog template using

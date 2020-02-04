@@ -118,6 +118,14 @@ export const CommitList: React.FC<Props> = ({
                           <span>{fixUsername(commit.node.author.name)} </span>
                           <span>
                             <strong style={{ color: "grey" }}>
+                              <GoGitCommit
+                                style={{
+                                  position: "relative",
+                                  top: "2px",
+                                  color: "grey",
+                                  transform: "rotate(90deg)"
+                                }}
+                              />
                               {commit.node.oid.substring(0, 6)}
                             </strong>
                           </span>

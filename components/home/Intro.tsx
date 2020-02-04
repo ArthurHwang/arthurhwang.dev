@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { ReactElement } from "react";
 import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
+import { AiFillProject } from "react-icons/ai";
 import { IoMdMail } from "react-icons/io";
+import { ActiveLink as Link } from "../ActiveLink";
 
 export const Intro: React.FC = (): ReactElement => {
   return (
@@ -68,6 +70,13 @@ export const Intro: React.FC = (): ReactElement => {
             >
               <FaClipboardList className="icon" /> <span>CV</span>
             </a>
+
+            <Link activeClassName="active" href="/projects" as="/projects">
+              <a className="link" href="/projects">
+                <AiFillProject className="icon" />
+                Projects
+              </a>
+            </Link>
           </div>
         </InnerRight>
       </StyledIntro>
@@ -88,11 +97,7 @@ const ContentWrap = styled("div")`
   }
 `;
 
-const InnerLeft = styled("div")`
-  /* p {
-    font-size: 1.8rem;
-  } */
-`;
+const InnerLeft = styled("div")``;
 
 const InnerRight = styled("div")`
   .badges-2 {
