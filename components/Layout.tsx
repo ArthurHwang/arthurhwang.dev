@@ -6,7 +6,7 @@ import { Subheader } from "./Subheader";
 import { withRouter } from "next/router";
 import { Contact } from "./Contact";
 import { ReactElement } from "react";
-import "../util/slick-fix.css";
+// import "../util/slick-fix.css";
 
 interface Props {
   children: any;
