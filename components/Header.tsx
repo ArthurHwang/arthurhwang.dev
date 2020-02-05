@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Nav } from "./Nav";
 import { NavMobile } from "./NavMobile";
 import { ReactElement } from "react";
+import { NavLinks } from "./NavLinks";
 
 export const Header: React.FC = (): ReactElement => {
   return (
@@ -20,6 +21,7 @@ export const Header: React.FC = (): ReactElement => {
           </div>
         </Link>
         <Nav />
+        <NavLinks />
         <NavMobile />
       </div>
     </StyledHeader>
@@ -88,8 +90,9 @@ const StyledLogo = styled("div")`
 const StyledHeader = styled("header")`
   font-weight: 600;
   z-index: 1;
-  background: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.bg.black};
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  height: 60px;
 
   .hover-box {
     cursor: pointer;
@@ -99,9 +102,13 @@ const StyledHeader = styled("header")`
 
   .bar {
     display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: space-between;
+    grid-template-columns: 33.333333% 33.333333% 33.333333%;
+    /* justify-content: space-between; */
     align-items: stretch;
+
+    @media (max-width: 934px) {
+      grid-template-columns: auto 1fr;
+    }
 
     .me {
       padding: 1rem;

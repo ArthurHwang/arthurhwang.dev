@@ -33,8 +33,13 @@ const StyledNav = styled("nav")`
   margin: 0;
   padding: 0;
   display: flex;
-  justify-self: end;
+  justify-self: center;
   position: relative;
+  z-index: 3000;
+
+  @media (max-width: 934px) {
+    justify-self: end;
+  }
 
   .link-box {
     display: flex;
@@ -79,7 +84,7 @@ const StyledNav = styled("nav")`
     background: none;
     border: 0;
     cursor: pointer;
-    color: ${({ theme }) => theme.grey};
+    color: ${({ theme }) => theme.font.white};
 
     &:after {
       height: 2px;

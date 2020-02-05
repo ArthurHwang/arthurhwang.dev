@@ -127,7 +127,7 @@ export const Skills: React.FC = (): ReactElement => {
 
 const ContentWrap = styled("div")`
   padding: 4rem 2rem;
-  background-color: ${({ theme }) => theme.lightgrey};
+  background-color: ${({ theme }) => theme.bg.white};
 
   h2 {
     margin-top: 0;

@@ -85,6 +85,7 @@ export const Intro: React.FC = (): ReactElement => {
 };
 
 const ContentWrap = styled("div")`
+  background-color: ${({ theme }) => theme.bg.grey};
   display: flex;
   justify-content: center;
   padding: 4rem 2rem;

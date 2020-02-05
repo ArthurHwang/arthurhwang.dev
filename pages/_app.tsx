@@ -8,15 +8,27 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 const theme = {
   primary: "#fff",
-  secondary: "#001730",
-  accent: "#4AD7D1",
+  secondary: "#333",
+  accent: "#2FA286",
   secondaryAccent: "#FE4A49",
   yellow: "#faa916",
   blue: "#3454d1",
   lightgrey: "#f6f6f6",
   grey: "#525252",
   black: "#1e1e1e",
-  maxWidth: "1000px"
+  maxWidth: "1000px",
+
+  font: {
+    white: "#F6F5F3",
+    aqua: "#2E9E82"
+  },
+
+  bg: {
+    white: "#fff",
+    black: "#222",
+    aqua: "#2FA286",
+    grey: "#F9F8FD"
+  }
 };
 
 class MyApp extends App<any> {
@@ -43,6 +55,38 @@ class MyApp extends App<any> {
 export default withGA("UA-150992172-1", Router)(MyApp);
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 400;
+  src: url('/static/fonts/TitilliumWeb-Regular.ttf');
+}
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 600;
+  src: url('/static/fonts/TitilliumWeb-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 700;
+  src: url('/static/fonts/TitilliumWeb-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  src: url('/static/fonts/SourceSansPro-Regular.ttf');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  src: url('/static/fonts/SourceSansPro-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  src: url('/static/fonts/SourceSansPro-Bold.ttf');
+}
+
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -58,7 +102,8 @@ body {
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
-  font-family:  "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", "Segoe UI", "lato", "Arial", "Open Sans", "sans-serif";
+  font-family:  "Source Sans Pro","-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", "Segoe UI", "lato", "Arial", "Open Sans", "sans-serif";
+  font-weight: 400;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.8;
@@ -70,7 +115,10 @@ body {
 }
 
 h1,h2,h3 {
+  font-weight: bold;
   color: ${theme.black};
+  text-transform: uppercase;
+    font-family:  "Titillium","-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", "Segoe UI", "lato", "Arial", "Open Sans", "sans-serif";
 }
 
 h2 {
