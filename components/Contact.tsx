@@ -27,7 +27,7 @@ const validationSchema = Yup.object().shape({
 export const Contact: React.FC = (): ReactElement => {
   const [alert, setAlert] = useState("");
   return (
-    <ContentWrap>
+    <ContentWrap id="contact">
       <StyledContact>
         <h2>
           Let's Chat!<span>_</span>

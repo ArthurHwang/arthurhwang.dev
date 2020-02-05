@@ -1,13 +1,18 @@
 import styled from "styled-components";
-import React, { ReactElement } from "react";
+import { ReactElement, useRef } from "react";
 import useTyped from "use-typed";
 import { getWelcomeMessage } from "../lib/welcomeMessage";
+import { Button } from "./Button";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 export const SubheaderHome: React.FC = (): ReactElement => {
-  const demoRef = React.useRef(null);
+  const demoRef = useRef(null);
+
   useTyped(demoRef, {
     strings: [
       "I'm a Fullstack web developer",
+      "Rong Rong you got a big ass",
       "Lover of technology",
       "A few of my skills are React, TypeScript, NodeJS, HTML, CSS",
       "I'm currently learning React, Node, and PostCSS",
@@ -17,6 +22,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
       "Or, just keep playing with the particles! No judgement here!",
       "Reloading sequence...^4000"
     ],
+    loop: true,
     typeSpeed: 70,
     backSpeed: 40
   });
@@ -28,6 +34,23 @@ export const SubheaderHome: React.FC = (): ReactElement => {
         <div className="typed">
           <span ref={demoRef}></span>
         </div>
+        <div className="buttons">
+          <ScrollLink
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <Button color="green">Contact Me</Button>
+          </ScrollLink>
+          <Link href="/projects">
+            <a>
+              <Button color="black">View My Work</Button>
+            </a>
+          </Link>
+        </div>
       </div>
     </ContentWrap>
   );
@@ -35,14 +58,28 @@ export const SubheaderHome: React.FC = (): ReactElement => {
 
 const ContentWrap = styled("div")`
   height: 100%;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-content: middle; */
 
+  .buttons {
+    z-index: 50;
+    text-align: center;
+
+    button {
+      display: inline-block;
+      width: 120px;
+      padding: 1rem 0;
+
+      &:first-child {
+        margin-right: 8px;
+      }
+
+      &:last-child {
+        margin-left: 8px;
+      }
+    }
+  }
   .flex-wrap {
     height: 100%;
     display: flex;
-    /* justify-content: middle; */
     justify-content: center;
     flex-direction: column;
   }
@@ -57,29 +94,59 @@ const ContentWrap = styled("div")`
 
   h1 {
     line-height: 0.1;
-    font-size: 4rem;
-    position: relative;
+    font-size: 3.8rem;
     letter-spacing: -1px;
+
+    @media (max-width: 734px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 518px) {
+      font-size: 2.4rem;
+    }
   }
 
   h2 {
     line-height: 1.5;
     font-size: 8rem;
     letter-spacing: -3px;
+
+    @media (max-width: 734px) {
+      font-size: 6rem;
+    }
+
+    @media (max-width: 518px) {
+      line-height: 2;
+      font-size: 4.2rem;
+    }
   }
 
   .typed {
     color: ${({ theme }) => theme.font.white};
     width: 100%;
-    display: flex;
-    justify-content: center;
     z-index: 50;
+    position: relative;
+    bottom: 15px;
+    text-align: center;
+
+    @media (max-width: 518px) {
+      bottom: 12px;
+    }
 
     span {
       text-transform: uppercase;
       font-size: 2.8rem;
       letter-spacing: 0;
       font-weight: 300;
+
+      @media (max-width: 734px) {
+        font-size: 2.2rem;
+      }
+
+      @media (max-width: 518px) {
+        font-size: 2rem;
+        line-height: 0;
+      }
     }
   }
 `;

@@ -63,22 +63,27 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
 
 const StyledSubheader = styled("section")<{ pathname: string }>`
   background: ${({ theme }) => theme.secondary} no-repeat 50%;
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.125); */
-  /* position: relative;
-  bottom: 1px; */
-  height: 94.1vh;
-  /* overflow: hidden; */
+  height: ${props => (props.pathname === "/" ? "94.1vh" : "300px")};
+  overflow: hidden;
+  position: relative;
+  z-index: 5000;
 
-  /* @media (max-width: 490px) {
-    height: ${props => (props.pathname === "/" ? "250px" : "200px")};
-  } */
+  @media (max-width: 490px) {
+    height: ${props => props.pathname !== "/" && "250px"};
+  }
 
   .particles {
     position: absolute;
-    height: 94.1vh;
+    height: auto;
+    height: ${props => (props.pathname === "/" ? "94.1vh" : "300px")};
     right: 0;
     top: 60px;
     left: 0;
     z-index: 0 !important;
+
+    canvas {
+      height: 100vmax !important;
+      z-index: 0;
+    }
   }
 `;

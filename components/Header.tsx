@@ -40,18 +40,18 @@ const StyledLogo = styled("div")`
   }
 
   .text-wrapper {
-    &:hover {
+    /* &:hover {
       .name {
         transition: all 0.4s;
         color: ${({ theme }) => theme.font.aqua};
       }
-    }
+    } */
   }
 
   .logo-img {
     width: 100%;
     height: 100%;
-    background-image: url("/static/me.jpg");
+    background-image: url('/static/me.jpg');
     background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,7 +64,7 @@ const StyledLogo = styled("div")`
     text-transform: uppercase;
     padding: 0 0 0 1.5rem;
     margin: 0;
-    font-family: "Titillium";
+    font-family: 'Titillium';
   }
 
   p.name {
@@ -98,7 +98,11 @@ const StyledLogo = styled("div")`
 
 const StyledHeader = styled("header")`
   font-weight: 600;
-  /* z-index: 1; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+
   background: ${({ theme }) => theme.bg.black};
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   height: 60px;
@@ -112,7 +116,6 @@ const StyledHeader = styled("header")`
   .bar {
     display: grid;
     grid-template-columns: 33.333333% 33.333333% 33.333333%;
-    /* justify-content: space-between; */
     align-items: stretch;
 
     @media (max-width: 934px) {

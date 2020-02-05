@@ -204,6 +204,8 @@ const StyledSkills = styled("div")`
       margin: 0 auto;
       width: 45px;
       height: 45px;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
     }
 
     &:last-child {

@@ -17,13 +17,11 @@ const theme = {
   grey: "#525252",
   black: "#1e1e1e",
   maxWidth: "1000px",
-
   font: {
     white: "#F6F5F3",
     aqua: "#2E9E82",
     darkAqua: "#37bc9b"
   },
-
   bg: {
     white: "#fff",
     black: "#222",
@@ -91,6 +89,7 @@ const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 *,

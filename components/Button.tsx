@@ -27,7 +27,9 @@ const StyledButton = styled("button")<{ color: string | undefined }>`
       case "blue":
         return props.theme.secondary;
       case "green":
-        return props.theme.accent;
+        return props.theme.bg.aqua;
+      case "black":
+        return props.theme.bg.black;
       case "red":
         return props.theme.secondaryAccent;
       case "yellow":
