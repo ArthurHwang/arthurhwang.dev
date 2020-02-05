@@ -38,7 +38,7 @@ export const Footer: React.FC = (): ReactElement => {
           rel="noopener noreferrer"
           title=""
           href="https://github.com/ArthurHwang"
-          className="link"
+          className="link invert"
         >
           <FaGithub className="icon" />
         </a>
@@ -48,7 +48,7 @@ export const Footer: React.FC = (): ReactElement => {
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/arthur-hwang"
-          className="link"
+          className="link invert"
         >
           <FaLinkedin className="icon" />
         </a>
@@ -58,7 +58,7 @@ export const Footer: React.FC = (): ReactElement => {
           rel="noopener noreferrer"
           title="Email"
           href="mailto:mail@arthurhwang.dev"
-          className="link"
+          className="link invert"
         >
           <IoMdMail className="icon" />
         </a>
@@ -68,7 +68,7 @@ export const Footer: React.FC = (): ReactElement => {
           rel="noopener noreferrer"
           title="CV"
           href="/static/arthurhwang-resume.pdf"
-          className="link"
+          className="link invert"
         >
           <FaClipboardList className="icon" />{" "}
         </a>
@@ -79,7 +79,7 @@ export const Footer: React.FC = (): ReactElement => {
 
 const StyledFooter = styled("footer")`
   padding: 1rem 2rem;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.bg.black};
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

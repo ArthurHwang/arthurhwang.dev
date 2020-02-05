@@ -164,7 +164,7 @@ const StyledIntro = styled("div")`
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 6rem;
-  max-width: 800px;
+  max-width: 1200px;
 
   @media (max-width: 490px) {
     grid-template-columns: initial;

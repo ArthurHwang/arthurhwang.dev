@@ -53,7 +53,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
     pathName !== "/blog/[post]" && (
       <StyledSubheader pathname={pathName}>
         {/* 
-      //@ts-ignore */}
+          //@ts-ignore */}
         <Particles className="particles" params={ParticleConfig} />
         {contentSwitch(pathName)}
       </StyledSubheader>
@@ -63,15 +63,15 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
 
 const StyledSubheader = styled("section")<{ pathname: string }>`
   background: ${({ theme }) => theme.secondary} no-repeat 50%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.125); */
   /* position: relative;
   bottom: 1px; */
   height: 94.1vh;
   /* overflow: hidden; */
 
-  @media (max-width: 490px) {
+  /* @media (max-width: 490px) {
     height: ${props => (props.pathname === "/" ? "250px" : "200px")};
-  }
+  } */
 
   .particles {
     position: absolute;

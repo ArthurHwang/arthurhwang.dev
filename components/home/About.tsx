@@ -82,7 +82,7 @@ const ContentWrap = styled("div")`
 `;
 
 const StyledAbout = styled("div")`
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 
   .flex-wrap {

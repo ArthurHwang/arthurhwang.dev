@@ -35,7 +35,7 @@ const StyledNav = styled("nav")`
   display: flex;
   justify-self: center;
   position: relative;
-  z-index: 3000;
+  /* z-index: 3000; */
 
   @media (max-width: 934px) {
     justify-self: end;
@@ -49,23 +49,25 @@ const StyledNav = styled("nav")`
     transition: background 0.2s linear;
 
     &:hover {
-      background: ${({ theme }) => theme.accent};
+      /* background: ${({ theme }) => theme.bg.grey}; */
+      background: ${({ theme }) => theme.grey};
 
       a {
         transition: color 0.2s linear;
-        color: ${({ theme }) => theme.secondary};
+        color: ${({ theme }) => theme.yellow};
       }
     }
   }
 
   .active {
-    background: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.font.aqua};
+    /* background: ${({ theme }) => theme.accent}; */
     a:after {
       height: 2px;
       position: absolute;
       bottom: 15px;
-      background: ${({ theme }) => theme.yellow};
-      content: "";
+      background: ${({ theme }) => theme.font.aqua};
+      content: '';
       width: calc(100% - 30px);
     }
   }
@@ -79,8 +81,9 @@ const StyledNav = styled("nav")`
     position: relative;
     text-transform: uppercase;
     letter-spacing: -0.2px;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-family: 'Titillium';
+    /* font-weight: 700; */
+    font-size: 1.3rem;
     background: none;
     border: 0;
     cursor: pointer;
@@ -88,8 +91,8 @@ const StyledNav = styled("nav")`
 
     &:after {
       height: 2px;
-      background: ${({ theme }) => theme.yellow};
-      content: "";
+      background: ${({ theme }) => theme.aqua};
+      content: '';
       width: 0;
       position: absolute;
       bottom: 15px;

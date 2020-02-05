@@ -9,7 +9,7 @@ export const NavLinks: React.FC = ({}): ReactElement => (
       href="https://github.com/ArthurHwang"
       target="_blank"
       rel="noopener noreferrer"
-      className="link"
+      className="link invert"
     >
       <FaGithub className="icon" />
     </a>
@@ -17,7 +17,7 @@ export const NavLinks: React.FC = ({}): ReactElement => (
       href="https://www.linkedin.com/in/arthur-hwang"
       target="_blank"
       rel="noopener noreferrer"
-      className="link"
+      className="link invert"
     >
       <FaLinkedin className="icon" />
     </a>
@@ -25,13 +25,13 @@ export const NavLinks: React.FC = ({}): ReactElement => (
       href="mailto:mail@arthurhwang.dev"
       target="_blank"
       rel="noopener noreferrer"
-      className="link"
+      className="link invert"
     >
       <IoMdMail className="icon" />
     </a>
     <a
       href="/static/arthurhwang-resume.pdf"
-      className="link"
+      className="link invert"
       target="_blank"
       rel="noopener noreferrer"
     >

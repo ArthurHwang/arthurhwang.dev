@@ -139,7 +139,7 @@ const ContentWrap = styled("div")`
 `;
 
 const StyledSkills = styled("div")`
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 
   .other-wrap {

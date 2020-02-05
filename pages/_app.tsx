@@ -20,7 +20,8 @@ const theme = {
 
   font: {
     white: "#F6F5F3",
-    aqua: "#2E9E82"
+    aqua: "#2E9E82",
+    darkAqua: "#37bc9b"
   },
 
   bg: {
@@ -102,7 +103,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
-  font-family:  "Source Sans Pro","-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", "Segoe UI", "lato", "Arial", "Open Sans", "sans-serif";
+  font-family:  "Titillium","-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", "Segoe UI", "lato", "Arial", "Open Sans", "sans-serif";
   font-weight: 400;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
@@ -110,15 +111,14 @@ body {
   letter-spacing: 0.1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-rendering: geometricPrecision; */
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  /* text-rendering: optimizeLegibility; */
 }
 
 h1,h2,h3 {
   font-weight: bold;
   color: ${theme.black};
   text-transform: uppercase;
-    font-family:  "Titillium","-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", "Segoe UI", "lato", "Arial", "Open Sans", "sans-serif";
 }
 
 h2 {
@@ -157,10 +157,12 @@ p {
   text-align: justify;
   max-height: 999999px;
   word-break: break-word;
+  font-family: "Source Sans Pro";
 }
 
 li {
   color: ${theme.grey};
+  font-family: "Source Sans Pro"
 }
 
 strong {
@@ -184,6 +186,14 @@ a {
   }
 }
 
+a.invert {
+  color: ${theme.font.white};
+
+  &:hover {
+    color: ${theme.accent};
+  }
+}
+
 a.link {
   text-decoration: none;
   font-weight: 600;
@@ -196,6 +206,8 @@ a.link {
 
   &:hover {
     background-position: 0%;
-  }
+  } 
 }
+
+
 `;

@@ -35,16 +35,24 @@ const StyledLogo = styled("div")`
   grid-template-columns: 50px 1fr;
   grid-template-rows: 50px;
   margin: 0.5rem 0.5rem 0.5rem 2rem;
-
   @media (max-width: 768px) {
     margin-left: 1rem;
+  }
+
+  .text-wrapper {
+    &:hover {
+      .name {
+        transition: all 0.4s;
+        color: ${({ theme }) => theme.font.aqua};
+      }
+    }
   }
 
   .logo-img {
     width: 100%;
     height: 100%;
     background-image: url("/static/me.jpg");
-    background-position: 1px 50%;
+    background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
@@ -56,13 +64,14 @@ const StyledLogo = styled("div")`
     text-transform: uppercase;
     padding: 0 0 0 1.5rem;
     margin: 0;
+    font-family: "Titillium";
   }
 
   p.name {
     font-size: 2.5rem;
     position: relative;
     bottom: 5px;
-    color: ${({ theme }) => theme.black};
+    color: ${({ theme }) => theme.font.white};
 
     @media (max-width: 413px) {
       font-size: 1.8rem;
@@ -89,7 +98,7 @@ const StyledLogo = styled("div")`
 
 const StyledHeader = styled("header")`
   font-weight: 600;
-  z-index: 1;
+  /* z-index: 1; */
   background: ${({ theme }) => theme.bg.black};
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   height: 60px;
