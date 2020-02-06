@@ -4,7 +4,7 @@ import ParticleConfig from "../lib/particlesConfig";
 import { Divider } from "./Divider";
 import { SubheaderHome } from "./Subheader-Home";
 import { SubheaderDefault } from "./Subheader-Default";
-import { useState, ReactElement, useEffect } from "react";
+import { useState, ReactElement, useLayoutEffect } from "react";
 interface Props {
   pathName: string;
 }
@@ -18,13 +18,14 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
       : windowGlobal.innerHeight
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    console.log("fired");
     setHeight(windowGlobal.innerHeight - 60);
     window.addEventListener("resize", () => {
       setHeight(windowGlobal.innerHeight - 60);
     });
     return () => window.removeEventListener("resize", () => {});
-  }, []);
+  });
 
   function contentSwitch(path: string): ReactElement | null {
     switch (path) {
