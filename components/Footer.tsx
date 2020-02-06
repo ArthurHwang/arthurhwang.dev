@@ -3,6 +3,7 @@ import MdHeart from "react-ionicons/lib/MdHeart";
 import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { ReactElement } from "react";
+import Link from "next/link";
 
 export const Footer: React.FC = (): ReactElement => {
   return (
@@ -52,16 +53,16 @@ export const Footer: React.FC = (): ReactElement => {
         >
           <FaLinkedin className="icon" />
         </a>
-        <a
-          aria-label="Email"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Email"
-          href="mailto:mail@arthurhwang.dev"
-          className="link invert"
-        >
-          <IoMdMail className="icon" />
-        </a>
+        <Link href="/#contact">
+          <a
+            // href="mailto:mail@arthurhwang.dev"
+            // target="_blank"
+            // rel="noopener noreferrer"
+            className="link invert"
+          >
+            <IoMdMail className="icon" />
+          </a>
+        </Link>
         <a
           aria-label="Resume"
           target="_blank"
@@ -141,6 +142,9 @@ const StyledFooter = styled("footer")`
   }
 
   .icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: 0 0.6rem;
+    position: relative;
+    top: 3px;
   }
 `;

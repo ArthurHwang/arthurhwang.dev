@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ReactElement } from "react";
 import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import Link from "next/link";
 
 export const NavLinks: React.FC = ({}): ReactElement => (
   <StyledNavLinks>
@@ -21,14 +22,17 @@ export const NavLinks: React.FC = ({}): ReactElement => (
     >
       <FaLinkedin className="icon" />
     </a>
-    <a
-      href="mailto:mail@arthurhwang.dev"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="link invert"
-    >
-      <IoMdMail className="icon" />
-    </a>
+    <Link href="/#contact">
+      <a
+        // href="mailto:mail@arthurhwang.dev"
+        // target="_blank"
+        // rel="noopener noreferrer"
+        className="link invert"
+      >
+        <IoMdMail className="icon" />
+      </a>
+    </Link>
+
     <a
       href="/static/arthurhwang-resume.pdf"
       className="link invert"

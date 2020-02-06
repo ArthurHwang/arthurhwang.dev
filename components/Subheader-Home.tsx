@@ -7,15 +7,15 @@ import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 
 export const SubheaderHome: React.FC = (): ReactElement => {
-  const demoRef = useRef(null);
+  const typedRef = useRef(null);
 
-  useTyped(demoRef, {
+  useTyped(typedRef, {
     strings: [
       "I'm a Fullstack web developer",
       "Rong Rong you got a big ass",
       "Lover of technology",
       "A few of my skills are React, TypeScript, NodeJS, HTML, CSS",
-      "I'm currently grinding out data structures and algorithms",
+      "I am currently grinding out data structures and algorithms",
       "I pass my free time with mahjong, guitar, and learning",
       "Wow, thanks for staying til the end!",
       "Feel free to scroll down at any time!",
@@ -32,7 +32,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
         <h1>{getWelcomeMessage()}</h1>
         <h2>I'm Arthur Hwang</h2>
         <div className="typed">
-          <span ref={demoRef}></span>
+          <span ref={typedRef}></span>
         </div>
         <div className="buttons">
           <ScrollLink
