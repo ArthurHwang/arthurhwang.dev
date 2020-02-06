@@ -12,11 +12,7 @@ interface Props {
 // @ts-ignore
 export const Subheader: React.FC<Props> = ({ pathName }) => {
   const windowGlobal: any = typeof window !== "undefined" && window;
-  const [height, setHeight] = useState(
-    windowGlobal.innerHeight < 768
-      ? windowGlobal.innerHeight - 60
-      : windowGlobal.innerHeight
-  );
+  const [height, setHeight] = useState(windowGlobal.innerHeight - 60);
 
   useLayoutEffect(() => {
     console.log("fired");
