@@ -14,7 +14,7 @@ export const NavMobile: React.FC = (): ReactElement => {
     });
 
     return () => window.removeEventListener("scroll", () => {});
-  });
+  }, []);
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);

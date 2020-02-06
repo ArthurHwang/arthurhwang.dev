@@ -72,21 +72,20 @@ const GlobalStyle = createGlobalStyle`
   font-style: normal;
   src: url('/static/fonts/TitilliumWeb-Bold.ttf') format('truetype');
 }
-
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'SourceSansPro';
   font-weight: 400;
   font-style: normal;
   src: url('/static/fonts/SourceSansPro-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'SourceSansPro';
   font-weight: 600;
   font-style: normal;
   src: url('/static/fonts/SourceSansPro-SemiBold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'SourceSansPro';
   font-weight: 700;
   font-style: normal;
   src: url('/static/fonts/SourceSansPro-Bold.ttf') format('truetype');
@@ -162,12 +161,12 @@ p {
   text-align: justify;
   max-height: 999999px;
   word-break: break-word;
-  font-family: "Source Sans Pro";
+  font-family: "SourceSansPro";
 }
 
 li {
   color: ${theme.grey};
-  font-family: "Source Sans Pro"
+  font-family: "SourceSansPro"
 }
 
 strong {

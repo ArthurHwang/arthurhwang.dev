@@ -149,7 +149,7 @@ const ContentWrap = styled("div")`
   }
 
   h1 {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "SourceSansPro", sans-serif;
     font-weight: bold;
     font-size: 90px;
     letter-spacing: 20px;
@@ -162,7 +162,7 @@ const ContentWrap = styled("div")`
   }
 
   h2 {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "SourceSansPro", sans-serif;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 20px;

@@ -15,7 +15,6 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    console.log("fired");
     setHeight(windowGlobal.innerHeight - 60);
 
     window.addEventListener("resize", () => {
