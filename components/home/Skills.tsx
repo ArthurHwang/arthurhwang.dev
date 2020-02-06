@@ -5,9 +5,9 @@ export const Skills: React.FC = (): ReactElement => {
   return (
     <ContentWrap>
       <StyledSkills>
-        <h2>
+        <h3>
           Some of my skills<span>_</span>
-        </h2>
+        </h3>
         <div className="skills-wrap">
           <span className="skill-item">
             <img
@@ -98,11 +98,12 @@ export const Skills: React.FC = (): ReactElement => {
           </span>
           <span className="skill-item">
             <img
-              src="/static/home/semantic.png"
-              title="semantic ui"
-              alt="semantic ui"
+              style={{ width: "55px" }}
+              src="/static/projects/logos/mysql.png"
+              title="mysql"
+              alt="mysql"
             />{" "}
-            Semantic
+            MySQL
           </span>
           <span className="skill-item">
             <img
@@ -173,15 +174,15 @@ export const Skills: React.FC = (): ReactElement => {
 };
 
 const ContentWrap = styled("div")`
-  padding: 4rem 2rem;
-  background-color: ${({ theme }) => theme.bg.white};
+  padding: 1rem 2rem 10rem;
+  background-color: ${({ theme }) => theme.bg.grey};
 
   h2 {
     margin-top: 0;
   }
 
   span {
-    color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.secondaryAccent};
     font-weight: 800;
   }
 `;
@@ -193,6 +194,8 @@ const StyledSkills = styled("div")`
   .other-wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: 75%;
+    margin: 0 auto;
 
     .two {
       @media (max-width: 865px) {
@@ -235,9 +238,11 @@ const StyledSkills = styled("div")`
   }
 
   .skills-wrap {
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
     flex-wrap: wrap;
     position: relative;
+    width: 75%;
+
     right: 10px;
     display: grid;
     grid-gap: 2rem;

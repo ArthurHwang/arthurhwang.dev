@@ -9,24 +9,24 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 const theme = {
   primary: "#fff",
   secondary: "#333",
-  accent: "#2FA286",
+  accent: "#37bc9b",
   secondaryAccent: "#FE4A49",
   yellow: "#faa916",
-  blue: "#3454d1",
+  blue: "#3B68B5",
   lightgrey: "#f6f6f6",
   grey: "#525252",
   black: "#1e1e1e",
-  maxWidth: "1000px",
+  maxWidth: "1200px",
   font: {
     white: "#F6F5F3",
     aqua: "#2E9E82",
     darkAqua: "#37bc9b"
   },
   bg: {
-    white: "#fff",
+    white: "#f9f8fd",
     black: "#222",
-    aqua: "#2FA286",
-    grey: "#F9F8FD"
+    aqua: "#37bc9b",
+    grey: "rgba(0,0,0,.1)"
   }
 };
 
@@ -123,10 +123,11 @@ h1,h2,h3 {
   font-weight: bold;
   color: ${theme.black};
   text-transform: uppercase;
+  /* letter-spacing: -1px; */
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 3.6rem;
 }
 
 h3 {
@@ -201,7 +202,7 @@ a.invert {
 a.link {
   text-decoration: none;
   font-weight: 600;
-  background-image: linear-gradient(to right,#4AD7D1,#4AD7D1 50%,${theme.blue} 50%);
+  background-image: linear-gradient(to right,#37bc9b,#37bc9b 50%,${theme.blue} 50%);
   background-position: 100%;
   background-size: 200% 100%;
   -webkit-background-clip: text;

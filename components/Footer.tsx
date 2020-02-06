@@ -23,7 +23,7 @@ export const Footer: React.FC = (): ReactElement => {
           <MdHeart
             style={{ marginLeft: "0rem", cursor: "pointer" }}
             fontSize="35px"
-            color="red"
+            color="#FE4A49"
             onClick={() =>
               alert("Thank you for visiting my website.  I love you <3.")
             }
@@ -36,7 +36,7 @@ export const Footer: React.FC = (): ReactElement => {
           aria-label="GitHub"
           target="_blank"
           rel="noopener noreferrer"
-          title=""
+          title="GitHub"
           href="https://github.com/ArthurHwang"
           className="link invert"
         >
@@ -44,7 +44,7 @@ export const Footer: React.FC = (): ReactElement => {
         </a>
         <a
           aria-label="LinkedIn"
-          title=""
+          title="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/arthur-hwang"
@@ -53,7 +53,7 @@ export const Footer: React.FC = (): ReactElement => {
           <FaLinkedin className="icon" />
         </a>
         <Link href="/#contact">
-          <a className="link invert">
+          <a className="link invert" title="Contact">
             <IoMdMail className="icon" />
           </a>
         </Link>
@@ -73,7 +73,7 @@ export const Footer: React.FC = (): ReactElement => {
 };
 
 const StyledFooter = styled("footer")`
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   background-color: ${({ theme }) => theme.bg.black};
   margin: 0;
   display: grid;
@@ -94,6 +94,7 @@ const StyledFooter = styled("footer")`
   .love {
     position: relative;
     top: 2px;
+    color: ${({ theme }) => theme.font.white};
 
     @media (max-width: 910px) {
       text-align: center;
@@ -105,6 +106,8 @@ const StyledFooter = styled("footer")`
       margin: 0 0.3rem;
       position: relative;
       bottom: 4px;
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
     }
   }
 

@@ -5,6 +5,8 @@ import { Error } from "./Error";
 import { useState } from "react";
 import { Button } from "./Button";
 import { ReactElement } from "react";
+import { FaPhone } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -33,11 +35,21 @@ export const Contact: React.FC = (): ReactElement => {
           Let's Chat!<span>_</span>
         </h2>
         <p style={{ textAlign: "left" }}>
-          Feel free to use this form or directly email me at{" "}
+          Feel free to use this form or directly email / call me :{" "}
+        </p>
+        <p>
           <a className="link" href="mailto:mail@arthurhwang.dev">
+            <IoMdMail style={{ position: "relative", top: "2px" }} />{" "}
             mail@arthurhwang.dev
+          </a>{" "}
+          <a className="link" href="tel:714-280-6188">
+            <FaPhone
+              style={{ marginLeft: "15px", position: "relative", top: "2px" }}
+            />{" "}
+            (714) 280-6188{" "}
           </a>
         </p>
+        <p></p>
         <Formik
           initialValues={{
             firstName: "",
@@ -90,7 +102,7 @@ export const Contact: React.FC = (): ReactElement => {
                       type="text"
                       name="firstName"
                       id="firstName"
-                      placeholder="Enter your first name"
+                      placeholder="Jon"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.firstName}
@@ -112,7 +124,7 @@ export const Contact: React.FC = (): ReactElement => {
                       type="text"
                       name="lastName"
                       id="lastName"
-                      placeholder="Enter your last name"
+                      placeholder="Snow"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.lastName}
@@ -132,7 +144,7 @@ export const Contact: React.FC = (): ReactElement => {
                       type="email"
                       name="email"
                       id="email"
-                      placeholder="Enter your email"
+                      placeholder="youknownothin@jonsnow.com"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.email}
@@ -149,7 +161,7 @@ export const Contact: React.FC = (): ReactElement => {
                     aria-label="Message"
                     name="message"
                     id="message"
-                    placeholder="Enter your message"
+                    placeholder="Ygritte: Is that a palace? Jon Snow: It's a windmill."
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.message}
@@ -178,7 +190,7 @@ export const Contact: React.FC = (): ReactElement => {
 };
 
 const StyledContact = styled("div")`
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 
   .textarea-fix {
@@ -207,6 +219,23 @@ const StyledContact = styled("div")`
       width: 100%;
       height: 50px;
       padding-left: 2rem;
+
+      ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: rgba(0, 0, 0, 0.4);
+      }
+      ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: rgba(0, 0, 0, 0.4);
+      }
+      :-ms-input-placeholder {
+        /* IE 10+ */
+        color: rgba(0, 0, 0, 0.4);
+      }
+      :-moz-placeholder {
+        /* Firefox 18- */
+        color: rgba(0, 0, 0, 0.4);
+      }
     }
 
     textarea {
@@ -214,6 +243,23 @@ const StyledContact = styled("div")`
       height: 206px;
       resize: none;
       padding: 1.5rem;
+
+      ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: rgba(0, 0, 0, 0.4);
+      }
+      ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: rgba(0, 0, 0, 0.4);
+      }
+      :-ms-input-placeholder {
+        /* IE 10+ */
+        color: rgba(0, 0, 0, 0.4);
+      }
+      :-moz-placeholder {
+        /* Firefox 18- */
+        color: rgba(0, 0, 0, 0.4);
+      }
 
       @media (max-width: 650px) {
         position: relative;
@@ -228,7 +274,7 @@ const StyledContact = styled("div")`
 `;
 
 const ContentWrap = styled("section")`
-  padding: 4rem 2rem;
+  padding: 10rem 2rem 10rem;
   background-color: ${({ theme }) => theme.bg.grey};
 
   .valid {

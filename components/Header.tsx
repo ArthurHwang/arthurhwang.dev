@@ -73,7 +73,7 @@ const StyledLogo = styled("div")`
 
   p.title {
     font-size: 1.4rem;
-    color: #fe4a49;
+    color: ${({ theme }) => theme.secondaryAccent};
     position: relative;
     bottom: 20px;
     font-style: italic;

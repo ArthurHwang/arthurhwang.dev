@@ -3,7 +3,8 @@ import { ReactElement } from "react";
 import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
 import { IoMdMail } from "react-icons/io";
-import { ActiveLink as Link } from "../ActiveLink";
+import { ActiveLink } from "../ActiveLink";
+import Link from "next/link";
 
 export const Intro: React.FC = (): ReactElement => {
   return (
@@ -11,24 +12,35 @@ export const Intro: React.FC = (): ReactElement => {
       <StyledIntro>
         <InnerLeft>
           <h2>
-            Brute Force Determination<span>_</span>
+            WHOAMI<span>_</span>
           </h2>
           <p>
-            I like to <strong>get things done</strong>. Architecting and
-            building highly performant, high quality, maintainable web
-            applications is my passion. As a <strong>hyper-motivated</strong>{" "}
-            self starter who is passionate about writing clean, efficient code -
-            delivering features and pushing through to the finish line is what
-            fuels me. In order to solve tough problems, I instill maximum effort
-            and resilience in anything I touch. Having a never-give-up attitude
-            is my ethos.
+            Hi there! I'm Arthur, a fullstack web developer born and raised in
+            Southern California where I currently reside. I'm a passionate and
+            professional web developer that likes to visualize, plan and deliver
+            technically perfect, responsive and user friendly software
+            solutions.
           </p>
           <p>
-            I am hungry and driven to do more, build more and learn more. My
-            thirst for knowledge could be classified as borderline obsessive.
-            Ultimately, being able to take part and help businesses reach their
-            goals and get to the next level by developing software brings me
-            immense joy and satisfaction.
+            I have always had an interest in anything technology related.
+            However, ever since I found coding I have felt blessed to find
+            something in my life that interests me every day. From creating user
+            interfaces to more computer science topics like data structures and
+            algorithms, I constantly put the work and the time in to learn more
+            and more. It is my life long ambition to become the best software
+            developer I can possibly be.
+          </p>
+          <p>
+            I have recently gotten into blogging to try to give back to the
+            community by trying teach and explain to readers that may come
+            across my website about code and technology topics. The main focus
+            for my blog is to explain topics that I have learned in a way that
+            readers can comprehend easily. I hope to give readers an "ah-ha"
+            moment about the topic that maybe they previously had trouble
+            understanding.{" "}
+            <Link href="/blog">
+              <a className="link">Visit my blog!</a>
+            </Link>
           </p>
         </InnerLeft>
 
@@ -71,12 +83,16 @@ export const Intro: React.FC = (): ReactElement => {
               <FaClipboardList className="icon" /> <span>CV</span>
             </a>
 
-            <Link activeClassName="active" href="/projects" as="/projects">
+            <ActiveLink
+              activeClassName="active"
+              href="/projects"
+              as="/projects"
+            >
               <a className="link" href="/projects">
                 <AiFillProject className="icon" />
                 Projects
               </a>
-            </Link>
+            </ActiveLink>
           </div>
         </InnerRight>
       </StyledIntro>
@@ -88,7 +104,7 @@ const ContentWrap = styled("div")`
   background-color: ${({ theme }) => theme.bg.grey};
   display: flex;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 10rem 2rem 1rem;
 
   span {
     color: ${({ theme }) => theme.accent};
@@ -124,34 +140,6 @@ const InnerRight = styled("div")`
       top: 8px;
       font-size: 3rem;
       margin-right: 0.9rem;
-    }
-
-    @media (max-width: 490px) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  .badges {
-    display: flex;
-    flex-direction: column;
-    padding-top: 0.2rem;
-
-    & a {
-      margin-bottom: 2rem;
-      display: flex;
-
-      @media (max-width: 490px) {
-        &:nth-child(even) {
-          padding-left: calc(100% - 66%);
-        }
-      }
-    }
-
-    .icon {
-      position: relative;
-      font-size: 3rem;
-      margin-right: 1rem;
     }
 
     @media (max-width: 490px) {

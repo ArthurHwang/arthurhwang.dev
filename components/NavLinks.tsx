@@ -9,6 +9,7 @@ export const NavLinks: React.FC = ({}): ReactElement => (
     <a
       href="https://github.com/ArthurHwang"
       target="_blank"
+      title="GitHub"
       rel="noopener noreferrer"
       className="link invert"
     >
@@ -17,13 +18,14 @@ export const NavLinks: React.FC = ({}): ReactElement => (
     <a
       href="https://www.linkedin.com/in/arthur-hwang"
       target="_blank"
+      title="LinkedIn"
       rel="noopener noreferrer"
       className="link invert"
     >
       <FaLinkedin className="icon" />
     </a>
     <Link href="/#contact">
-      <a className="link invert">
+      <a className="link invert" title="Contact">
         <IoMdMail className="icon" />
       </a>
     </Link>
@@ -31,6 +33,7 @@ export const NavLinks: React.FC = ({}): ReactElement => (
       href="/static/arthurhwang-resume.pdf"
       className="link invert"
       target="_blank"
+      title="CV"
       rel="noopener noreferrer"
     >
       <FaClipboardList className="icon" />
@@ -48,7 +51,7 @@ const StyledNavLinks = styled("div")`
     font-size: 2rem;
     margin: 0 1rem;
     position: relative;
-    top: 3px;
+    top: 5px;
   }
 
   @media (max-width: 934px) {
