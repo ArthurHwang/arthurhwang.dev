@@ -12,7 +12,7 @@ export const Nav: React.FC = (): ReactElement => {
       </Link>
       <Link activeClassName="active" href="/projects" as="/projects">
         <div className="link-box">
-          <a href="/projects">Projects</a>
+          <a>Projects</a>
         </div>
       </Link>
       <Link

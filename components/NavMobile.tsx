@@ -19,7 +19,7 @@ export const NavMobile: React.FC = (): ReactElement => {
       setHeight(windowGlobal.innerHeight - 60);
     });
     return () => window.removeEventListener("resize", () => {});
-  }, [height]);
+  });
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
@@ -200,12 +200,21 @@ const StyledNavMobile = styled("nav")`
 const StyledNavMenu = styled("div")<{ viewportHeight: number }>`
   position: fixed;
   z-index: 20;
+  /* 
+  //@ts-ignore */
+  /* overflow: ${props => console.log(props)}; */
   left: 0;
   top: 61px;
   width: 100vw;
   /* padding: 2rem 2rem 1rem; */
-  background-color: ${({ theme }) => theme.bg.black};
+  /* 
+  //@ts-ignore */
+  /* overflow: ${props => console.log(props)}; */
+  background-color: ${({ theme }: any) => theme.bg.black};
   /* height: calc(100% - 60px); */
+
+  /* 
+  //@ts-ignore */
   height: ${props => props.viewportHeight + "px"};
   display: flex;
   flex-direction: column;
