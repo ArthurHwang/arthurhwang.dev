@@ -15,18 +15,13 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    setHeight(windowGlobal.innerHeight - 60);
     console.log("fired");
-
-    window.addEventListener(
-      "resize",
-      () => {
-        setHeight(windowGlobal.innerHeight - 60);
-      },
-      { once: true }
-    );
+    setHeight(windowGlobal.innerHeight - 60);
+    window.addEventListener("resize", () => {
+      setHeight(windowGlobal.innerHeight - 60);
+    });
     return () => window.removeEventListener("resize", () => {});
-  }, []);
+  });
 
   function contentSwitch(path: string): ReactElement | null {
     switch (path) {

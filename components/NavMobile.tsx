@@ -90,7 +90,7 @@ export const NavMobile: React.FC = (): ReactElement => {
                   Blog<span className="underscore">_</span>
                 </a>
               </Link>
-              <Link href="/contact">
+              <Link href="/#contact">
                 <a className="link-wrap link invert" onClick={handleLink}>
                   Contact<span className="underscore">_</span>
                 </a>
