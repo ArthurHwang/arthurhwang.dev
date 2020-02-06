@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactElement, useRef } from "react";
+import { ReactElement, useRef, useEffect, useState } from "react";
 import useTyped from "use-typed";
 import { getWelcomeMessage } from "../lib/welcomeMessage";
 import { Button } from "./Button";
@@ -7,7 +7,15 @@ import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 
 export const SubheaderHome: React.FC = (): ReactElement => {
+  const [showText, setShowText] = useState(false);
+
   const typedRef = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowText(true);
+    }, 500);
+  }, []);
 
   useTyped(typedRef, {
     strings: [
@@ -28,30 +36,32 @@ export const SubheaderHome: React.FC = (): ReactElement => {
   });
   return (
     <ContentWrap>
-      <div className="flex-wrap">
-        <h1>{getWelcomeMessage()}</h1>
-        <h2>I'm Arthur Hwang</h2>
-        <div className="typed">
-          <span ref={typedRef}></span>
+      {showText && (
+        <div className="flex-wrap">
+          <h1>{getWelcomeMessage()}</h1>
+          <h2>I'm Arthur Hwang</h2>
+          <div className="typed">
+            <span ref={typedRef}></span>
+          </div>
+          <div className="buttons">
+            <ScrollLink
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <Button color="green">Contact Me</Button>
+            </ScrollLink>
+            <Link href="/projects">
+              <a>
+                <Button color="black">View My Work</Button>
+              </a>
+            </Link>
+          </div>
         </div>
-        <div className="buttons">
-          <ScrollLink
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            <Button color="green">Contact Me</Button>
-          </ScrollLink>
-          <Link href="/projects">
-            <a>
-              <Button color="black">View My Work</Button>
-            </a>
-          </Link>
-        </div>
-      </div>
+      )}
     </ContentWrap>
   );
 };
