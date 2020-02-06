@@ -16,10 +16,15 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
 
   useEffect(() => {
     setHeight(windowGlobal.innerHeight - 60);
+    console.log("fired");
 
-    window.addEventListener("resize", () => {
-      setHeight(windowGlobal.innerHeight - 60);
-    });
+    window.addEventListener(
+      "resize",
+      () => {
+        setHeight(windowGlobal.innerHeight - 60);
+      },
+      { once: true }
+    );
     return () => window.removeEventListener("resize", () => {});
   }, []);
 
