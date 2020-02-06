@@ -7,18 +7,22 @@ import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 
 export const SubheaderHome: React.FC = (): ReactElement => {
-  const [showText, setShowText] = useState(false);
+  const windowGlobal: any = typeof window !== "undefined" && window;
+  const [showText, setShowText] = useState(
+    windowGlobal.innerHeight >= 768 ? true : false
+  );
 
   const typedRef = useRef(null);
 
-  useEffect(() => {
-    let textTimer = setTimeout(() => {
-      setShowText(true);
-    }, 500);
+  if (windowGlobal.innerHeight < 768) {
+    useEffect(() => {
+      let textTimer = setTimeout(() => {
+        setShowText(true);
+      }, 500);
 
-    return () => clearTimeout(textTimer);
-  }, []);
-
+      return () => clearTimeout(textTimer);
+    }, []);
+  }
   useTyped(typedRef, {
     strings: [
       "I'm a Fullstack web developer",

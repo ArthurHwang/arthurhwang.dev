@@ -58,14 +58,16 @@ export const NavMobile: React.FC = (): ReactElement => {
                 >
                   <FaLinkedin className="icon" />
                 </a>
-                <a
-                  href="mailto:mail@arthurhwang.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link invert"
-                >
-                  <IoMdMail className="icon" />
-                </a>
+                <Link href="/#contact">
+                  <a
+                    // href="mailto:mail@arthurhwang.dev"
+                    // target="_blank"
+                    rel="noopener noreferrer"
+                    className="link invert"
+                  >
+                    <IoMdMail className="icon" />
+                  </a>
+                </Link>
                 <a
                   href="/static/arthurhwang-resume.pdf"
                   className="link invert"
