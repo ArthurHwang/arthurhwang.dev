@@ -15,7 +15,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
       "Rong Rong you got a big ass",
       "Lover of technology",
       "A few of my skills are React, TypeScript, NodeJS, HTML, CSS",
-      "I'm currently grinding data structures and algorithms",
+      "I'm currently grinding out data structures and algorithms",
       "I pass my free time with mahjong, guitar, and learning",
       "Wow, thanks for staying til the end!",
       "Feel free to scroll down at any time!",
@@ -128,6 +128,7 @@ const ContentWrap = styled("div")`
     position: relative;
     bottom: 15px;
     text-align: center;
+    padding: 0 1rem;
 
     @media (max-width: 518px) {
       bottom: 12px;

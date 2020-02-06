@@ -1,12 +1,20 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { IoIosKeypad } from "react-icons/io";
-import { ReactElement, useState } from "react";
+import { ReactElement, useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 export const NavMobile: React.FC = (): ReactElement => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setMenuOpen(false);
+    });
+
+    return () => window.removeEventListener("scroll", () => {});
+  });
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
