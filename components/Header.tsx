@@ -35,6 +35,7 @@ const StyledLogo = styled("div")`
   grid-template-columns: 50px 1fr;
   grid-template-rows: 50px;
   margin: 0.5rem 0.5rem 0.5rem 2rem;
+
   @media (max-width: 768px) {
     margin-left: 1rem;
   }

@@ -31,8 +31,8 @@ export const SubheaderHome: React.FC = (): ReactElement => {
     <ContentWrap>
       <div className="flex-wrap">
         <img src="/static/me.jpg" />
-        <h1>{getWelcomeMessage()}</h1>
-        <h2>I'm Arthur Hwang</h2>
+        <h2>{getWelcomeMessage()}</h2>
+        <h1>I'm Arthur Hwang</h1>
         <div className="typed">
           <span ref={typedRef}></span>
         </div>
@@ -107,6 +107,7 @@ const ContentWrap = styled("div")`
       visibility: visible;
     }
   }
+
   h1,
   h2 {
     margin: 0;
@@ -117,6 +118,21 @@ const ContentWrap = styled("div")`
   }
 
   h1 {
+    line-height: 1.5;
+    font-size: 8rem;
+    letter-spacing: -1px;
+
+    @media (max-width: 734px) {
+      font-size: 6rem;
+    }
+
+    @media (max-width: 518px) {
+      line-height: 2;
+      font-size: 4.2rem;
+    }
+  }
+
+  h2 {
     line-height: 0.1;
     font-size: 3.8rem;
     letter-spacing: -1px;
@@ -130,21 +146,6 @@ const ContentWrap = styled("div")`
     }
   }
 
-  h2 {
-    line-height: 1.5;
-    font-size: 8rem;
-    letter-spacing: -3px;
-
-    @media (max-width: 734px) {
-      font-size: 6rem;
-    }
-
-    @media (max-width: 518px) {
-      line-height: 2;
-      font-size: 4.2rem;
-    }
-  }
-
   .typed {
     color: ${({ theme }) => theme.font.white};
     width: 100%;
@@ -153,6 +154,12 @@ const ContentWrap = styled("div")`
     bottom: 15px;
     text-align: center;
     padding: 0 1rem;
+
+    .typed-cursor {
+      color: ${({ theme }) => theme.accent};
+      position: relative;
+      bottom: 3px;
+    }
 
     @media (max-width: 518px) {
       bottom: 12px;

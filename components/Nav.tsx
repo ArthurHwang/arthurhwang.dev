@@ -25,6 +25,16 @@ export const Nav: React.FC = (): ReactElement => {
           <a>Blog</a>
         </div>
       </Link>
+      <Link
+        activeClassName="active"
+        as="/#contact"
+        partiallyActive={true}
+        href="/#contact"
+      >
+        <div className="link-box">
+          <a>Contact</a>
+        </div>
+      </Link>
     </StyledNav>
   );
 };

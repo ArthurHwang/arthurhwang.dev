@@ -1,7 +1,6 @@
 import styled from "styled-components";
-// import Link from 'next/link';
-import { ReactElement } from "react";
 import MdHeart from "react-ionicons/lib/MdHeart";
+import { ReactElement } from "react";
 
 export const About: React.FC = (): ReactElement => {
   return (
@@ -68,6 +67,10 @@ const ContentWrap = styled("div")`
   span {
     color: ${({ theme }) => theme.accent};
     font-weight: 800;
+  }
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
   }
 `;
 

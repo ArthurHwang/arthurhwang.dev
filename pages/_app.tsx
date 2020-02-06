@@ -115,7 +115,6 @@ body {
   letter-spacing: 0.1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-rendering: geometricPrecision; */
   text-rendering: optimizeLegibility;
 }
 
@@ -127,7 +126,7 @@ h1,h2,h3 {
 }
 
 h2 {
-  font-size: 3.6rem;
+  font-size: 3.8rem;
 }
 
 h3 {
@@ -144,10 +143,10 @@ ul, ol {
 
 @media(max-width:490px) {
   h2 {
-    font-size: 2.4rem; 
+    font-size: 3rem; 
   }
   h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   h4 {
     font-size: 1.6rem;

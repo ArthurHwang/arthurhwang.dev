@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Particles from "react-particles-js";
-import ParticleConfig from "../lib/particlesConfig";
 import { Divider } from "./Divider";
 import { SubheaderHome } from "./Subheader-Home";
 import { SubheaderDefault } from "./Subheader-Default";
 import { useState, ReactElement, useEffect } from "react";
+import ParticlesConfig from "../lib/particlesConfig";
+
 interface Props {
   pathName: string;
 }
@@ -15,7 +16,6 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
   const [height, setHeight] = useState(windowGlobal.innerHeight);
 
   useEffect(() => {
-    console.log(height);
     setHeight(windowGlobal.innerHeight - 60);
     window.addEventListener("resize", () => {
       setHeight(windowGlobal.innerHeight - 60);
@@ -29,7 +29,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
         return (
           <SubheaderDefault>
             <h1>Projects</h1>
-            <Divider invert={true} color="green" />
+            <Divider invert={true} color="red" />
             <h2>
               See my projects below. Unless explicity stated,{" "}
               <strong>all source code is completely authored by me.</strong>
@@ -44,29 +44,19 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
             <h2>Thoughts on life, work and everything in between.</h2>
           </SubheaderDefault>
         );
-      case "/contact":
-        return (
-          <SubheaderDefault>
-            <h1>Contact Me</h1>
-            <Divider invert={true} color="red" />
-            <h2>
-              You're awesome and I'm flattered. Please feel free to reach out to
-              me for any reason!
-            </h2>
-          </SubheaderDefault>
-        );
       case "/blog/[post]":
         return null;
       default:
         return <SubheaderHome />;
     }
   }
+
   return (
     pathName !== "/blog/[post]" && (
       <StyledSubheader viewportHeight={height} pathname={pathName}>
         {/* 
           //@ts-ignore */}
-        <Particles className="particles" params={ParticleConfig} />
+        <Particles className="particles" params={ParticlesConfig} />
         {contentSwitch(pathName)}
       </StyledSubheader>
     )
@@ -78,8 +68,6 @@ const StyledSubheader = styled('section')<{pathname: string; viewportHeight: num
   background: ${({ theme }) => theme.secondary} no-repeat 50%;
   height: ${props => (props.pathname === '/' ? '94.1vh' : '300px')};
   overflow: hidden;
-
-  top: ${(props: any)  => console.log(props) as any};
   position: relative;
 
   @media (max-width: 490px) {

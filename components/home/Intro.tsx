@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import Link from "next/link";
 import { ReactElement } from "react";
 import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
 import { IoMdMail } from "react-icons/io";
 import { ActiveLink } from "../ActiveLink";
-import Link from "next/link";
 
 export const Intro: React.FC = (): ReactElement => {
   return (
@@ -48,7 +48,6 @@ export const Intro: React.FC = (): ReactElement => {
           <h2>
             Links<span>_</span>
           </h2>
-
           <div className="badges-2">
             <a
               href="https://github.com/ArthurHwang"
@@ -66,23 +65,11 @@ export const Intro: React.FC = (): ReactElement => {
             >
               <FaLinkedin className="icon" /> <span>LinkedIn</span>
             </a>
-            <a
-              href="mailto:mail@arthurhwang.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              <IoMdMail className="icon" /> <span>Email</span>
-            </a>
-            <a
-              href="/static/arthurhwang-resume.pdf"
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaClipboardList className="icon" /> <span>CV</span>
-            </a>
-
+            <Link href="/#contact">
+              <a className="link">
+                <IoMdMail className="icon" /> <span>Contact</span>
+              </a>
+            </Link>
             <ActiveLink
               activeClassName="active"
               href="/projects"
@@ -93,6 +80,14 @@ export const Intro: React.FC = (): ReactElement => {
                 Projects
               </a>
             </ActiveLink>
+            <a
+              href="/static/arthurhwang-resume.pdf"
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaClipboardList className="icon" /> <span>CV</span>
+            </a>
           </div>
         </InnerRight>
       </StyledIntro>
@@ -113,6 +108,10 @@ const ContentWrap = styled("div")`
   h2 {
     margin-top: 0;
   }
+
+  @media (max-width: 768px) {
+    padding-top: 4rem;
+  }
 `;
 
 const InnerLeft = styled("div")``;
@@ -123,6 +122,8 @@ const InnerRight = styled("div")`
     flex-direction: column;
     justify-content: space-evenly;
     height: calc(100% - 63px - 19.92px);
+    position: relative;
+    bottom: 10px;
 
     a.link {
       position: relative;
@@ -140,6 +141,10 @@ const InnerRight = styled("div")`
       top: 8px;
       font-size: 3rem;
       margin-right: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      position: initial;
     }
 
     @media (max-width: 490px) {
