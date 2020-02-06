@@ -12,13 +12,10 @@ interface Props {
 // @ts-ignore
 export const Subheader: React.FC<Props> = ({ pathName }) => {
   const windowGlobal: any = typeof window !== "undefined" && window;
-  const [height, setHeight] = useState(
-    windowGlobal.innerHeight < 768
-      ? windowGlobal.innerHeight - 60
-      : windowGlobal.innerHeight
-  );
+  const [height, setHeight] = useState(windowGlobal.innerHeight);
 
   useEffect(() => {
+    console.log(height);
     setHeight(windowGlobal.innerHeight - 60);
     window.addEventListener("resize", () => {
       setHeight(windowGlobal.innerHeight - 60);
@@ -81,6 +78,8 @@ const StyledSubheader = styled('section')<{pathname: string; viewportHeight: num
   background: ${({ theme }) => theme.secondary} no-repeat 50%;
   height: ${props => (props.pathname === '/' ? '94.1vh' : '300px')};
   overflow: hidden;
+
+  top: ${(props: any)  => console.log(props) as any};
   position: relative;
 
   @media (max-width: 490px) {
@@ -107,4 +106,4 @@ const StyledSubheader = styled('section')<{pathname: string; viewportHeight: num
       z-index: 0;
     }
   }
-`;
+`
