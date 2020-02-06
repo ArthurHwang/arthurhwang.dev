@@ -186,7 +186,7 @@ const ContentWrap = styled("div")`
   }
 
   span {
-    color: ${({ theme }) => theme.secondaryAccent};
+    color: ${({ theme }) => theme.accent};
     font-weight: 800;
   }
 `;
@@ -202,6 +202,7 @@ const StyledSkills = styled("div")`
     margin: 0 auto;
 
     .two {
+      /* justify-self:  */
       @media (max-width: 865px) {
         padding-left: 0;
       }
@@ -209,6 +210,7 @@ const StyledSkills = styled("div")`
 
     .three {
       padding-left: 2rem;
+      /* justify-self: self-end; */
 
       @media (max-width: 768px) {
         padding-left: 0;
