@@ -98,7 +98,7 @@ const ContentWrap = styled("div")`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    animation: cssAnimation 0s 0.2s forwards;
+    animation: cssAnimation 0s 0.4s forwards;
     visibility: hidden;
   }
 
