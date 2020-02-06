@@ -175,9 +175,9 @@ const ContentWrap = styled("div")`
       font-weight: 600;
       background-image: linear-gradient(
         to right,
-        #4ad7d1,
-        #4ad7d1 50%,
-        #3454d1 50%
+        #37bc9b,
+        #37bc9b 50%,
+        #3b68b5 50%
       );
       background-position: 100%;
       background-size: 200% 100%;
