@@ -6,7 +6,11 @@ import { Subheader } from "./Subheader";
 import { withRouter } from "next/router";
 import { Contact } from "./Contact";
 import { ReactElement } from "react";
-// import "../util/slick-fix.css";
+
+if (process.env.NODE_ENV !== "production") {
+  // Fix for slick carousel on development mode not SSR correctly
+  require("../util/slick-fix.css");
+}
 
 interface Props {
   children: any;

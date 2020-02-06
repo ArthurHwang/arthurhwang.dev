@@ -1,25 +1,12 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { useEffect } from "react";
 import { IoIosKeypad } from "react-icons/io";
-import { useState } from "react";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 export const NavMobile: React.FC = (): ReactElement => {
-  const windowGlobal: any = typeof window !== "undefined" && window;
   const [menuOpen, setMenuOpen] = useState(false);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    setHeight(windowGlobal.innerHeight - 60);
-
-    window.addEventListener("resize", () => {
-      setHeight(windowGlobal.innerHeight - 60);
-    });
-    return () => window.removeEventListener("resize", () => {});
-  });
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
@@ -41,7 +28,6 @@ export const NavMobile: React.FC = (): ReactElement => {
         </IconWrapper>
         {menuOpen && (
           <StyledNavMenu
-            viewportHeight={height}
             onScroll={handleScroll}
             className={menuOpen ? "fade" : "fadeOut"}
           >
@@ -173,7 +159,6 @@ const LinkWrapper = styled("div")`
 const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
   height: 100%;
   width: 100%;
-  z-index: 20;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -197,25 +182,13 @@ const StyledNavMobile = styled("nav")`
   }
 `;
 
-const StyledNavMenu = styled("div")<{ viewportHeight: number }>`
+const StyledNavMenu = styled("div")`
   position: fixed;
-  z-index: 20;
-  /* 
-  //@ts-ignore */
-  /* overflow: ${props => console.log(props)}; */
   left: 0;
-  top: 61px;
+  top: 60px;
   width: 100vw;
-  /* padding: 2rem 2rem 1rem; */
-  /* 
-  //@ts-ignore */
-  /* overflow: ${props => console.log(props)}; */
   background-color: ${({ theme }: any) => theme.bg.black};
-  /* height: calc(100% - 60px); */
-
-  /* 
-  //@ts-ignore */
-  height: ${props => props.viewportHeight + "px"};
+  height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

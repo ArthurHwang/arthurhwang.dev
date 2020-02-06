@@ -15,7 +15,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
       "Rong Rong you got a big ass",
       "Lover of technology",
       "A few of my skills are React, TypeScript, NodeJS, HTML, CSS",
-      "I'm currently learning React, Node, and PostCSS",
+      "I'm currently grinding data structures and algorithms",
       "I pass my free time with mahjong, guitar, and learning",
       "Wow, thanks for staying til the end!",
       "Feel free to scroll down at any time!",
@@ -60,7 +60,7 @@ const ContentWrap = styled("div")`
   height: 100%;
 
   .buttons {
-    z-index: 50;
+    z-index: 1;
     text-align: center;
 
     button {
@@ -89,7 +89,7 @@ const ContentWrap = styled("div")`
     text-align: center;
     font-weight: 300;
     color: ${({ theme }) => theme.font.white};
-    z-index: 20;
+    z-index: 1;
   }
 
   h1 {
@@ -124,7 +124,7 @@ const ContentWrap = styled("div")`
   .typed {
     color: ${({ theme }) => theme.font.white};
     width: 100%;
-    z-index: 50;
+    z-index: 1;
     position: relative;
     bottom: 15px;
     text-align: center;

@@ -57,33 +57,39 @@ const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'Titillium';
   font-weight: 400;
-  src: url('/static/fonts/TitilliumWeb-Regular.ttf');
+  font-style: normal;
+  src: url('/static/fonts/TitilliumWeb-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Titillium';
   font-weight: 600;
-  src: url('/static/fonts/TitilliumWeb-SemiBold.ttf');
+  font-style: normal;
+  src: url('/static/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Titillium';
   font-weight: 700;
-  src: url('/static/fonts/TitilliumWeb-Bold.ttf');
+  font-style: normal;
+  src: url('/static/fonts/TitilliumWeb-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-weight: 400;
-  src: url('/static/fonts/SourceSansPro-Regular.ttf');
+  font-style: normal;
+  src: url('/static/fonts/SourceSansPro-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Source Sans Pro';
   font-weight: 600;
-  src: url('/static/fonts/SourceSansPro-SemiBold.ttf');
+  font-style: normal;
+  src: url('/static/fonts/SourceSansPro-SemiBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Source Sans Pro';
   font-weight: 700;
-  src: url('/static/fonts/SourceSansPro-Bold.ttf');
+  font-style: normal;
+  src: url('/static/fonts/SourceSansPro-Bold.ttf') format('truetype');
 }
 
 html {

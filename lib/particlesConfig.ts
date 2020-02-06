@@ -1,7 +1,7 @@
 export default {
   particles: {
     number: {
-      value: 50,
+      value: 90,
       density: {
         enable: true,
         value_area: 800
@@ -22,7 +22,7 @@ export default {
     },
     line_linked: {
       enable: true,
-      distance: 150,
+      distance: 120,
       color: "#37bc9b",
       opacity: 0.3314420094855545,
       width: 1

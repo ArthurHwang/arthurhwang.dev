@@ -8,6 +8,7 @@ import { Project3 } from "../components/projects/Project3";
 import { Project4 } from "../components/projects/Project4";
 import { Project5 } from "../components/projects/Project5";
 import { Project6 } from "../components/projects/Project6";
+import "../util/slick-fix.css";
 
 const Projects: NextPage = (): ReactElement => {
   return (

@@ -4,13 +4,26 @@ import ParticleConfig from "../lib/particlesConfig";
 import { Divider } from "./Divider";
 import { SubheaderHome } from "./Subheader-Home";
 import { SubheaderDefault } from "./Subheader-Default";
-import { ReactElement } from "react";
+import { useState, ReactElement, useEffect } from "react";
 interface Props {
   pathName: string;
 }
 
 // @ts-ignore
 export const Subheader: React.FC<Props> = ({ pathName }) => {
+  const windowGlobal: any = typeof window !== "undefined" && window;
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    console.log("fired");
+    setHeight(windowGlobal.innerHeight - 60);
+
+    window.addEventListener("resize", () => {
+      setHeight(windowGlobal.innerHeight - 60);
+    });
+    return () => window.removeEventListener("resize", () => {});
+  }, []);
+
   function contentSwitch(path: string): ReactElement | null {
     switch (path) {
       case "/projects":
@@ -51,7 +64,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
   }
   return (
     pathName !== "/blog/[post]" && (
-      <StyledSubheader pathname={pathName}>
+      <StyledSubheader viewportHeight={height} pathname={pathName}>
         {/* 
           //@ts-ignore */}
         <Particles className="particles" params={ParticleConfig} />
@@ -61,21 +74,27 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
   );
 };
 
-const StyledSubheader = styled("section")<{ pathname: string }>`
+// prettier-ignore
+const StyledSubheader = styled('section')<{pathname: string; viewportHeight: number;}>`
   background: ${({ theme }) => theme.secondary} no-repeat 50%;
-  height: ${props => (props.pathname === "/" ? "94.1vh" : "300px")};
+  height: ${props => (props.pathname === '/' ? '94.1vh' : '300px')};
   overflow: hidden;
   position: relative;
-  /* z-index: 5000; */
 
   @media (max-width: 490px) {
-    height: ${props => props.pathname !== "/" && "250px"};
+    height: ${props => {
+      if (props.pathname === '/') {
+        return props.viewportHeight + 'px';
+      } else {
+        return props.pathname !== '/' && '250px';
+      }
+    }};
   }
 
   .particles {
     position: absolute;
     height: auto;
-    height: ${props => (props.pathname === "/" ? "94.1vh" : "300px")};
+    height: ${props => (props.pathname === '/' ? '94.1vh' : '300px')};
     right: 0;
     top: 60px;
     left: 0;

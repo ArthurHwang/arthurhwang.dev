@@ -35,7 +35,6 @@ const StyledNav = styled("nav")`
   display: flex;
   justify-self: center;
   position: relative;
-  /* z-index: 3000; */
 
   @media (max-width: 934px) {
     justify-self: end;
