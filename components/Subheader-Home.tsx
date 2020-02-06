@@ -1,25 +1,13 @@
 import styled from "styled-components";
 import Link from "next/link";
 import useTyped from "use-typed";
-import { ReactElement, useRef, useState, useLayoutEffect } from "react";
+import { ReactElement, useRef } from "react";
 import { getWelcomeMessage } from "../lib/welcomeMessage";
 import { Button } from "./Button";
 import { Link as ScrollLink } from "react-scroll";
 
 export const SubheaderHome: React.FC = (): ReactElement => {
-  const windowGlobal: any = typeof window !== "undefined" && window;
-  const [showText, setShowText] = useState(false);
   const typedRef = useRef(null);
-
-  if (windowGlobal.innerHeight < 768) {
-    useLayoutEffect(() => {
-      let textTimer = setTimeout(() => {
-        setShowText(true);
-      }, 500);
-
-      return () => clearTimeout(textTimer);
-    });
-  }
 
   useTyped(typedRef, {
     strings: [
@@ -41,33 +29,31 @@ export const SubheaderHome: React.FC = (): ReactElement => {
 
   return (
     <ContentWrap>
-      {showText && (
-        <div className="flex-wrap">
-          <img src="/static/me.jpg" />
-          <h1>{getWelcomeMessage()}</h1>
-          <h2>I'm Arthur Hwang</h2>
-          <div className="typed">
-            <span ref={typedRef}></span>
-          </div>
-          <div className="buttons">
-            <ScrollLink
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <Button color="green">Contact Me</Button>
-            </ScrollLink>
-            <Link href="/projects">
-              <a>
-                <Button color="black">View My Work</Button>
-              </a>
-            </Link>
-          </div>
+      <div className="flex-wrap">
+        <img src="/static/me.jpg" />
+        <h1>{getWelcomeMessage()}</h1>
+        <h2>I'm Arthur Hwang</h2>
+        <div className="typed">
+          <span ref={typedRef}></span>
         </div>
-      )}
+        <div className="buttons">
+          <ScrollLink
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <Button color="green">Contact Me</Button>
+          </ScrollLink>
+          <Link href="/projects">
+            <a>
+              <Button color="black">View My Work</Button>
+            </a>
+          </Link>
+        </div>
+      </div>
     </ContentWrap>
   );
 };
@@ -112,6 +98,15 @@ const ContentWrap = styled("div")`
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    animation: cssAnimation 0s 0.2s forwards;
+    visibility: hidden;
+  }
+
+  @keyframes cssAnimation {
+    to {
+      visibility: visible;
+    }
   }
   h1,
   h2 {
