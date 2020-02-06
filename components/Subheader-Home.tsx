@@ -20,7 +20,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
       }, 500);
 
       return () => clearTimeout(textTimer);
-    }, []);
+    });
   }
 
   useTyped(typedRef, {

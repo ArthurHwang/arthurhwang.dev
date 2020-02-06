@@ -181,6 +181,10 @@ const ContentWrap = styled("div")`
     margin-top: 0;
   }
 
+  h3 {
+    text-align: center;
+  }
+
   span {
     color: ${({ theme }) => theme.secondaryAccent};
     font-weight: 800;
