@@ -12,9 +12,11 @@ export const SubheaderHome: React.FC = (): ReactElement => {
   const typedRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
+    let textTimer = setTimeout(() => {
       setShowText(true);
     }, 500);
+
+    return () => clearTimeout(textTimer);
   }, []);
 
   useTyped(typedRef, {
