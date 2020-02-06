@@ -44,6 +44,7 @@ const StyledNavLinks = styled("div")`
   justify-self: flex-end;
   display: flex;
   align-items: center;
+  padding-right: 1rem;
   /* border: 1px solid red; */
   @media (max-width: 934px) {
     display: none;
