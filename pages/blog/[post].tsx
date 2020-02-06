@@ -162,7 +162,6 @@ const ContentWrap = styled("div")`
   .markdown {
     blockquote {
       margin-top: 0;
-      /* background: ${({ theme }) => theme.lightgrey}; */
       p {
         text-align: center;
         font-style: italic;

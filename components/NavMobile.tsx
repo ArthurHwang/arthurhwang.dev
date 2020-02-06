@@ -59,12 +59,7 @@ export const NavMobile: React.FC = (): ReactElement => {
                   <FaLinkedin className="icon" />
                 </a>
                 <Link href="/#contact">
-                  <a
-                    // href="mailto:mail@arthurhwang.dev"
-                    // target="_blank"
-                    rel="noopener noreferrer"
-                    className="link invert"
-                  >
+                  <a rel="noopener noreferrer" className="link invert">
                     <IoMdMail className="icon" />
                   </a>
                 </Link>
@@ -98,16 +93,6 @@ export const NavMobile: React.FC = (): ReactElement => {
                 </a>
               </Link>
             </LinkWrapper>
-            {/* <MiscWrapper>
-              <a
-                href="mailto:mail@arthurhwang.dev"
-                className="link-wrap link"
-                onClick={handleLink}
-              >
-                mail@arthurhwang.dev
-              </a>
-              <p className="copyright">&copy; - 2019 Arthur Hwang </p>
-            </MiscWrapper> */}
           </StyledNavMenu>
         )}
       </StyledNavMobile>
@@ -151,20 +136,6 @@ const LinkWrapper = styled("div")`
     -webkit-text-fill-color: initial;
   }
 `;
-
-// const MiscWrapper = styled('div')`
-//   border-top: 1px solid #ebeaeb;
-//   padding-top: 1rem;
-
-//   .link-wrap {
-//     font-size: 1.4rem;
-//   }
-
-//   .copyright {
-//     margin: 0;
-//     font-size: 1.4rem;
-//   }
-// `;
 
 const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
   height: 100%;

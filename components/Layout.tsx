@@ -42,10 +42,6 @@ export default withRouter(Layout);
 
 const MobilePush = styled("div")`
   height: 60px;
-
-  /* @media (min-width: 769px) {
-    display: none;
-  } */
 `;
 
 const StyledLayout = styled("div")<{ pathName: string }>`

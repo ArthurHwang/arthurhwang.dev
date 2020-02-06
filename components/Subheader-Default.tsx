@@ -26,8 +26,6 @@ const ContentWrap = styled("div")`
   align-items: center;
   justify-content: center;
   height: 100%;
-  /* position: relative; */
-  /* bottom: 10px; */
 
   h1,
   h2 {

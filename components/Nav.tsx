@@ -48,7 +48,6 @@ const StyledNav = styled("nav")`
     transition: background 0.2s linear;
 
     &:hover {
-      /* background: ${({ theme }) => theme.bg.grey}; */
       background: ${({ theme }) => theme.grey};
 
       a {
@@ -60,13 +59,12 @@ const StyledNav = styled("nav")`
 
   .active {
     color: ${({ theme }) => theme.font.aqua};
-    /* background: ${({ theme }) => theme.accent}; */
     a:after {
       height: 2px;
       position: absolute;
       bottom: 15px;
       background: ${({ theme }) => theme.font.aqua};
-      content: '';
+      content: "";
       width: calc(100% - 30px);
     }
   }
@@ -80,8 +78,7 @@ const StyledNav = styled("nav")`
     position: relative;
     text-transform: uppercase;
     letter-spacing: -0.2px;
-    font-family: 'Titillium';
-    /* font-weight: 700; */
+    font-family: "Titillium";
     font-size: 1.3rem;
     background: none;
     border: 0;
@@ -91,7 +88,7 @@ const StyledNav = styled("nav")`
     &:after {
       height: 2px;
       background: ${({ theme }) => theme.aqua};
-      content: '';
+      content: "";
       width: 0;
       position: absolute;
       bottom: 15px;

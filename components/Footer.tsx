@@ -31,7 +31,6 @@ export const Footer: React.FC = (): ReactElement => {
           />
         </span>
       </div>
-
       <div className="badges">
         <a
           aria-label="GitHub"
@@ -54,12 +53,7 @@ export const Footer: React.FC = (): ReactElement => {
           <FaLinkedin className="icon" />
         </a>
         <Link href="/#contact">
-          <a
-            // href="mailto:mail@arthurhwang.dev"
-            // target="_blank"
-            // rel="noopener noreferrer"
-            className="link invert"
-          >
+          <a className="link invert">
             <IoMdMail className="icon" />
           </a>
         </Link>

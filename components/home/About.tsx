@@ -87,7 +87,6 @@ const StyledAbout = styled("div")`
 
   .flex-wrap {
     display: flex;
-
     justify-content: space-evenly;
 
     img {

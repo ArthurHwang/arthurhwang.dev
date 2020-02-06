@@ -13,7 +13,7 @@ export const Header: React.FC = (): ReactElement => {
           <div className="hover-box">
             <StyledLogo>
               <div className="logo-img" />
-              <div className="text-wrapper">
+              <div>
                 <p className="name">Arthur Hwang</p>
                 <p className="title">FullStack Web Developer</p>
               </div>
@@ -39,19 +39,10 @@ const StyledLogo = styled("div")`
     margin-left: 1rem;
   }
 
-  .text-wrapper {
-    /* &:hover {
-      .name {
-        transition: all 0.4s;
-        color: ${({ theme }) => theme.font.aqua};
-      }
-    } */
-  }
-
   .logo-img {
     width: 100%;
     height: 100%;
-    background-image: url('/static/me.jpg');
+    background-image: url("/static/me.jpg");
     background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,7 +55,7 @@ const StyledLogo = styled("div")`
     text-transform: uppercase;
     padding: 0 0 0 1.5rem;
     margin: 0;
-    font-family: 'Titillium';
+    font-family: "Titillium";
   }
 
   p.name {

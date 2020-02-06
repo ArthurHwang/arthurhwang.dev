@@ -23,16 +23,10 @@ export const NavLinks: React.FC = ({}): ReactElement => (
       <FaLinkedin className="icon" />
     </a>
     <Link href="/#contact">
-      <a
-        // href="mailto:mail@arthurhwang.dev"
-        // target="_blank"
-        // rel="noopener noreferrer"
-        className="link invert"
-      >
+      <a className="link invert">
         <IoMdMail className="icon" />
       </a>
     </Link>
-
     <a
       href="/static/arthurhwang-resume.pdf"
       className="link invert"
@@ -49,15 +43,15 @@ const StyledNavLinks = styled("div")`
   display: flex;
   align-items: center;
   padding-right: 1rem;
-  /* border: 1px solid red; */
-  @media (max-width: 934px) {
-    display: none;
-  }
 
   .icon {
     font-size: 2rem;
     margin: 0 1rem;
     position: relative;
     top: 3px;
+  }
+
+  @media (max-width: 934px) {
+    display: none;
   }
 `;

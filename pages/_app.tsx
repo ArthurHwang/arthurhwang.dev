@@ -115,8 +115,8 @@ body {
   letter-spacing: 0.1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
-  /* text-rendering: optimizeLegibility; */
+  /* text-rendering: geometricPrecision; */
+  text-rendering: optimizeLegibility;
 }
 
 h1,h2,h3 {

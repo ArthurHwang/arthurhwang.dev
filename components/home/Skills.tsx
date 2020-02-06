@@ -179,6 +179,7 @@ const ContentWrap = styled("div")`
   h2 {
     margin-top: 0;
   }
+
   span {
     color: ${({ theme }) => theme.accent};
     font-weight: 800;

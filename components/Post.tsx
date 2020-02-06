@@ -41,7 +41,6 @@ export const Post: React.FC<Props> = ({
               </p>
             </div>
           </div>
-
           <div className="image-block">
             <img
               className="image"
@@ -75,12 +74,12 @@ const StyledPost = styled("div")`
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
     transition: transform 0.1s linear;
 
-    @media (max-width: 768px) {
-      width: 100%;
-    }
-
     &:hover {
       transform: scale(1.01);
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
     }
   }
 

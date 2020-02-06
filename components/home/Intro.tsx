@@ -89,6 +89,7 @@ const ContentWrap = styled("div")`
   display: flex;
   justify-content: center;
   padding: 4rem 2rem;
+
   span {
     color: ${({ theme }) => theme.accent};
   }

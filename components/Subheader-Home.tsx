@@ -1,17 +1,16 @@
 import styled from "styled-components";
-import { ReactElement, useRef, useEffect, useState } from "react";
+import Link from "next/link";
 import useTyped from "use-typed";
+import { ReactElement, useRef, useEffect, useState } from "react";
 import { getWelcomeMessage } from "../lib/welcomeMessage";
 import { Button } from "./Button";
 import { Link as ScrollLink } from "react-scroll";
-import Link from "next/link";
 
 export const SubheaderHome: React.FC = (): ReactElement => {
   const windowGlobal: any = typeof window !== "undefined" && window;
   const [showText, setShowText] = useState(
     windowGlobal.innerHeight >= 768 ? true : false
   );
-
   const typedRef = useRef(null);
 
   if (windowGlobal.innerHeight < 768) {
@@ -23,6 +22,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
       return () => clearTimeout(textTimer);
     }, []);
   }
+
   useTyped(typedRef, {
     strings: [
       "I'm a Fullstack web developer",
@@ -40,10 +40,12 @@ export const SubheaderHome: React.FC = (): ReactElement => {
     typeSpeed: 70,
     backSpeed: 40
   });
+
   return (
     <ContentWrap>
       {showText && (
         <div className="flex-wrap">
+          <img src="/static/me.jpg" />
           <h1>{getWelcomeMessage()}</h1>
           <h2>I'm Arthur Hwang</h2>
           <div className="typed">
@@ -75,6 +77,19 @@ export const SubheaderHome: React.FC = (): ReactElement => {
 const ContentWrap = styled("div")`
   height: 100%;
 
+  img {
+    width: 130px;
+    border-radius: 50%;
+    border: 3px solid ${({ theme }) => theme.accent};
+    margin: 0 auto;
+    position: relative;
+    bottom: 30px;
+
+    @media (max-width: 519px) {
+      width: 100px;
+    }
+  }
+
   .buttons {
     z-index: 1;
     text-align: center;
@@ -93,6 +108,7 @@ const ContentWrap = styled("div")`
       }
     }
   }
+
   .flex-wrap {
     height: 100%;
     display: flex;
