@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { useEffect } from "react";
 import { IoIosKeypad } from "react-icons/io";
 import { useState } from "react";
 import { ReactElement } from "react";
@@ -7,7 +8,18 @@ import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 export const NavMobile: React.FC = (): ReactElement => {
+  const windowGlobal: any = typeof window !== "undefined" && window;
   const [menuOpen, setMenuOpen] = useState(false);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    setHeight(windowGlobal.innerHeight - 60);
+
+    window.addEventListener("resize", () => {
+      setHeight(windowGlobal.innerHeight - 60);
+    });
+    return () => window.removeEventListener("resize", () => {});
+  }, [height]);
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
@@ -29,6 +41,7 @@ export const NavMobile: React.FC = (): ReactElement => {
         </IconWrapper>
         {menuOpen && (
           <StyledNavMenu
+            viewportHeight={height}
             onScroll={handleScroll}
             className={menuOpen ? "fade" : "fadeOut"}
           >
@@ -184,7 +197,7 @@ const StyledNavMobile = styled("nav")`
   }
 `;
 
-const StyledNavMenu = styled("div")`
+const StyledNavMenu = styled("div")<{ viewportHeight: number }>`
   position: fixed;
   z-index: 20;
   left: 0;
@@ -192,14 +205,15 @@ const StyledNavMenu = styled("div")`
   width: 100vw;
   /* padding: 2rem 2rem 1rem; */
   background-color: ${({ theme }) => theme.bg.black};
-  height: calc(100% - 60px);
+  /* height: calc(100% - 60px); */
+  height: ${props => props.viewportHeight + "px"};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 
 const NavMobileWrapper = styled.div`
-  z-index: 20;
+  z-index: 1000;
   .fade {
     animation: fadein 0.8s;
     -moz-animation: fadein 0.8s; /* Firefox */

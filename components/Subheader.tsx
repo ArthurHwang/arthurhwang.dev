@@ -66,7 +66,7 @@ const StyledSubheader = styled("section")<{ pathname: string }>`
   height: ${props => (props.pathname === "/" ? "94.1vh" : "300px")};
   overflow: hidden;
   position: relative;
-  z-index: 5000;
+  /* z-index: 5000; */
 
   @media (max-width: 490px) {
     height: ${props => props.pathname !== "/" && "250px"};
