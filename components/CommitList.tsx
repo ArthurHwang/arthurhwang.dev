@@ -126,7 +126,9 @@ export const CommitList: React.FC<Props> = ({
                                   transform: "rotate(90deg)"
                                 }}
                               />
-                              {commit.node.oid.substring(0, 6)}
+                              <span style={{ color: "grey" }}>
+                                {commit.node.oid.substring(0, 6)}
+                              </span>
                             </strong>
                           </span>
                         </div>
@@ -141,7 +143,7 @@ export const CommitList: React.FC<Props> = ({
                               style={{
                                 position: "relative",
                                 top: "2px",
-                                color: "#1e1e1e"
+                                color: "#37BC9B"
                               }}
                             />{" "}
                             {commit.node.messageHeadline}
