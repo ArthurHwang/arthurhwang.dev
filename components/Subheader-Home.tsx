@@ -114,6 +114,7 @@ const ContentWrap = styled("div")`
     font-weight: 300;
     color: ${({ theme }) => theme.font.white};
     z-index: 1;
+    text-shadow: 1px 1px 2px black;
   }
 
   h1 {
@@ -169,6 +170,7 @@ const ContentWrap = styled("div")`
       font-size: 2.8rem;
       letter-spacing: 0;
       font-weight: 300;
+      text-shadow: 1px 1px 2px black;
 
       @media (max-width: 734px) {
         font-size: 2.2rem;
