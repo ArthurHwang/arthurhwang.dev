@@ -43,6 +43,7 @@ class MyApp extends App<any> {
             startPosition={0}
             stopDelayMs={0}
             height="3"
+            style={{ zIndex: "5000" }}
           />
           <Component {...pageProps} />
         </Layout>

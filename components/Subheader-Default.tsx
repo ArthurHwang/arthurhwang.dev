@@ -16,6 +16,8 @@ export const SubheaderDefault: React.FC<Props> = ({
 };
 
 const TextWrap = styled("div")`
+  position: relative;
+  bottom: 5px;
   strong {
     color: ${({ theme }) => theme.primary};
   }

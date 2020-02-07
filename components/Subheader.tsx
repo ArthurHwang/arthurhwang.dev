@@ -66,7 +66,7 @@ export const Subheader: React.FC<Props> = ({ pathName }) => {
 // prettier-ignore
 const StyledSubheader = styled('section')<{pathname: string; viewportHeight: number;}>`
   background: ${({ theme }) => theme.secondary} no-repeat 50%;
-  height: ${props => (props.pathname === '/' ? '94.1vh' : '300px')};
+  height: ${props => (props.pathname === '/' ? 'calc(100vh - 60px)' : '300px')};
   overflow: hidden;
   position: relative;
 
@@ -82,10 +82,7 @@ const StyledSubheader = styled('section')<{pathname: string; viewportHeight: num
 
   .particles {
     position: absolute;
-    height: auto;
-    height: ${props => (props.pathname === '/' ? '94.1vh' : '300px')};
     right: 0;
-    top: 60px;
     left: 0;
     z-index: 0 !important;
 
