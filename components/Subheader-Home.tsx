@@ -12,10 +12,9 @@ export const SubheaderHome: React.FC = (): ReactElement => {
   useTyped(typedRef, {
     strings: [
       "I'm a Fullstack web developer",
-      "Rong Rong you got a big ass",
-      "Lover of technology",
-      "A few of my skills are React, TypeScript, NodeJS, HTML, CSS",
-      "I am currently grinding out data structures and algorithms",
+      "A few of my skills are React, TypeScript, NodeJS, Express, and MySQL",
+      "Lover of technology, Lover of code",
+      "I am currently working on my data structures and algorithms knowledge",
       "I pass my free time with mahjong, guitar, and learning",
       "Wow, thanks for staying til the end!",
       "Feel free to scroll down at any time!",
@@ -23,7 +22,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
       "Reloading sequence...^4000"
     ],
     loop: true,
-    typeSpeed: 70,
+    typeSpeed: 50,
     backSpeed: 40
   });
 
