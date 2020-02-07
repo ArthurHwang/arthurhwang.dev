@@ -3,7 +3,6 @@ import Disqus from "disqus-react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import CodeBlock from "../../components/CodeBlock";
-import LazyLoad from "react-lazyload";
 import { Fragment } from "react";
 import { NextPage } from "next";
 import { client } from "../../services/blog";
