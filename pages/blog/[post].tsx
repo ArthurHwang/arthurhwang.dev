@@ -71,14 +71,13 @@ const Post: NextPage<any> = props => {
           renderers={{ code: CodeBlock }}
           source={body}
         />
-        <LazyLoad>
-          <div style={{ marginTop: "4rem" }}>
-            <Disqus.DiscussionEmbed
-              shortname={disqusShortname}
-              config={disqusConfig}
-            />
-          </div>
-        </LazyLoad>
+
+        <div style={{ marginTop: "4rem" }}>
+          <Disqus.DiscussionEmbed
+            shortname={disqusShortname}
+            config={disqusConfig}
+          />
+        </div>
       </ContentWrap>
     </Fragment>
   );
