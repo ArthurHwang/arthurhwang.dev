@@ -110,6 +110,17 @@ export const Project3: React.FC = (): ReactElement => {
               Used apache server ProxyPass and ProxyPassReverse to get NodeJS /
               Express application running under existing Linux server.
             </li>
+            <li>
+              If you would like to login and peek around, please use the
+              following credentials. Otherwise feel free to create your own
+              account:
+              <br />
+              <code style={{ padding: "0" }}>
+                Username: testing@testing.com
+              </code>
+              <br />
+              <code style={{ padding: "0" }}>Password: 123456</code>
+            </li>
           </ul>
         </div>
       </div>

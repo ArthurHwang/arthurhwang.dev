@@ -200,12 +200,13 @@ const ProjectWrapper = styled("div")`
 
       li {
         font-size: 1.4rem;
-        text-indent: -18px;
+        text-indent: -17px;
         text-align: left;
+        line-height: 1.6;
 
         @media (max-width: 490px) {
           text-align: justify;
-          text-indent: -18px;
+          text-indent: -17px;
         }
 
         &:before {

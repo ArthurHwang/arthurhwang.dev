@@ -113,7 +113,7 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   line-height: 1.8;
-  letter-spacing: 0.1px;
+  letter-spacing: 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
