@@ -22,7 +22,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
       "Reloading sequence...^4000"
     ],
     loop: true,
-    typeSpeed: 50,
+    typeSpeed: 60,
     backSpeed: 40
   });
 
