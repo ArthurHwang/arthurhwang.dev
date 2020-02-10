@@ -130,17 +130,6 @@ export const Project1: React.FC = (): ReactElement => {
           </div>
           <ul>
             <li>
-              <span
-                style={{
-                  color: "red",
-                  fontWeight: "bold"
-                }}
-              >
-                **NOTE** Project approved by company to go live early 2020 - DNS
-                has not switched yet!
-              </span>
-            </li>
-            <li>
               Built production ready statically generated <strong>7000+</strong>{" "}
               page application with GatsbyJS and TypeScript for code splitting,
               performance, SEO benefits, and future proofing tech stack for the
