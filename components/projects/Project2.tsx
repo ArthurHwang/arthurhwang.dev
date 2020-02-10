@@ -116,6 +116,11 @@ export const Project2: React.FC = (): ReactElement => {
               links.
             </li>
             <li>
+              Created fully responsive front-end application using modern
+              CSS-in-JS solution Styled-Components to build reusable React
+              components.
+            </li>
+            <li>
               Used Formik, Yup and Express to handle form validation and backend
               form submission logic.
             </li>
@@ -136,17 +141,12 @@ export const Project2: React.FC = (): ReactElement => {
               react-markdown and implemented Disqus comment component.
             </li>
             <li>
-              Created fully responsive front-end application using modern
-              CSS-in-JS solution styled-components to build reusable React
-              components.
+              Implemented Prism for code block syntax highlighting in markdown
+              files.
             </li>
             <li>
               Created dynamic sitemap that automatically pulls data from
-              Contentful and create new sitemap entries.
-            </li>
-            <li>
-              Implemented Prism for code block syntax highlighting in markdown
-              files.
+              Contentful to create new sitemap entries.
             </li>
             <li>
               Used ParticleJS to implement custom animated heading background

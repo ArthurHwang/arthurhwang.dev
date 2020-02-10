@@ -92,6 +92,11 @@ export const Project4: React.FC = (): ReactElement => {
               Administered and managed LAMP (Linux-Apache-MySQL-PHP) stack web
               application for company.
             </li>
+            <li>
+              Managed dedicated server with Linux / cPanel / WHM. Configured
+              redirects and firewall settings for server. Managed GoDaddy DNS
+              and inMotion server hosting solutions.
+            </li>
             <li>Managed and optimized Wordpress blog for marketing team.</li>
             <li>
               Put out fires caused by marketing team, debugged errors caused by
@@ -106,9 +111,12 @@ export const Project4: React.FC = (): ReactElement => {
               visually appealing.
             </li>
             <li>
+              Worked in tandem with graphic designer to prototype, design, and
+              deploy new marketing and website materials.
+            </li>
+            <li>
               Ensured application is mobile and tablet ready. Ensured cross
-              browser compatibility both desktop and mobile. IOS / chrome /
-              android / firefox.
+              browser compatibility for both desktop and mobile platforms.
             </li>
             <li>Improved page load speeds by implementing MaxCDN.</li>
             <li>
@@ -126,15 +134,15 @@ export const Project4: React.FC = (): ReactElement => {
               within application and server.
             </li>
             <li>
+              Created new PHP contact forms to track and log IP addresses of
+              users that contacted the law firm.
+            </li>
+            <li>
               Administered and maintained GitHub repo for entire marketing team.
             </li>
             <li>
               Created a solution for users to text message the business through
               the website by using SMS links from the website and Google Voice.
-            </li>
-            <li>
-              Setup cron jobs on Linux server to automate backups of important
-              server configuration files every week.
             </li>
           </ul>
         </div>

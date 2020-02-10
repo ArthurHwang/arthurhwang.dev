@@ -67,14 +67,14 @@ export const Project6: React.FC = (): ReactElement => {
           <ul>
             <li>
               Created fullstack e-commerce application with full user
-              authentication and authorization flow.
+              authentication and authorization flow and stripe checkout.
             </li>
             <li>
               Used ReactJS and TypeScript to build and create client-side
               application.
             </li>
             <li>
-              Implemented modern CSS-in-JS solution styled-components to design
+              Implemented modern CSS-in-JS solution Styled-Components to design
               and create fully responsive front-end application with custom
               reusable React components.
             </li>

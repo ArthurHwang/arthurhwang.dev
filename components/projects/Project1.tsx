@@ -131,20 +131,20 @@ export const Project1: React.FC = (): ReactElement => {
           <ul>
             <li>
               Built production ready statically generated <strong>7000+</strong>{" "}
-              page application with GatsbyJS and TypeScript for code splitting,
-              performance, SEO benefits, and future proofing tech stack for the
+              page application with GatsbyJS and TypeScript for performance
+              benefits, SEO benefits, and future proofing tech stack for the
               company.
             </li>
             <li>
               Created custom CI / CD automated build pipeline workflow using
-              CircleCI, Cypress, Jest, and Netlify.
+              CircleCI, Jest, Cypress, and Netlify.
             </li>
             <li>
               Wrote E2E (End-to-End) / smoke tests with Cypress as well as unit
               / snapshot tests with Jest.
             </li>
             <li>
-              Architected custom file / folder structure in which values are
+              Architected custom file and folder structure in which values are
               inherited from a single source in order to empower non-developers
               to be able to easily add, remove and update items on the website.
             </li>
@@ -154,15 +154,15 @@ export const Project1: React.FC = (): ReactElement => {
                 className="link"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://bestattorney.netlify.com/blog"
+                href="https://bisnarchaselaw.com/blog"
               >
                 blog
               </a>{" "}
-              with 16 years of WordPress data by leveraging a headless CMS with
-              custom decoupled hosting solution.
+              with 16 years of WordPress data by leveraging headless WordPress
+              CMS with custom decoupled hosting solution.
             </li>
             <li>
-              Used modern CSS-in-JS solution styled-components to design and
+              Used modern CSS-in-JS solution Styled-Components to design and
               create fully responsive front-end application with custom reusable
               React components.
             </li>
@@ -172,19 +172,19 @@ export const Project1: React.FC = (): ReactElement => {
                 className="link"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://bestattorney.netlify.com/locations"
+                href="https://bisnarchaselaw.com/locations"
               >
                 Google Maps component
               </a>{" "}
               that shows all company service area locations with filtering based
-              on region.
+              on geolocation.
             </li>
             <li>
               Created custom validated Google AMP (Accelerated Mobile Pages) for
               blog according to Google specifications.
             </li>
             <li>
-              Developed custom SEO component to automatically generate full SEO
+              Developed custom SEO component to dynamically generate full SEO
               meta requirements including facebook, twitter, AMP, canonical
               URL's and JSON-LD structured data.
             </li>

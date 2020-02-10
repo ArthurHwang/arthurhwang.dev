@@ -111,7 +111,7 @@ export const Project3: React.FC = (): ReactElement => {
               Express application running under existing Linux server.
             </li>
             <li>
-              If you would like to login and peek around, please use the
+              **If you would like to login and peek around, please use the
               following credentials. Otherwise feel free to create your own
               account:
               <br />
@@ -146,7 +146,7 @@ export const Project3: React.FC = (): ReactElement => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://bestattorney.netlify.com"
+          href="https://www.bestattorney.com/admin"
         >
           <Button color="green">
             Launch <FaPlay />
