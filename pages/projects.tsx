@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { NextPage } from "next";
-import { Fragment, ReactElement } from "react";
+import { ReactElement } from "react";
 import { withApollo } from "../lib/apollo";
 import { Project1 } from "../components/projects/Project1";
 import { Project2 } from "../components/projects/Project2";
@@ -12,7 +12,7 @@ import "../util/slick-fix.css";
 
 const Projects: NextPage = (): ReactElement => {
   return (
-    <Fragment>
+    <div className="circuit-bg">
       <Head>
         <title>Arthur Hwang | Projects</title>
         <meta
@@ -32,7 +32,7 @@ const Projects: NextPage = (): ReactElement => {
       <Project3 />
       {/* PROJECT 5 - toneify*/}
       <Project5 />
-    </Fragment>
+    </div>
   );
 };
 

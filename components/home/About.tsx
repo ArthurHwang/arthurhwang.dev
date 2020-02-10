@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 
 export const About: React.FC = (): ReactElement => {
   return (
-    <ContentWrap>
+    <ContentWrap className="circuit-bg">
       <StyledAbout>
         <h2>
           Brute Force Determination<span>_</span>

@@ -19,6 +19,15 @@ interface Props {
   };
 }
 
+function addCircuitBG(pathname: string): string | undefined {
+  switch (pathname) {
+    case "/blog" || "/projects":
+      return "circuit-bg";
+    default:
+      return "";
+  }
+}
+
 const Layout: React.FC<Props> = ({
   children,
   router: { pathname }
@@ -29,7 +38,7 @@ const Layout: React.FC<Props> = ({
       <MobilePush />
       <Header />
       {pathname !== "/_error" && <Subheader pathName={pathname} />}
-      <main>
+      <main className={`${addCircuitBG(pathname)}`}>
         <Inner pathName={pathname}>{children}</Inner>
       </main>
       {pathname !== "/contact" && <Contact />}
@@ -56,7 +65,7 @@ const StyledLayout = styled("div")<{ pathName: string }>`
 
 const Inner = styled("section")<{ pathName: string }>`
   margin: 0 auto;
-  background-color: ${({ theme }) => theme.primary};
+  /* background-color: ${({ theme }) => theme.primary}; */
   max-width: ${props => {
     switch (props.pathName) {
       case "/":

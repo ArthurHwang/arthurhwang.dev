@@ -85,6 +85,7 @@ const StyledPost = styled("div")`
 
   .text-block {
     padding: 0.5rem 2rem 2rem;
+    background: ${({ theme }) => theme.bg.white};
     @media (max-width: 490px) {
       padding: 0 1rem 1rem;
     }
@@ -123,7 +124,7 @@ const StyledPost = styled("div")`
     padding: 2rem;
     grid-gap: 1rem;
     align-items: center;
-
+    background: ${({ theme }) => theme.bg.white};
     @media (max-width: 490px) {
       padding: 1rem;
     }

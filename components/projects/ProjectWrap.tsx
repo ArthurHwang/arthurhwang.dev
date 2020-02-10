@@ -274,6 +274,7 @@ const ContentWrapper = styled("div")`
   margin: 0 auto;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
   padding: 1rem 2rem 2rem;
+  background: ${({ theme }) => theme.bg.white};
 
   @media (max-width: 1400px) {
     max-height: initial;
