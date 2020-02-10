@@ -66,7 +66,7 @@ export const Project6: React.FC = (): ReactElement => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Created fullstack e-commerce application with full user
+              Created Full-Stack e-commerce application with full user
               authentication and authorization flow and stripe checkout.
             </li>
             <li>

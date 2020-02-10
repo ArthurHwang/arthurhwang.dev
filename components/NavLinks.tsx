@@ -30,7 +30,7 @@ export const NavLinks: React.FC = ({}): ReactElement => (
       </a>
     </Link>
     <a
-      href="/static/arthurhwang-resume.pdf"
+      href="/static/ahwang-resume.pdf"
       className="link invert"
       target="_blank"
       title="CV"

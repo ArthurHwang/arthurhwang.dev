@@ -64,7 +64,7 @@ export const NavMobile: React.FC = (): ReactElement => {
                   </a>
                 </Link>
                 <a
-                  href="/static/arthurhwang-resume.pdf"
+                  href="/static/ahwang-resume.pdf"
                   className="link invert"
                   target="_blank"
                   rel="noopener noreferrer"

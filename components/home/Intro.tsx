@@ -16,7 +16,7 @@ export const Intro: React.FC = (): ReactElement => {
           </h2>
           <p>
             Hey there, nice to meet you! My name is Arthur Hwang, I'm a
-            Fullstack Web Developer. I'm a driven, passionate, family-oriented
+            Full-Stack Web Developer. I'm a driven, passionate, family-oriented
             individual who looks at obstacles and difficulties as opportunities
             to learn and grow. Ever since I was a kid I have had a love for
             puzzles and building. I'd even take things apart to see how they
@@ -94,7 +94,7 @@ export const Intro: React.FC = (): ReactElement => {
               </a>
             </ActiveLink>
             <a
-              href="/static/arthurhwang-resume.pdf"
+              href="/static/ahwang-resume.pdf"
               className="link"
               target="_blank"
               rel="noopener noreferrer"
