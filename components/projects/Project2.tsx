@@ -25,57 +25,70 @@ export const Project2: React.FC = (): ReactElement => {
             //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-1.webp"
+            src="/static/projects/arthurhwang.dev/screenshot-7.webp"
             alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-1.png";
+                "/static/projects/arthurhwang.dev/screenshot-7.png";
             }}
           />
+          <div className="vertical-wrapper">
+            <img
+              className="vertical"
+              src="/static/projects/arthurhwang.dev/screenshot-8.webp"
+              alt="screenshot 2"
+              onError={(e: any) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "/static/projects/arthurhwang.dev/screenshot-8.png";
+              }}
+            />
+            <img
+              className="vertical"
+              src="/static/projects/arthurhwang.dev/screenshot-9.webp"
+              alt="screenshot 3"
+              onError={(e: any) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "/static/projects/arthurhwang.dev/screenshot-9.png";
+              }}
+            />
+          </div>
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-2.webp"
-            alt="screenshot 2"
+            src="/static/projects/arthurhwang.dev/screenshot-10.webp"
+            alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-2.png";
+                "/static/projects/arthurhwang.dev/screenshot-10.png";
             }}
           />
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-3.webp"
-            alt="screenshot 3"
+            src="/static/projects/arthurhwang.dev/screenshot-11.webp"
+            alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-3.png";
+                "/static/projects/arthurhwang.dev/screenshot-11.png";
             }}
           />
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-4.webp"
-            alt="screenshot 4"
+            src="/static/projects/arthurhwang.dev/screenshot-12.webp"
+            alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-4.png";
+                "/static/projects/arthurhwang.dev/screenshot-12.png";
             }}
           />
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-5.webp"
-            alt="screenshot 5"
+            src="/static/projects/arthurhwang.dev/screenshot-13.webp"
+            alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-5.png";
-            }}
-          />
-          <img
-            src="/static/projects/arthurhwang.dev/screenshot-6.webp"
-            alt="screenshot 6"
-            onError={(e: any) => {
-              e.target.onerror = null;
-              e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-6.png";
+                "/static/projects/arthurhwang.dev/screenshot-13.png";
             }}
           />
         </Slider>

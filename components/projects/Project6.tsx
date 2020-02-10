@@ -14,7 +14,7 @@ export const Project6: React.FC = (): ReactElement => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://keeb-kraze.herokuapp.com/"
+        href="https://keebkraze.com/"
         className="link project-title"
       >
         Keeb Kraze
@@ -25,51 +25,35 @@ export const Project6: React.FC = (): ReactElement => {
             //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
           <img
-            src="/static/projects/toneify/screenshot-1.webp"
+            src="/static/projects/keebkraze/screenshot-1.webp"
             alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-1.png";
+              e.target.src = "/static/projects/keebkraze/screenshot-1.png";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-2.webp"
+            src="/static/projects/keebkraze/screenshot-3.webp"
             alt="screenshot 2"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-2.png";
+              e.target.src = "/static/projects/keebkraze/screenshot-3.png";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-4.webp"
+            src="/static/projects/keebkraze/screenshot-4.webp"
             alt="screenshot 4"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-4.png";
+              e.target.src = "/static/projects/keebkraze/screenshot-4.png";
             }}
           />
           <img
-            src="/static/projects/toneify/screenshot-7.webp"
-            alt="screenshot 7"
+            src="/static/projects/keebkraze/screenshot-2.webp"
+            alt="screenshot 2"
             onError={(e: any) => {
               e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-7.png";
-            }}
-          />
-          <img
-            src="/static/projects/toneify/screenshot-5.webp"
-            alt="screenshot 5"
-            onError={(e: any) => {
-              e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-5.png";
-            }}
-          />
-          <img
-            src="/static/projects/toneify/screenshot-6.webp"
-            alt="screenshot 6"
-            onError={(e: any) => {
-              e.target.onerror = null;
-              e.target.src = "/static/projects/toneify/screenshot-6.png";
+              e.target.src = "/static/projects/keebkraze/screenshot-2.png";
             }}
           />
         </Slider>
@@ -157,7 +141,7 @@ export const Project6: React.FC = (): ReactElement => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://keeb-kraze.herokuapp.com/"
+          href="https://keebkraze.com/"
         >
           <Button color="green">
             Launch <FaPlay />

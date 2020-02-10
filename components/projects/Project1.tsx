@@ -14,7 +14,7 @@ export const Project1: React.FC = (): ReactElement => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://bestattorney.netlify.com"
+        href="https://bisnarchaselaw.com"
         className="link  project-title"
       >
         Bisnar | Chase - Gatsby
@@ -240,7 +240,7 @@ export const Project1: React.FC = (): ReactElement => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://bestattorney.netlify.com"
+          href="https://bisnarchaselaw.com"
         >
           <Button color="green">
             Launch <FaPlay />
