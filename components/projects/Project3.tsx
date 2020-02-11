@@ -85,13 +85,13 @@ export const Project3: React.FC = (): ReactElement => {
               client-side dashboard application.
             </li>
             <li>
-              Used NodeJS and Express to handle back-end logic and custom API
+              Used Node.js and Express to handle back-end logic and custom API
               endpoints while correctly hashing and salting sensitive password
               information with bcrypt library.
             </li>
             <li>
               Stored user account information into MySQL database using
-              Sequelize ORM and Nodejs.
+              Sequelize ORM and Node.js.
             </li>
             <li>
               Used JSON Web Tokens to pass authentication data to client side
@@ -107,7 +107,7 @@ export const Project3: React.FC = (): ReactElement => {
               basic common tasks relative to the company.
             </li>
             <li>
-              Used apache server ProxyPass and ProxyPassReverse to get NodeJS /
+              Used apache server ProxyPass and ProxyPassReverse to get Node.js /
               Express application running under existing Linux server.
             </li>
             <li>

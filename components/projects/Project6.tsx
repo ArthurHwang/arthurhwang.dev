@@ -103,7 +103,7 @@ export const Project6: React.FC = (): ReactElement => {
               user authentication and store application data.
             </li>
             <li>
-              Used Express and NodeJS to handle back-end API payment requests
+              Used Express and Node.js to handle back-end API payment requests
               from front-end application using Stripe API.
             </li>
             <li>

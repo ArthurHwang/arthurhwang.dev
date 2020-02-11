@@ -105,7 +105,7 @@ export const Project5: React.FC = (): ReactElement => {
               data and history.
             </li>
             <li>
-              Used Express and NodeJS to handle back-end API requests such as
+              Used Express and Node.js to handle back-end API requests such as
               fetching user builds and purchase history.
             </li>
             <li>

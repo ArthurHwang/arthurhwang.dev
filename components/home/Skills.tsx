@@ -37,7 +37,7 @@ export const Skills: React.FC = (): ReactElement => {
               title="nodejs"
               alt="nodejs"
             />{" "}
-            NodeJS
+            Node.js
           </span>
           <span className="skill-item">
             <img
@@ -45,7 +45,7 @@ export const Skills: React.FC = (): ReactElement => {
               title="express"
               alt="express"
             />{" "}
-            ExpressJS
+            Express
           </span>
           <span className="skill-item">
             <img src="/static/home/graphql.png" title="graphql" alt="graphql" />{" "}
@@ -61,7 +61,7 @@ export const Skills: React.FC = (): ReactElement => {
           </span>
           <span className="skill-item">
             <img src="/static/home/next-js.svg" title="nextjs" alt="nextjs" />{" "}
-            NextJS
+            Next.js
           </span>
           <span className="skill-item">
             <img

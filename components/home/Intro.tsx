@@ -16,33 +16,17 @@ export const Intro: React.FC = (): ReactElement => {
           </h2>
           <p>
             Hey there, nice to meet you! My name is Arthur Hwang, I'm a
-            Full-Stack Web Developer. I'm a driven, passionate, family-oriented
-            individual who looks at obstacles and difficulties as opportunities
-            to learn and grow. Ever since I was a kid I have had a love for
-            puzzles and building. I'd even take things apart to see how they
-            were put together, though, more often than not they didn't go back
-            the way they came. Ultimately, this led me to development where I
-            get to enjoy the best of both worlds. When I'm not coding you'll
-            likely find me spending time with family, reading documentation,
-            watching tutorials, playing mahjong, or learning about the latest
-            and greatest in technology.
+            Full-Stack Web Developer currently residing in Southern California.
+            I'm a driven, passionate, family-oriented individual who looks at
+            obstacles and difficulties as opportunities to learn and grow. Ever
+            since I was a kid I have had a love for puzzles and building. I'd
+            even take things apart to see how they were put together, though,
+            more often than not they didn't go back the way they came.
+            Ultimately, this led me to development where I get to enjoy the best
+            of both worlds. When I'm not coding you'll likely find me spending
+            time with family, reading documentation, watching tutorials, playing
+            mahjong, or learning about the latest and greatest in technology.
           </p>
-          {/* <p>
-            Hi there! I'm Arthur, a fullstack web developer born and raised in
-            Southern California where I currently reside. I'm a passionate and
-            professional web developer that likes to visualize, plan and deliver
-            technically perfect, responsive and user friendly software
-            solutions.
-          </p> */}
-          {/* <p>
-            I have always had an interest in anything technology related.
-            However, ever since I found coding I have felt blessed to find
-            something in my life that interests me every day. From creating user
-            interfaces to more computer science topics like data structures and
-            algorithms, I constantly put the work and the time in to learn more
-            and more. It is my life long ambition to become the best software
-            developer I can possibly be.
-          </p> */}
           <p>
             I have recently gotten into blogging to try to give back to the
             development community by trying teach and explain to readers that
