@@ -2,8 +2,10 @@ import styled from "styled-components";
 import Link from "next/link";
 import { Nav } from "./Nav";
 import { NavMobile } from "./NavMobile";
+import { ReactElement } from "react";
+import { NavLinks } from "./NavLinks";
 
-export const Header: React.FC<any> = () => {
+export const Header: React.FC = (): ReactElement => {
   return (
     <StyledHeader>
       <div className="bar">
@@ -11,14 +13,15 @@ export const Header: React.FC<any> = () => {
           <div className="hover-box">
             <StyledLogo>
               <div className="logo-img" />
-              <div className="text-wrapper">
+              <div>
                 <p className="name">Arthur Hwang</p>
-                <p className="title">FullStack Web Developer</p>
+                <p className="title">Full-Stack Web Developer</p>
               </div>
             </StyledLogo>
           </div>
         </Link>
         <Nav />
+        <NavLinks />
         <NavMobile />
       </div>
     </StyledHeader>
@@ -41,7 +44,7 @@ const StyledLogo = styled("div")`
     width: 100%;
     height: 100%;
     background-image: url("/static/me.jpg");
-    background-position: 1px 50%;
+    background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
@@ -53,13 +56,14 @@ const StyledLogo = styled("div")`
     text-transform: uppercase;
     padding: 0 0 0 1.5rem;
     margin: 0;
+    font-family: "Titillium";
   }
 
   p.name {
     font-size: 2.5rem;
     position: relative;
     bottom: 5px;
-    color: ${({ theme }) => theme.black};
+    color: ${({ theme }) => theme.font.white};
 
     @media (max-width: 413px) {
       font-size: 1.8rem;
@@ -70,7 +74,7 @@ const StyledLogo = styled("div")`
 
   p.title {
     font-size: 1.4rem;
-    color: #fe4a49;
+    color: ${({ theme }) => theme.secondaryAccent};
     position: relative;
     bottom: 20px;
     font-style: italic;
@@ -86,9 +90,14 @@ const StyledLogo = styled("div")`
 
 const StyledHeader = styled("header")`
   font-weight: 600;
-  z-index: 1;
-  background: ${({ theme }) => theme.primary};
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+
+  background: ${({ theme }) => theme.bg.black};
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  height: 60px;
 
   .hover-box {
     cursor: pointer;
@@ -98,9 +107,12 @@ const StyledHeader = styled("header")`
 
   .bar {
     display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: space-between;
+    grid-template-columns: 33.333333% 33.333333% 33.333333%;
     align-items: stretch;
+
+    @media (max-width: 934px) {
+      grid-template-columns: auto 1fr;
+    }
 
     .me {
       padding: 1rem;

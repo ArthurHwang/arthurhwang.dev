@@ -1,13 +1,14 @@
-import { ProjectWrap } from "./ProjectWrap";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
+import { ProjectWrap } from "./ProjectWrap";
 import { CommitList } from "../../components/CommitList";
 import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
+import { ReactElement } from "react";
 
 // bestattorney.com-admin
-export const Project3: React.FC<any> = () => {
+export const Project3: React.FC = (): ReactElement => {
   return (
     <ProjectWrap>
       <a
@@ -85,7 +86,7 @@ export const Project3: React.FC<any> = () => {
             </li>
             <li>
               Used NodeJS and Express to handle back-end logic and custom API
-              routing while correctly hashing and salting sensitive password
+              endpoints while correctly hashing and salting sensitive password
               information with bcrypt library.
             </li>
             <li>
@@ -109,6 +110,17 @@ export const Project3: React.FC<any> = () => {
               Used apache server ProxyPass and ProxyPassReverse to get NodeJS /
               Express application running under existing Linux server.
             </li>
+            <li>
+              **If you would like to login and peek around, please use the
+              following credentials. Otherwise feel free to create your own
+              account:
+              <br />
+              <code style={{ padding: "0" }}>
+                Username: testing@testing.com
+              </code>
+              <br />
+              <code style={{ padding: "0" }}>Password: 123456</code>
+            </li>
           </ul>
         </div>
       </div>
@@ -125,7 +137,7 @@ export const Project3: React.FC<any> = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://gitlab.com/ArthurHwang/bestattorney-com/tree/master/SPAs"
+          href="https://gitlab.com/ArthurHwang/bestattorney-com/-/tree/master/SPAs"
         >
           <Button color="blue">
             Source <FaGithub />
@@ -134,7 +146,7 @@ export const Project3: React.FC<any> = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://bestattorney.netlify.com"
+          href="https://www.bestattorney.com/admin"
         >
           <Button color="green">
             Launch <FaPlay />

@@ -1,49 +1,45 @@
 import styled from "styled-components";
-import Link from "next/link";
+import MdHeart from "react-ionicons/lib/MdHeart";
+import { ReactElement } from "react";
 
-export const About: React.FC<any> = () => {
+export const About: React.FC = (): ReactElement => {
   return (
-    <ContentWrap>
+    <ContentWrap className="circuit-bg">
       <StyledAbout>
         <h2>
-          WHOAMI<span>_</span>
+          Brute Force Determination<span>_</span>
         </h2>
         <p>
-          I'm Arthur, a fullstack web developer born and raised in Southern
-          California where I currently reside. I'm a passionate and professional
-          web developer that likes to visualize, plan and deliver technically
-          perfect, responsive and user friendly software solutions.
+          I like to <strong>get things done</strong>. Architecting and building
+          highly performant, high quality, maintainable web applications is my
+          passion. As a <strong>hyper-motivated</strong> self starter who is
+          passionate about writing clean, efficient code - delivering features
+          and pushing through to the finish line is what fuels me. In order to
+          solve tough problems, I instill maximum effort and resilience in
+          anything I touch. Having a never-give-up attitude is my ethos.
         </p>
         <p>
-          I have always had an interest in anything technology related. However,
-          ever since I found coding I have felt blessed to find something in my
-          life that interests me every day. From creating user interfaces to
-          more computer science topics like data structures and algorithms, I
-          constantly put the work and the time in to learn more and more. It is
-          my life long ambition to become the best software developer I can
-          possibly be.
-        </p>
-        <p>
-          I have recently gotten into blogging to try to give back to the
-          community by trying teach and explain to readers that may come across
-          me about code and technology topics. My main focus for my blog is to
-          explain topics that I have learned in a way that readers can
-          comprehend easily. I hope to give readers an "ah-ha" moment about the
-          topic.{" "}
-          <Link href="/blog">
-            <a className="link">Visit my blog!</a>
-          </Link>
+          I am hungry and driven to do more, build more and learn more. My
+          thirst for knowledge could be classified as borderline obsessive.
+          Ultimately, being able to take part and help businesses reach their
+          goals and get to the next level by developing software brings me
+          immense joy and satisfaction.
         </p>
         <h3>
           Random Facts About Me<span>_</span>
         </h3>
         <ul>
           <li>
-            I listen to{" "}
+            I{" "}
+            <MdHeart
+              style={{ position: "relative", top: "5px" }}
+              fontSize="22px"
+              color="red"
+              beat={true}
+            />{" "}
             <a className="link" href="https://www.syntax.fm">
               Syntax.fm
             </a>{" "}
-            everyday
           </li>
           <li>I have been playing the guitar for more than 15 years.</li>
           <li>My favorite guitarist is Stevie Ray Vaughan.</li>
@@ -51,9 +47,9 @@ export const About: React.FC<any> = () => {
             I have a dog and a cat that depending on the hour either love or
             hate each other.
           </li>
-          <li>I REALLY like coffee and tea.</li>
+          <li>I have an unhealthy obsession with coffee and tea.</li>
           <li>I meetup with a few close friends every week to play mahjong.</li>
-          <li>I love playing golf.</li>
+          <li>I enjoy playing golf.</li>
           <li>I speak Chinese.</li>
         </ul>
       </StyledAbout>
@@ -62,7 +58,7 @@ export const About: React.FC<any> = () => {
 };
 
 const ContentWrap = styled("div")`
-  padding: 4rem 2rem;
+  padding: 10rem 2rem 10rem;
 
   h2 {
     margin-top: 0;
@@ -72,15 +68,18 @@ const ContentWrap = styled("div")`
     color: ${({ theme }) => theme.accent};
     font-weight: 800;
   }
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
 `;
 
 const StyledAbout = styled("div")`
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 
   .flex-wrap {
     display: flex;
-
     justify-content: space-evenly;
 
     img {

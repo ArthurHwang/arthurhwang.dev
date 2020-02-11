@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ReactElement } from "react";
 
 interface Props {
   children: any;
 }
 
-export const ProjectWrap: React.FC<Props> = ({ children }) => {
+export const ProjectWrap: React.FC<Props> = ({ children }): ReactElement => {
   return (
     <ProjectWrapper>
       <ContentWrapper>{children}</ContentWrapper>
@@ -199,12 +200,13 @@ const ProjectWrapper = styled("div")`
 
       li {
         font-size: 1.4rem;
-        text-indent: -18px;
+        text-indent: -17px;
         text-align: left;
+        line-height: 1.6;
 
         @media (max-width: 490px) {
           text-align: justify;
-          text-indent: -18px;
+          text-indent: -17px;
         }
 
         &:before {
@@ -272,6 +274,7 @@ const ContentWrapper = styled("div")`
   margin: 0 auto;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
   padding: 1rem 2rem 2rem;
+  background: ${({ theme }) => theme.bg.white};
 
   @media (max-width: 1400px) {
     max-height: initial;

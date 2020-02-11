@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactElement } from "react";
 
 interface Props {
   invert: boolean;
@@ -8,7 +9,7 @@ interface Props {
 export const Divider: React.FC<Props> = ({
   invert = false,
   color = "yellow"
-}) => {
+}): ReactElement => {
   return (
     <ContentWrap invert={invert} color={color}>
       <div className="divider div-transparent div-dot" />

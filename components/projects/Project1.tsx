@@ -1,19 +1,20 @@
-import { ProjectWrap } from "./ProjectWrap";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
+import { ProjectWrap } from "./ProjectWrap";
 import { CommitList } from "../../components/CommitList";
 import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
+import { ReactElement } from "react";
 
 // bestattorney.com-gatsby
-export const Project1: React.FC<any> = () => {
+export const Project1: React.FC = (): ReactElement => {
   return (
     <ProjectWrap>
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://bestattorney.netlify.com"
+        href="https://bisnarchaselaw.com"
         className="link  project-title"
       >
         Bisnar | Chase - Gatsby
@@ -115,6 +116,7 @@ export const Project1: React.FC<any> = () => {
         <div className="commits">
           <LazyLoad once height={344}>
             <CommitList
+              idx={1}
               owner="bestattorney"
               name="bestattorney.com-gatsby"
               source="gitlab"
@@ -128,32 +130,21 @@ export const Project1: React.FC<any> = () => {
           </div>
           <ul>
             <li>
-              <span
-                style={{
-                  color: "red",
-                  fontWeight: "bold"
-                }}
-              >
-                **NOTE** Project approved by company to go live early 2020 - DNS
-                has not switched yet!
-              </span>
-            </li>
-            <li>
               Built production ready statically generated <strong>7000+</strong>{" "}
-              page application with GatsbyJS and TypeScript for code splitting,
-              performance, SEO benefits, and future proofing tech stack for the
+              page application with GatsbyJS and TypeScript for performance
+              benefits, SEO benefits, and future proofing tech stack for the
               company.
             </li>
             <li>
-              Created custom serverless automated build pipeline workflow using
-              CircleCI, Cypress, Jest, and Netlify.
+              Created custom CI / CD automated build pipeline workflow using
+              CircleCI, Jest, Cypress, and Netlify.
             </li>
             <li>
               Wrote E2E (End-to-End) / smoke tests with Cypress as well as unit
               / snapshot tests with Jest.
             </li>
             <li>
-              Architected custom file / folder structure in which values are
+              Architected custom file and folder structure in which values are
               inherited from a single source in order to empower non-developers
               to be able to easily add, remove and update items on the website.
             </li>
@@ -163,17 +154,16 @@ export const Project1: React.FC<any> = () => {
                 className="link"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://bestattorney.netlify.com/blog"
+                href="https://bisnarchaselaw.com/blog"
               >
                 blog
               </a>{" "}
-              with 16 years of Wordpress data by leveraging a headless CMS with
-              custom hosting solution that is decoupled from the main
-              application.
+              with 16 years of WordPress data by leveraging headless WordPress
+              CMS with custom decoupled hosting solution.
             </li>
             <li>
-              Used modern CSS-in-JS solution styled-components to design and
-              create fully responsive application front-end with custom reusable
+              Used modern CSS-in-JS solution Styled-Components to design and
+              create fully responsive front-end application with custom reusable
               React components.
             </li>
             <li>
@@ -182,26 +172,26 @@ export const Project1: React.FC<any> = () => {
                 className="link"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://bestattorney.netlify.com/locations"
+                href="https://bisnarchaselaw.com/locations"
               >
                 Google Maps component
               </a>{" "}
               that shows all company service area locations with filtering based
-              on region.
+              on geolocation.
             </li>
             <li>
               Created custom validated Google AMP (Accelerated Mobile Pages) for
               blog according to Google specifications.
             </li>
             <li>
-              Developed custom SEO component to automatically generate full SEO
+              Developed custom SEO component to dynamically generate full SEO
               meta requirements including facebook, twitter, AMP, canonical
               URL's and JSON-LD structured data.
             </li>
-            {/* <li>
+            <li>
               Integrated Google Analytics and Google Marketing Suite for user
-              insights and goal tracking.
-            </li> */}
+              insights and metric tracking.
+            </li>
           </ul>
         </div>
       </div>
@@ -239,7 +229,7 @@ export const Project1: React.FC<any> = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://bestattorney.netlify.com"
+          href="https://bisnarchaselaw.com"
         >
           <Button color="green">
             Launch <FaPlay />

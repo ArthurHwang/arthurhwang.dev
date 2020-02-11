@@ -1,15 +1,11 @@
 import styled from "styled-components";
 import MdHeart from "react-ionicons/lib/MdHeart";
-import {
-  FaGithub,
-  // FaFacebook,
-  FaLinkedin,
-  FaClipboardList
-  // FaTwitter
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { ReactElement } from "react";
+import Link from "next/link";
 
-export const Footer: React.FC<any> = () => {
+export const Footer: React.FC = (): ReactElement => {
   return (
     <StyledFooter>
       <div className="love">
@@ -27,7 +23,7 @@ export const Footer: React.FC<any> = () => {
           <MdHeart
             style={{ marginLeft: "0rem", cursor: "pointer" }}
             fontSize="35px"
-            color="red"
+            color="#FE4A49"
             onClick={() =>
               alert("Thank you for visiting my website.  I love you <3.")
             }
@@ -35,67 +31,41 @@ export const Footer: React.FC<any> = () => {
           />
         </span>
       </div>
-
       <div className="badges">
         <a
           aria-label="GitHub"
           target="_blank"
           rel="noopener noreferrer"
-          title=""
+          title="GitHub"
           href="https://github.com/ArthurHwang"
-          className="link"
+          className="link invert"
         >
           <FaGithub className="icon" />
         </a>
         <a
           aria-label="LinkedIn"
-          title=""
+          title="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/arthur-hwang"
-          className="link"
+          className="link invert"
         >
           <FaLinkedin className="icon" />
         </a>
-        {/* <a
-          aria-label="facebook"
-          title=""
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.facebook.com/arthur.hwang.9"
-          className="link"
-        >
-          <FaFacebook className="icon" />
-        </a>
-        <a
-          aria-label="Twitter"
-          target="_blank"
-          rel="noopener noreferrer"
-          title=""
-          href="https://twitter.com/ArthurHwang"
-          className="link"
-        >
-          <FaTwitter className="icon" />
-        </a> */}
+        <Link href="/#contact">
+          <a className="link invert" title="Contact">
+            <IoMdMail className="icon" />
+          </a>
+        </Link>
         <a
           aria-label="Resume"
           target="_blank"
           rel="noopener noreferrer"
           title="CV"
-          href="mailto:mail@arthurhwang.dev"
-          className="link"
+          href="/static/ahwang-resume.pdf"
+          className="link invert"
         >
           <FaClipboardList className="icon" />{" "}
-        </a>
-        <a
-          aria-label="Email"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Email"
-          href="mailto:mail@arthurhwang.dev"
-          className="link"
-        >
-          <IoMdMail className="icon" />
         </a>
       </div>
     </StyledFooter>
@@ -103,8 +73,8 @@ export const Footer: React.FC<any> = () => {
 };
 
 const StyledFooter = styled("footer")`
-  padding: 1rem 2rem;
-  background-color: ${({ theme }) => theme.primary};
+  padding: 2rem 2rem;
+  background-color: ${({ theme }) => theme.bg.black};
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -124,6 +94,7 @@ const StyledFooter = styled("footer")`
   .love {
     position: relative;
     top: 2px;
+    color: ${({ theme }) => theme.font.white};
 
     @media (max-width: 910px) {
       text-align: center;
@@ -135,6 +106,8 @@ const StyledFooter = styled("footer")`
       margin: 0 0.3rem;
       position: relative;
       bottom: 4px;
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
     }
   }
 
@@ -166,6 +139,9 @@ const StyledFooter = styled("footer")`
   }
 
   .icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: 0 0.6rem;
+    position: relative;
+    top: 3px;
   }
 `;

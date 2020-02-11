@@ -1,15 +1,20 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { IoIosKeypad } from "react-icons/io";
-import { useState } from "react";
+import { ReactElement, useState, useEffect } from "react";
+import { FaGithub, FaLinkedin, FaClipboardList } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
-export const NavMobile: React.FC<any> = () => {
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return window.addEventListener("scroll", handleScroll);
-  // }, []);
-
+export const NavMobile: React.FC = (): ReactElement => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setMenuOpen(false);
+    });
+
+    return () => window.removeEventListener("scroll", () => {});
+  }, []);
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
@@ -35,37 +40,59 @@ export const NavMobile: React.FC<any> = () => {
             className={menuOpen ? "fade" : "fadeOut"}
           >
             <LinkWrapper>
+              <h2>Navigation</h2>
+              <div className="icon-wrap">
+                <a
+                  href="https://github.com/ArthurHwang"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link invert"
+                >
+                  <FaGithub className="icon" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/arthur-hwang"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link invert"
+                >
+                  <FaLinkedin className="icon" />
+                </a>
+                <Link href="/#contact">
+                  <a rel="noopener noreferrer" className="link invert">
+                    <IoMdMail className="icon" />
+                  </a>
+                </Link>
+                <a
+                  href="/static/ahwang-resume.pdf"
+                  className="link invert"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaClipboardList className="icon" />
+                </a>
+              </div>
               <Link href="/">
-                <a className="link-wrap link" onClick={handleLink}>
+                <a className="link-wrap link invert" onClick={handleLink}>
                   Home<span className="underscore">_</span>
                 </a>
               </Link>
               <Link href="/projects">
-                <a className="link-wrap link" onClick={handleLink}>
+                <a className="link-wrap link invert" onClick={handleLink}>
                   Projects<span className="underscore">_</span>
                 </a>
               </Link>
               <Link href="/blog">
-                <a className="link-wrap link" onClick={handleLink}>
+                <a className="link-wrap link invert" onClick={handleLink}>
                   Blog<span className="underscore">_</span>
                 </a>
               </Link>
-              <Link href="/contact">
-                <a className="link-wrap link" onClick={handleLink}>
+              <Link href="/#contact">
+                <a className="link-wrap link invert" onClick={handleLink}>
                   Contact<span className="underscore">_</span>
                 </a>
               </Link>
             </LinkWrapper>
-            <MiscWrapper>
-              <a
-                href="mailto:mail@arthurhwang.dev"
-                className="link-wrap link"
-                onClick={handleLink}
-              >
-                mail@arthurhwang.dev
-              </a>
-              <p className="copyright">&copy; - 2019 Arthur Hwang </p>
-            </MiscWrapper>
           </StyledNavMenu>
         )}
       </StyledNavMobile>
@@ -76,6 +103,27 @@ export const NavMobile: React.FC<any> = () => {
 const LinkWrapper = styled("div")`
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: ${({ theme }) => theme.font.white};
+  }
+
+  .icon-wrap {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .icon {
+      font-size: 2.4rem;
+      margin: 0 1rem;
+      position: relative;
+      top: 3px;
+    }
+  }
 
   .link-wrap {
     cursor: pointer;
@@ -89,24 +137,9 @@ const LinkWrapper = styled("div")`
   }
 `;
 
-const MiscWrapper = styled("div")`
-  border-top: 1px solid #ebeaeb;
-  padding-top: 1rem;
-
-  .link-wrap {
-    font-size: 1.4rem;
-  }
-
-  .copyright {
-    margin: 0;
-    font-size: 1.4rem;
-  }
-`;
-
 const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
   height: 100%;
   width: 100%;
-  z-index: 20;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -117,7 +150,7 @@ const IconWrapper = styled("div")<{ rotate: string; theme: any }>`
     font-size: 3rem;
     right: 1.5rem;
     color: ${props =>
-      props.rotate === "true" ? props.theme.yellow : props.theme.black};
+      props.rotate === "true" ? props.theme.yellow : props.theme.font.white};
     transform: ${props => (props.rotate === "true" ? `rotate(225deg)` : "")};
     transition: transform 0.5s;
   }
@@ -132,12 +165,10 @@ const StyledNavMobile = styled("nav")`
 
 const StyledNavMenu = styled("div")`
   position: fixed;
-  z-index: 20;
   left: 0;
-  top: 61px;
+  top: 60px;
   width: 100vw;
-  padding: 2rem 2rem 1rem;
-  background-color: ${({ theme }) => theme.lightgrey};
+  background-color: ${({ theme }: any) => theme.bg.black};
   height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
@@ -145,7 +176,7 @@ const StyledNavMenu = styled("div")`
 `;
 
 const NavMobileWrapper = styled.div`
-  z-index: 20;
+  z-index: 1000;
   .fade {
     animation: fadein 0.8s;
     -moz-animation: fadein 0.8s; /* Firefox */

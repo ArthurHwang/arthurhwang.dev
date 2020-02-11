@@ -5,7 +5,12 @@ import { Footer } from "./Footer";
 import { Subheader } from "./Subheader";
 import { withRouter } from "next/router";
 import { Contact } from "./Contact";
-import "../util/slick-fix.css";
+import { ReactElement } from "react";
+
+if (process.env.NODE_ENV !== "production") {
+  // Fix for slick carousel on development mode not SSR correctly
+  require("../util/slick-fix.css");
+}
 
 interface Props {
   children: any;
@@ -14,14 +19,28 @@ interface Props {
   };
 }
 
-const Layout: React.FC<Props> = ({ children, router: { pathname } }) => {
+function addCircuitBG(pathname: string): string | undefined {
+  switch (pathname) {
+    case "/blog" || "/projects":
+      return "circuit-bg";
+    default:
+      return "";
+  }
+}
+
+const Layout: React.FC<Props> = ({
+  children,
+  router: { pathname }
+}): ReactElement => {
   return (
     <StyledLayout pathName={pathname}>
       <Meta pathName={pathname} />
       <MobilePush />
       <Header />
       {pathname !== "/_error" && <Subheader pathName={pathname} />}
-      <Inner pathName={pathname}>{children}</Inner>
+      <main className={`${addCircuitBG(pathname)}`}>
+        <Inner pathName={pathname}>{children}</Inner>
+      </main>
       {pathname !== "/contact" && <Contact />}
       <Footer />
     </StyledLayout>
@@ -32,10 +51,6 @@ export default withRouter(Layout);
 
 const MobilePush = styled("div")`
   height: 60px;
-
-  @media (min-width: 769px) {
-    display: none;
-  }
 `;
 
 const StyledLayout = styled("div")<{ pathName: string }>`
@@ -50,7 +65,7 @@ const StyledLayout = styled("div")<{ pathName: string }>`
 
 const Inner = styled("section")<{ pathName: string }>`
   margin: 0 auto;
-  background-color: ${({ theme }) => theme.primary};
+  /* background-color: ${({ theme }) => theme.primary}; */
   max-width: ${props => {
     switch (props.pathName) {
       case "/":

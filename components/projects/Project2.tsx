@@ -1,13 +1,14 @@
-import { ProjectWrap } from "./ProjectWrap";
 import LazyLoad from "react-lazyload";
 import Slider from "react-slick";
+import { ProjectWrap } from "./ProjectWrap";
 import { CommitList } from "../../components/CommitList";
 import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
+import { ReactElement } from "react";
 
 // arthurhwang.dev
-export const Project2: React.FC<any> = () => {
+export const Project2: React.FC = (): ReactElement => {
   return (
     <ProjectWrap>
       <a
@@ -24,57 +25,70 @@ export const Project2: React.FC<any> = () => {
             //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-1.webp"
+            src="/static/projects/arthurhwang.dev/screenshot-7.webp"
             alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-1.png";
+                "/static/projects/arthurhwang.dev/screenshot-7.png";
             }}
           />
+          <div className="vertical-wrapper">
+            <img
+              className="vertical"
+              src="/static/projects/arthurhwang.dev/screenshot-8.webp"
+              alt="screenshot 2"
+              onError={(e: any) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "/static/projects/arthurhwang.dev/screenshot-8.png";
+              }}
+            />
+            <img
+              className="vertical"
+              src="/static/projects/arthurhwang.dev/screenshot-9.webp"
+              alt="screenshot 3"
+              onError={(e: any) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "/static/projects/arthurhwang.dev/screenshot-9.png";
+              }}
+            />
+          </div>
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-2.webp"
-            alt="screenshot 2"
+            src="/static/projects/arthurhwang.dev/screenshot-10.webp"
+            alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-2.png";
+                "/static/projects/arthurhwang.dev/screenshot-10.png";
             }}
           />
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-3.webp"
-            alt="screenshot 3"
+            src="/static/projects/arthurhwang.dev/screenshot-11.webp"
+            alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-3.png";
+                "/static/projects/arthurhwang.dev/screenshot-11.png";
             }}
           />
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-4.webp"
-            alt="screenshot 4"
+            src="/static/projects/arthurhwang.dev/screenshot-12.webp"
+            alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-4.png";
+                "/static/projects/arthurhwang.dev/screenshot-12.png";
             }}
           />
           <img
-            src="/static/projects/arthurhwang.dev/screenshot-5.webp"
-            alt="screenshot 5"
+            src="/static/projects/arthurhwang.dev/screenshot-13.webp"
+            alt="screenshot 1"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-5.png";
-            }}
-          />
-          <img
-            src="/static/projects/arthurhwang.dev/screenshot-6.webp"
-            alt="screenshot 6"
-            onError={(e: any) => {
-              e.target.onerror = null;
-              e.target.src =
-                "/static/projects/arthurhwang.dev/screenshot-6.png";
+                "/static/projects/arthurhwang.dev/screenshot-13.png";
             }}
           />
         </Slider>
@@ -89,7 +103,7 @@ export const Project2: React.FC<any> = () => {
           <ul>
             <li>
               Used NextJS and TypeScript to build server-rendered isomorphic
-              React application.
+              React portfolio application.
             </li>
             <li>
               Implemented Apollo and GraphQL to programmatically load data
@@ -100,6 +114,11 @@ export const Project2: React.FC<any> = () => {
               Created custom real-time GitHub commit list component with
               relevant continuous integration / continuous development status
               links.
+            </li>
+            <li>
+              Created fully responsive front-end application using modern
+              CSS-in-JS solution Styled-Components to build reusable React
+              components.
             </li>
             <li>
               Used Formik, Yup and Express to handle form validation and backend
@@ -114,25 +133,20 @@ export const Project2: React.FC<any> = () => {
               through Cloudflare into personal Gmail account.
             </li>
             <li>
-              Built personal blog with Contentful CMS. Sourced data with
-              Contentful Delivery API.
+              Built personal blog with headless Contentful CMS. Sourced data
+              with Contentful Delivery API.
             </li>
             <li>
               Parsed Contentful markdown data into blog template using
               react-markdown and implemented Disqus comment component.
             </li>
             <li>
-              Created fully responsive front-end application using modern
-              CSS-in-JS solution styled-components to build reusable React
-              components.
+              Implemented Prism for code block syntax highlighting in markdown
+              files.
             </li>
             <li>
               Created dynamic sitemap that automatically pulls data from
-              Contentful and create new sitemap entries.
-            </li>
-            <li>
-              Implemented Prism for code block syntax highlighting in markdown
-              files.
+              Contentful to create new sitemap entries.
             </li>
             <li>
               Used ParticleJS to implement custom animated heading background

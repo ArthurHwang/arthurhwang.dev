@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
+import { ReactElement } from "react";
 
-export const LoadingDots: React.FC<any> = () => {
+export const LoadingDots: React.FC = (): ReactElement => {
   return (
     <DotWrapper>
       <Dot delay="0s" />
@@ -30,7 +31,6 @@ const Dot = styled("div")<{ delay: string }>`
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  /* Animation */
   animation: ${BounceAnimation} 0.5s linear infinite;
   animation-delay: ${props => props.delay};
 `;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { ActiveLink as Link } from "./ActiveLink";
+import { ReactElement } from "react";
 
-export const Nav: React.FC<any> = () => {
+export const Nav: React.FC = (): ReactElement => {
   return (
     <StyledNav>
       <Link activeClassName="active" href="/" as="/">
@@ -11,7 +12,7 @@ export const Nav: React.FC<any> = () => {
       </Link>
       <Link activeClassName="active" href="/projects" as="/projects">
         <div className="link-box">
-          <a href="/projects">Projects</a>
+          <a>Projects</a>
         </div>
       </Link>
       <Link
@@ -24,11 +25,11 @@ export const Nav: React.FC<any> = () => {
           <a>Blog</a>
         </div>
       </Link>
-      {/* <Link activeClassName="active" href="/contact" as="/contact">
+      <Link as="/#contact" href="/#contact">
         <div className="link-box">
           <a>Contact</a>
         </div>
-      </Link> */}
+      </Link>
     </StyledNav>
   );
 };
@@ -37,8 +38,12 @@ const StyledNav = styled("nav")`
   margin: 0;
   padding: 0;
   display: flex;
-  justify-self: end;
+  justify-self: center;
   position: relative;
+
+  @media (max-width: 934px) {
+    justify-self: end;
+  }
 
   .link-box {
     display: flex;
@@ -48,22 +53,22 @@ const StyledNav = styled("nav")`
     transition: background 0.2s linear;
 
     &:hover {
-      background: ${({ theme }) => theme.accent};
+      background: ${({ theme }) => theme.grey};
 
       a {
         transition: color 0.2s linear;
-        color: ${({ theme }) => theme.secondary};
+        color: ${({ theme }) => theme.yellow};
       }
     }
   }
 
   .active {
-    background: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.font.aqua};
     a:after {
       height: 2px;
       position: absolute;
       bottom: 15px;
-      background: ${({ theme }) => theme.yellow};
+      background: ${({ theme }) => theme.font.aqua};
       content: "";
       width: calc(100% - 30px);
     }
@@ -78,16 +83,16 @@ const StyledNav = styled("nav")`
     position: relative;
     text-transform: uppercase;
     letter-spacing: -0.2px;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-family: "Titillium";
+    font-size: 1.3rem;
     background: none;
     border: 0;
     cursor: pointer;
-    color: ${({ theme }) => theme.grey};
+    color: ${({ theme }) => theme.font.white};
 
     &:after {
       height: 2px;
-      background: ${({ theme }) => theme.yellow};
+      background: ${({ theme }) => theme.aqua};
       content: "";
       width: 0;
       position: absolute;

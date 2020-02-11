@@ -3,7 +3,6 @@ import Disqus from "disqus-react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import CodeBlock from "../../components/CodeBlock";
-import LazyLoad from "react-lazyload";
 import { Fragment } from "react";
 import { NextPage } from "next";
 import { client } from "../../services/blog";
@@ -71,14 +70,13 @@ const Post: NextPage<any> = props => {
           renderers={{ code: CodeBlock }}
           source={body}
         />
-        <LazyLoad>
-          <div style={{ marginTop: "4rem" }}>
-            <Disqus.DiscussionEmbed
-              shortname={disqusShortname}
-              config={disqusConfig}
-            />
-          </div>
-        </LazyLoad>
+
+        <div style={{ marginTop: "4rem" }}>
+          <Disqus.DiscussionEmbed
+            shortname={disqusShortname}
+            config={disqusConfig}
+          />
+        </div>
       </ContentWrap>
     </Fragment>
   );
@@ -162,7 +160,6 @@ const ContentWrap = styled("div")`
   .markdown {
     blockquote {
       margin-top: 0;
-      /* background: ${({ theme }) => theme.lightgrey}; */
       p {
         text-align: center;
         font-style: italic;
@@ -176,9 +173,9 @@ const ContentWrap = styled("div")`
       font-weight: 600;
       background-image: linear-gradient(
         to right,
-        #4ad7d1,
-        #4ad7d1 50%,
-        #3454d1 50%
+        #37bc9b,
+        #37bc9b 50%,
+        #3b68b5 50%
       );
       background-position: 100%;
       background-size: 200% 100%;

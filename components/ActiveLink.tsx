@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -16,7 +16,7 @@ export const ActiveLink: React.FC<Props> = ({
   partiallyActive,
   children,
   as
-}) => {
+}): ReactElement => {
   const router = useRouter();
   const child = React.Children.only(children);
   let className = child.props.className || "";
