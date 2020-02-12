@@ -48,7 +48,7 @@ export const Contact: React.FC = (): ReactElement => {
             280-6188{" "}
           </a>
         </p>
-        <p></p>
+
         <Formik
           initialValues={{
             firstName: "",

@@ -1,4 +1,5 @@
 export default {
+  fps_limit: 60,
   particles: {
     number: {
       value: 80,

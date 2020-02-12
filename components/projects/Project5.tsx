@@ -84,37 +84,36 @@ export const Project5: React.FC = (): ReactElement => {
             <li>
               Created interactive guitar pedalboard builder to help guitarists
               create unique pedalboard configurations. Users can create, read,
-              update and delete their builds.
+              update and delete their builds
             </li>
             <li>
               Used ReactJS and Semantic-UI component library to create front-end
-              application.
+              application
             </li>
             <li>
               Implemented Redux for centralized application state and
               persistence. Wrote actions and reducers to allow predictable state
-              management.
+              management
             </li>
-            <li>Implemented React-Router for client-side routing.</li>
+            <li>Implemented React-Router for client-side routing</li>
             <li>
               Utilized Redux-Thunk middleware to perform asynchronous logic /
-              AJAX requests with Redux.
+              AJAX requests with Redux
             </li>
             <li>
               Implemented MongoDB database to seed application and store user
-              data and history.
+              data and history
             </li>
             <li>
               Used Express and Node.js to handle back-end API requests such as
-              fetching user builds and purchase history.
+              fetching user builds and purchase history
             </li>
             <li>
-              Used Stripe API to allow users to checkout and purchase cart
-              items.
+              Used Stripe API to allow users to checkout and purchase cart items
             </li>
             <li>
               Used PassportJS to implement Google and Facebook Oauth login
-              systems.
+              systems
             </li>
           </ul>
         </div>

@@ -78,37 +78,37 @@ export const Project3: React.FC = (): ReactElement => {
             <li>
               Created live production ready user authentication / user login
               system for company and team documentation. Users are able to
-              sign-up, sign-in, logout, and update their credentials.
+              sign-up, sign-in, logout, and update their credentials
             </li>
             <li>
               Utilized Angular Framework with TypeScript and bootstrap to build
-              client-side dashboard application.
+              client-side dashboard application
             </li>
             <li>
               Used Node.js and Express to handle back-end logic and custom API
               endpoints while correctly hashing and salting sensitive password
-              information with bcrypt library.
+              information with bcrypt library
             </li>
             <li>
               Stored user account information into MySQL database using
-              Sequelize ORM and Node.js.
+              Sequelize ORM and Node.js
             </li>
             <li>
               Used JSON Web Tokens to pass authentication data to client side
-              local storage for user sessions.
+              local storage for user sessions
             </li>
             <li>
               Created authentication guard and interceptor to validate user
-              authentication based on if the user has a valid JWT token.
+              authentication based on if the user has a valid JWT token
             </li>
             <li>
               Wrote easy to understand technical documentation for
               non-developers to help them understand certain technologies and
-              basic common tasks relative to the company.
+              basic common tasks relative to the company
             </li>
             <li>
               Used apache server ProxyPass and ProxyPassReverse to get Node.js /
-              Express application running under existing Linux server.
+              Express application running under existing Linux server
             </li>
             <li>
               **If you would like to login and peek around, please use the

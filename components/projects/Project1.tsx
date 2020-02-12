@@ -133,20 +133,20 @@ export const Project1: React.FC = (): ReactElement => {
               Built production ready statically generated <strong>7000+</strong>{" "}
               page application with GatsbyJS and TypeScript for performance
               benefits, SEO benefits, and future proofing tech stack for the
-              company.
+              company
             </li>
             <li>
               Created custom CI / CD automated build pipeline workflow using
-              CircleCI, Jest, Cypress, and Netlify.
+              CircleCI, Jest, Cypress, and Netlify
             </li>
             <li>
               Wrote E2E (End-to-End) / smoke tests with Cypress as well as unit
-              / snapshot tests with Jest.
+              / snapshot tests with Jest
             </li>
             <li>
               Architected custom file and folder structure in which values are
               inherited from a single source in order to empower non-developers
-              to be able to easily add, remove and update items on the website.
+              to be able to easily add, remove and update items on the website
             </li>
             <li>
               Implemented paginated{" "}
@@ -159,12 +159,12 @@ export const Project1: React.FC = (): ReactElement => {
                 blog
               </a>{" "}
               with 16 years of WordPress data by leveraging headless WordPress
-              CMS with custom decoupled hosting solution.
+              CMS with custom decoupled hosting solution
             </li>
             <li>
-              Used modern CSS-in-JS solution Styled-Components to design and
+              Used modern CSS-in-JS solution styled-components to design and
               create fully responsive front-end application with custom reusable
-              React components.
+              React components
             </li>
             <li>
               Built custom{" "}
@@ -177,20 +177,20 @@ export const Project1: React.FC = (): ReactElement => {
                 Google Maps component
               </a>{" "}
               that shows all company service area locations with filtering based
-              on geolocation.
+              on geolocation
             </li>
             <li>
               Created custom validated Google AMP (Accelerated Mobile Pages) for
-              blog according to Google specifications.
+              blog according to Google specifications
             </li>
             <li>
               Developed custom SEO component to dynamically generate full SEO
               meta requirements including facebook, twitter, AMP, canonical
-              URL's and JSON-LD structured data.
+              URL's and JSON-LD structured data
             </li>
             <li>
               Integrated Google Analytics and Google Marketing Suite for user
-              insights and metric tracking.
+              insights and metric tracking
             </li>
           </ul>
         </div>

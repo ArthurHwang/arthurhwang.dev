@@ -103,54 +103,54 @@ export const Project2: React.FC = (): ReactElement => {
           <ul>
             <li>
               Used NextJS and TypeScript to build server-rendered isomorphic
-              React portfolio application.
+              React portfolio application
             </li>
             <li>
               Implemented Apollo and GraphQL to programmatically load data
               fetched from Github API. Used loading states from Apollo to show
-              loading animations.
+              loading animations
             </li>
             <li>
               Created custom real-time GitHub commit list component with
               relevant continuous integration / continuous development status
-              links.
+              links
             </li>
             <li>
               Created fully responsive front-end application using modern
-              CSS-in-JS solution Styled-Components to build reusable React
-              components.
+              CSS-in-JS solution styled-components to build reusable React
+              components
             </li>
             <li>
               Used Formik, Yup and Express to handle form validation and backend
-              form submission logic.
+              form submission logic
             </li>
             <li>
               Custom serverless hosting with Cloudflare DNS and Zeit Now. Setup
-              DNS records and nameservers.
+              DNS records and nameservers
             </li>
             <li>
               Setup custom email forwarding with Mailgun by proxying requests
-              through Cloudflare into personal Gmail account.
+              through Cloudflare into personal Gmail account
             </li>
             <li>
               Built personal blog with headless Contentful CMS. Sourced data
-              with Contentful Delivery API.
+              with Contentful Delivery API
             </li>
             <li>
               Parsed Contentful markdown data into blog template using
-              react-markdown and implemented Disqus comment component.
+              react-markdown and implemented Disqus comment component
             </li>
             <li>
               Implemented Prism for code block syntax highlighting in markdown
-              files.
+              files
             </li>
             <li>
               Created dynamic sitemap that automatically pulls data from
-              Contentful to create new sitemap entries.
+              Contentful to create new sitemap entries
             </li>
             <li>
               Used ParticleJS to implement custom animated heading background
-              and animated error page.
+              and animated error page
             </li>
           </ul>
         </div>

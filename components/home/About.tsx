@@ -41,16 +41,17 @@ export const About: React.FC = (): ReactElement => {
               Syntax.fm
             </a>{" "}
           </li>
-          <li>I have been playing the guitar for more than 15 years.</li>
-          <li>My favorite guitarist is Stevie Ray Vaughan.</li>
+          <li>I am really into custom mechanical keyboards</li>
+          <li>I have been playing the guitar for more than 15 years</li>
+          <li>My favorite guitarist is Stevie Ray Vaughan</li>
           <li>
             I have a dog and a cat that depending on the hour either love or
-            hate each other.
+            hate each other
           </li>
-          <li>I have an unhealthy obsession with coffee and tea.</li>
-          <li>I meetup with a few close friends every week to play mahjong.</li>
-          <li>I enjoy playing golf.</li>
-          <li>I speak Chinese.</li>
+          <li>I have an unhealthy obsession with coffee and tea</li>
+          <li>I meetup with a few close friends every week to play mahjong</li>
+          <li>I enjoy playing golf</li>
+          <li>I speak Mandarin Chinese</li>
         </ul>
       </StyledAbout>
     </ContentWrap>

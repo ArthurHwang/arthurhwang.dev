@@ -67,48 +67,48 @@ export const Project6: React.FC = (): ReactElement => {
           <ul>
             <li>
               Created Full-Stack e-commerce application with full user
-              authentication and authorization flow and stripe checkout.
+              authentication and authorization flow and stripe checkout
             </li>
             <li>
               Used ReactJS and TypeScript to build and create client-side
-              application.
+              application
             </li>
             <li>
-              Implemented modern CSS-in-JS solution Styled-Components to design
+              Implemented modern CSS-in-JS solution styled-components to design
               and create fully responsive front-end application with custom
-              reusable React components.
+              reusable React components
             </li>
             <li>
               Code-split application into dynamic chunks by using React Lazy and
               Suspense to improve performance and lower bundle size over network
-              requests.
+              requests
             </li>
-            <li>Used React-Router for client-side routing.</li>
+            <li>Used React-Router for client-side routing</li>
             <li>
               Implemented Redux for predictable and centralized application
-              state and persistence.
+              state and persistence
             </li>
             <li>
               Integrated Redux Saga middleware to perform asynchronous logic and
               reduce overall dispatch calls to Redux reducers to boost
-              performance of application.
+              performance of application
             </li>
             <li>
               Wrote custom Redux state selectors with Reselect library for
               memoization of Redux state to combat unnecessary component
-              re-rendering.
+              re-rendering
             </li>
             <li>
               Leveraged Firebase cloud database and authentication to perform
-              user authentication and store application data.
+              user authentication and store application data
             </li>
             <li>
               Used Express and Node.js to handle back-end API payment requests
-              from front-end application using Stripe API.
+              from front-end application using Stripe API
             </li>
             <li>
               Setup custom hosting with heroku and custom DNS hosting with
-              Cloudflare to improve performance.
+              Cloudflare to improve performance
             </li>
           </ul>
         </div>
