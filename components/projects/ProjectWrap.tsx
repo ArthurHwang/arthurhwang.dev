@@ -204,6 +204,14 @@ const ProjectWrapper = styled("div")`
         text-align: left;
         line-height: 1.6;
 
+        @media (max-width: 1400px) {
+          margin-bottom: 1rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
         @media (max-width: 490px) {
           text-align: justify;
           text-indent: -17px;
