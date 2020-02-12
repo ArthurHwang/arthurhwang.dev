@@ -8,6 +8,7 @@ https://arthurhwang.dev
 ### Technologies Used:
 * Next.js
 * TypeScript
+* Styled Components
 * Contentful
 * GraphQL
 * Apollo
