@@ -78,7 +78,7 @@ export const Intro: React.FC = (): ReactElement => {
               </a>
             </ActiveLink>
             <a
-              href="/static/ahwang-resume.pdf"
+              href="https://drive.google.com/file/d/1RDc63cFtD8wObtUejJqhaphey-ZEQs65/view?usp=sharing"
               className="link"
               target="_blank"
               rel="noopener noreferrer"

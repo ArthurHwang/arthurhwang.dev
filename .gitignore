@@ -1,3 +1,5 @@
 node_modules/
 .next/
 .env
+
+public/static/ahwang-resume.pdf

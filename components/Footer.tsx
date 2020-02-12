@@ -62,7 +62,7 @@ export const Footer: React.FC = (): ReactElement => {
           target="_blank"
           rel="noopener noreferrer"
           title="CV"
-          href="/static/ahwang-resume.pdf"
+          href="https://drive.google.com/file/d/1RDc63cFtD8wObtUejJqhaphey-ZEQs65/view?usp=sharing"
           className="link invert"
         >
           <FaClipboardList className="icon" />{" "}

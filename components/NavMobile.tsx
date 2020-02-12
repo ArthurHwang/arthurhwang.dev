@@ -64,7 +64,7 @@ export const NavMobile: React.FC = (): ReactElement => {
                   </a>
                 </Link>
                 <a
-                  href="/static/ahwang-resume.pdf"
+                  href="https://drive.google.com/file/d/1RDc63cFtD8wObtUejJqhaphey-ZEQs65/view?usp=sharing"
                   className="link invert"
                   target="_blank"
                   rel="noopener noreferrer"
