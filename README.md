@@ -1,8 +1,20 @@
-# arthurhwang.dev
-
 https://arthurhwang.dev
 
-Arthur Hwang | Full Stack Web Developer Personal Site
+# arthurhwang.dev
 
-## Made with NextJS, Apollo, GraphQL, Contentful
-## Hosted on Ziet Now with custom Cloudflare DNS
+
+## Arthur Hwang | Full Stack Web Developer Personal Site
+
+### Technologies Used:
+* Next.js
+* TypeScript
+* Contentful
+* GraphQL
+* Apollo
+* Mailgun
+* Express
+* Formik
+* Yup
+* Cloudflare
+* Zeit Now
+
