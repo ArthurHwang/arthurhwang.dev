@@ -268,6 +268,10 @@ const ContentWrap = styled("section")`
   padding: 10rem 2rem 10rem;
   background-color: ${({ theme }) => theme.bg.grey};
 
+  form {
+    margin-top: 2rem;
+  }
+
   @media (max-width: 768px) {
     padding: 4rem 2rem;
   }
