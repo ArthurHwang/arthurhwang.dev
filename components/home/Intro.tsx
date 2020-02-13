@@ -51,6 +51,7 @@ export const Intro: React.FC = (): ReactElement => {
               target="_blank"
               rel="noopener noreferrer"
               className="link"
+              title="GitHub"
             >
               <FaGithub className="icon" /> <span>Github</span>
             </a>
@@ -59,11 +60,12 @@ export const Intro: React.FC = (): ReactElement => {
               target="_blank"
               rel="noopener noreferrer"
               className="link"
+              title="LinkedIn"
             >
               <FaLinkedin className="icon" /> <span>LinkedIn</span>
             </a>
             <Link href="/#contact">
-              <a className="link">
+              <a className="link" title="Mail">
                 <IoMdMail className="icon" /> <span>Contact</span>
               </a>
             </Link>
@@ -72,7 +74,7 @@ export const Intro: React.FC = (): ReactElement => {
               href="/projects"
               as="/projects"
             >
-              <a className="link" href="/projects">
+              <a className="link" href="/projects" title="Projects">
                 <AiFillProject className="icon" />
                 Projects
               </a>
@@ -82,6 +84,7 @@ export const Intro: React.FC = (): ReactElement => {
               className="link"
               target="_blank"
               rel="noopener noreferrer"
+              title="CV"
             >
               <FaClipboardList className="icon" /> <span>CV</span>
             </a>
