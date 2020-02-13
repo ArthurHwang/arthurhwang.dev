@@ -2,7 +2,6 @@ https://arthurhwang.dev
 
 # arthurhwang.dev
 
-
 ## Arthur Hwang | Full Stack Web Developer Personal Site
 
 ### Technologies Used:
@@ -19,3 +18,5 @@ https://arthurhwang.dev
 * Cloudflare
 * Zeit Now
 
+
+![homepage](https://arthurhwang.dev/static/projects/arthurhwang.dev/screenshot-7.png)
