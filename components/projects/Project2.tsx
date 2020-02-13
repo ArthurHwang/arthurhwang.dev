@@ -116,7 +116,7 @@ export const Project2: React.FC = (): ReactElement => {
               links
             </li>
             <li>
-              Created fully responsive front-end application using modern
+              Developed fully responsive front-end application using modern
               CSS-in-JS solution styled-components to build reusable React
               components
             </li>
@@ -125,32 +125,21 @@ export const Project2: React.FC = (): ReactElement => {
               form submission logic
             </li>
             <li>
-              Custom serverless hosting with Cloudflare DNS and Zeit Now. Setup
-              DNS records and nameservers
-            </li>
-            <li>
-              Setup custom email forwarding with Mailgun by proxying requests
-              through Cloudflare into personal Gmail account
-            </li>
-            <li>
               Built personal blog with headless Contentful CMS. Sourced data
               with Contentful Delivery API
             </li>
             <li>
               Parsed Contentful markdown data into blog template using
-              react-markdown and implemented Disqus comment component
+              react-markdown. Used Prism for code block syntax highlighting.
             </li>
             <li>
-              Implemented Prism for code block syntax highlighting in markdown
-              files
+              Custom serverless hosting with Cloudflare DNS and Zeit Now.
+              Implemented custom email forwarding with Mailgun by proxying
+              requests through Cloudflare into personal Gmail account
             </li>
             <li>
-              Created dynamic sitemap that automatically pulls data from
-              Contentful to create new sitemap entries
-            </li>
-            <li>
-              Used ParticleJS to implement custom animated heading background
-              and animated error page
+              Created dynamic sitemap that automatically fetches new data from
+              Contentful to generate new sitemap entries.
             </li>
           </ul>
         </div>

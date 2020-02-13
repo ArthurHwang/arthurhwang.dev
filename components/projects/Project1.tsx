@@ -130,23 +130,21 @@ export const Project1: React.FC = (): ReactElement => {
           </div>
           <ul>
             <li>
-              Built production ready statically generated <strong>7000+</strong>{" "}
-              page application with GatsbyJS and TypeScript for performance
-              benefits, SEO benefits, and future proofing tech stack for the
-              company
+              Built live production ready statically generated{" "}
+              <strong>7000+</strong> page application with GatsbyJS and
+              TypeScript for performance benefits, SEO benefits, and future
+              proofing tech stack for the company
             </li>
             <li>
               Created custom CI / CD automated build pipeline workflow using
-              CircleCI, Jest, Cypress, and Netlify
+              CircleCI, Jest, Cypress, and Netlify. Wrote E2E (End-to-End) /
+              smoke tests with Cypress in addition to unit / snapshot tests with
+              Jest
             </li>
             <li>
-              Wrote E2E (End-to-End) / smoke tests with Cypress as well as unit
-              / snapshot tests with Jest
-            </li>
-            <li>
-              Architected custom file and folder structure in which values are
-              inherited from a single source in order to empower non-developers
-              to be able to easily add, remove and update items on the website
+              Architected custom proprietary options system to empower
+              non-developers to be able to easily add, remove and update items
+              on the website
             </li>
             <li>
               Implemented paginated{" "}

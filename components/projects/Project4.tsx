@@ -89,60 +89,46 @@ export const Project4: React.FC = (): ReactElement => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Administered and managed LAMP (Linux-Apache-MySQL-PHP) stack web
-              application for company
+              Administered, managed, and optimized LAMP (Linux-Apache-MySQL-PHP)
+              stack web application, GitHub repository and WordPress blog for
+              law firm
             </li>
             <li>
               Managed dedicated server with Linux / cPanel / WHM. Configured
               redirects and firewall settings for server. Managed GoDaddy DNS
               and inMotion server hosting solutions
             </li>
-            <li>Managed and optimized Wordpress blog for marketing team</li>
             <li>
-              Put out fires caused by marketing team, debugged errors caused by
-              marketing team
-            </li>
-            <li>
-              Created and designed new desktop and mobile homepages approved by
-              superiors
-            </li>
-            <li>
-              Restyled entire application with new color theme to be more
-              visually appealing
-            </li>
-            <li>
-              Worked in tandem with graphic designer to prototype, design, and
-              deploy new marketing and website materials
+              Prototyped, redesigned, developed and deployed new desktop, tablet
+              and mobile hero components in addition to new site-wide theme to
+              inject new life into application
             </li>
             <li>
               Ensured application is mobile and tablet ready. Ensured cross
               browser compatibility for both desktop and mobile platforms
             </li>
-            <li>Improved page load speeds by implementing MaxCDN</li>
             <li>
-              Improved overall business by decreasing bounce rates and
-              increasing site traffic by improving page-speed and implementing
-              new SEO features
+              Increased firm revenue and overall business and by constantly
+              optimizing site performance and SEO data to decrease bounce rates
+              and increase site traffic.
             </li>
             <li>
-              Implemented custom google tag manager events to let marketing team
-              be knowledgeable what to focus their efforts on in order to
-              improve conversion rates
+              Analyzed Google Analytics reports and implemented custom Google
+              Tag Manager events to let marketing team be knowledgeable what to
+              focus their efforts on in order to improve conversion rates
             </li>
             <li>
-              Used tools like semrush and screaming frog to diagnose problems
-              within application and server
+              Used tools like Semrush and Screaming Frog to diagnose and fix
+              problems within application and server
             </li>
             <li>
               Created new PHP contact forms to track and log IP addresses of
-              users that contacted the law firm
+              malicious users that contacted the law firm
             </li>
             <li>
-              Administered and maintained GitHub repo for entire marketing team
-            </li>
-            <li>
-              Created a solution for users to text message the business through
-              the website by using SMS links from the website and Google Voice
+              Developed a solution for users to text message the business
+              through the website by using SMS links from the website and Google
+              Voice
             </li>
           </ul>
         </div>

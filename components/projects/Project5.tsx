@@ -87,7 +87,7 @@ export const Project5: React.FC = (): ReactElement => {
               update and delete their builds
             </li>
             <li>
-              Used ReactJS and Semantic-UI component library to create front-end
+              Used React and Semantic-UI component library to create front-end
               application
             </li>
             <li>

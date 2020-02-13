@@ -76,9 +76,9 @@ export const Project3: React.FC = (): ReactElement => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Created live production ready user authentication / user login
-              system for company and team documentation. Users are able to
-              sign-up, sign-in, logout, and update their credentials
+              Created live production ready company documentation dashboard with
+              user authentication and user login system for company. Users are
+              able to sign-up, sign-in, logout, and update their credentials
             </li>
             <li>
               Utilized Angular Framework with TypeScript and bootstrap to build
@@ -95,7 +95,7 @@ export const Project3: React.FC = (): ReactElement => {
             </li>
             <li>
               Used JSON Web Tokens to pass authentication data to client side
-              local storage for user sessions
+              local storage to authenticate and validate user sessions
             </li>
             <li>
               Created authentication guard and interceptor to validate user
@@ -107,8 +107,8 @@ export const Project3: React.FC = (): ReactElement => {
               basic common tasks relative to the company
             </li>
             <li>
-              Used apache server ProxyPass and ProxyPassReverse to get Node.js /
-              Express application running under existing Linux server
+              Used Apache HTTP Server ProxyPass and ProxyPassReverse to get
+              Node.js / Express application running under existing Linux server
             </li>
             <li>
               **If you would like to login and peek around, please use the

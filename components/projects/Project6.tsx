@@ -66,12 +66,19 @@ export const Project6: React.FC = (): ReactElement => {
           <h3>Accomplishments:</h3>
           <ul>
             <li>
-              Created Full-Stack e-commerce application with full user
-              authentication and authorization flow and stripe checkout
+              Used React, TypeScript, Express, and Firebase to build full-stack
+              e-commerce application with full user authentication,
+              authorization and checkout
             </li>
             <li>
-              Used ReactJS and TypeScript to build and create client-side
-              application
+              Implemented Redux and Redux-Saga middleware to perform
+              asynchronous logic and reduce overall dispatch calls to Redux
+              reducers to boost performance of application
+            </li>
+            <li>
+              Wrote custom Redux state selectors with Reselect library for
+              memoization of Redux state to combat unnecessary component
+              re-rendering
             </li>
             <li>
               Implemented modern CSS-in-JS solution styled-components to design
@@ -82,21 +89,6 @@ export const Project6: React.FC = (): ReactElement => {
               Code-split application into dynamic chunks by using React Lazy and
               Suspense to improve performance and lower bundle size over network
               requests
-            </li>
-            <li>Used React-Router for client-side routing</li>
-            <li>
-              Implemented Redux for predictable and centralized application
-              state and persistence
-            </li>
-            <li>
-              Integrated Redux Saga middleware to perform asynchronous logic and
-              reduce overall dispatch calls to Redux reducers to boost
-              performance of application
-            </li>
-            <li>
-              Wrote custom Redux state selectors with Reselect library for
-              memoization of Redux state to combat unnecessary component
-              re-rendering
             </li>
             <li>
               Leveraged Firebase cloud database and authentication to perform
