@@ -159,7 +159,7 @@ ul, ol {
 
 p {
   color: ${theme.grey};
-  text-align: justify;
+  /* text-align: justify; */
   max-height: 999999px;
   word-break: break-word;
   font-family: "SourceSansPro";

@@ -213,7 +213,7 @@ const ProjectWrapper = styled("div")`
         }
 
         @media (max-width: 490px) {
-          text-align: justify;
+          /* text-align: justify; */
           text-indent: -17px;
         }
 
