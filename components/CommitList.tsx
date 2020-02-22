@@ -157,13 +157,13 @@ export const CommitList: React.FC<Props> = ({
                       className={`commit-status ${
                         commit.node.status ? "" : "disabled"
                       }`}
-                      href={
-                        commit.node.status
-                          ? idx === 1
-                            ? commit.node.status.contexts[1].targetUrl
-                            : commit.node.status.contexts[0].targetUrl
-                          : null
-                      }
+                      // href={
+                      //   commit.node.status
+                      //     ? idx === 1
+                      //       ? commit.node.status.contexts[1].targetUrl
+                      //       : commit.node.status.contexts[0].targetUrl
+                      //     : null
+                      // }
                     >
                       <StyledStatus>
                         {StatusButton(
@@ -319,6 +319,7 @@ const StyledCommits = styled("ul")`
   .commit-status {
     display: flex;
     align-items: center;
+    /* cursor: not-allowed; */
 
     &.disabled {
       cursor: not-allowed;
