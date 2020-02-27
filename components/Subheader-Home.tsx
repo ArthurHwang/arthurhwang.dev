@@ -14,7 +14,7 @@ export const SubheaderHome: React.FC = (): ReactElement => {
       "I'm a Full-Stack web developer",
       "A few of my skills are React, TypeScript, Node.js, Express, and MySQL",
       "Lover of technology, Lover of code",
-      "I am currently working on my data structures and algorithms knowledge",
+      "I am currently studying for AWS certifications",
       "I pass my free time with mahjong, guitar, and learning",
       "Wow, thanks for staying til the end!",
       "Feel free to scroll down at any time!",
