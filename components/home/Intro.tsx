@@ -16,8 +16,8 @@ export const Intro: React.FC = (): ReactElement => {
           </h2>
           <p>
             Hey there, nice to meet you! My name is Arthur Hwang, I'm a
-            Full-Stack Web Developer currently residing in Southern California.
-            I'm a driven, passionate, family-oriented individual who looks at
+            Full-Stack Developer currently residing in Southern California. I'm
+            a driven, passionate, family-oriented individual who looks at
             obstacles and difficulties as opportunities to learn and grow. Ever
             since I was a kid I have had a love for puzzles and building. I'd
             even take things apart to see how they were put together, though,

@@ -15,7 +15,7 @@ export const Header: React.FC = (): ReactElement => {
               <div className="logo-img" />
               <div>
                 <p className="name">Arthur Hwang</p>
-                <p className="title">Full-Stack Web Developer</p>
+                <p className="title">Full-Stack Developer</p>
               </div>
             </StyledLogo>
           </div>

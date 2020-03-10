@@ -9,10 +9,10 @@ const Home: NextPage = (): ReactElement => {
   return (
     <Fragment>
       <Head>
-        <title>Arthur Hwang | Full-Stack Web Developer</title>
+        <title>Arthur Hwang | Full-Stack Developer</title>
         <meta
           name="description"
-          content="Arthur Hwang's Full-Stack Web Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
+          content="Arthur Hwang's Full-Stack Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
         />
       </Head>
       <Intro />
