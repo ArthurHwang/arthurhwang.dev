@@ -231,6 +231,10 @@ const StyledContact = styled("div")`
       :-moz-placeholder {
         color: rgba(0, 0, 0, 0.4);
       }
+
+      &#firstName {
+        background-image: none !important;
+      }
     }
 
     textarea {

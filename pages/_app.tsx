@@ -221,4 +221,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 
+#__lpform_firstName_icon {
+  /* fix base 64 form icon (hide it) */
+  opacity: 0 !important; 
+}
+
 `;
