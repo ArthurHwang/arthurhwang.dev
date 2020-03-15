@@ -22,7 +22,7 @@ const Home: NextPage = (): ReactElement => {
         <meta property="og:url" content="https://arthurhwang.dev" />
         <meta
           property="og:image"
-          content="/static/projects/arthurhwang.dev/screenshot-7.png"
+          content="https://arthurhwang.dev/static/projects/arthurhwang.dev/screenshot-7.png"
         />
         <meta
           property="og:description"
