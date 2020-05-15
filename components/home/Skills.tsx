@@ -267,7 +267,7 @@ const StyledSkills = styled("div")`
     img {
       width: 80%;
       position: relative;
-      right: 20px;
+      right: 21px;
     }
 
     @media (max-width: 940px) {
