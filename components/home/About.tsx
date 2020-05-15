@@ -23,8 +23,7 @@ export const About: React.FC = (): ReactElement => {
           thirst for knowledge could be classified as borderline obsessive.
           Ultimately, being able to take part and help businesses reach their
           goals and get to the next level by developing software brings me
-          immense joy and satisfaction. I am currently studying for AWS
-          certifications.
+          immense joy and satisfaction.
         </p>
         <h3>
           Random Facts About Me<span>_</span>

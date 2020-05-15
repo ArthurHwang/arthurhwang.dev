@@ -134,6 +134,46 @@ export const Skills: React.FC = (): ReactElement => {
             <img src="/static/home/css.png" title="css" alt="css3" /> CSS3
           </span>
         </div>
+
+        <h3>
+          Certifications<span>_</span>
+        </h3>
+
+        <div className="certifications-wrap">
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://www.youracclaim.com/badges/87b364f2-423c-4d64-b336-fdd821ab0824/public_url"
+          >
+            <img
+              src="/static/certifications/aws-certified-developer-associate.png"
+              alt="aws certified developer"
+            />
+          </a>
+
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://www.youracclaim.com/badges/086f5107-e9f9-460f-8d70-13fd2ef5f6b1/public_url"
+          >
+            <img
+              src="/static/certifications/aws-certified-solutions-architect-associate.png"
+              alt="aws certified solutions architect"
+            />
+          </a>
+
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://www.youracclaim.com/badges/fa915a75-8112-432b-bf95-8337a0ef4fdc/public_url"
+          >
+            <img
+              src="/static/certifications/aws-certified-cloud-practitioner.png"
+              alt="aws certified cloud practitioner"
+            />
+          </a>
+        </div>
+
         <h3>
           Other<span>_</span>
         </h3>
@@ -209,6 +249,39 @@ const ContentWrap = styled("div")`
 const StyledSkills = styled("div")`
   max-width: 1200px;
   margin: 0 auto;
+
+  .certifications-wrap {
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+      text-align: center;
+      &:hover {
+        img {
+          transition: transform 0.1s linear;
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    img {
+      width: 80%;
+      position: relative;
+      right: 20px;
+    }
+
+    @media (max-width: 940px) {
+      img {
+        right: 0;
+      }
+    }
+
+    @media (max-width: 580px) {
+      img {
+        width: 100%;
+      }
+    }
+  }
 
   .other-wrap {
     display: grid;

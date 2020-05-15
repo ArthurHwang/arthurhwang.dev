@@ -11,10 +11,9 @@ export const SubheaderHome: React.FC = (): ReactElement => {
 
   useTyped(typedRef, {
     strings: [
-      "I'm a Full-Stack developer",
-      "A few of my skills are React, TypeScript, Node.js, Express, and MySQL",
+      "I'm an Full-Stack developer",
+      "A few of my skills are React, TypeScript, Node.js, AWS, Express, and MySQL",
       "Lover of technology, Lover of code",
-      "I am currently studying for AWS certifications",
       "I pass my free time with mahjong, guitar, and learning",
       "Wow, thanks for staying til the end!",
       "Feel free to scroll down at any time!",
