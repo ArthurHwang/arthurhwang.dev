@@ -133,7 +133,7 @@ export const Project2: React.FC = (): ReactElement => {
               react-markdown. Used Prism for code block syntax highlighting.
             </li>
             <li>
-              Custom serverless hosting with Cloudflare DNS and Zeit Now.
+              Custom serverless deployment with Cloudflare DNS and Zeit Now.
               Implemented custom email forwarding with Mailgun by proxying
               requests through Cloudflare into personal Gmail account
             </li>

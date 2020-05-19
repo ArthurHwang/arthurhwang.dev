@@ -15,17 +15,18 @@ export const Intro: React.FC = (): ReactElement => {
             WHOAMI<span>_</span>
           </h2>
           <p>
-            Hey there, nice to meet you! My name is Arthur Hwang, I'm a
-            Full-Stack Developer currently residing in Southern California. I'm
-            a driven, passionate, family-oriented individual who looks at
-            obstacles and difficulties as opportunities to learn and grow. Ever
-            since I was a kid I have had a love for puzzles and building. I'd
-            even take things apart to see how they were put together, though,
-            more often than not they didn't go back the way they came.
-            Ultimately, this led me to development where I get to enjoy the best
-            of both worlds. When I'm not coding you'll likely find me spending
-            time with family, reading documentation, watching tutorials, playing
-            mahjong, or learning about the latest and greatest in technology.
+            Hey there, nice to meet you! My name is Arthur Hwang, I'm an AWS
+            Certified Full-Stack Developer currently residing in Southern
+            California. I'm a driven, passionate, family-oriented individual who
+            looks at obstacles and difficulties as opportunities to learn and
+            grow. Ever since I was a kid I have had a love for puzzles and
+            building. I'd even take things apart to see how they were put
+            together, though, more often than not they didn't go back the way
+            they came. Ultimately, this led me to development where I get to
+            enjoy the best of both worlds. When I'm not coding you'll likely
+            find me spending time with family, reading documentation, watching
+            tutorials, playing mahjong, or learning about the latest and
+            greatest in technology.
           </p>
           <p>
             I have recently gotten into blogging to try to give back to the
