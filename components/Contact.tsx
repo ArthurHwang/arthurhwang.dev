@@ -218,6 +218,7 @@ const StyledContact = styled("div")`
       width: 100%;
       height: 50px;
       padding-left: 2rem;
+      border: 1px solid grey;
 
       ::-webkit-input-placeholder {
         color: rgba(0, 0, 0, 0.4);
@@ -232,9 +233,11 @@ const StyledContact = styled("div")`
         color: rgba(0, 0, 0, 0.4);
       }
 
-      &#firstName {
-        background-image: none !important;
-      }
+      /* &#firstName { */
+      /* background-image: none !important; */
+      /* opacity: 0; */
+      /* border: 1px solid grey; */
+      /* } */
     }
 
     textarea {
@@ -242,6 +245,7 @@ const StyledContact = styled("div")`
       height: 206px;
       resize: none;
       padding: 1.5rem;
+      border: 1px solid grey;
 
       ::-webkit-input-placeholder {
         color: rgba(0, 0, 0, 0.4);
