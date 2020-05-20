@@ -81,7 +81,7 @@ export const Intro: React.FC = (): ReactElement => {
               </a>
             </ActiveLink>
             <a
-              href="/static/ahwang-resume-final.pdf"
+              href="/static/arthur-hwang-resume-2020.pdf"
               className="link"
               target="_blank"
               rel="noopener noreferrer"
