@@ -68,6 +68,9 @@ const BlogHome: NextPage = (): ReactElement => {
 const StyledPosts = styled("div")`
   width: 100%;
   margin-top: 2rem;
+
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
 `;
 
 export default BlogHome;

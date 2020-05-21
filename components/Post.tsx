@@ -66,7 +66,7 @@ const StyledPost = styled("div")`
   .container {
     overflow: hidden;
     cursor: pointer;
-    width: 80%;
+    width: 60%;
     margin: 0 auto 48px;
     position: relative;
     border: 1px solid black;
@@ -84,10 +84,15 @@ const StyledPost = styled("div")`
   }
 
   .text-block {
-    padding: 0.5rem 2rem 2rem;
+    padding: 2rem 3rem 3rem;
     background: ${({ theme }) => theme.bg.white};
     @media (max-width: 490px) {
       padding: 0 1rem 1rem;
+    }
+
+    h2 {
+      line-height: 4rem;
+      font-size: 3rem;
     }
 
     h2,
