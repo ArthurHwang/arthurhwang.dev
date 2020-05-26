@@ -194,7 +194,7 @@ export const Skills: React.FC = (): ReactElement => {
           </div>
           <div className="col two">
             <span className="other-item">
-              <span className="hyphen">-</span> UNIX Server Administration
+              <span className="hyphen">-</span> Linux Server Administration
             </span>
             <span className="other-item">
               <span className="hyphen">-</span> Google Marketing Platform
