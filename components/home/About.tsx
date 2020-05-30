@@ -37,7 +37,12 @@ export const About: React.FC = (): ReactElement => {
               color="red"
               beat={true}
             />{" "}
-            <a className="link" href="https://syntax.fm/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+              href="https://syntax.fm/"
+            >
               Syntax.fm
             </a>{" "}
           </li>
