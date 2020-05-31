@@ -73,7 +73,16 @@ export const Project3: React.FC = (): ReactElement => {
         </div>
 
         <div className="accomplishments">
-          <h3>Accomplishments:</h3>
+          <div>
+            <h3>About</h3>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam,
+            alias! Similique, laudantium molestiae harum quo nihil, ex odit
+            assumenda quod rerum incidunt molestias, necessitatibus cumque
+            itaque beatae veniam quisquam aliquam!
+          </p>
+          <h3>Accomplishments</h3>
           <ul>
             <li>
               Created live production ready company documentation dashboard with

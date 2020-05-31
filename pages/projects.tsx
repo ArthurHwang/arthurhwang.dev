@@ -8,6 +8,7 @@ import { Project3 } from "../components/projects/Project3";
 import { Project4 } from "../components/projects/Project4";
 import { Project5 } from "../components/projects/Project5";
 import { Project6 } from "../components/projects/Project6";
+import { Project7 } from "../components/projects/Project7";
 import "../util/slick-fix.css";
 
 const Projects: NextPage = (): ReactElement => {
@@ -20,16 +21,25 @@ const Projects: NextPage = (): ReactElement => {
           content="Built with custom NextJS, Apollo, and GraphQL, this website is a showcase of my recent projects as a Full-Stack Developer."
         />
       </Head>
+
+      {/* PROJECT 7 -RSVP Serverless */}
+      <Project7 />
+
       {/* PROJECT 1 - bestattorney.com-gatsby */}
       <Project1 />
+
       {/* PROJECT 2 - arthurhwang.dev */}
       <Project2 />
+
       {/* PROJECT 4 - bestattorney - LAMP */}
       <Project4 />
+
       {/* PROJECT 6 - keeb kraze*/}
       <Project6 />
+
       {/* PROJECT 3 - bestattorney.com-admin*/}
       <Project3 />
+
       {/* PROJECT 5 - toneify*/}
       <Project5 />
     </div>

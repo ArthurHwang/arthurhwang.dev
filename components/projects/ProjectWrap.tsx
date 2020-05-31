@@ -187,6 +187,11 @@ const ProjectWrapper = styled("div")`
 
   .accomplishments {
     grid-area: accomplishments;
+    overflow: scroll;
+
+    p {
+      font-size: 1.4rem;
+    }
 
     ul {
       padding-left: 1.5rem;
