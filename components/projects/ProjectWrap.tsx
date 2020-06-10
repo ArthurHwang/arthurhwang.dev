@@ -192,23 +192,6 @@ const ProjectWrapper = styled("div")`
     flex-direction: column;
     justify-content: space-between;
 
-    /* .accomplishments-wrapper { */
-    /* overflow: hidden; */
-    /* height: 100%; */
-    /* } */
-    /* 
-    display: grid;
-    grid-template-rows: auto 1fr; */
-
-    /* .about-wrapper { */
-    /* height: ; */
-    /* } */
-
-    /* .accomplishments-wrapper { */
-    /* height: 800%; */
-    /* overflow: auto; */
-    /* } */
-
     p {
       font-size: 1.4rem;
     }

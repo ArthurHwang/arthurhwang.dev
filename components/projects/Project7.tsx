@@ -177,7 +177,6 @@ export const Project7: React.FC = (): ReactElement => {
 
         <img
           src="/static/projects/logos/nodejs.png"
-          title="node.js"
           alt="nodejs"
           title="Node.js"
         />
