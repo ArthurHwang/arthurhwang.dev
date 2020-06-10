@@ -20,7 +20,7 @@ export const Project4: React.FC = (): ReactElement => {
         Bisnar | Chase - LAMP
       </a>
 
-      <div className="project split-grid-right">
+      <div className="project split-grid-left">
         {/* 
         //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
@@ -130,7 +130,7 @@ export const Project4: React.FC = (): ReactElement => {
               Used tools like Semrush and Screaming Frog to diagnose and fix
               problems within application and server
             </li>
-            <li>
+            {/* <li>
               Created new PHP contact forms to track and log IP addresses of
               malicious users that contacted the law firm
             </li>
@@ -138,7 +138,7 @@ export const Project4: React.FC = (): ReactElement => {
               Developed a solution for users to text message the business
               through the website by using SMS links from the website and Google
               Voice
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

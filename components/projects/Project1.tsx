@@ -190,7 +190,7 @@ export const Project1: React.FC = (): ReactElement => {
               Created custom validated Google AMP (Accelerated Mobile Pages) for
               blog according to Google specifications
             </li>
-            <li>
+            {/* <li>
               Developed custom SEO component to dynamically generate full SEO
               meta requirements including facebook, twitter, AMP, canonical
               URL's and JSON-LD structured data
@@ -198,7 +198,7 @@ export const Project1: React.FC = (): ReactElement => {
             <li>
               Integrated Google Analytics and Google Marketing Suite for user
               insights and metric tracking
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -216,12 +216,12 @@ export const Project1: React.FC = (): ReactElement => {
           src="/static/projects/logos/styled-components.png"
           alt="styled components"
         />
-        <img src="/static/projects/logos/netlify.png" alt="netlify" />
-        <img src="/static/projects/logos/ga.png" alt="google analytics" />
+        {/* <img src="/static/projects/logos/netlify.png" alt="netlify" /> */}
+        {/* <img src="/static/projects/logos/ga.png" alt="google analytics" />
         <img
           src="/static/projects/logos/gmp.png"
           alt="google marketing platform"
-        />
+        /> */}
       </div>
       <div className="buttons">
         <a

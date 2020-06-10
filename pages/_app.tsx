@@ -104,6 +104,26 @@ html {
   box-sizing: inherit;
 }
 
+    /* * {
+      scrollbar-width: thin;
+      scrollbar-color: ${theme.secondary} none;
+    }
+
+    *::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    *::-webkit-scrollbar-track {
+      background: hidden;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background-color: hidden;
+      border-radius: 20px;
+      border: 3px solid ${theme.secondary};
+    } */
+
+
 body {
   padding: 0;
   margin: 0;

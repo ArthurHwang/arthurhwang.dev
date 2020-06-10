@@ -102,15 +102,15 @@ export const Project3: React.FC = (): ReactElement => {
               Stored user account information into MySQL database using
               Sequelize ORM and Node.js
             </li>
-            <li>
+            {/* <li>
               Used JSON Web Tokens to pass authentication data to client side
               local storage to authenticate and validate user sessions
             </li>
             <li>
               Created authentication guard and interceptor to validate user
               authentication based on if the user has a valid JWT token
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               Wrote easy to understand technical documentation for
               non-developers to help them understand certain technologies and
               basic common tasks relative to the company
@@ -118,7 +118,7 @@ export const Project3: React.FC = (): ReactElement => {
             <li>
               Used Apache HTTP Server ProxyPass and ProxyPassReverse to get
               Node.js / Express application running under existing Linux server
-            </li>
+            </li> */}
             <li>
               **If you would like to login and peek around, please use the
               following credentials. Otherwise feel free to create your own

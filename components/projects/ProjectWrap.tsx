@@ -187,7 +187,27 @@ const ProjectWrapper = styled("div")`
 
   .accomplishments {
     grid-area: accomplishments;
-    overflow: scroll;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* .accomplishments-wrapper { */
+    /* overflow: hidden; */
+    /* height: 100%; */
+    /* } */
+    /* 
+    display: grid;
+    grid-template-rows: auto 1fr; */
+
+    /* .about-wrapper { */
+    /* height: ; */
+    /* } */
+
+    /* .accomplishments-wrapper { */
+    /* height: 800%; */
+    /* overflow: auto; */
+    /* } */
 
     p {
       font-size: 1.4rem;
@@ -196,18 +216,20 @@ const ProjectWrapper = styled("div")`
     ul {
       padding-left: 1.5rem;
       list-style-type: none;
-      display: flex;
+      /* display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 92%;
+      justify-content: space-between; */
+      /* height: 91%; */
       margin-top: 1rem;
-      margin-bottom: 1rem;
+      /* margin-bottom: 1rem; */
+      /* overflow: auto; */
 
       li {
         font-size: 1.4rem;
         text-indent: -17px;
         text-align: left;
         line-height: 1.6;
+        margin-bottom: 1rem;
 
         @media (max-width: 1400px) {
           margin-bottom: 1rem;
@@ -281,9 +303,9 @@ const ProjectWrapper = styled("div")`
 
 const ContentWrapper = styled("div")`
   max-width: 1300px;
-  max-height: 1090.28px;
-  min-height: 1090.28px;
-  height: 1090.28px;
+  /* max-height: 1090.28px; */
+  /* min-height: 1090.28px; */
+  /* height: 1090.28px; */
   margin: 0 auto;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
   padding: 1rem 2rem 2rem;

@@ -141,7 +141,7 @@ export const Project2: React.FC = (): ReactElement => {
               Parsed Contentful markdown data into blog template using
               react-markdown. Used Prism for code block syntax highlighting.
             </li>
-            <li>
+            {/* <li>
               Custom serverless deployment with Cloudflare DNS and Zeit Now.
               Implemented custom email forwarding with Mailgun by proxying
               requests through Cloudflare into personal Gmail account
@@ -149,7 +149,7 @@ export const Project2: React.FC = (): ReactElement => {
             <li>
               Created dynamic sitemap that automatically fetches new data from
               Contentful to generate new sitemap entries.
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -171,9 +171,9 @@ export const Project2: React.FC = (): ReactElement => {
           style={{ width: "60px" }}
           alt="formik"
         />
-        <img src="/static/projects/logos/cloudflare.png" alt="cloudflare" />
-        <img src="/static/projects/logos/mailgun.png" alt="mailgun" />
-        <img src="/static/projects/logos/now.png" alt="now" />
+        {/* <img src="/static/projects/logos/cloudflare.png" alt="cloudflare" /> */}
+        {/* <img src="/static/projects/logos/mailgun.png" alt="mailgun" /> */}
+        {/* <img src="/static/projects/logos/now.png" alt="now" /> */}
       </div>
       <div className="buttons">
         <a
