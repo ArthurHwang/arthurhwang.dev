@@ -55,54 +55,74 @@ class MyApp extends App<any> {
 export default withGA("UA-150992172-1", Router)(MyApp);
 
 const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family: 'Titillium';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/static/fonts/TitilliumWeb-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Titillium';
-  font-weight: 600;
-  font-style: normal;
-  src: url('/static/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Titillium';
-  font-weight: 700;
-  font-style: normal;
-  src: url('/static/fonts/TitilliumWeb-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'SourceSansPro';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/static/fonts/SourceSansPro-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'SourceSansPro';
-  font-weight: 600;
-  font-style: normal;
-  src: url('/static/fonts/SourceSansPro-SemiBold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'SourceSansPro';
-  font-weight: 700;
-  font-style: normal;
-  src: url('/static/fonts/SourceSansPro-Bold.ttf') format('truetype');
-}
+  @font-face {
+    font-family: 'Titillium';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/static/fonts/TitilliumWeb-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Titillium';
+    font-weight: 600;
+    font-style: normal;
+    src: url('/static/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Titillium';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/static/fonts/TitilliumWeb-Bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'SourceSansPro';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/static/fonts/SourceSansPro-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'SourceSansPro';
+    font-weight: 600;
+    font-style: normal;
+    src: url('/static/fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'SourceSansPro';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/static/fonts/SourceSansPro-Bold.ttf') format('truetype');
+  }
 
-html {
-  box-sizing: border-box;
-  font-size: 10px;
-  scroll-behavior: smooth;
-}
+  html {
+    box-sizing: border-box;
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: ${theme.black} none;
+  }
+
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: hidden;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: hidden;
+    border-radius: 20px;
+    border: 3px solid ${theme.black};
+  }
+
 
 body {
   padding: 0;
@@ -123,7 +143,6 @@ h1,h2,h3 {
   font-weight: bold;
   color: ${theme.black};
   text-transform: uppercase;
-  /* letter-spacing: -1px; */
 }
 
 h2 {
@@ -159,7 +178,6 @@ ul, ol {
 
 p {
   color: ${theme.grey};
-  /* text-align: justify; */
   max-height: 999999px;
   word-break: break-word;
   font-family: "SourceSansPro";

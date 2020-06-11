@@ -86,66 +86,107 @@ export const Project4: React.FC = (): ReactElement => {
         </div>
 
         <div className="accomplishments">
-          <h3>Accomplishments:</h3>
-          <ul>
-            <li>
-              Administered, managed, and optimized LAMP (Linux-Apache-MySQL-PHP)
-              stack web application, GitHub repository and WordPress blog for
-              law firm
-            </li>
-            <li>
-              Managed dedicated server with Linux / cPanel / WHM. Configured
-              redirects and firewall settings for server. Managed GoDaddy DNS
-              and inMotion server hosting solutions
-            </li>
-            <li>
-              Prototyped, redesigned, developed and deployed new desktop, tablet
-              and mobile hero components in addition to new site-wide theme to
-              inject new life into application
-            </li>
-            <li>
-              Ensured application is mobile and tablet ready. Ensured cross
-              browser compatibility for both desktop and mobile platforms
-            </li>
-            <li>
-              Increased firm revenue and overall business and by constantly
-              optimizing site performance and SEO data to decrease bounce rates
-              and increase site traffic.
-            </li>
-            <li>
-              Analyzed Google Analytics reports and implemented custom Google
-              Tag Manager events to let marketing team be knowledgeable what to
-              focus their efforts on in order to improve conversion rates
-            </li>
-            <li>
-              Used tools like Semrush and Screaming Frog to diagnose and fix
-              problems within application and server
-            </li>
-            <li>
-              Created new PHP contact forms to track and log IP addresses of
-              malicious users that contacted the law firm
-            </li>
-            <li>
-              Developed a solution for users to text message the business
-              through the website by using SMS links from the website and Google
-              Voice
-            </li>
-          </ul>
+          <div className="about-wrapper">
+            <div>
+              <h3>About</h3>
+            </div>
+            <p>
+              This legacy website was fully revamped before I decided to migrate
+              the firm over to their new cloud application that I built for
+              them.
+            </p>
+            <p>
+              I implemented multiple improvements for the application such as
+              lazy loading of assets to improve pagespeed, lowering overall HTTP
+              requests by using CSS sprites and automatic image optimizations.
+              Additionally, I modernized the overall look-and-feel of the
+              application by designing and developing new mobile, tablet and
+              desktop hero components with a new site-wide theme.
+            </p>
+          </div>
+
+          <div className="accomplishment-wrapper">
+            <h3>Accomplishments</h3>
+            <ul>
+              <li>
+                Administered, managed, and optimized LAMP
+                (Linux-Apache-MySQL-PHP) stack web application, GitHub
+                repository and WordPress blog for law firm
+              </li>
+              <li>
+                Managed dedicated server with Linux / cPanel / WHM. Configured
+                redirects and firewall settings for server. Managed GoDaddy DNS
+                and inMotion server hosting solutions
+              </li>
+              <li>
+                Prototyped, redesigned, developed and deployed new desktop,
+                tablet and mobile hero components in addition to new site-wide
+                theme to inject new life into application
+              </li>
+              <li>
+                Ensured application is mobile and tablet ready. Ensured cross
+                browser compatibility for both desktop and mobile platforms
+              </li>
+              <li>
+                Increased firm revenue and overall business and by constantly
+                optimizing site performance and SEO data to decrease bounce
+                rates and increase site traffic.
+              </li>
+              <li>
+                Analyzed Google Analytics reports and implemented custom Google
+                Tag Manager events to let marketing team be knowledgeable what
+                to focus their efforts on in order to improve conversion rates
+              </li>
+              <li>
+                Used tools like Semrush and Screaming Frog to diagnose and fix
+                problems within application and server
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="badges">
-        <img src="/static/projects/logos/ga.png" alt="google analytics" />
         <img
-          src="/static/projects/logos/gmp.png"
-          alt="google marketing platform"
+          src="/static/projects/logos/lamp.png"
+          title="LAMP Stack"
+          alt="lamp"
         />
-        <img src="/static/projects/logos/gsc.png" alt="google search console" />
-        <img src="/static/projects/logos/lamp.png" alt="lamp" />
-        <img src="/static/projects/logos/circleci.png" alt="circleci" />
-        <img src="/static/projects/logos/wordpress.png" alt="wordpress" />
-        <img src="/static/projects/logos/whm.png" alt="whm" />
-        <img src="/static/projects/logos/cpanel.png" alt="cpanel" />
-        <img src="/static/projects/logos/semrush.png" alt="semrush" />
+        <img
+          src="/static/projects/logos/ga.png"
+          title="Google Analytics"
+          alt="google analytics"
+        />
+        <img
+          src="/static/projects/logos/gsc.png"
+          title="Google Search Console"
+          alt="google search console"
+        />
+
+        <img
+          src="/static/projects/logos/circleci.png"
+          title="CircleCI"
+          alt="circleci"
+        />
+        <img
+          src="/static/projects/logos/wordpress.png"
+          title="WordPress"
+          alt="wordpress"
+        />
+        <img
+          src="/static/projects/logos/whm.png"
+          title="Web Host Manager"
+          alt="whm"
+        />
+        <img
+          src="/static/projects/logos/cpanel.png"
+          title="cPanel"
+          alt="cpanel"
+        />
+        <img
+          src="/static/projects/logos/semrush.png"
+          title="Semrush"
+          alt="semrush"
+        />
       </div>
       <div className="buttons">
         <a

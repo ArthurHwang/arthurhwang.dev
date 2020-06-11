@@ -20,7 +20,7 @@ export const Project1: React.FC = (): ReactElement => {
         Bisnar | Chase - Gatsby
       </a>
 
-      <div className="project split-grid-left">
+      <div className="project split-grid-right">
         <div>
           {/* 
             //@ts-ignore */}
@@ -125,93 +125,127 @@ export const Project1: React.FC = (): ReactElement => {
         </div>
 
         <div className="accomplishments">
-          <div>
-            <h3>Accomplishments:</h3>
+          <div className="about-wrapper">
+            <div>
+              <h3>About</h3>
+            </div>
+            <p>
+              I rewrote and migrated the law firms entire legacy web application
+              to a new cloud based project. Multiple benefits were observed from
+              pagespeed, SEO, and ease of day-to-day tasks for the marketing
+              team.
+            </p>
+            <p>
+              With no dedicated server to manage anymore, I got rid of
+              additional overhead and costs for the firm. Which ultimately
+              simplified how the business operates.
+            </p>
+            <p>
+              In the project I developed an easy-to-use system for
+              non-developers to be able to change items on the website simply by
+              editing an options file.
+            </p>
           </div>
-          <ul>
-            <li>
-              Built live production ready statically generated{" "}
-              <strong>7000+</strong> page application with GatsbyJS and
-              TypeScript for performance benefits, SEO benefits, and future
-              proofing tech stack for the company
-            </li>
-            <li>
-              Created custom CI / CD automated build pipeline workflow using
-              CircleCI, Jest, Cypress, and Netlify. Wrote E2E (End-to-End) /
-              smoke tests with Cypress in addition to unit / snapshot tests with
-              Jest
-            </li>
-            <li>
-              Architected custom proprietary options system to empower
-              non-developers to be able to easily add, remove and update items
-              on the website
-            </li>
-            <li>
-              Implemented paginated{" "}
-              <a
-                className="link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://bisnarchaselaw.com/blog"
-              >
-                blog
-              </a>{" "}
-              with 16 years of WordPress data by leveraging headless WordPress
-              CMS with custom decoupled hosting solution
-            </li>
-            <li>
-              Used modern CSS-in-JS solution styled-components to design and
-              create fully responsive front-end application with custom reusable
-              React components
-            </li>
-            <li>
-              Built custom{" "}
-              <a
-                className="link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://bisnarchaselaw.com/locations"
-              >
-                Google Maps component
-              </a>{" "}
-              that shows all company service area locations with filtering based
-              on geolocation
-            </li>
-            <li>
-              Created custom validated Google AMP (Accelerated Mobile Pages) for
-              blog according to Google specifications
-            </li>
-            <li>
-              Developed custom SEO component to dynamically generate full SEO
-              meta requirements including facebook, twitter, AMP, canonical
-              URL's and JSON-LD structured data
-            </li>
-            <li>
-              Integrated Google Analytics and Google Marketing Suite for user
-              insights and metric tracking
-            </li>
-          </ul>
+
+          <div className="accomplishment-wrapper">
+            <div>
+              <h3>Accomplishments</h3>
+            </div>
+            <ul>
+              <li>
+                Built live production ready statically generated{" "}
+                <strong>7000+</strong> page application with GatsbyJS and
+                TypeScript for performance benefits, SEO benefits, and future
+                proofing tech stack for the company
+              </li>
+              <li>
+                Created custom CI / CD automated build pipeline workflow using
+                CircleCI, Jest, Cypress, and Netlify. Wrote E2E (End-to-End) /
+                smoke tests with Cypress in addition to unit / snapshot tests
+                with Jest
+              </li>
+              <li>
+                Architected custom proprietary options system to empower
+                non-developers to be able to easily add, remove and update items
+                on the website
+              </li>
+              <li>
+                Implemented paginated{" "}
+                <a
+                  className="link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://bisnarchaselaw.com/blog"
+                >
+                  blog
+                </a>{" "}
+                with 16 years of WordPress data by leveraging headless WordPress
+                CMS with custom decoupled hosting solution
+              </li>
+              <li>
+                Used modern CSS-in-JS solution styled-components to design and
+                create fully responsive front-end application with custom
+                reusable React components
+              </li>
+              <li>
+                Built custom{" "}
+                <a
+                  className="link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://bisnarchaselaw.com/locations"
+                >
+                  Google Maps component
+                </a>{" "}
+                that shows all company service area locations with filtering
+                based on geolocation
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="badges">
-        <img src="/static/projects/logos/Gatsby-Logo.svg" alt="gatsbyjs" />
-        <img src="/static/projects/logos/React.png" alt="reactjs" />
-        <img src="/static/projects/logos/ts.png" alt="typescript" />
-        <img src="/static/projects/logos/gql.png" alt="graphql" />
-        <img src="/static/projects/logos/circleci.png" alt="circleci" />
-        <img src="/static/projects/logos/jest.png" alt="jest" />
-        <img src="/static/projects/logos/cypress.png" alt="cypress" />
-        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
+        <img
+          src="/static/projects/logos/Gatsby-Logo.svg"
+          title="GatsbyJS"
+          alt="gatsbyjs"
+        />
+        <img
+          src="/static/projects/logos/React.png"
+          title="ReactJS"
+          alt="reactjs"
+        />
+        <img
+          src="/static/projects/logos/ts.png"
+          title="TypeScript"
+          alt="typescript"
+        />
+        <img
+          src="/static/projects/logos/gql.png"
+          title="GraphQL"
+          alt="graphql"
+        />
+        <img
+          src="/static/projects/logos/circleci.png"
+          title=""
+          alt="circleci"
+        />
+        <img src="/static/projects/logos/jest.png" title="Jest" alt="jest" />
+        <img
+          src="/static/projects/logos/cypress.png"
+          title="Cypress"
+          alt="cypress"
+        />
+        <img
+          src="/static/projects/logos/nodejs.png"
+          title="Node.js"
+          alt="nodejs"
+        />
         <img
           style={{ width: "60px" }}
+          title="Styled Components"
           src="/static/projects/logos/styled-components.png"
           alt="styled components"
-        />
-        <img src="/static/projects/logos/netlify.png" alt="netlify" />
-        <img src="/static/projects/logos/ga.png" alt="google analytics" />
-        <img
-          src="/static/projects/logos/gmp.png"
-          alt="google marketing platform"
         />
       </div>
       <div className="buttons">

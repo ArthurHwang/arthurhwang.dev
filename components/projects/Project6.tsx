@@ -63,62 +63,100 @@ export const Project6: React.FC = (): ReactElement => {
           </LazyLoad>
         </div>
         <div className="accomplishments">
-          <h3>Accomplishments:</h3>
-          <ul>
-            <li>
-              Used React, TypeScript, Express, and Firebase to build full-stack
-              e-commerce application with full user authentication,
-              authorization and checkout
-            </li>
-            <li>
-              Implemented Redux and Redux-Saga middleware to perform
-              asynchronous logic and reduce overall dispatch calls to Redux
-              reducers to boost performance of application
-            </li>
-            <li>
-              Wrote custom Redux state selectors with Reselect library for
-              memoization of Redux state to combat unnecessary component
-              re-rendering
-            </li>
-            <li>
-              Implemented modern CSS-in-JS solution styled-components to design
-              and create fully responsive front-end application with custom
-              reusable React components
-            </li>
-            <li>
-              Code-split application into dynamic chunks by using React Lazy and
-              Suspense to improve performance and lower bundle size over network
-              requests
-            </li>
-            <li>
-              Leveraged Firebase cloud database and authentication to perform
-              user authentication and store application data
-            </li>
-            <li>
-              Used Express and Node.js to handle back-end API payment requests
-              from front-end application using Stripe API
-            </li>
-            <li>
-              Setup custom hosting with heroku and custom DNS hosting with
-              Cloudflare to improve performance
-            </li>
-          </ul>
+          <div className="about-wrapper">
+            <div>
+              <h3>About</h3>
+            </div>
+            <p>
+              As a die hard enthusiast of custom mechanical keyboards I built
+              this application to learn about redux-saga. I implemented user
+              authentication and authorization via Firebase Oauth.
+            </p>
+            <p>
+              Users have access to their own shopping cart and can mock checkout
+              with fake stripe credentials.
+            </p>
+          </div>
+
+          <div className="accomplishment-wrapper">
+            <h3>Accomplishments</h3>
+            <ul>
+              <li>
+                Used React, TypeScript, Express, and Firebase to build
+                full-stack e-commerce application with full user authentication,
+                authorization and checkout
+              </li>
+              <li>
+                Implemented Redux and Redux-Saga middleware to perform
+                asynchronous logic and reduce overall dispatch calls to Redux
+                reducers to boost performance of application
+              </li>
+              <li>
+                Wrote custom Redux state selectors with Reselect library for
+                memoization of Redux state to combat unnecessary component
+                re-rendering
+              </li>
+              <li>
+                Implemented modern CSS-in-JS solution styled-components to
+                design and create fully responsive front-end application with
+                custom reusable React components
+              </li>
+              <li>
+                Code-split application into dynamic chunks by using React Lazy
+                and Suspense to improve performance and lower bundle size over
+                network requests
+              </li>
+              <li>
+                Leveraged Firebase cloud database and authentication to perform
+                user authentication and store application data
+              </li>
+              <li>
+                Used Express and Node.js to handle back-end API payment requests
+                from front-end application using Stripe API
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="badges">
-        <img src="/static/projects/logos/React.png" alt="react" />
-        <img src="/static/projects/logos/ts.png" alt="typescript" />
-        <img src="/static/projects/logos/redux.png" alt="redux" />
         <img
+          src="/static/projects/logos/React.png"
+          title="ReactJS"
+          alt="react"
+        />
+        <img
+          src="/static/projects/logos/ts.png"
+          title="TypeScript"
+          alt="typescript"
+        />
+        <img src="/static/projects/logos/redux.png" title="Redux" alt="redux" />
+        <img
+          title="Styled Components"
           style={{ width: "60px" }}
           src="/static/projects/logos/styled-components.png"
           alt="styled components"
         />
-        <img src="/static/projects/logos/firebase.svg" alt="firebase" />
-        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
-        <img src="/static/projects/logos/express.svg" alt="express" />
+        <img
+          src="/static/projects/logos/firebase.svg"
+          title="Firebase"
+          alt="firebase"
+        />
+        <img
+          src="/static/projects/logos/nodejs.png"
+          title="Node.js"
+          alt="nodejs"
+        />
+        <img
+          src="/static/projects/logos/express.svg"
+          title="Express"
+          alt="express"
+        />
 
-        <img src="/static/projects/logos/stripe.png" alt="stripe" />
+        <img
+          src="/static/projects/logos/stripe.png"
+          title="Stripe"
+          alt="stripe"
+        />
       </div>
       <div className="buttons">
         <a

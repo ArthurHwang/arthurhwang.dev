@@ -131,7 +131,7 @@ const ProjectWrapper = styled("div")`
       bottom: -39px;
 
       &:after {
-        content: "-swipe or drag images to scroll-";
+        content: "-swipe or drag-";
         display: block;
         position: relative;
         bottom: 5px;
@@ -187,22 +187,28 @@ const ProjectWrapper = styled("div")`
 
   .accomplishments {
     grid-area: accomplishments;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.025);
+    padding: 1rem 1.5rem 0;
+
+    p {
+      font-size: 1.4rem;
+    }
 
     ul {
       padding-left: 1.5rem;
       list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 92%;
       margin-top: 1rem;
-      margin-bottom: 1rem;
 
       li {
         font-size: 1.4rem;
         text-indent: -17px;
         text-align: left;
         line-height: 1.6;
+        margin-bottom: 1rem;
 
         @media (max-width: 1400px) {
           margin-bottom: 1rem;
@@ -213,7 +219,6 @@ const ProjectWrapper = styled("div")`
         }
 
         @media (max-width: 490px) {
-          /* text-align: justify; */
           text-indent: -17px;
         }
 
@@ -230,6 +235,8 @@ const ProjectWrapper = styled("div")`
 
     @media (max-width: 1400px) {
       margin-top: 4rem;
+      padding: 0;
+      background-color: rgb(249, 248, 253);
     }
   }
 
@@ -276,9 +283,9 @@ const ProjectWrapper = styled("div")`
 
 const ContentWrapper = styled("div")`
   max-width: 1300px;
-  max-height: 1090.28px;
-  min-height: 1090.28px;
-  height: 1090.28px;
+  /* max-height: 1090.28px; */
+  /* min-height: 1090.28px; */
+  /* height: 1090.28px; */
   margin: 0 auto;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
   padding: 1rem 2rem 2rem;
