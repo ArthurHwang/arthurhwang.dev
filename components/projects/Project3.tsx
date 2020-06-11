@@ -73,74 +73,103 @@ export const Project3: React.FC = (): ReactElement => {
         </div>
 
         <div className="accomplishments">
-          <div>
-            <h3>About</h3>
+          <div className="about-wrapper">
+            <div>
+              <h3>About</h3>
+            </div>
+            <p>
+              I created this Angular application for the law firm as an internal
+              team dashboard. Created a full user sign-up / sign-in
+              authentication flow REST API with Express and Node.js.
+            </p>
+            <p>
+              User authorization and authentication is handled on the client
+              side with JWT tokens. Team members can access documentation and
+              find answers to frequently asked questions about the web stack.
+            </p>
+            <p></p>
           </div>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam,
-            alias! Similique, laudantium molestiae harum quo nihil, ex odit
-            assumenda quod rerum incidunt molestias, necessitatibus cumque
-            itaque beatae veniam quisquam aliquam!
-          </p>
-          <h3>Accomplishments</h3>
-          <ul>
-            <li>
-              Created live production ready company documentation dashboard with
-              user authentication and user login system for company. Users are
-              able to sign-up, sign-in, logout, and update their credentials
-            </li>
-            <li>
-              Utilized Angular Framework with TypeScript and bootstrap to build
-              client-side dashboard application
-            </li>
-            <li>
-              Used Node.js and Express to handle back-end logic and custom API
-              endpoints while correctly hashing and salting sensitive password
-              information with bcrypt library
-            </li>
-            <li>
-              Stored user account information into MySQL database using
-              Sequelize ORM and Node.js
-            </li>
-            {/* <li>
-              Used JSON Web Tokens to pass authentication data to client side
-              local storage to authenticate and validate user sessions
-            </li>
-            <li>
-              Created authentication guard and interceptor to validate user
-              authentication based on if the user has a valid JWT token
-            </li> */}
-            {/* <li>
-              Wrote easy to understand technical documentation for
-              non-developers to help them understand certain technologies and
-              basic common tasks relative to the company
-            </li>
-            <li>
-              Used Apache HTTP Server ProxyPass and ProxyPassReverse to get
-              Node.js / Express application running under existing Linux server
-            </li> */}
-            <li>
-              **If you would like to login and peek around, please use the
-              following credentials. Otherwise feel free to create your own
-              account:
-              <br />
-              <code style={{ padding: "0" }}>
-                Username: testing@testing.com
-              </code>
-              <br />
-              <code style={{ padding: "0" }}>Password: 123456</code>
-            </li>
-          </ul>
+          <div className="accomplishment-wrapper">
+            <h3>Accomplishments</h3>
+            <ul>
+              <li>
+                Created live production ready company documentation dashboard
+                with user authentication and user login system for company.
+                Users are able to sign-up, sign-in, logout, and update their
+                credentials
+              </li>
+              <li>
+                Utilized Angular Framework with TypeScript and bootstrap to
+                build client-side dashboard application
+              </li>
+              <li>
+                Used Node.js and Express to handle back-end logic and custom API
+                endpoints while correctly hashing and salting sensitive password
+                information with bcrypt library
+              </li>
+              <li>
+                Stored user account information into MySQL database using
+                Sequelize ORM and Node.js
+              </li>
+              <li>
+                Used JSON Web Tokens to pass authentication data to client side
+                local storage to authenticate and validate user sessions
+              </li>
+              <li>
+                Created authentication guard and interceptor to validate user
+                authentication based on if the user has a valid JWT token
+              </li>
+              <li>
+                **If you would like to login and peek around, please use the
+                following credentials. Otherwise feel free to create your own
+                account:
+                <br />
+                <code style={{ padding: "0" }}>
+                  Username: testing@testing.com
+                </code>
+                <br />
+                <code style={{ padding: "0" }}>Password: 123456</code>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="badges">
-        <img src="/static/projects/logos/angular.svg" alt="angular" />
-        <img src="/static/projects/logos/express.svg" alt="express" />
-        <img src="/static/projects/logos/ts.png" alt="typescript" />
-        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
-        <img src="/static/projects/logos/jwt.png" alt="json web token" />
-        <img src="/static/projects/logos/sequelize.png" alt="sequelize" />
-        <img src="/static/projects/logos/bootstrap.png" alt="bootstrap" />
+        <img
+          src="/static/projects/logos/angular.svg"
+          title="Angular"
+          alt="angular"
+        />
+        <img
+          src="/static/projects/logos/express.svg"
+          title="Express"
+          alt="express"
+        />
+        <img
+          src="/static/projects/logos/ts.png"
+          title="TypeScript"
+          alt="typescript"
+        />
+        <img
+          src="/static/projects/logos/nodejs.png"
+          title="Node.js"
+          alt="nodejs"
+        />
+        <img
+          src="/static/projects/logos/jwt.png"
+          title="JSON Web Token"
+          alt="json web token"
+        />
+        <img
+          src="/static/projects/logos/sequelize.png"
+          title="Sequelize"
+          alt="sequelize"
+        />
+        <img
+          src="/static/projects/logos/bootstrap.png"
+          title="Bootstrap"
+          alt="bootstrap"
+        />
       </div>
       <div className="buttons">
         <a

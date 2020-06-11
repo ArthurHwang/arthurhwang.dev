@@ -79,52 +79,58 @@ export const Project5: React.FC = (): ReactElement => {
           </LazyLoad>
         </div>
         <div className="accomplishments">
-          <div>
-            <h3>About</h3>
+          <div className="about-wrapper">
+            <div>
+              <h3>About</h3>
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Quibusdam, alias! Similique, laudantium molestiae harum quo nihil,
+              ex odit assumenda quod rerum incidunt molestias, necessitatibus
+              cumque itaque beatae veniam quisquam aliquam!
+            </p>
           </div>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam,
-            alias! Similique, laudantium molestiae harum quo nihil, ex odit
-            assumenda quod rerum incidunt molestias, necessitatibus cumque
-            itaque beatae veniam quisquam aliquam!
-          </p>
-          <h3>Accomplishments</h3>
-          <ul>
-            <li>
-              Created interactive guitar pedalboard builder to help guitarists
-              create unique pedalboard configurations. Users can create, read,
-              update and delete their builds
-            </li>
-            <li>
-              Used React and Semantic-UI component library to create front-end
-              application
-            </li>
-            <li>
-              Implemented Redux for centralized application state and
-              persistence. Wrote actions and reducers to allow predictable state
-              management
-            </li>
-            <li>Implemented React-Router for client-side routing</li>
-            <li>
-              Utilized Redux-Thunk middleware to perform asynchronous logic /
-              AJAX requests with Redux
-            </li>
-            <li>
-              Implemented MongoDB database to seed application and store user
-              data and history
-            </li>
-            <li>
-              Used Express and Node.js to handle back-end API requests such as
-              fetching user builds and purchase history
-            </li>
-            <li>
-              Used Stripe API to allow users to checkout and purchase cart items
-            </li>
-            <li>
-              Used PassportJS to implement Google and Facebook Oauth login
-              systems
-            </li>
-          </ul>
+
+          <div className="accomplishment-wrapper">
+            <h3>Accomplishments</h3>
+            <ul>
+              <li>
+                Created interactive guitar pedalboard builder to help guitarists
+                create unique pedalboard configurations. Users can create, read,
+                update and delete their builds
+              </li>
+              <li>
+                Used React and Semantic-UI component library to create front-end
+                application
+              </li>
+              <li>
+                Implemented Redux for centralized application state and
+                persistence. Wrote actions and reducers to allow predictable
+                state management
+              </li>
+              <li>Implemented React-Router for client-side routing</li>
+              <li>
+                Utilized Redux-Thunk middleware to perform asynchronous logic /
+                AJAX requests with Redux
+              </li>
+              <li>
+                Implemented MongoDB database to seed application and store user
+                data and history
+              </li>
+              <li>
+                Used Express and Node.js to handle back-end API requests such as
+                fetching user builds and purchase history
+              </li>
+              <li>
+                Used Stripe API to allow users to checkout and purchase cart
+                items
+              </li>
+              <li>
+                Used PassportJS to implement Google and Facebook Oauth login
+                systems
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="badges">

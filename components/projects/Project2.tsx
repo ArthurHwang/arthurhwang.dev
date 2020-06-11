@@ -6,6 +6,7 @@ import { FaGithub, FaPlay } from "react-icons/fa";
 import { Button } from "../Button";
 import { settings } from "../../util/slick-config";
 import { ReactElement } from "react";
+import Link from "next/link";
 
 // arthurhwang.dev
 export const Project2: React.FC = (): ReactElement => {
@@ -20,7 +21,7 @@ export const Project2: React.FC = (): ReactElement => {
         arthurhwang.dev
       </a>
 
-      <div className="project split-grid-right">
+      <div className="project split-grid-left">
         {/* 
             //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
@@ -99,81 +100,118 @@ export const Project2: React.FC = (): ReactElement => {
         </div>
 
         <div className="accomplishments">
-          <div>
-            <h3>About</h3>
+          <div className="about-wrapper">
+            <div>
+              <h3>About</h3>
+            </div>
+            <p>
+              My personal portfolio was built not only to showcase my projects
+              and skills, but also to learn about and build something with
+              Apollo and GraphQL. I set out to design and develop a site to call
+              my own - I am happy with how it turned out!
+            </p>
+
+            <p>
+              I implemented my own{" "}
+              <Link href="/blog">
+                <a className="link">blog</a>
+              </Link>{" "}
+              using Contentful CMS, where I write articles to hopefully teach
+              confusing topics in an easy to understand way.
+            </p>
           </div>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam,
-            alias! Similique, laudantium molestiae harum quo nihil, ex odit
-            assumenda quod rerum incidunt molestias, necessitatibus cumque
-            itaque beatae veniam quisquam aliquam!
-          </p>
-          <h3>Accomplishments</h3>
-          <ul>
-            <li>
-              Used NextJS and TypeScript to build server-rendered isomorphic
-              React portfolio application
-            </li>
-            <li>
-              Implemented Apollo and GraphQL to programmatically load data
-              fetched from Github API. Used loading states from Apollo to show
-              loading animations
-            </li>
-            <li>
-              Created custom real-time GitHub commit list component with
-              relevant continuous integration / continuous development status
-              links
-            </li>
-            <li>
-              Developed fully responsive front-end application using modern
-              CSS-in-JS solution styled-components to build reusable React
-              components
-            </li>
-            <li>
-              Used Formik, Yup and Express to handle form validation and backend
-              form submission logic
-            </li>
-            <li>
-              Built personal blog with headless Contentful CMS. Sourced data
-              with Contentful Delivery API
-            </li>
-            <li>
-              Parsed Contentful markdown data into blog template using
-              react-markdown. Used Prism for code block syntax highlighting.
-            </li>
-            {/* <li>
-              Custom serverless deployment with Cloudflare DNS and Zeit Now.
-              Implemented custom email forwarding with Mailgun by proxying
-              requests through Cloudflare into personal Gmail account
-            </li>
-            <li>
-              Created dynamic sitemap that automatically fetches new data from
-              Contentful to generate new sitemap entries.
-            </li> */}
-          </ul>
+
+          <div className="accomplishment-wrapper">
+            <h3>Accomplishments</h3>
+            <ul>
+              <li>
+                Used NextJS and TypeScript to build server-rendered isomorphic
+                React portfolio application
+              </li>
+              <li>
+                Implemented Apollo and GraphQL to programmatically load data
+                fetched from Github API. Used loading states from Apollo to show
+                loading animations
+              </li>
+              <li>
+                Created custom real-time GitHub commit list component with
+                relevant continuous integration / continuous development status
+                links
+              </li>
+              <li>
+                Developed fully responsive front-end application using modern
+                CSS-in-JS solution styled-components to build reusable React
+                components
+              </li>
+              <li>
+                Used Formik, Yup and Express to handle form validation and
+                backend form submission logic
+              </li>
+              <li>
+                Built personal blog with headless Contentful CMS. Sourced data
+                with Contentful Delivery API
+              </li>
+              <li>
+                Created dynamic sitemap that automatically fetches new data from
+                Contentful to generate new sitemap entries on-the-fly.
+              </li>
+              <li>
+                Custom serverless deployment with Cloudflare DNS and Zeit Now.
+                Implemented custom email forwarding with Mailgun by proxying
+                requests through Cloudflare into personal Gmail account
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="badges">
-        <img src="/static/projects/logos/nextjs.png" alt="nextjs" />
-        <img src="/static/projects/logos/React.png" alt="reactjs" />
-        <img src="/static/projects/logos/ts.png" alt="typescript" />
-        <img src="/static/projects/logos/nodejs.png" alt="nodejs" />
-        <img src="/static/projects/logos/apollo.png" alt="apollo" />
-        <img src="/static/projects/logos/gql.png" alt="graphql" />
+        <img
+          src="/static/projects/logos/nextjs.png"
+          title="Next.js"
+          alt="nextjs"
+        />
+        <img
+          src="/static/projects/logos/React.png"
+          title="ReactJS"
+          alt="reactjs"
+        />
+        <img
+          src="/static/projects/logos/ts.png"
+          title="TypeScript"
+          alt="typescript"
+        />
+        <img
+          src="/static/projects/logos/nodejs.png"
+          title="Node.js"
+          alt="nodejs"
+        />
+        <img
+          src="/static/projects/logos/apollo.png"
+          title="Apollo"
+          alt="apollo"
+        />
+        <img
+          src="/static/projects/logos/gql.png"
+          title="GraphQL"
+          alt="graphql"
+        />
         <img
           style={{ width: "60px" }}
           src="/static/projects/logos/styled-components.png"
           alt="styled components"
+          title="Styled Components"
         />
-        <img src="/static/projects/logos/contentful.png" alt="contentful" />
+        <img
+          src="/static/projects/logos/contentful.png"
+          title="Contentful"
+          alt="contentful"
+        />
         <img
           src="/static/projects/logos/formik.png"
           style={{ width: "60px" }}
           alt="formik"
+          title="Formik"
         />
-        {/* <img src="/static/projects/logos/cloudflare.png" alt="cloudflare" /> */}
-        {/* <img src="/static/projects/logos/mailgun.png" alt="mailgun" /> */}
-        {/* <img src="/static/projects/logos/now.png" alt="now" /> */}
       </div>
       <div className="buttons">
         <a

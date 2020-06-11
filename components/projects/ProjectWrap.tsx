@@ -131,7 +131,7 @@ const ProjectWrapper = styled("div")`
       bottom: -39px;
 
       &:after {
-        content: "-swipe or drag images to scroll-";
+        content: "-swipe or drag-";
         display: block;
         position: relative;
         bottom: 5px;
@@ -191,6 +191,8 @@ const ProjectWrapper = styled("div")`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.025);
+    padding: 1rem 1.5rem 0;
 
     p {
       font-size: 1.4rem;
@@ -199,13 +201,7 @@ const ProjectWrapper = styled("div")`
     ul {
       padding-left: 1.5rem;
       list-style-type: none;
-      /* display: flex;
-      flex-direction: column;
-      justify-content: space-between; */
-      /* height: 91%; */
       margin-top: 1rem;
-      /* margin-bottom: 1rem; */
-      /* overflow: auto; */
 
       li {
         font-size: 1.4rem;
@@ -223,7 +219,6 @@ const ProjectWrapper = styled("div")`
         }
 
         @media (max-width: 490px) {
-          /* text-align: justify; */
           text-indent: -17px;
         }
 
@@ -240,6 +235,8 @@ const ProjectWrapper = styled("div")`
 
     @media (max-width: 1400px) {
       margin-top: 4rem;
+      padding: 0;
+      background-color: rgb(249, 248, 253);
     }
   }
 

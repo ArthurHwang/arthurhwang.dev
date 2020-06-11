@@ -6,7 +6,7 @@ import { Project1 } from "../components/projects/Project1";
 import { Project2 } from "../components/projects/Project2";
 import { Project3 } from "../components/projects/Project3";
 import { Project4 } from "../components/projects/Project4";
-import { Project5 } from "../components/projects/Project5";
+// import { Project5 } from '../components/projects/Project5';
 import { Project6 } from "../components/projects/Project6";
 import { Project7 } from "../components/projects/Project7";
 import "../util/slick-fix.css";
@@ -41,7 +41,7 @@ const Projects: NextPage = (): ReactElement => {
       <Project3 />
 
       {/* PROJECT 5 - toneify*/}
-      <Project5 />
+      {/* <Project5 /> */}
     </div>
   );
 };

@@ -20,7 +20,7 @@ export const Project7: React.FC = (): ReactElement => {
         CarolandArthur.com
       </a>
 
-      <div className="project split-grid-right">
+      <div className="project split-grid-left">
         {/* 
             //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>
@@ -33,7 +33,6 @@ export const Project7: React.FC = (): ReactElement => {
                 "/static/projects/carolandarthur.com/screenshot-1.png";
             }}
           />
-
           <div className="vertical-wrapper">
             <img
               className="vertical"
@@ -100,11 +99,11 @@ export const Project7: React.FC = (): ReactElement => {
             </p>
             <p>
               So instead, I built a globally distributed serverless full-stack
-              application using AWS Lambda@Edge and AWS API Gateway so that our
-              family members all over the world could have millisecond access to
-              our wedding RSVP site. The RSVP's are stored in DynamoDB where I
-              can query and scan data so we can more easily organize our
-              wedding.
+              application using AWS Lambda@Edge, AWS API Gateway, and AWS
+              DynamoDB so that our family members and friends all over the world
+              could have millisecond access to our wedding RSVP site. The RSVP's
+              are stored in DynamoDB where I can query and scan our attendees
+              data so we can more easily organize our wedding.
             </p>
           </div>
 
@@ -112,13 +111,13 @@ export const Project7: React.FC = (): ReactElement => {
             <h3>Accomplishments</h3>
             <ul>
               <li>
-                Leveraged serverless IaaS framework to define, build, provision
-                and deploy multiple AWS microservices with the added benefit of
-                handling cloudformation stacks easily.
+                Leveraged Serverless Framework to define, build, provision and
+                deploy multiple AWS microservices with the added benefit of easy
+                manipulation of cloudformation stacks
               </li>
               <li>
-                Used AWS API Gateway to build RESTful API with AWS Lambda
-                functions to handle DynamoDB CRUD operations
+                Used AWS API Gateway to build REST API with AWS Lambda functions
+                to handle DynamoDB CRUD operations
               </li>
               <li>
                 Implemented DynamoDB streams to automate response emails when
@@ -126,20 +125,17 @@ export const Project7: React.FC = (): ReactElement => {
               </li>
               <li>
                 Created full CI / CD pipeline with AWS CodeBuild and
-                CodePipeline. Wrote custom lambda handler let GitHub be aware of
-                CodePipeline status changes
+                CodePipeline. Wrote custom lambda handler to let GitHub be aware
+                of CodePipeline status changes
               </li>
               <li>
                 Setup AWS Route53 DNS records and SLS/TLS certificates with AWS
                 Certificate Manager
               </li>
               <li>
-                Used Next.js, TypeScript and styled-components to build
-                front-end React application
-              </li>
-              <li>
-                Deployed highly available front-end application globally using
-                lambda@edge
+                Used Next.js, TypeScript and styled-components to build and
+                deploy highly avalable front-end React application globally
+                using AWS Lambda@Edge
               </li>
             </ul>
           </div>
@@ -185,7 +181,7 @@ export const Project7: React.FC = (): ReactElement => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/ArthurHwang/keeb-kraze"
+          href="https://github.com/ArthurHwang/rsvp-serverless-aws"
         >
           <Button color="blue">
             Source <FaGithub />
