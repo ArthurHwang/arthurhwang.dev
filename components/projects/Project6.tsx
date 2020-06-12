@@ -82,8 +82,8 @@ export const Project6: React.FC = (): ReactElement => {
             <h3>Accomplishments</h3>
             <ul>
               <li>
-                Used React, TypeScript, Express, and Firebase to build
-                full-stack e-commerce application with full user authentication,
+                Used React, TypeScript, Express, and Firebase to build full
+                stack e-commerce application with full user authentication,
                 authorization and checkout
               </li>
               <li>

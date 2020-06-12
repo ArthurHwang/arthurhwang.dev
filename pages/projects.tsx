@@ -18,7 +18,7 @@ const Projects: NextPage = (): ReactElement => {
         <title>Arthur Hwang | Projects</title>
         <meta
           name="description"
-          content="Built with custom NextJS, Apollo, and GraphQL, this website is a showcase of my recent projects as a Full-Stack Developer."
+          content="Built with custom NextJS, Apollo, and GraphQL, this website is a showcase of my recent projects as a Full Stack Developer."
         />
       </Head>
 
@@ -34,11 +34,11 @@ const Projects: NextPage = (): ReactElement => {
       {/* PROJECT 4 - bestattorney - LAMP */}
       <Project4 />
 
-      {/* PROJECT 6 - keeb kraze*/}
-      <Project6 />
-
       {/* PROJECT 3 - bestattorney.com-admin*/}
       <Project3 />
+
+      {/* PROJECT 6 - keeb kraze*/}
+      <Project6 />
 
       {/* PROJECT 5 - toneify*/}
       {/* <Project5 /> */}

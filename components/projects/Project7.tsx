@@ -98,7 +98,7 @@ export const Project7: React.FC = (): ReactElement => {
               people all over the world that would be attending our wedding.
             </p>
             <p>
-              So instead, I built a globally distributed serverless full-stack
+              So instead, I built a globally distributed serverless full stack
               application using AWS Lambda@Edge, AWS API Gateway, and AWS
               DynamoDB so that our family members and friends all over the world
               could have millisecond access to our wedding RSVP site. The RSVP's
@@ -111,7 +111,7 @@ export const Project7: React.FC = (): ReactElement => {
             <h3>Accomplishments</h3>
             <ul>
               <li>
-                Leveraged Serverless Framework to define, build, provision and
+                Leveraged serverless framework to define, build, provision and
                 deploy multiple AWS microservices with the added benefit of easy
                 manipulation of cloudformation stacks
               </li>
