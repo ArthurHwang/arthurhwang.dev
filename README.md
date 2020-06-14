@@ -2,7 +2,7 @@
 
 [![Uptime Robot](https://img.shields.io/uptimerobot/ratio/7/m784352489-f7ec45d48a0aa4ee2b70754c)](https://arthurhwang.dev) [![GitHub issues](https://img.shields.io/github/issues/ArthurHwang/arthurhwang.dev)](https://github.com/ArthurHwang/arthurhwang.dev/issues) [![GitHub issues closed](https://img.shields.io/github/issues-closed/ArthurHwang/arthurhwang.dev)](https://github.com/ArthurHwang/arthurhwang.dev/issues?q=is%3Aissue+is%3Aclosed)
 
-[arthurhwang.dev](https://arthurhwang.dev) is my personal portfolio application I built to showcase my projects as well as my personal blog where I attempt to write articles to explain technical topics in a not so technical way, in hopes that maybe readers in the future who browse my blog can have an "AH-HA" moment.
+[arthurhwang.dev](https://arthurhwang.dev) is my personal portfolio application I built to showcase my projects as well as my personal [blog](https://arthurhwang.dev/blog) where I attempt to write articles to explain technical topics in a not so technical way, in hopes that maybe readers in the future who browse my blog can have an "AH-HA" moment.
 
 The blog was implemented by querying Contentful API to dynamically build server-side rendered pages.
 
