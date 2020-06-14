@@ -11,5 +11,5 @@ export const settings = {
   speed: 600,
   fade: true,
   lazyLoad: "progressive",
-  adaptiveHeight: true
+  adaptiveHeight: false
 };

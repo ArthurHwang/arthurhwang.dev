@@ -229,4 +229,29 @@ const ContentWrap = styled("div")`
     display: block;
     margin: 0 auto;
   }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => theme.yellow} none;
+  }
+
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: hidden;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: hidden;
+    border-radius: 20px;
+    border: 3px solid ${({ theme }) => theme.yellow};
+  }
 `;

@@ -65,7 +65,6 @@ const StyledLayout = styled("div")<{ pathName: string }>`
 
 const Inner = styled("section")<{ pathName: string }>`
   margin: 0 auto;
-  /* background-color: ${({ theme }) => theme.primary}; */
   max-width: ${props => {
     switch (props.pathName) {
       case "/":

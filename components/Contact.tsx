@@ -232,12 +232,6 @@ const StyledContact = styled("div")`
       :-moz-placeholder {
         color: rgba(0, 0, 0, 0.4);
       }
-
-      /* &#firstName { */
-      /* background-image: none !important; */
-      /* opacity: 0; */
-      /* border: 1px solid grey; */
-      /* } */
     }
 
     textarea {

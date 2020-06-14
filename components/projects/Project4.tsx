@@ -19,7 +19,6 @@ export const Project4: React.FC = (): ReactElement => {
       >
         Bisnar | Chase - LAMP
       </a>
-
       <div className="project split-grid-right">
         {/* 
         //@ts-ignore */}
