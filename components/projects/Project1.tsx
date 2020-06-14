@@ -74,7 +74,6 @@ export const Project1: React.FC = (): ReactElement => {
                   "/static/projects/bestattorney-gatsby/screenshot-8.png";
               }}
             />
-
             <img
               src="/static/projects/bestattorney-gatsby/screenshot-4.webp"
               alt="screenshot 4"
@@ -146,7 +145,6 @@ export const Project1: React.FC = (): ReactElement => {
               editing an options file.
             </p>
           </div>
-
           <div className="accomplishment-wrapper">
             <div>
               <h3>Accomplishments</h3>

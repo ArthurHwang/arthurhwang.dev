@@ -179,16 +179,18 @@ const NavMobileWrapper = styled.div`
   z-index: 1000;
   .fade {
     animation: fadein 0.8s;
-    -moz-animation: fadein 0.8s; /* Firefox */
-    -webkit-animation: fadein 0.8s; /* Safari and Chrome */
-    -o-animation: fadein 0.8s; /* Opera */
+    -moz-animation: fadein 0.8s;
+    -webkit-animation: fadein 0.8s;
+    -o-animation: fadein 0.8s;
   }
+
   .fadeOut {
     animation: fadeout 2s;
-    -moz-animation: fadeout 2s; /* Firefox */
-    -webkit-animation: fadeout 2s; /* Safari and Chrome */
-    -o-animation: fadeout 2s; /* Opera */
+    -moz-animation: fadeout 2s;
+    -webkit-animation: fadeout 2s;
+    -o-animation: fadeout 2s;
   }
+
   @keyframes fadein {
     from {
       opacity: 0;
@@ -197,8 +199,8 @@ const NavMobileWrapper = styled.div`
       opacity: 1;
     }
   }
+
   @-moz-keyframes fadein {
-    /* Firefox */
     from {
       opacity: 0;
     }
@@ -206,8 +208,8 @@ const NavMobileWrapper = styled.div`
       opacity: 1;
     }
   }
+
   @-webkit-keyframes fadein {
-    /* Safari and Chrome */
     from {
       opacity: 0;
     }
@@ -216,7 +218,6 @@ const NavMobileWrapper = styled.div`
     }
   }
   @-o-keyframes fadein {
-    /* Opera */
     from {
       opacity: 0;
     }
@@ -224,6 +225,7 @@ const NavMobileWrapper = styled.div`
       opacity: 1;
     }
   }
+
   @keyframes fadeout {
     from {
       opacity: 1;
@@ -232,8 +234,8 @@ const NavMobileWrapper = styled.div`
       opacity: 0;
     }
   }
+
   @-moz-keyframes fadeout {
-    /* Firefox */
     from {
       opacity: 1;
     }
@@ -241,8 +243,8 @@ const NavMobileWrapper = styled.div`
       opacity: 0;
     }
   }
+
   @-webkit-keyframes fadeout {
-    /* Safari and Chrome */
     from {
       opacity: 1;
     }
@@ -250,8 +252,8 @@ const NavMobileWrapper = styled.div`
       opacity: 0;
     }
   }
+
   @-o-keyframes fadeout {
-    /* Opera */
     from {
       opacity: 1;
     }
@@ -259,6 +261,7 @@ const NavMobileWrapper = styled.div`
       opacity: 0;
     }
   }
+
   @keyframes moveInLeft {
     0% {
       opacity: 0;

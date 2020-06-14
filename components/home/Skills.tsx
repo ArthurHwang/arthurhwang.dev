@@ -134,11 +134,9 @@ export const Skills: React.FC = (): ReactElement => {
             <img src="/static/home/css.png" title="css" alt="css3" /> CSS3
           </span>
         </div>
-
         <h3>
           Certifications<span>_</span>
         </h3>
-
         <div className="certifications-wrap">
           <a
             target="_blank"
@@ -150,7 +148,6 @@ export const Skills: React.FC = (): ReactElement => {
               alt="aws certified developer"
             />
           </a>
-
           <a
             target="_blank"
             rel="noreferrer noopener"
@@ -161,7 +158,6 @@ export const Skills: React.FC = (): ReactElement => {
               alt="aws certified solutions architect"
             />
           </a>
-
           <a
             target="_blank"
             rel="noreferrer noopener"
@@ -213,7 +209,6 @@ export const Skills: React.FC = (): ReactElement => {
             <span className="other-item">
               <span className="hyphen">-</span> RESTful Web Services
             </span>
-
             <span className="other-item">
               <span className="hyphen">-</span> Continuous Integration
             </span>

@@ -14,7 +14,6 @@ const Home: NextPage = (): ReactElement => {
           name="description"
           content="Arthur Hwang's Full Stack Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
         />
-
         <meta
           property="og:title"
           content="Arthur Hwang | Full Stack Developer"

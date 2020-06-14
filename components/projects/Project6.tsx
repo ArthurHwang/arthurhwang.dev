@@ -20,7 +20,7 @@ export const Project6: React.FC = (): ReactElement => {
         Keeb Kraze
       </a>
 
-      <div className="project split-grid-left">
+      <div className="project split-grid-right">
         {/* 
             //@ts-ignore */}
         <Slider className="inner-slider" {...settings}>

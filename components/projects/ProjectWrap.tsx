@@ -15,6 +15,20 @@ export const ProjectWrap: React.FC<Props> = ({ children }): ReactElement => {
   );
 };
 
+const ContentWrapper = styled("div")`
+  max-width: 1300px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem 2rem;
+  background: ${({ theme }) => theme.bg.white};
+
+  @media (max-width: 1400px) {
+    max-height: initial;
+    min-height: initial;
+    height: initial;
+  }
+`;
+
 const ProjectWrapper = styled("div")`
   height: auto;
   padding: 4rem 2rem;
@@ -116,10 +130,6 @@ const ProjectWrapper = styled("div")`
       .vertical {
         width: 27%;
         height: 100%;
-
-        @media (max-width: 490px) {
-          width: 50%;
-        }
       }
 
       @media (max-width: 490px) {
@@ -128,31 +138,12 @@ const ProjectWrapper = styled("div")`
     }
 
     .slick-dots {
-      bottom: -39px;
-
-      &:after {
-        content: "-swipe or drag-";
-        display: block;
-        position: relative;
-        bottom: 5px;
-        font-size: 1rem;
-        color: ${({ theme }) => theme.secondaryAccent};
-      }
-
       .slick-active button:before {
         color: ${({ theme }) => theme.accent};
       }
 
       li button:before {
         font-size: 20px;
-      }
-
-      @media (max-width: 768px) {
-        bottom: -45px;
-      }
-
-      @media (max-width: 490px) {
-        bottom: -40px;
       }
     }
 
@@ -240,6 +231,10 @@ const ProjectWrapper = styled("div")`
     }
   }
 
+  @media (max-width: 490px) {
+    padding: 2rem 0;
+  }
+
   .split-grid-left {
     display: grid;
     grid-gap: 2rem;
@@ -278,22 +273,5 @@ const ProjectWrapper = styled("div")`
         "accomplishments"
         "commits";
     }
-  }
-`;
-
-const ContentWrapper = styled("div")`
-  max-width: 1300px;
-  /* max-height: 1090.28px; */
-  /* min-height: 1090.28px; */
-  /* height: 1090.28px; */
-  margin: 0 auto;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
-  padding: 1rem 2rem 2rem;
-  background: ${({ theme }) => theme.bg.white};
-
-  @media (max-width: 1400px) {
-    max-height: initial;
-    min-height: initial;
-    height: initial;
   }
 `;

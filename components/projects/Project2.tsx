@@ -20,7 +20,6 @@ export const Project2: React.FC = (): ReactElement => {
       >
         arthurhwang.dev
       </a>
-
       <div className="project split-grid-left">
         {/* 
             //@ts-ignore */}

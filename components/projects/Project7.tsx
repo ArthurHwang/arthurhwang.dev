@@ -93,9 +93,10 @@ export const Project7: React.FC = (): ReactElement => {
               <h3>About</h3>
             </div>
             <p>
-              My wife and I started sending out wedding invitations by mail but
-              quickly realized it would be very difficult to keep track of 150+
-              people all over the world that would be attending our wedding.
+              As newlyweds, my wife and I started sending out wedding
+              invitations by mail but quickly realized it would be very
+              difficult to keep track of 150+ people all over the world that
+              would be attending our wedding.
             </p>
             <p>
               So instead, I built a globally distributed serverless full stack

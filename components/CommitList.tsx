@@ -88,9 +88,8 @@ export const CommitList: React.FC<Props> = ({
         return (
           <ContentWrapper>
             <h3>
-              Real-Time Project Commits{" "}
-              <span style={{ color: "black", fontWeight: 800 }}>||</span> CI/CD
-              Status{" "}
+              <span>Real-Time Commits</span>{" "}
+              <span className="ci-cd">CI/CD Status</span>
             </h3>
             <StyledCommits>
               {commitHistory.map((commit: any) => {
@@ -157,13 +156,6 @@ export const CommitList: React.FC<Props> = ({
                       className={`commit-status ${
                         commit.node.status ? "" : "disabled"
                       }`}
-                      // href={
-                      //   commit.node.status
-                      //     ? idx === 1
-                      //       ? commit.node.status.contexts[1].targetUrl
-                      //       : commit.node.status.contexts[0].targetUrl
-                      //     : null
-                      // }
                     >
                       <StyledStatus>
                         {StatusButton(
@@ -320,7 +312,6 @@ const StyledCommits = styled("ul")`
   .commit-status {
     display: flex;
     align-items: center;
-    /* cursor: not-allowed; */
 
     &.disabled {
       cursor: not-allowed;
@@ -328,4 +319,15 @@ const StyledCommits = styled("ul")`
   }
 `;
 
-const ContentWrapper = styled("div")``;
+const ContentWrapper = styled("div")`
+  h3 {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 490px) {
+      .ci-cd {
+        text-align: right;
+      }
+    }
+  }
+`;
