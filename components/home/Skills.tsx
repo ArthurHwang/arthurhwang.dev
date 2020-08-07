@@ -161,11 +161,11 @@ export const Skills: React.FC = (): ReactElement => {
           <a
             target="_blank"
             rel="noreferrer noopener"
-            href="https://www.youracclaim.com/badges/fa915a75-8112-432b-bf95-8337a0ef4fdc/public_url"
+            href="https://www.youracclaim.com/badges/c673f994-3764-40f0-a014-d8f4732f8310"
           >
             <img
-              src="/static/certifications/aws-certified-cloud-practitioner.png"
-              alt="aws certified cloud practitioner"
+              src="/static/certifications/aws-certified-sysops-administrator-associate.png"
+              alt="aws certified sysops administrator"
             />
           </a>
         </div>
