@@ -9,14 +9,14 @@ const Home: NextPage = (): ReactElement => {
   return (
     <Fragment>
       <Head>
-        <title>Arthur Hwang | Full Stack Developer</title>
+        <title>Arthur Hwang | Full Stack Web Developer</title>
         <meta
           name="description"
-          content="Arthur Hwang's Full Stack Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
+          content="Arthur Hwang's Full Stack Web Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
         />
         <meta
           property="og:title"
-          content="Arthur Hwang | Full Stack Developer"
+          content="Arthur Hwang | Full Stack Web Developer"
         />
         <meta property="og:url" content="https://arthurhwang.dev" />
         <meta
@@ -25,7 +25,7 @@ const Home: NextPage = (): ReactElement => {
         />
         <meta
           property="og:description"
-          content="Arthur Hwang's Full Stack Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
+          content="Arthur Hwang's Full Stack Web Developer portfolio.  I am a Mission-driven, detail-oriented developer that likes to build software solutions and solve problems with code.  All code, all day. "
         />
       </Head>
       <Intro />
