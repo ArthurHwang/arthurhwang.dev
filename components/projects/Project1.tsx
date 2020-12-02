@@ -14,7 +14,7 @@ export const Project1: React.FC = (): ReactElement => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://bisnarchaselaw.com"
+        href="https://bestatto-gatsby.netlify.app"
         className="link  project-title"
       >
         Bisnar | Chase - Gatsby
@@ -173,7 +173,7 @@ export const Project1: React.FC = (): ReactElement => {
                   className="link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://bisnarchaselaw.com/blog"
+                  href="https://bestatto-gatsby.netlify.app/blog"
                 >
                   blog
                 </a>{" "}
@@ -191,7 +191,7 @@ export const Project1: React.FC = (): ReactElement => {
                   className="link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://bisnarchaselaw.com/locations"
+                  href="https://bestatto-gatsby.netlify.app/locations"
                 >
                   Google Maps component
                 </a>{" "}
@@ -259,7 +259,7 @@ export const Project1: React.FC = (): ReactElement => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://bisnarchaselaw.com"
+          href="https://bestatto-gatsby.netlify.app"
         >
           <Button color="green">
             Launch <FaPlay />
