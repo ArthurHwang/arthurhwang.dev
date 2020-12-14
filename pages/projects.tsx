@@ -18,7 +18,7 @@ const Projects: NextPage = (): ReactElement => {
         <title>Arthur Hwang | Projects</title>
         <meta
           name="description"
-          content="Built with custom NextJS, Apollo, and GraphQL, this website is a showcase of my recent projects as a Full Stack Web Developer."
+          content="Built with custom NextJS, Apollo, and GraphQL, this website is a showcase of my recent projects as a Full Stack Developer."
         />
       </Head>
 
